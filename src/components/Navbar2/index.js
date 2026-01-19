@@ -86,7 +86,7 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
           <NavLink to="/" $active={location.pathname === '/'}>home</NavLink>
           <NavLink to="/about" $active={location.pathname === '/about'}>about</NavLink>
           <NavLink to="/education" $active={location.pathname === '/education'}>education</NavLink>
-          <NavLink to="/work" $active={location.pathname === '/work'}>work</NavLink>
+          <NavLink to="/work" $active={location.pathname === '/work'}>projects</NavLink>
         </NavLinks>
         <RightSection>
           <SocialIcon href={Bio.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">

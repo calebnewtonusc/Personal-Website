@@ -215,9 +215,9 @@ const HomePage = () => {
       <Location>Los Angeles, CA</Location>
       <Skills>
         <Skill>machine learning</Skill>
-        <Skill>statistics</Skill>
+        <Skill>computer vision</Skill>
       </Skills>
-      <Tagline>stats & ml @ usc</Tagline>
+      <Tagline>cs + applied math @ usc</Tagline>
       <Mission>
         Making software that makes people's lives better.
       </Mission>

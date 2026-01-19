@@ -35,7 +35,7 @@ const ItemHeader = styled.div`
   margin-bottom: 1rem;
 `;
 
-const Logo = styled.a`
+const Logo = styled.div`
   width: 48px;
   height: 48px;
   border-radius: 8px;
@@ -46,29 +46,22 @@ const Logo = styled.a`
   justify-content: center;
   flex-shrink: 0;
   font-size: 24px;
-  text-decoration: none;
-  cursor: ${({ href }) => href ? 'pointer' : 'default'};
-  transition: background 0.2s;
-
-  &:hover {
-    background: ${({ theme, href }) => href ? theme.card : theme.bgLight};
-  }
 `;
 
 const ItemContent = styled.div`
   flex: 1;
 `;
 
-const Company = styled.h2`
+const ProjectName = styled.h2`
   font-size: 17px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   margin-bottom: 0.25rem;
 `;
 
-const Role = styled.div`
-  font-size: 15px;
-  color: ${({ theme }) => theme.text_primary};
+const ProjectType = styled.div`
+  font-size: 14px;
+  color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 0.25rem;
 `;
 
@@ -98,102 +91,85 @@ const Description = styled.div`
   }
 `;
 
-const workExperience = [
-  {
-    logo: "🔬",
-    company: "Aina Tech, Inc.",
-    role: "Software Engineer + Immersive Studio Production Assistant",
-    period: "September 2025 - Present",
-    href: "https://ainatech.com",
-    description: "Building the future of holographic video through Gaussian Splatting, Neural Radiance Fields, and the coolest camera rig on Earth."
-  },
-  {
-    logo: "✝️",
-    company: "SGV Christian Club Collective",
-    role: "Co-Founder",
-    period: "November 2024 - June 2025",
-    description: (
-      <>
-        <p>Spearheaded formation of a coalition uniting 15+ high school Christian clubs across the San Gabriel Valley with Rianna Marquez. Pioneered a scalable framework for multi-school collaboration, media, and fundraising that emphasized community-building.</p>
-        <ul>
-          <li><strong>Chosen (April 2025):</strong> Worship night with 100 students serving dinner, leading games, and performing 2 worship music sets</li>
-          <li><strong>Everything Night (May 2025):</strong> First-of-its-kind regional outreach event attracting 200+ students to 20 breakout sessions (from dodgeball to guest speaker talks to Bible studies)</li>
-        </ul>
-      </>
-    )
-  },
-  {
-    logo: "🔬",
-    company: "Caltech",
-    role: "Research Assistant",
-    period: "August 2024 - June 2025",
-    description: "Collaborated with Taylan Kargin, Ph.D., on control theory research, creating simulations and visual models that translated complex engineering concepts into digestible tools for vendors and stakeholders in aerospace, autonomous systems, and robotics."
-  },
-  {
-    logo: "🏔️",
-    company: "Impact 360 Institute",
-    role: "Leadership Development Program",
-    period: "June 2022 - July 2023",
-    description: "Completed two summers of Christian leadership training focused on character, servant leadership, and communication, strengthening my ability to collaborate, make decisions, and lead with empathy and purpose."
-  }
-];
+const TechStack = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+`;
+
+const TechTag = styled.span`
+  padding: 0.25rem 0.75rem;
+  background: ${({ theme }) => theme.bgLight};
+  border: 1px solid ${({ theme }) => theme.border};
+  color: ${({ theme }) => theme.text_primary};
+  border-radius: 999px;
+  font-size: 12px;
+`;
 
 const projects = [
   {
     logo: "🤖",
-    company: "ModelLab",
-    role: "Personal Project",
+    name: "ModelLab",
+    type: "ML Testing Platform",
     period: "2025",
-    description: "Interactive ML testing platform for comparing model performance across tasks. Features custom evaluation harnesses and model comparison tools built with PyTorch."
+    description: "Interactive machine learning testing platform for comparing model performance across different tasks. Features custom evaluation harnesses, model comparison tools, and performance visualization.",
+    tech: ["PyTorch", "Python", "React", "Model Evaluation"]
   },
   {
     logo: "🧠",
-    company: "16 Tech Personalities Assessment",
-    role: "Personal Project",
+    name: "16 Tech Personalities",
+    type: "Developer Assessment Framework",
     period: "2025",
-    description: "Created a personality framework for tech professionals with 5 key spectrums (Builder vs Analyzer, Speed vs Precision, Generalist vs Specialist, Solo vs Collaborative, Practical vs Theoretical). Helps developers understand their working style and team dynamics."
+    description: "Personality framework for tech professionals with 5 key spectrums: Builder vs Analyzer, Speed vs Precision, Generalist vs Specialist, Solo vs Collaborative, and Practical vs Theoretical. Helps developers understand their working style and optimize team dynamics.",
+    tech: ["React", "TypeScript", "Psychology", "UX Design"]
   },
   {
     logo: "🍕",
-    company: "FoodVision Mini",
-    role: "Computer Vision Project",
+    name: "FoodVision Mini",
+    type: "Computer Vision Project",
     period: "2025",
-    description: "Food classification system using Vision Transformers and EfficientNet. Achieved high accuracy on Food101 dataset with transfer learning techniques."
+    description: "Food classification system using Vision Transformers (ViT) and EfficientNet architectures. Achieved high accuracy on the Food101 dataset through transfer learning and fine-tuning techniques.",
+    tech: ["PyTorch", "Computer Vision", "ViT", "EfficientNet", "Transfer Learning"]
+  },
+  {
+    logo: "✝️",
+    name: "SGV Christian Club Collective",
+    type: "Community Platform & Events",
+    period: "2024-2025",
+    description: (
+      <>
+        <p>Co-founded coalition uniting 15+ high school Christian clubs across the San Gabriel Valley. Built scalable framework for multi-school collaboration, media production, and fundraising.</p>
+        <ul>
+          <li><strong>Everything Night:</strong> Regional outreach event with 200+ students, 20 breakout sessions</li>
+          <li><strong>Chosen:</strong> Worship night with 100 students, dinner, games, and 2 music sets</li>
+        </ul>
+      </>
+    ),
+    tech: ["Event Planning", "Leadership", "Community Building", "Media Production"]
   }
 ];
 
 const WorkPage = () => {
   return (
     <Container>
-      <PageTitle>Work</PageTitle>
-      {workExperience.map((item, idx) => (
-        <TimelineItem key={idx}>
-          <ItemHeader>
-            <Logo href={item.href} target="_blank" rel="noopener noreferrer">
-              {item.logo}
-            </Logo>
-            <ItemContent>
-              <Company>{item.company}</Company>
-              <Role>{item.role}</Role>
-              <Period>{item.period}</Period>
-            </ItemContent>
-          </ItemHeader>
-          <Description>{item.description}</Description>
-        </TimelineItem>
-      ))}
-
-      <PageTitle style={{ marginTop: '3rem' }}>Projects</PageTitle>
+      <PageTitle>Projects</PageTitle>
       {projects.map((item, idx) => (
         <TimelineItem key={idx}>
           <ItemHeader>
             <Logo>{item.logo}</Logo>
             <ItemContent>
-              <Company>{item.company}</Company>
-              <Role>{item.role}</Role>
+              <ProjectName>{item.name}</ProjectName>
+              <ProjectType>{item.type}</ProjectType>
               <Period>{item.period}</Period>
             </ItemContent>
           </ItemHeader>
           <Description>{item.description}</Description>
+          <TechStack>
+            {item.tech.map((tech, techIdx) => (
+              <TechTag key={techIdx}>{tech}</TechTag>
+            ))}
+          </TechStack>
         </TimelineItem>
       ))}
     </Container>
