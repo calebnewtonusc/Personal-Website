@@ -7,14 +7,21 @@ import ainaTechLogo from '../assets/logos/learninglyai.png';
 import caltechLogo from '../assets/logos/caltech.png';
 import impact360Logo from '../assets/logos/impact360.png';
 import smslLogo from '../assets/projects/smsl.png';
+import uscResearchImg from '../assets/usc_research.jpg';
+import caltechResearchImg from '../assets/caltech_research.jpg';
+import ainaTechSetupImg from '../assets/AinatechImages/Ainatechsetup.jpg';
+import ainaTechGoatsImg from '../assets/AinatechImages/Ainatechgoats.jpg';
+import everythingNightImg from '../assets/everything_night_main.jpg';
+import impact360LeadershipImg from '../assets/impact360_leadership.jpg';
+import dominicanRepublicImg from '../assets/dominican_republic.jpg';
 
 const Container = styled.div`
-  max-width: 672px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem 2.5rem;
 
   @media (min-width: 640px) {
-    padding: 0 0 2.5rem;
+    padding: 0 1.5rem 2.5rem;
   }
 `;
 
@@ -135,6 +142,14 @@ const TimelineItems = styled.div`
 const YearBlock = styled.div`
   position: relative;
   padding-left: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media (min-width: 968px) {
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+  }
 `;
 
 const YearDot = styled.div`
@@ -252,9 +267,133 @@ const Link = styled.a`
   }
 `;
 
+const YearContent = styled.div`
+  flex: 1;
+`;
+
+const ImagesColumn = styled.div`
+  display: none;
+
+  @media (min-width: 968px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 280px;
+  }
+`;
+
+const FlipCard = styled.div`
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  perspective: 1000px;
+  cursor: pointer;
+  transform: rotate(${props => props.$rotation || 0}deg);
+  transition: transform 0.3s ease;
+  z-index: ${props => props.$zIndex || 1};
+  overflow: visible;
+
+  &:hover {
+    z-index: 10;
+    transform: rotate(0deg) scale(1.05);
+  }
+`;
+
+const FlipCardInner = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+  ${FlipCard}:hover & {
+    transform: rotateY(180deg);
+  }
+`;
+
+const FlipCardFront = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+`;
+
+const FlipCardBack = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border-radius: 12px;
+  background: ${({ theme }) => theme.card};
+  border: 1px solid ${({ theme }) => theme.border};
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+`;
+
+const Photo = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid ${({ theme }) => theme.border};
+`;
+
+const CardDate = styled.div`
+  font-size: 13px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary};
+`;
+
+const CardLocation = styled.div`
+  font-size: 14px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 0.5rem;
+`;
+
+const CardCaption = styled.div`
+  font-size: 14px;
+  color: ${({ theme }) => theme.text_primary};
+  opacity: 0.8;
+  line-height: 1.5;
+`;
+
 const timelineData = [
   {
     year: "2026",
+    images: [
+      {
+        image: uscResearchImg,
+        date: "2026",
+        location: "University of Southern California",
+        caption: "Machine learning research at USC",
+        rotation: 2,
+        zIndex: 1
+      },
+      {
+        image: ainaTechSetupImg,
+        date: "January 2026",
+        location: "Aina Tech Studio",
+        caption: "75-camera volumetric capture rig setup",
+        rotation: -2,
+        zIndex: 2
+      },
+      {
+        image: ainaTechGoatsImg,
+        date: "January 2026",
+        location: "Aina Tech - On Location",
+        caption: "Volumetric capture in diverse environments",
+        rotation: 1,
+        zIndex: 3
+      }
+    ],
     items: [
       {
         text: (
@@ -283,6 +422,16 @@ const timelineData = [
   },
   {
     year: "2025",
+    images: [
+      {
+        image: everythingNightImg,
+        date: "May 2025",
+        location: "San Gabriel Valley, CA",
+        caption: "Everything Night - 200+ students, 20 breakout sessions",
+        rotation: -2,
+        zIndex: 1
+      }
+    ],
     items: [
       {
         text: (
@@ -301,6 +450,16 @@ const timelineData = [
   },
   {
     year: "2024",
+    images: [
+      {
+        image: caltechResearchImg,
+        date: "Summer 2024",
+        location: "Caltech",
+        caption: "Control systems research - MATLAB and Python simulations",
+        rotation: 2,
+        zIndex: 1
+      }
+    ],
     items: [
       {
         text: (
@@ -317,6 +476,24 @@ const timelineData = [
   },
   {
     year: "2022-2023",
+    images: [
+      {
+        image: impact360LeadershipImg,
+        date: "Summer 2022-2023",
+        location: "Impact 360 Institute",
+        caption: "Leadership development and servant leadership training",
+        rotation: -1,
+        zIndex: 1
+      },
+      {
+        image: dominicanRepublicImg,
+        date: "Summer 2023",
+        location: "Dominican Republic",
+        caption: "Mission trip - serving local communities",
+        rotation: 2,
+        zIndex: 2
+      }
+    ],
     items: [
       {
         text: (
@@ -360,21 +537,41 @@ const HomePage = () => {
                 <YearDot />
                 <YearDotCircle />
                 {idx < timelineData.length - 1 && <YearVerticalLine />}
-                <Year>{yearBlock.year}</Year>
-                <ItemsList>
-                  {yearBlock.items.map((item, itemIdx) => (
-                    <Item key={itemIdx}>
-                      <div>{item.text}</div>
-                      {item.nested && item.nested.length > 0 && (
-                        <NestedList>
-                          {item.nested.map((nestedItem, nestedIdx) => (
-                            <NestedItem key={nestedIdx}>{nestedItem}</NestedItem>
-                          ))}
-                        </NestedList>
-                      )}
-                    </Item>
-                  ))}
-                </ItemsList>
+                <YearContent>
+                  <Year>{yearBlock.year}</Year>
+                  <ItemsList>
+                    {yearBlock.items.map((item, itemIdx) => (
+                      <Item key={itemIdx}>
+                        <div>{item.text}</div>
+                        {item.nested && item.nested.length > 0 && (
+                          <NestedList>
+                            {item.nested.map((nestedItem, nestedIdx) => (
+                              <NestedItem key={nestedIdx}>{nestedItem}</NestedItem>
+                            ))}
+                          </NestedList>
+                        )}
+                      </Item>
+                    ))}
+                  </ItemsList>
+                </YearContent>
+                {yearBlock.images && yearBlock.images.length > 0 && (
+                  <ImagesColumn>
+                    {yearBlock.images.map((photo, photoIdx) => (
+                      <FlipCard key={photoIdx} $rotation={photo.rotation} $zIndex={photo.zIndex}>
+                        <FlipCardInner>
+                          <FlipCardFront>
+                            <Photo src={photo.image} alt={photo.caption} />
+                          </FlipCardFront>
+                          <FlipCardBack>
+                            <CardDate>{photo.date}</CardDate>
+                            <CardLocation>{photo.location}</CardLocation>
+                            <CardCaption>{photo.caption}</CardCaption>
+                          </FlipCardBack>
+                        </FlipCardInner>
+                      </FlipCard>
+                    ))}
+                  </ImagesColumn>
+                )}
               </YearBlock>
             ))}
           </TimelineItems>

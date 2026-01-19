@@ -27,12 +27,12 @@ const Gradient = styled.div`
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 672px;
-  height: 400px;
-  background: radial-gradient(circle at 50% 0%, ${({ theme }) => theme.primary}10, transparent 50%);
+  max-width: 1400px;
+  height: 600px;
+  background: radial-gradient(circle at 50% 0%, ${({ theme }) => theme.primary}25, ${({ theme }) => theme.primary}08 40%, transparent 70%);
   pointer-events: none;
   z-index: 0;
-  mask-image: radial-gradient(circle at 50% 0%, black, transparent 70%);
+  opacity: 0.6;
 `;
 
 const Content = styled.div`

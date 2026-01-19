@@ -14,9 +14,6 @@ const Nav = styled.nav`
   background: ${({ theme }) => theme.bg === '#0a0a0a'
     ? 'rgba(10,10,10,0.7)'
     : 'rgba(255,255,255,0.7)'};
-  border-bottom: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(255,255,255,0.1)'
-    : 'rgba(0,0,0,0.1)'};
 
   @media (min-width: 640px) {
     padding: 1.5rem 1rem;

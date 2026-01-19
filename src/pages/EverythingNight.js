@@ -76,61 +76,134 @@ const EventDate = styled.div`
 
 const ImageGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
+
+  @media (max-width: 968px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
-const ImageCard = styled.div`
+const FlipCard = styled.div`
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  perspective: 1000px;
+  cursor: pointer;
+  transform: rotate(${props => props.$rotation || 0}deg);
+  transition: transform 0.3s ease;
+  z-index: ${props => props.$zIndex || 1};
+  overflow: visible;
+
+  &:hover {
+    z-index: 10;
+    transform: rotate(0deg) scale(1.05);
+  }
+`;
+
+const FlipCardInner = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+  ${FlipCard}:hover & {
+    transform: rotateY(180deg);
+  }
+`;
+
+const FlipCardFront = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
+`;
+
+const FlipCardBack = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border-radius: 12px;
+  background: ${({ theme }) => theme.card};
   border: 1px solid ${({ theme }) => theme.border};
-  background: ${({ theme }) => theme.bgLight};
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  border-radius: 12px;
+  border: 1px solid ${({ theme }) => theme.border};
 `;
 
 const ImageCaption = styled.div`
-  padding: 1rem;
   font-size: 14px;
-  color: ${({ theme }) => theme.text_secondary};
+  color: ${({ theme }) => theme.text_primary};
+  opacity: 0.8;
+  line-height: 1.5;
 `;
 
 const everythingNightImages = [
   {
     src: posterImg,
-    caption: "Everything Night Event Poster"
+    caption: "Everything Night Event Poster",
+    rotation: -2,
+    zIndex: 1
   },
   {
     src: crowdImg,
-    caption: "200+ Students Gathered for Community and Faith"
+    caption: "200+ Students Gathered for Community and Faith",
+    rotation: 1,
+    zIndex: 2
   },
   {
     src: dinnerImg,
-    caption: "Students Enjoying Dinner Together"
+    caption: "Students Enjoying Dinner Together",
+    rotation: -1,
+    zIndex: 3
   },
   {
     src: bandImg,
-    caption: "Live Worship Band Performance"
+    caption: "Live Worship Band Performance",
+    rotation: 2,
+    zIndex: 4
   },
   {
     src: dodgeballImg,
-    caption: "Fun and Games - Dodgeball Tournament"
+    caption: "Fun and Games - Dodgeball Tournament",
+    rotation: -2,
+    zIndex: 5
   },
   {
     src: picnicImg,
-    caption: "Community Building Through Shared Meals"
+    caption: "Community Building Through Shared Meals",
+    rotation: 1,
+    zIndex: 6
   }
 ];
 
 const chosenImages = [
   {
     src: chosenDabImg,
-    caption: "Celebrating Community at Chosen Event"
+    caption: "Celebrating Community at Chosen Event",
+    rotation: -1,
+    zIndex: 1
   }
 ];
 
@@ -171,10 +244,16 @@ const SGVCCCPage = () => {
         </Description>
         <ImageGrid>
           {chosenImages.map((img, idx) => (
-            <ImageCard key={idx}>
-              <Image src={img.src} alt={img.caption} />
-              <ImageCaption>{img.caption}</ImageCaption>
-            </ImageCard>
+            <FlipCard key={idx} $rotation={img.rotation} $zIndex={img.zIndex}>
+              <FlipCardInner>
+                <FlipCardFront>
+                  <Image src={img.src} alt={img.caption} />
+                </FlipCardFront>
+                <FlipCardBack>
+                  <ImageCaption>{img.caption}</ImageCaption>
+                </FlipCardBack>
+              </FlipCardInner>
+            </FlipCard>
           ))}
         </ImageGrid>
       </EventSection>
@@ -195,10 +274,16 @@ const SGVCCCPage = () => {
         </Description>
         <ImageGrid>
           {everythingNightImages.map((img, idx) => (
-            <ImageCard key={idx}>
-              <Image src={img.src} alt={img.caption} />
-              <ImageCaption>{img.caption}</ImageCaption>
-            </ImageCard>
+            <FlipCard key={idx} $rotation={img.rotation} $zIndex={img.zIndex}>
+              <FlipCardInner>
+                <FlipCardFront>
+                  <Image src={img.src} alt={img.caption} />
+                </FlipCardFront>
+                <FlipCardBack>
+                  <ImageCaption>{img.caption}</ImageCaption>
+                </FlipCardBack>
+              </FlipCardInner>
+            </FlipCard>
           ))}
         </ImageGrid>
       </EventSection>
