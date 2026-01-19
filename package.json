@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/calebnewtonusc/Personal-Website/issues"
   },
-  "homepage": "https://github.com/calebnewtonusc/Personal-Website#readme",
+  "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
