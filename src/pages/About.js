@@ -5,6 +5,8 @@ import baseballImage from '../assets/baseball_pitching.jpg';
 import boardGameImage from '../assets/board_game.jpg';
 import hikeImage from '../assets/hike.jpg';
 import familyImage from '../assets/baseball_with_family.jpg';
+import dominicanImage from '../assets/dominican_republic.jpg';
+import impact360Image from '../assets/impact360_leadership.jpg';
 
 const Container = styled.div`
   max-width: 1200px;
@@ -239,6 +241,22 @@ const photos = [
     caption: "Board game nights with friends",
     rotation: 3,
     zIndex: 5
+  },
+  {
+    image: impact360Image,
+    date: "Summer 2022-2023",
+    location: "Pine Mountain, GA",
+    caption: "Leadership training at Impact 360 Institute",
+    rotation: -2,
+    zIndex: 6
+  },
+  {
+    image: dominicanImage,
+    date: "March 2023",
+    location: "Dominican Republic",
+    caption: "Mission trip serving communities",
+    rotation: 1,
+    zIndex: 7
   }
 ];
 

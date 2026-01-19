@@ -9,11 +9,14 @@ const Nav = styled.nav`
   top: 0;
   z-index: 40;
   padding: 1rem;
-  backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   background: ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(10,10,10,0.8)'
-    : 'rgba(255,255,255,0.8)'};
-  border-bottom: 1px solid ${({ theme }) => theme.border};
+    ? 'rgba(10,10,10,0.7)'
+    : 'rgba(255,255,255,0.7)'};
+  border-bottom: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.1)'
+    : 'rgba(0,0,0,0.1)'};
 
   @media (min-width: 640px) {
     padding: 1.5rem 1rem;
@@ -77,14 +80,18 @@ const NavPill = styled.div`
   gap: 0.25rem;
   padding: 0.25rem;
   border-radius: 999px;
-  backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   background: ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(255,255,255,0.08)'
-    : 'rgba(255,255,255,0.3)'};
+    ? 'rgba(255,255,255,0.06)'
+    : 'rgba(0,0,0,0.04)'};
   border: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(255,255,255,0.1)'
-    : 'rgba(0,0,0,0.05)'};
-  box-shadow: 0 2px 8px -1px rgba(0,0,0,0.1);
+    ? 'rgba(255,255,255,0.12)'
+    : 'rgba(0,0,0,0.08)'};
+  box-shadow: 0 4px 12px -2px rgba(0,0,0,0.12),
+              inset 0 1px 0 ${({ theme }) => theme.bg === '#0a0a0a'
+                ? 'rgba(255,255,255,0.1)'
+                : 'rgba(255,255,255,0.6)'};
 `;
 
 const NavLink = styled(Link)`
