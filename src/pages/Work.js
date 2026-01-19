@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import selfIcon from '../assets/projects/self_icon_2.png';
 import frcVision from '../assets/projects/frcvision.png';
 import smslImg from '../assets/projects/smsl.png';
+import modellabImg from '../assets/projects/modellab.jpg';
+import foodvisionImg from '../assets/projects/foodvision.jpg';
+import tech16Img from '../assets/projects/tech16personalities.jpg';
 
 const Container = styled.div`
   max-width: 672px;
@@ -148,6 +151,15 @@ const TechTag = styled.span`
 const projects = [
   {
     logo: selfIcon,
+    name: "2026 Learning & Exploration",
+    type: "Concepts & Technologies to Explore",
+    period: "2026",
+    description: "Focus areas for 2026: Building production ML systems with PyTorch, exploring transformer architectures and attention mechanisms, diving into computer vision applications, learning ranking systems and recommendation engines, understanding distributed training and model deployment, experimenting with neural architecture search, and building end-to-end ML pipelines from data collection to production inference.",
+    tech: ["PyTorch", "Transformers", "Computer Vision", "Ranking Systems", "Distributed Training", "MLOps", "Neural Architecture Search"],
+    link: null
+  },
+  {
+    logo: modellabImg,
     name: "ModelLab",
     type: "ML Testing Platform",
     period: "2025",
@@ -156,7 +168,7 @@ const projects = [
     link: null
   },
   {
-    logo: selfIcon,
+    logo: tech16Img,
     name: "16 Tech Personalities",
     type: "Developer Assessment Framework",
     period: "2025",
@@ -174,7 +186,7 @@ const projects = [
     link: "https://www.youtube.com/playlist?list=PLWhbpQ2inj_p13rmaV6mOdpLu3kTIi8XF"
   },
   {
-    logo: selfIcon,
+    logo: foodvisionImg,
     name: "FoodVision Mini",
     type: "Computer Vision Project",
     period: "2025",

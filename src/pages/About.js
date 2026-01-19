@@ -43,11 +43,11 @@ const Subtitle = styled.div`
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2rem;
 
   @media (min-width: 968px) {
     grid-template-columns: 45% 1fr;
-    gap: 4rem;
+    gap: 3rem;
   }
 `;
 
@@ -98,20 +98,11 @@ const PhotoGrid = styled.div`
   gap: 1rem;
   flex: 1;
   max-width: 100%;
-  padding: 1rem 0;
-
-  /* Make the middle photo span 2 columns on larger screens */
-  & > div:nth-child(3) {
-    @media (min-width: 640px) {
-      grid-column: 1 / -1;
-      max-width: 80%;
-      margin: 0 auto;
-    }
-  }
+  padding: 0;
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 `;
 
@@ -119,17 +110,17 @@ const FlipCard = styled.div`
   position: relative;
   width: 100%;
   max-width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   perspective: 1000px;
   cursor: pointer;
   transform: rotate(${props => props.$rotation || 0}deg);
   transition: transform 0.3s ease;
   z-index: ${props => props.$zIndex || 1};
-  overflow: hidden;
+  overflow: visible;
 
   &:hover {
     z-index: 10;
-    transform: rotate(0deg) scale(1.02);
+    transform: rotate(0deg) scale(1.05);
   }
 `;
 

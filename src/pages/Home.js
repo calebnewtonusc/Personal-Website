@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroImg from '../assets/CalebAtUSC.jpg';
+import HeroImg from '../assets/CalebAtBeach.jpg';
 import GlassTag from '../components/GlassTag';
 import uscLogo from '../assets/logos/usc.png';
 import ainaTechLogo from '../assets/logos/learninglyai.png';
@@ -259,12 +259,11 @@ const timelineData = [
       {
         text: (
           <>
-            studying @ <GlassTag logo={uscLogo} href="https://www.usc.edu">USC</GlassTag>
+            research assistant @ <GlassTag logo={uscLogo} href="https://www.usc.edu">USC</GlassTag>
           </>
         ),
         nested: [
-          "Computer Science + Applied Mathematics major",
-          "Diving deep into ML foundations—PyTorch, transformers, computer vision, and ranking systems"
+          "Coming soon - Machine learning research position at University of Southern California"
         ]
       },
       {

@@ -2,14 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import { Bio } from '../../data/constants';
-import ProfileImg from '../../assets/CalebAtBeach.jpg';
+import ProfileImg from '../../assets/CalebAtUSC.jpg';
 
 const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 40;
   padding: 1rem;
-  background: transparent;
+  backdrop-filter: blur(12px) saturate(180%);
+  background: ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(10,10,10,0.8)'
+    : 'rgba(255,255,255,0.8)'};
+  border-bottom: 1px solid ${({ theme }) => theme.border};
 
   @media (min-width: 640px) {
     padding: 1.5rem 1rem;

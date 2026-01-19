@@ -121,8 +121,8 @@ const education = [
     description: (
       <ul>
         <li>Viterbi School of Engineering</li>
-        <li>Focus: Machine Learning, Statistics, Neural Architectures</li>
-        <li>Spring 2026 Courses: CSCI 170 (Discrete Methods), MATH 225 (Linear Algebra), CSCI 104 (Data Structures)</li>
+        <li>Focus: Machine Learning Systems + Data/ML Engineering</li>
+        <li>Spring 2026 Courses: Multivariable Calculus, Linear Algebra & Differential Equations, C++, Discrete Methods in CS</li>
       </ul>
     )
   },
