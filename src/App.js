@@ -8,6 +8,7 @@ import HomePage from './pages/Home';
 import AboutPage from './pages/About';
 import EducationPage from './pages/EducationPage';
 import WorkPage from './pages/Work';
+import EverythingNightPage from './pages/EverythingNight';
 import Footer from './components/Footer2';
 
 const Body = styled.div`
@@ -41,7 +42,7 @@ const Content = styled.div`
 function App() {
   const [isDark, setIsDark] = useState(() => {
     const saved = localStorage.getItem('theme');
-    return saved ? saved === 'dark' : true;
+    return saved ? saved === 'dark' : false;
   });
 
   useEffect(() => {
@@ -64,6 +65,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/education" element={<EducationPage />} />
               <Route path="/work" element={<WorkPage />} />
+              <Route path="/everything-night" element={<EverythingNightPage />} />
             </Routes>
             <Footer />
           </Content>

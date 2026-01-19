@@ -259,12 +259,24 @@ const timelineData = [
       {
         text: (
           <>
-            studying @ <GlassTag logo={uscLogo} href="https://www.usc.edu">usc</GlassTag>
+            studying @ <GlassTag logo={uscLogo} href="https://www.usc.edu">USC</GlassTag>
           </>
         ),
         nested: [
-          "computer science + applied mathematics major",
-          "diving deep into ml foundations—pytorch, transformers, computer vision, and ranking systems"
+          "Computer Science + Applied Mathematics major",
+          "Diving deep into ML foundations—PyTorch, transformers, computer vision, and ranking systems"
+        ]
+      },
+      {
+        text: (
+          <>
+            software engineer @ <GlassTag logo={ainaTechLogo} href="https://www.ainatech.ai/">Aina Tech</GlassTag>
+          </>
+        ),
+        nested: [
+          "Assisting in development of Aina's foundational generative 3D model using Gaussian splatting and neural radiance fields (NeRFs) for photorealistic spatial video and holographic rendering",
+          "Supporting day-to-day studio operations by managing volumetric capture workflows and data quality checks",
+          "Collaborating across software R&D and business initiatives as Aina builds flexible, AI-driven holographic content creation for industry and entertainment"
         ]
       }
     ]
@@ -275,26 +287,14 @@ const timelineData = [
       {
         text: (
           <>
-            software engineer @ <GlassTag logo={ainaTechLogo} href="https://ainatech.com">aina tech</GlassTag>
+            co-founder @ <GlassTag logo={smslLogo}>SGV Christian Club Collective</GlassTag>
           </>
         ),
         nested: [
-          "assisting in development of aina's foundational generative 3d model using gaussian splatting and neural radiance fields (nerfs) for photorealistic spatial video and holographic rendering",
-          "supporting day-to-day studio operations by managing volumetric capture workflows and data quality checks",
-          "collaborating across software r&d and business initiatives as aina builds flexible, ai-driven holographic content creation for industry and entertainment"
-        ]
-      },
-      {
-        text: (
-          <>
-            co-founder @ <GlassTag logo={smslLogo}>sgv christian club collective</GlassTag>
-          </>
-        ),
-        nested: [
-          "spearheaded formation of a coalition uniting 15+ high school christian clubs across the san gabriel valley",
-          "pioneered a scalable framework for multi-school collaboration, media, and fundraising that emphasized community-building",
-          "chosen (4/12/2025): worship night with 100 students serving dinner, leading games, and performing 2 worship music sets",
-          "everything night (5/23/2025): first-of-its-kind regional outreach event attracting 200+ students to 20 breakout sessions"
+          "Spearheaded formation of a coalition uniting 15+ high school Christian clubs across the San Gabriel Valley",
+          "Pioneered a scalable framework for multi-school collaboration, media, and fundraising that emphasized community-building",
+          "Chosen (4/12/2025): worship night with 100 students serving dinner, leading games, and performing 2 worship music sets",
+          (<><Link href="/everything-night">Everything Night</Link> (5/23/2025): first-of-its-kind regional outreach event attracting 200+ students to 20 breakout sessions</>)
         ]
       }
     ]
@@ -305,12 +305,12 @@ const timelineData = [
       {
         text: (
           <>
-            research assistant @ <GlassTag logo={caltechLogo} href="https://www.caltech.edu">caltech</GlassTag>
+            research assistant @ <GlassTag logo={caltechLogo} href="https://www.caltech.edu">Caltech</GlassTag>
           </>
         ),
         nested: [
-          "collaborated with taylan kargin, ph.d., on control theory research",
-          "created simulations and visual models that translated complex engineering concepts into digestible tools for vendors and stakeholders in aerospace, autonomous systems, and robotics"
+          "Collaborated with Taylan Kargin, Ph.D., on control theory research",
+          "Created simulations and visual models that translated complex engineering concepts into digestible tools for vendors and stakeholders in aerospace, autonomous systems, and robotics"
         ]
       }
     ]
@@ -321,12 +321,12 @@ const timelineData = [
       {
         text: (
           <>
-            leadership development @ <GlassTag logo={impact360Logo} href="https://impact360institute.org">impact 360 institute</GlassTag>
+            leadership development @ <GlassTag logo={impact360Logo} href="https://impact360institute.org">Impact 360 Institute</GlassTag>
           </>
         ),
         nested: [
-          "completed two summers of christian leadership training focused on character, servant leadership, and communication",
-          "strengthened my ability to collaborate, make decisions, and lead with empathy and purpose"
+          "Completed two summers of Christian leadership training focused on character, servant leadership, and communication",
+          "Strengthened my ability to collaborate, make decisions, and lead with empathy and purpose"
         ]
       }
     ]
@@ -338,20 +338,20 @@ const HomePage = () => {
     <Container>
       <ProfileSection>
         <ProfileImage src={HeroImg} alt="Caleb Newton" />
-        <Name>hi, i'm caleb newton</Name>
-        <Location>los angeles, ca</Location>
+        <Name>Hi, I'm Caleb Newton</Name>
+        <Location>Los Angeles, CA</Location>
         <Skills>
-          <Skill>machine learning</Skill>
-          <Skill>computer vision</Skill>
+          <Skill>Machine Learning</Skill>
+          <Skill>Computer Vision</Skill>
         </Skills>
-        <Tagline>cs + applied math @ usc</Tagline>
+        <Tagline>CS + Applied Math @ USC</Tagline>
         <Mission>
-          making software that makes people's lives better.
+          Making software that makes people's lives better.
         </Mission>
       </ProfileSection>
 
       <TimelineSection>
-        <TimelineTitle>timeline</TimelineTitle>
+        <TimelineTitle>Timeline</TimelineTitle>
         <TimelineContainer>
           <TimelineLine />
           <TimelineItems>

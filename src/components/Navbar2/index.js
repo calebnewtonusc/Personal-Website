@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import { Bio } from '../../data/constants';
-import ProfileImg from '../../assets/CalebAtUSC.jpg';
+import ProfileImg from '../../assets/CalebAtBeach.jpg';
 
 const Nav = styled.nav`
   position: sticky;
@@ -170,10 +170,10 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
 
         <CenterSection>
           <NavPill>
-            <NavLink to="/" $active={location.pathname === '/'}>home</NavLink>
-            <NavLink to="/about" $active={location.pathname === '/about'}>about</NavLink>
-            <NavLink to="/education" $active={location.pathname === '/education'}>education</NavLink>
-            <NavLink to="/work" $active={location.pathname === '/work'}>work</NavLink>
+            <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
+            <NavLink to="/about" $active={location.pathname === '/about'}>About</NavLink>
+            <NavLink to="/education" $active={location.pathname === '/education'}>Education</NavLink>
+            <NavLink to="/work" $active={location.pathname === '/work'}>Work</NavLink>
           </NavPill>
         </CenterSection>
 

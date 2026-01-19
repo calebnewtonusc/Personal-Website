@@ -148,38 +148,38 @@ const TechTag = styled.span`
 const projects = [
   {
     logo: selfIcon,
-    name: "modellab",
-    type: "ml testing platform",
+    name: "ModelLab",
+    type: "ML Testing Platform",
     period: "2025",
-    description: "interactive machine learning testing platform for comparing model performance across different tasks. features custom evaluation harnesses, model comparison tools, and performance visualization.",
-    tech: ["pytorch", "python", "react", "model evaluation"],
+    description: "Interactive machine learning testing platform for comparing model performance across different tasks. Features custom evaluation harnesses, model comparison tools, and performance visualization.",
+    tech: ["PyTorch", "Python", "React", "Model Evaluation"],
     link: null
   },
   {
     logo: selfIcon,
-    name: "16 tech personalities",
-    type: "developer assessment framework",
+    name: "16 Tech Personalities",
+    type: "Developer Assessment Framework",
     period: "2025",
-    description: "personality framework for tech professionals with 5 key spectrums: builder vs analyzer, speed vs precision, generalist vs specialist, solo vs collaborative, and practical vs theoretical. helps developers understand their working style and optimize team dynamics.",
-    tech: ["react", "typescript", "psychology", "ux design"],
+    description: "Personality framework for tech professionals with 5 key spectrums: Builder vs Analyzer, Speed vs Precision, Generalist vs Specialist, Solo vs Collaborative, and Practical vs Theoretical. Helps developers understand their working style and optimize team dynamics.",
+    tech: ["React", "TypeScript", "Psychology", "UX Design"],
     link: null
   },
   {
     logo: selfIcon,
-    name: "the lines",
-    type: "music project",
-    period: "september 2023 - january 2025",
-    description: "educational calculus music videos combining mathematical concepts with creative songwriting and production. created engaging content to make calculus more accessible and fun for students.",
-    tech: ["music", "video production", "education", "calculus"],
+    name: "The Lines",
+    type: "Music Project",
+    period: "September 2023 - January 2025",
+    description: "Educational calculus music videos combining mathematical concepts with creative songwriting and production. Created engaging content to make calculus more accessible and fun for students.",
+    tech: ["Music", "Video Production", "Education", "Calculus"],
     link: "https://www.youtube.com/playlist?list=PLWhbpQ2inj_p13rmaV6mOdpLu3kTIi8XF"
   },
   {
     logo: selfIcon,
-    name: "foodvision mini",
-    type: "computer vision project",
+    name: "FoodVision Mini",
+    type: "Computer Vision Project",
     period: "2025",
-    description: "food classification system using vision transformers (vit) and efficientnet architectures. achieved high accuracy on the food101 dataset through transfer learning and fine-tuning techniques.",
-    tech: ["pytorch", "computer vision", "vit", "efficientnet", "transfer learning"],
+    description: "Food classification system using Vision Transformers (ViT) and EfficientNet architectures. Achieved high accuracy on the Food101 dataset through transfer learning and fine-tuning techniques.",
+    tech: ["PyTorch", "Computer Vision", "ViT", "EfficientNet", "Transfer Learning"],
     link: null
   }
 ];
@@ -187,8 +187,8 @@ const projects = [
 const WorkPage = () => {
   return (
     <Container>
-      <PageTitle>projects</PageTitle>
-      <Subtitle>things i've built.</Subtitle>
+      <PageTitle>Projects</PageTitle>
+      <Subtitle>Things I've built.</Subtitle>
       {projects.map((item, idx) => (
         <TimelineItem key={idx}>
           <ItemHeader>

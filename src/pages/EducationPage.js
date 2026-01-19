@@ -115,46 +115,46 @@ const education = [
   {
     logo: uscLogo,
     isImage: true,
-    institution: "university of southern california",
-    degree: "bachelor of science - mathematics and computer science",
-    period: "2025 - may 2029",
+    institution: "University of Southern California",
+    degree: "Bachelor of Science - Mathematics and Computer Science",
+    period: "2025 - May 2029",
     description: (
       <ul>
-        <li>viterbi school of engineering</li>
-        <li>focus: machine learning, statistics, neural architectures</li>
-        <li>spring 2026 courses: csci 170 (discrete methods), math 225 (linear algebra), csci 104 (data structures)</li>
+        <li>Viterbi School of Engineering</li>
+        <li>Focus: Machine Learning, Statistics, Neural Architectures</li>
+        <li>Spring 2026 Courses: CSCI 170 (Discrete Methods), MATH 225 (Linear Algebra), CSCI 104 (Data Structures)</li>
       </ul>
     )
   },
   {
     logo: berkeleyLogo,
     isImage: true,
-    institution: "uc berkeley college of engineering",
-    degree: "summer program - computer science",
-    period: "june 2024 - june 2024",
-    description: "completed intensive bjc-based course in abstraction, recursion, algorithms, and introductory ml through snap! and python."
+    institution: "UC Berkeley College of Engineering",
+    degree: "Summer Program - Computer Science",
+    period: "June 2024 - June 2024",
+    description: "Completed intensive BJC-based course in abstraction, recursion, algorithms, and introductory ML through Snap! and Python."
   },
   {
     logo: uclaLogo,
     isImage: true,
-    institution: "california nanosystems institute at ucla",
-    degree: "summer program - nanotechnology",
-    period: "july 2023 - july 2023",
-    description: "developed aquashield (hydrophobic water bottle) in a two-week stem + entrepreneurship program, pitching to investors and applying matlab for analysis."
+    institution: "California Nanosystems Institute at UCLA",
+    degree: "Summer Program - Nanotechnology",
+    period: "July 2023 - July 2023",
+    description: "Developed AquaShield (hydrophobic water bottle) in a two-week STEM + entrepreneurship program, pitching to investors and applying MATLAB for analysis."
   },
   {
     logo: smhsLogo,
     isImage: true,
-    institution: "san marino high school",
-    degree: "high school diploma",
-    period: "august 2021 - june 2025",
+    institution: "San Marino High School",
+    degree: "High School Diploma",
+    period: "August 2021 - June 2025",
     description: (
       <ul>
-        <li>promethean: highest honor for a graduating student at san marino high school</li>
-        <li>person who made calculus fun, most likely to star in a calculus video</li>
-        <li>ap scholar with distinction</li>
-        <li>national merit commended student</li>
-        <li>acts christian club vice president (11th) and president (12th)</li>
+        <li>Promethean: Highest honor for a graduating student at San Marino High School</li>
+        <li>Person Who Made Calculus Fun, Most Likely to Star in a Calculus Video</li>
+        <li>AP Scholar with Distinction</li>
+        <li>National Merit Commended Student</li>
+        <li>ACTS Christian Club Vice President (11th) and President (12th)</li>
       </ul>
     )
   }
@@ -163,8 +163,8 @@ const education = [
 const EducationPage = () => {
   return (
     <Container>
-      <PageTitle>education</PageTitle>
-      <Subtitle>where i've learned.</Subtitle>
+      <PageTitle>Education</PageTitle>
+      <Subtitle>Where I've learned.</Subtitle>
       {education.map((item, idx) => (
         <TimelineItem key={idx}>
           <ItemHeader>

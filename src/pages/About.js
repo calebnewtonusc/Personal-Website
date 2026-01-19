@@ -97,33 +97,39 @@ const PhotoGrid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   flex: 1;
+  max-width: 100%;
+  padding: 1rem 0;
 
   /* Make the middle photo span 2 columns on larger screens */
   & > div:nth-child(3) {
     @media (min-width: 640px) {
       grid-column: 1 / -1;
+      max-width: 80%;
+      margin: 0 auto;
     }
   }
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 `;
 
 const FlipCard = styled.div`
   position: relative;
   width: 100%;
+  max-width: 100%;
   aspect-ratio: 4 / 3;
   perspective: 1000px;
   cursor: pointer;
-  transform: rotate(${props => props.$rotation || 0}deg) ${props => props.$hover ? `perspective(1000px) rotateX(${props.$rotateX}deg) rotateY(${props.$rotateY}deg)` : ''};
-  transition: transform 0.3s ease, z-index 0s;
+  transform: rotate(${props => props.$rotation || 0}deg);
+  transition: transform 0.3s ease;
   z-index: ${props => props.$zIndex || 1};
+  overflow: hidden;
 
   &:hover {
     z-index: 10;
-    transform: rotate(0deg) scale(1.05) perspective(1000px) rotateX(${props => props.$rotateX || 0}deg) rotateY(${props => props.$rotateY || 0}deg);
+    transform: rotate(0deg) scale(1.02);
   }
 `;
 
@@ -205,41 +211,41 @@ const Link = styled.a`
 const photos = [
   {
     image: vinylImage,
-    date: "ongoing",
-    location: "los angeles, ca",
-    caption: "vinyl wall growing (stevie to the strokes)",
+    date: "Ongoing",
+    location: "Los Angeles, CA",
+    caption: "Vinyl wall growing (Stevie to The Strokes)",
     rotation: -3,
     zIndex: 1
   },
   {
     image: baseballImage,
-    date: "may 2025",
-    location: "san marino, ca",
-    caption: "pitched in high school - loved the competition and strategy",
+    date: "May 2025",
+    location: "San Marino, CA",
+    caption: "Pitched in high school - loved the competition and strategy",
     rotation: 2,
     zIndex: 2
   },
   {
     image: familyImage,
-    date: "ongoing",
-    location: "los angeles, ca",
-    caption: "i have 3 younger siblings",
+    date: "Ongoing",
+    location: "Los Angeles, CA",
+    caption: "I have 3 younger siblings",
     rotation: -1,
     zIndex: 3
   },
   {
     image: hikeImage,
-    date: "june 2025",
-    location: "los angeles, ca",
-    caption: "sunrise hikes above the hollywood sign",
+    date: "June 2025",
+    location: "Los Angeles, CA",
+    caption: "Sunrise hikes above the Hollywood sign",
     rotation: -2,
     zIndex: 4
   },
   {
     image: boardGameImage,
-    date: "ongoing",
-    location: "los angeles, ca",
-    caption: "board game nights with friends",
+    date: "Ongoing",
+    location: "Los Angeles, CA",
+    caption: "Board game nights with friends",
     rotation: 3,
     zIndex: 5
   }
@@ -275,25 +281,25 @@ const AboutPage = () => {
 
   return (
     <Container>
-      <Title>about</Title>
-      <Subtitle>who i am.</Subtitle>
+      <Title>About</Title>
+      <Subtitle>Who I am.</Subtitle>
 
       <ContentWrapper>
         <TextContent>
-          <SectionHeading>more about me...</SectionHeading>
+          <SectionHeading>More About Me...</SectionHeading>
           <Paragraph>
-            i'm a machine learning engineer based in los angeles, ca, studying computer science + applied mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">university of southern california</Link>. i love building software that makes people's lives better.
+            I'm a machine learning engineer based in Los Angeles, CA, studying Computer Science + Applied Mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">University of Southern California</Link>. I love building software that makes people's lives better.
           </Paragraph>
           <Paragraph>
-            my approach to tech is grounded in my christian faith—i believe the best technology serves people and helps them flourish. currently working on holographic video systems at <Link href="https://ainatech.com" target="_blank" rel="noopener noreferrer">aina tech</Link>.
+            My approach to tech is grounded in my Christian faith—I believe the best technology serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://www.ainatech.ai/" target="_blank" rel="noopener noreferrer">Aina Tech</Link>.
           </Paragraph>
 
-          <AsideHeading>aside from work, i'm currently:</AsideHeading>
+          <AsideHeading>Aside from work, I'm currently:</AsideHeading>
           <BulletList>
-            <BulletItem>collecting vinyl records (stevie wonder, the strokes, quadeca)</BulletItem>
-            <BulletItem>hiking trails at sunrise and finding god in creation</BulletItem>
-            <BulletItem>playing board games with friends (settlers, ticket to ride, catan)</BulletItem>
-            <BulletItem>exploring biohacking and optimizing daily routines</BulletItem>
+            <BulletItem>Collecting vinyl records (Stevie Wonder, The Strokes, Quadeca)</BulletItem>
+            <BulletItem>Hiking trails at sunrise and finding God in creation</BulletItem>
+            <BulletItem>Playing board games with friends (Settlers, Ticket to Ride, Catan)</BulletItem>
+            <BulletItem>Exploring biohacking and optimizing daily routines</BulletItem>
           </BulletList>
         </TextContent>
 
