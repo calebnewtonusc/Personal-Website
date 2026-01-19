@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link as RouterLink } from 'react-router-dom';
 
 const GlassShell = styled.a`
   display: inline-flex;
@@ -56,7 +57,7 @@ const Logo = styled.img`
   object-fit: cover;
 `;
 
-const GlassTag = ({ logo, children, href, ...props }) => {
+const GlassTag = ({ logo, children, href, internal, ...props }) => {
   const content = (
     <GlassSurface>
       {logo && <Logo src={logo} alt="" />}
@@ -65,6 +66,15 @@ const GlassTag = ({ logo, children, href, ...props }) => {
   );
 
   if (href) {
+    // If internal is true or href starts with '/', use React Router Link
+    if (internal || href.startsWith('/')) {
+      return (
+        <GlassShell as={RouterLink} to={href} {...props}>
+          {content}
+        </GlassShell>
+      );
+    }
+    // External link
     return (
       <GlassShell href={href} target="_blank" rel="noopener noreferrer" {...props}>
         {content}

@@ -9,6 +9,7 @@ import AboutPage from './pages/About';
 import EducationPage from './pages/EducationPage';
 import WorkPage from './pages/Work';
 import EverythingNightPage from './pages/EverythingNight';
+import ComingSoonPage from './pages/ComingSoon';
 import Footer from './components/Footer2';
 
 const Body = styled.div`
@@ -66,6 +67,9 @@ function App() {
               <Route path="/education" element={<EducationPage />} />
               <Route path="/work" element={<WorkPage />} />
               <Route path="/everything-night" element={<EverythingNightPage />} />
+              <Route path="/modellab" element={<ComingSoonPage />} />
+              <Route path="/tech16" element={<ComingSoonPage />} />
+              <Route path="/foodvision" element={<ComingSoonPage />} />
             </Routes>
             <Footer />
           </Content>

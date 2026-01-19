@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link as RouterLink } from 'react-router-dom';
 import selfIcon from '../assets/projects/self_icon_2.png';
 import frcVision from '../assets/projects/frcvision.png';
 import smslImg from '../assets/projects/smsl.png';
@@ -162,19 +163,21 @@ const projects = [
     logo: modellabImg,
     name: "ModelLab",
     type: "ML Testing Platform",
-    period: "2025",
-    description: "Interactive machine learning testing platform for comparing model performance across different tasks. Features custom evaluation harnesses, model comparison tools, and performance visualization.",
-    tech: ["PyTorch", "Python", "React", "Model Evaluation"],
-    link: null
+    period: "January 2025",
+    description: "Built an ML experiment command center with dataset versioning (checksums, schema snapshots), run tracking (seed, commit hash, dataset version), and artifact storage for reproducibility. Implemented EvalHarness: standardized metrics.json, slices.json, failure examples, and compare mode with metric/config/artifact diffs plus p50/p95 latency measurement.",
+    tech: ["PyTorch", "Python", "sklearn", "Dataset Versioning", "Reproducibility"],
+    link: "/modellab",
+    internal: true
   },
   {
     logo: tech16Img,
-    name: "16 Tech Personalities",
+    name: "Tech 16 Personalities",
     type: "Developer Assessment Framework",
-    period: "2025",
-    description: "Personality framework for tech professionals with 5 key spectrums: Builder vs Analyzer, Speed vs Precision, Generalist vs Specialist, Solo vs Collaborative, and Practical vs Theoretical. Helps developers understand their working style and optimize team dynamics.",
-    tech: ["React", "TypeScript", "Psychology", "UX Design"],
-    link: null
+    period: "January 2025",
+    description: "Implemented a 40-question Likert quiz that scores 5 spectrums and outputs a 4-letter Tech Type plus suffix (-A/-T); stores raw trait percentages and quiz version for integrity. Built CMS-like content + role mapping (trait-weighted RoleScore) and share features (results card, optional compare) using Next.js + TypeScript + Tailwind with Supabase Auth/Postgres.",
+    tech: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Postgres"],
+    link: "/tech16",
+    internal: true
   },
   {
     logo: selfIcon,
@@ -189,10 +192,11 @@ const projects = [
     logo: foodvisionImg,
     name: "FoodVision Mini",
     type: "Computer Vision Project",
-    period: "2025",
-    description: "Food classification system using Vision Transformers (ViT) and EfficientNet architectures. Achieved high accuracy on the Food101 dataset through transfer learning and fine-tuning techniques.",
-    tech: ["PyTorch", "Computer Vision", "ViT", "EfficientNet", "Transfer Learning"],
-    link: null
+    period: "December 2025",
+    description: "Trained a Food101 image classifier with a fast 3-class mini mode (pizza, steak, sushi); baseline EfficientNetB2 feature extractor with one meaningful improvement via transfer learning. Shipped a defensible eval report (accuracy, top-5, confusion matrix, calibration, failure examples) and measured CPU inference latency (warmup, p50/p95); served via FastAPI with a simple UI.",
+    tech: ["PyTorch", "EfficientNet", "FastAPI", "Transfer Learning"],
+    link: "/foodvision",
+    internal: true
   }
 ];
 
@@ -214,9 +218,15 @@ const WorkPage = () => {
             <ItemContent>
               <ProjectName>
                 {item.link ? (
-                  <ProjectLink href={item.link} target="_blank" rel="noopener noreferrer">
-                    {item.name}
-                  </ProjectLink>
+                  item.internal ? (
+                    <ProjectLink as={RouterLink} to={item.link}>
+                      {item.name}
+                    </ProjectLink>
+                  ) : (
+                    <ProjectLink href={item.link} target="_blank" rel="noopener noreferrer">
+                      {item.name}
+                    </ProjectLink>
+                  )
                 ) : (
                   item.name
                 )}

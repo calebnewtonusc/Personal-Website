@@ -273,9 +273,10 @@ const timelineData = [
           </>
         ),
         nested: [
-          "Assisting in development of Aina's foundational generative 3D model using Gaussian splatting and neural radiance fields (NeRFs) for photorealistic spatial video and holographic rendering",
-          "Supporting day-to-day studio operations by managing volumetric capture workflows and data quality checks",
-          "Collaborating across software R&D and business initiatives as Aina builds flexible, AI-driven holographic content creation for industry and entertainment"
+          "Assisting in development of Aina's foundational generative 3D model using Gaussian Splatting and Neural Radiance Fields (NeRFs) for photorealistic spatial video and holographic rendering",
+          "Supporting day-to-day studio operations by managing volumetric capture workflows and data quality checks to maintain high-fidelity 3D reconstruction across diverse environments",
+          "Collaborating across software R&D and business initiatives as Aina builds flexible, AI-driven holographic content creation for industry and entertainment",
+          "Have helped set up, operate, and break down a 75-camera volumetric capture rig, supporting calibration, synchronization, and reliable capture runs"
         ]
       }
     ]
@@ -286,14 +287,14 @@ const timelineData = [
       {
         text: (
           <>
-            co-founder @ <GlassTag logo={smslLogo}>SGV Christian Club Collective</GlassTag>
+            co-founder @ <GlassTag logo={smslLogo} href="/everything-night">SGV Christian Club Collective</GlassTag>
           </>
         ),
         nested: [
           "Spearheaded formation of a coalition uniting 15+ high school Christian clubs across the San Gabriel Valley",
-          "Pioneered a scalable framework for multi-school collaboration, media, and fundraising that emphasized community-building",
-          "Chosen (4/12/2025): worship night with 100 students serving dinner, leading games, and performing 2 worship music sets",
-          (<><Link href="/everything-night">Everything Night</Link> (5/23/2025): first-of-its-kind regional outreach event attracting 200+ students to 20 breakout sessions</>)
+          "Conceived and executed Everything Night, a first-of-its-kind regional event attracting 200+ students to 20 breakout sessions",
+          "Exercised visionary leadership by filtering and curating the strongest student-led ideas into a cohesive program that maximized impact",
+          "Pioneered a scalable framework for multi-school collaboration, media, and fundraising that emphasized community-building and created a replicable model for regional impact"
         ]
       }
     ]
@@ -308,8 +309,8 @@ const timelineData = [
           </>
         ),
         nested: [
-          "Collaborated with Taylan Kargin, Ph.D., on control theory research",
-          "Created simulations and visual models that translated complex engineering concepts into digestible tools for vendors and stakeholders in aerospace, autonomous systems, and robotics"
+          "Built MATLAB and Python simulations to compare Taylan Kargin's control model against three alternatives; produced visualizations to communicate stability, efficiency, and scalability trade-offs",
+          "Created system models and plots to distill theory into actionable insights for faculty and peers; supported evaluation for aerospace and robotics control strategies"
         ]
       }
     ]
