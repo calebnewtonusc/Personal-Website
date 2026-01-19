@@ -4,8 +4,6 @@ import vinylImage from '../assets/vinyl_collection.jpg';
 import baseballImage from '../assets/baseball_pitching.jpg';
 import boardGameImage from '../assets/board_game.jpg';
 import hikeImage from '../assets/hike.jpg';
-import baseballFamilyImage from '../assets/baseball_with_family.jpg';
-import dominicanImage from '../assets/dominican_republic.jpg';
 
 const Container = styled.div`
   max-width: 672px;
@@ -22,7 +20,7 @@ const Container = styled.div`
 `;
 
 const Section = styled.section`
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 `;
 
 const SectionHeader = styled.div`
@@ -33,104 +31,118 @@ const SectionTitle = styled.h2`
   font-size: 20px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 `;
 
 const SectionSubtitle = styled.div`
   font-size: 14px;
   color: ${({ theme }) => theme.text_secondary};
+  opacity: 0.8;
 `;
 
 const Text = styled.p`
   font-size: 15px;
   line-height: 1.7;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  opacity: 0.95;
 `;
 
 const List = styled.ul`
-  list-style: disc;
-  margin-left: 1.25rem;
-  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 `;
 
 const ListItem = styled.li`
   font-size: 15px;
   line-height: 1.7;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.95;
+  padding-left: 1.25rem;
+  position: relative;
+
+  &:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: ${({ theme }) => theme.text_secondary};
+  }
 `;
 
 const PhotoGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   margin-top: 2rem;
 
-  @media (min-width: 640px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
   }
 `;
 
 const PhotoCard = styled.div`
-  border-radius: 8px;
+  position: relative;
   overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 4 / 3;
   border: 1px solid ${({ theme }) => theme.border};
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 
 const Photo = styled.img`
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
   display: block;
 `;
 
 const PhotoCaption = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 1rem;
-  background: ${({ theme }) => theme.bgLight};
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+  color: white;
+`;
+
+const PhotoLocation = styled.div`
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0.125rem;
 `;
 
 const PhotoDate = styled.div`
-  font-size: 13px;
-  color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 0.25rem;
-`;
-
-const PhotoDescription = styled.div`
-  font-size: 14px;
-  color: ${({ theme }) => theme.text_primary};
+  font-size: 12px;
+  opacity: 0.8;
 `;
 
 const photos = [
   {
     image: vinylImage,
-    date: "Ongoing",
-    description: "Vinyl collection wall - From Stevie to The Strokes"
+    location: "Los Angeles, CA",
+    date: "Ongoing"
   },
   {
     image: baseballImage,
-    date: "May 2025",
-    description: "17 consecutive scoreless innings senior year"
-  },
-  {
-    image: baseballFamilyImage,
-    date: "May 2025",
-    description: "Baseball with family - Games and good times"
-  },
-  {
-    image: boardGameImage,
-    date: "Ongoing",
-    description: "Board game nights - Strategy and storytelling"
+    location: "San Marino, CA",
+    date: "May 2025"
   },
   {
     image: hikeImage,
-    date: "June 2025",
-    description: "Sunrise hikes above the Hollywood sign"
+    location: "Los Angeles, CA",
+    date: "June 2025"
   },
   {
-    image: dominicanImage,
-    date: "July 2024",
-    description: "Dominican Republic mission trip - Service and ministry"
+    image: boardGameImage,
+    location: "Los Angeles, CA",
+    date: "Ongoing"
   }
 ];
 
@@ -140,7 +152,7 @@ const AboutPage = () => {
       <Section>
         <SectionHeader>
           <SectionTitle>About</SectionTitle>
-          <SectionSubtitle>Who I Am</SectionSubtitle>
+          <SectionSubtitle>Who I am</SectionSubtitle>
         </SectionHeader>
         <Text>
           I'm a machine learning engineer based in Los Angeles, CA, studying Statistics and Machine
@@ -154,43 +166,24 @@ const AboutPage = () => {
 
       <Section>
         <SectionHeader>
-          <SectionTitle>Currently</SectionTitle>
-          <SectionSubtitle>What I'm Working On</SectionSubtitle>
+          <SectionTitle>Aside from work</SectionTitle>
         </SectionHeader>
         <List>
           <ListItem>Deep diving into PyTorch, transformers, and computer vision</ListItem>
-          <ListItem>Building holographic video systems at Aina Tech</ListItem>
-          <ListItem>Exploring ranking systems and neural architectures</ListItem>
-          <ListItem>Trying to make learning joyful through ModelLab</ListItem>
+          <ListItem>Building holographic video systems with Gaussian Splatting</ListItem>
+          <ListItem>Vinyl collecting (from Stevie Wonder to The Strokes)</ListItem>
+          <ListItem>Hiking sunrise trails and finding God in creation</ListItem>
         </List>
       </Section>
 
       <Section>
-        <SectionHeader>
-          <SectionTitle>Beyond Code</SectionTitle>
-          <SectionSubtitle>What I'm Into</SectionSubtitle>
-        </SectionHeader>
-        <List>
-          <ListItem>Vinyl records - obsessed with discovering albums</ListItem>
-          <ListItem>Baseball - pitched in high school, learned discipline through injury</ListItem>
-          <ListItem>Board games - strategy, storytelling, and conversation</ListItem>
-          <ListItem>Hiking - sunrise hikes and finding God in creation</ListItem>
-          <ListItem>Christian leadership - ACTS, Impact 360, SGV Collective</ListItem>
-        </List>
-      </Section>
-
-      <Section>
-        <SectionHeader>
-          <SectionTitle>Photos</SectionTitle>
-          <SectionSubtitle>Moments That Matter</SectionSubtitle>
-        </SectionHeader>
         <PhotoGrid>
           {photos.map((photo, idx) => (
             <PhotoCard key={idx}>
-              <Photo src={photo.image} alt={photo.description} />
+              <Photo src={photo.image} alt={photo.location} />
               <PhotoCaption>
+                <PhotoLocation>{photo.location}</PhotoLocation>
                 <PhotoDate>{photo.date}</PhotoDate>
-                <PhotoDescription>{photo.description}</PhotoDescription>
               </PhotoCaption>
             </PhotoCard>
           ))}

@@ -211,15 +211,15 @@ const HomePage = () => {
   return (
     <Container>
       <ProfileImage src={HeroImg} alt="Caleb Newton" />
-      <Name>caleb newton</Name>
-      <Location>los angeles, ca</Location>
+      <Name>Caleb Newton</Name>
+      <Location>Los Angeles, CA</Location>
       <Skills>
         <Skill>machine learning</Skill>
         <Skill>statistics</Skill>
       </Skills>
       <Tagline>stats & ml @ usc</Tagline>
       <Mission>
-        making software that makes people's lives better
+        Making software that makes people's lives better.
       </Mission>
 
       {timelineData.map((yearSection, idx) => (
