@@ -4,6 +4,8 @@ import vinylImage from '../assets/vinyl_collection.jpg';
 import baseballImage from '../assets/baseball_pitching.jpg';
 import boardGameImage from '../assets/board_game.jpg';
 import hikeImage from '../assets/hike.jpg';
+import baseballFamilyImage from '../assets/baseball_with_family.jpg';
+import dominicanImage from '../assets/dominican_republic.jpg';
 
 const Container = styled.div`
   max-width: 672px;
@@ -20,129 +22,143 @@ const Container = styled.div`
 `;
 
 const Section = styled.section`
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 `;
 
-const SectionHeader = styled.div`
-  margin-bottom: 1.5rem;
-`;
-
-const SectionTitle = styled.h2`
-  font-size: 20px;
+const Title = styled.h1`
+  font-size: 28px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 `;
 
-const SectionSubtitle = styled.div`
-  font-size: 14px;
+const Subtitle = styled.div`
+  font-size: 15px;
   color: ${({ theme }) => theme.text_secondary};
-  opacity: 0.8;
+  margin-bottom: 2.5rem;
 `;
 
-const Text = styled.p`
+const SectionHeading = styled.h2`
+  font-size: 16px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+`;
+
+const Paragraph = styled.p`
   font-size: 15px;
   line-height: 1.7;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 1.25rem;
-  opacity: 0.95;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
 `;
 
-const List = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
+const BulletList = styled.ul`
+  list-style: disc;
+  margin-left: 1.25rem;
+  margin-bottom: 2rem;
 `;
 
-const ListItem = styled.li`
+const BulletItem = styled.li`
   font-size: 15px;
   line-height: 1.7;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 0.75rem;
-  opacity: 0.95;
-  padding-left: 1.25rem;
-  position: relative;
-
-  &:before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: ${({ theme }) => theme.text_secondary};
-  }
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
 `;
 
-const PhotoGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
-
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-  }
+const PhotoSection = styled.div`
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 `;
 
-const PhotoCard = styled.div`
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  aspect-ratio: 4 / 3;
-  border: 1px solid ${({ theme }) => theme.border};
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.02);
-  }
+const PhotoItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 `;
 
 const Photo = styled.img`
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid ${({ theme }) => theme.border};
   display: block;
 `;
 
-const PhotoCaption = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
-  color: white;
+const PhotoInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+`;
+
+const PhotoDate = styled.div`
+  font-size: 13px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary};
 `;
 
 const PhotoLocation = styled.div`
   font-size: 13px;
-  font-weight: 500;
-  margin-bottom: 0.125rem;
+  color: ${({ theme }) => theme.text_secondary};
 `;
 
-const PhotoDate = styled.div`
-  font-size: 12px;
+const PhotoCaption = styled.div`
+  font-size: 14px;
+  color: ${({ theme }) => theme.text_primary};
   opacity: 0.8;
+  font-style: italic;
+`;
+
+const Link = styled.a`
+  color: ${({ theme }) => theme.primary};
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const photos = [
   {
     image: vinylImage,
+    date: "Ongoing",
     location: "Los Angeles, CA",
-    date: "Ongoing"
+    caption: "vinyl wall growing (stevie to the strokes)"
   },
   {
     image: baseballImage,
+    date: "May 2025",
     location: "San Marino, CA",
-    date: "May 2025"
+    caption: "17 consecutive scoreless innings senior year"
   },
   {
     image: hikeImage,
+    date: "June 2025",
     location: "Los Angeles, CA",
-    date: "June 2025"
+    caption: "sunrise hikes above the hollywood sign"
+  },
+  {
+    image: dominicanImage,
+    date: "July 2024",
+    location: "Dominican Republic",
+    caption: "mission trip serving communities"
   },
   {
     image: boardGameImage,
+    date: "Ongoing",
     location: "Los Angeles, CA",
-    date: "Ongoing"
+    caption: "board game nights with friends"
+  },
+  {
+    image: baseballFamilyImage,
+    date: "May 2025",
+    location: "San Marino, CA",
+    caption: "baseball with family"
   }
 ];
 
@@ -150,45 +166,40 @@ const AboutPage = () => {
   return (
     <Container>
       <Section>
-        <SectionHeader>
-          <SectionTitle>About</SectionTitle>
-          <SectionSubtitle>Who I am</SectionSubtitle>
-        </SectionHeader>
-        <Text>
-          I'm a machine learning engineer based in Los Angeles, CA, studying Statistics and Machine
-          Learning @ University of Southern California.
-        </Text>
-        <Text>
-          I love building software that makes people's lives better. My approach to technology is
-          grounded in my Christian faith—I believe the best tech serves people and helps them flourish.
-        </Text>
+        <Title>About</Title>
+        <Subtitle>Who I am.</Subtitle>
+
+        <SectionHeading>more about me...</SectionHeading>
+        <Paragraph>
+          I'm a machine learning engineer based in Los Angeles, CA, studying Computer Science + Applied Mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">University of Southern California</Link>. I love building software that makes people's lives better.
+        </Paragraph>
+        <Paragraph>
+          My approach to tech is grounded in my Christian faith—I believe the best technology serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://ainatech.com" target="_blank" rel="noopener noreferrer">Aina Tech</Link>.
+        </Paragraph>
       </Section>
 
       <Section>
-        <SectionHeader>
-          <SectionTitle>Aside from work</SectionTitle>
-        </SectionHeader>
-        <List>
-          <ListItem>Deep diving into PyTorch, transformers, and computer vision</ListItem>
-          <ListItem>Building holographic video systems with Gaussian Splatting</ListItem>
-          <ListItem>Vinyl collecting (from Stevie Wonder to The Strokes)</ListItem>
-          <ListItem>Hiking sunrise trails and finding God in creation</ListItem>
-        </List>
+        <SectionHeading>Aside from work, I'm currently:</SectionHeading>
+        <BulletList>
+          <BulletItem>Deep diving into PyTorch, transformers, and computer vision</BulletItem>
+          <BulletItem>Building holographic video with Gaussian Splatting and NeRFs</BulletItem>
+          <BulletItem>Collecting vinyl records (Stevie Wonder, The Strokes, Quadeca)</BulletItem>
+          <BulletItem>Hiking trails at sunrise and finding God in creation</BulletItem>
+        </BulletList>
       </Section>
 
-      <Section>
-        <PhotoGrid>
-          {photos.map((photo, idx) => (
-            <PhotoCard key={idx}>
-              <Photo src={photo.image} alt={photo.location} />
-              <PhotoCaption>
-                <PhotoLocation>{photo.location}</PhotoLocation>
-                <PhotoDate>{photo.date}</PhotoDate>
-              </PhotoCaption>
-            </PhotoCard>
-          ))}
-        </PhotoGrid>
-      </Section>
+      <PhotoSection>
+        {photos.map((photo, idx) => (
+          <PhotoItem key={idx}>
+            <Photo src={photo.image} alt={photo.caption} />
+            <PhotoInfo>
+              <PhotoDate>{photo.date}</PhotoDate>
+              <PhotoLocation>{photo.location}</PhotoLocation>
+              <PhotoCaption>{photo.caption}</PhotoCaption>
+            </PhotoInfo>
+          </PhotoItem>
+        ))}
+      </PhotoSection>
     </Container>
   );
 };
