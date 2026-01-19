@@ -201,6 +201,26 @@ const Link = styled.a`
   }
 `;
 
+const SpotifySection = styled.div`
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid ${({ theme }) => theme.border};
+`;
+
+const SpotifyTitle = styled.h2`
+  font-size: 24px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 1.5rem;
+`;
+
+const SpotifyEmbed = styled.iframe`
+  border-radius: 12px;
+  width: 100%;
+  height: 352px;
+  border: none;
+`;
+
 const photos = [
   {
     image: vinylImage,
@@ -338,6 +358,15 @@ const AboutPage = () => {
           ))}
         </PhotoGrid>
       </ContentWrapper>
+
+      <SpotifySection>
+        <SpotifyTitle>Now Playing</SpotifyTitle>
+        <SpotifyEmbed
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1EpseloNqbLMWJ?utm_source=generator&theme=0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        />
+      </SpotifySection>
     </Container>
   );
 };
