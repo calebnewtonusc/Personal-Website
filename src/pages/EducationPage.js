@@ -6,12 +6,12 @@ import uclaLogo from '../assets/education/ucla_logo.png';
 import smhsLogo from '../assets/education/smhs.png';
 
 const Container = styled.div`
-  max-width: 672px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem 2.5rem;
 
   @media (min-width: 640px) {
-    padding: 0 0 2.5rem;
+    padding: 0 1.5rem 2.5rem;
   }
 `;
 
@@ -35,70 +35,133 @@ const Subtitle = styled.div`
   opacity: 0.8;
 `;
 
-const TimelineItem = styled.div`
-  margin-bottom: 2.5rem;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid ${({ theme }) => theme.border};
+const GlassCard = styled.div`
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%)'
+    : 'linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%)'};
+  border: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.12)'
+    : 'rgba(0,0,0,0.08)'};
+  box-shadow: ${({ theme }) => theme.bg === '#0a0a0a'
+    ? '0 8px 32px -4px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15)'
+    : '0 8px 32px -4px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.8)'};
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
 
-  &:last-child {
-    border-bottom: none;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: ${({ theme }) => theme.bg === '#0a0a0a'
+      ? '0 12px 40px -4px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.15)'
+      : '0 12px 40px -4px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.8)'};
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+  }
+
+  @media (max-width: 640px) {
+    padding: 1.5rem;
   }
 `;
 
 const ItemHeader = styled.div`
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
 `;
 
 const Logo = styled.div`
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  background: ${({ theme }) => theme.bgLight};
-  border: 1px solid ${({ theme }) => theme.border};
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.08)'
+    : 'rgba(255,255,255,0.95)'};
+  border: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.15)'
+    : 'rgba(0,0,0,0.08)'};
+  box-shadow: ${({ theme }) => theme.bg === '#0a0a0a'
+    ? '0 4px 12px rgba(0,0,0,0.3)'
+    : '0 4px 12px rgba(0,0,0,0.08)'};
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 24px;
   overflow: hidden;
+  padding: 0.75rem;
+
+  @media (max-width: 640px) {
+    width: 56px;
+    height: 56px;
+    padding: 0.625rem;
+  }
 `;
 
 const LogoImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 const ItemContent = styled.div`
   flex: 1;
+  min-width: 0;
 `;
 
 const Institution = styled.h2`
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+
+  @media (max-width: 640px) {
+    font-size: 18px;
+  }
 `;
 
 const Degree = styled.div`
   font-size: 15px;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  line-height: 1.4;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
 `;
 
 const Period = styled.div`
   font-size: 14px;
   color: ${({ theme }) => theme.text_secondary};
+  opacity: 0.7;
+
+  @media (max-width: 640px) {
+    font-size: 13px;
+  }
 `;
 
 const Description = styled.div`
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: ${({ theme }) => theme.text_secondary};
   margin-top: 0.75rem;
+  opacity: 0.9;
 
   ul {
     list-style: disc;
@@ -107,7 +170,12 @@ const Description = styled.div`
   }
 
   li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 13px;
   }
 `;
 
@@ -166,7 +234,7 @@ const EducationPage = () => {
       <PageTitle>Education</PageTitle>
       <Subtitle>Where I've learned.</Subtitle>
       {education.map((item, idx) => (
-        <TimelineItem key={idx}>
+        <GlassCard key={idx}>
           <ItemHeader>
             <Logo>
               {item.isImage ? (
@@ -182,7 +250,7 @@ const EducationPage = () => {
             </ItemContent>
           </ItemHeader>
           <Description>{item.description}</Description>
-        </TimelineItem>
+        </GlassCard>
       ))}
     </Container>
   );

@@ -6,7 +6,9 @@ import boardGameImage from '../assets/board_game.jpg';
 import hikeImage from '../assets/hike.jpg';
 import familyImage from '../assets/baseball_with_family.jpg';
 import dominicanImage from '../assets/dominican_republic.jpg';
-import impact360Image from '../assets/impact360_leadership.jpg';
+import concertImage from '../assets/concert.jpg';
+import guitarImage from '../assets/guitar.jpg';
+import gymBibleImage from '../assets/gym_bible.jpg';
 
 const Container = styled.div`
   max-width: 1200px;
@@ -96,11 +98,15 @@ const BulletItem = styled.li`
 
 const PhotoGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   flex: 1;
   max-width: 100%;
   padding: 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
@@ -201,23 +207,137 @@ const Link = styled.a`
   }
 `;
 
-const SpotifySection = styled.div`
+const MusicSection = styled.div`
   margin-top: 4rem;
   padding-top: 3rem;
   border-top: 1px solid ${({ theme }) => theme.border};
 `;
 
-const SpotifyTitle = styled.h2`
+const MusicHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+`;
+
+const MusicTitle = styled.h2`
   font-size: 24px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 1.5rem;
+`;
+
+const TabContainer = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.06)'
+    : 'rgba(0,0,0,0.04)'};
+  border: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.12)'
+    : 'rgba(0,0,0,0.08)'};
+`;
+
+const Tab = styled.button`
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: ${({ $active, theme }) => $active
+    ? (theme.bg === '#0a0a0a' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.05)')
+    : 'transparent'};
+  color: ${({ $active, theme }) => $active ? theme.text_primary : theme.text_secondary};
+
+  &:hover {
+    color: ${({ theme }) => theme.text_primary};
+    background: ${({ $active, theme }) => !$active && (theme.bg === '#0a0a0a'
+      ? 'rgba(255,255,255,0.08)'
+      : 'rgba(0,0,0,0.03)')};
+  }
+`;
+
+const AlbumsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+`;
+
+const AlbumCard = styled.a`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+`;
+
+const AlbumArt = styled.div`
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: ${({ theme }) => theme.card};
+  border: 1px solid ${({ theme }) => theme.border};
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+`;
+
+const AlbumArtImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+const AlbumInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+`;
+
+const AlbumName = styled.div`
+  font-size: 14px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  line-height: 1.3;
+`;
+
+const AlbumArtist = styled.div`
+  font-size: 13px;
+  color: ${({ theme }) => theme.text_secondary};
+`;
+
+const NowPlayingSection = styled.div`
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid ${({ theme }) => theme.border};
+`;
+
+const NowPlayingTitle = styled.h3`
+  font-size: 18px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 1rem;
 `;
 
 const SpotifyEmbed = styled.iframe`
   border-radius: 12px;
   width: 100%;
-  height: 352px;
+  height: 152px;
   border: none;
 `;
 
@@ -263,25 +383,96 @@ const photos = [
     zIndex: 5
   },
   {
-    image: impact360Image,
-    date: "Summer 2022-2023",
-    location: "Pine Mountain, GA",
-    caption: "Leadership training at Impact 360 Institute",
-    rotation: -2,
-    zIndex: 6
-  },
-  {
     image: dominicanImage,
     date: "March 2023",
     location: "Dominican Republic",
     caption: "Mission trip serving communities",
     rotation: 1,
+    zIndex: 6
+  },
+  {
+    image: concertImage,
+    date: "Ongoing",
+    location: "Los Angeles, CA",
+    caption: "Concert nights with friends",
+    rotation: -2,
     zIndex: 7
+  },
+  {
+    image: guitarImage,
+    date: "December 2025",
+    location: "Los Angeles, CA",
+    caption: "Recently bought guitar - learning worship songs",
+    rotation: 2,
+    zIndex: 8
+  },
+  {
+    image: gymBibleImage,
+    date: "Daily",
+    location: "Los Angeles, CA",
+    caption: "6am gym and Bible study routine",
+    rotation: -1,
+    zIndex: 9
+  }
+];
+
+const oldAlbums = [
+  {
+    name: "Songs in the Key of Life",
+    artist: "Stevie Wonder",
+    spotify: "https://open.spotify.com/album/6YUCc2RiXcEKS9ibuZxjt0",
+    image: "https://i.scdn.co/image/ab67616d0000b2732aa04b29ecd22d1389d1b925"
+  },
+  {
+    name: "The Miseducation of Lauryn Hill",
+    artist: "Lauryn Hill",
+    spotify: "https://open.spotify.com/album/1BZoqf8Zje5nGdwZhOjAtD",
+    image: "https://i.scdn.co/image/ab67616d0000b273390a5d4f71c9519c3e94acd9"
+  },
+  {
+    name: "Mothership Connection",
+    artist: "Parliament",
+    spotify: "https://open.spotify.com/album/36ltakMWOJ7FUjfmG0vOtJ",
+    image: "https://i.scdn.co/image/ab67616d0000b273b9b66d3f7e19f48e68e25ee0"
+  },
+  {
+    name: "A Love Supreme",
+    artist: "John Coltrane",
+    spotify: "https://open.spotify.com/album/7FWR41OwYX3vvRXOrREJHG",
+    image: "https://i.scdn.co/image/ab67616d0000b273582d56ce20fe0146ffa0e5cf"
+  }
+];
+
+const newAlbums = [
+  {
+    name: "LL",
+    artist: "The Hellp",
+    spotify: "https://open.spotify.com/album/0Oc2i2rRn7fxVPYiM8n7pL",
+    image: "https://i.scdn.co/image/ab67616d0000b27333b929789076b07b1ca9bbaf"
+  },
+  {
+    name: "Live at the Banks House",
+    artist: "Will Reagan",
+    spotify: "https://open.spotify.com/album/37CrDTv7KN6jL4Nz2X6Kke",
+    image: "https://i.scdn.co/image/ab67616d0000b2732e27e66e5e87f0d01c328c5b"
+  },
+  {
+    name: "Vanisher",
+    artist: "Quadeca",
+    spotify: "https://open.spotify.com/album/1WJj3jDgUFJpHb5xGz3Q6r",
+    image: "https://i.scdn.co/image/ab67616d0000b2732de68eb707cc400f908a6ec5"
+  },
+  {
+    name: "Sometimes I Might Be Introvert",
+    artist: "Little Simz",
+    spotify: "https://open.spotify.com/album/0DBoWQ52XUHtrZQdfAqOVj",
+    image: "https://i.scdn.co/image/ab67616d0000b2733ae914c69f8afa479c300501"
   }
 ];
 
 const AboutPage = () => {
   const [cardStates, setCardStates] = useState(photos.map(() => ({ rotateX: 0, rotateY: 0, hover: false })));
+  const [activeTab, setActiveTab] = useState('old');
 
   const handleMouseMove = (idx, e) => {
     const card = e.currentTarget;
@@ -307,6 +498,8 @@ const AboutPage = () => {
       return newStates;
     });
   };
+
+  const currentAlbums = activeTab === 'old' ? oldAlbums : newAlbums;
 
   return (
     <Container>
@@ -359,14 +552,42 @@ const AboutPage = () => {
         </PhotoGrid>
       </ContentWrapper>
 
-      <SpotifySection>
-        <SpotifyTitle>Now Playing</SpotifyTitle>
-        <SpotifyEmbed
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1EpseloNqbLMWJ?utm_source=generator&theme=0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        />
-      </SpotifySection>
+      <MusicSection>
+        <MusicHeader>
+          <MusicTitle>Music</MusicTitle>
+          <TabContainer>
+            <Tab $active={activeTab === 'old'} onClick={() => setActiveTab('old')}>
+              Favorite Old Albums
+            </Tab>
+            <Tab $active={activeTab === 'new'} onClick={() => setActiveTab('new')}>
+              Favorite New Albums
+            </Tab>
+          </TabContainer>
+        </MusicHeader>
+
+        <AlbumsGrid>
+          {currentAlbums.map((album, idx) => (
+            <AlbumCard key={idx} href={album.spotify} target="_blank" rel="noopener noreferrer">
+              <AlbumArt>
+                <AlbumArtImage src={album.image} alt={`${album.name} by ${album.artist}`} />
+              </AlbumArt>
+              <AlbumInfo>
+                <AlbumName>{album.name}</AlbumName>
+                <AlbumArtist>{album.artist}</AlbumArtist>
+              </AlbumInfo>
+            </AlbumCard>
+          ))}
+        </AlbumsGrid>
+
+        <NowPlayingSection>
+          <NowPlayingTitle>Now Playing</NowPlayingTitle>
+          <SpotifyEmbed
+            src="https://open.spotify.com/embed/track/37f17hCX9Slu0HwHI6k9tE?utm_source=generator"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          />
+        </NowPlayingSection>
+      </MusicSection>
     </Container>
   );
 };
