@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import uscLogo from '../assets/logos/usc.png';
+import berkeleyLogo from '../assets/education/berkeley.png';
+import uclaLogo from '../assets/education/ucla_logo.png';
+import smhsLogo from '../assets/education/smhs.png';
 
 const Container = styled.div`
   max-width: 672px;
@@ -12,10 +16,23 @@ const Container = styled.div`
 `;
 
 const PageTitle = styled.h1`
-  font-size: 24px;
+  font-size: 48px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+
+  @media (max-width: 640px) {
+    font-size: 36px;
+  }
+`;
+
+const Subtitle = styled.div`
+  font-size: 16px;
+  color: ${({ theme }) => theme.text_secondary};
+  margin-bottom: 3rem;
+  opacity: 0.8;
 `;
 
 const TimelineItem = styled.div`
@@ -46,6 +63,13 @@ const Logo = styled.div`
   justify-content: center;
   flex-shrink: 0;
   font-size: 24px;
+  overflow: hidden;
+`;
+
+const LogoImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const ItemContent = styled.div`
@@ -89,43 +113,48 @@ const Description = styled.div`
 
 const education = [
   {
-    logo: "🎓",
-    institution: "University of Southern California",
-    degree: "Bachelor of Science - Computer Science + Applied Mathematics",
-    period: "August 2025 - May 2029",
+    logo: uscLogo,
+    isImage: true,
+    institution: "university of southern california",
+    degree: "bachelor of science - mathematics and computer science",
+    period: "2025 - may 2029",
     description: (
       <ul>
-        <li>Viterbi School of Engineering</li>
-        <li>Focus: Machine Learning, Statistics, Neural Architectures</li>
-        <li>Spring 2026 Courses: CSCI 170 (Discrete Methods), MATH 225 (Linear Algebra), CSCI 104 (Data Structures)</li>
+        <li>viterbi school of engineering</li>
+        <li>focus: machine learning, statistics, neural architectures</li>
+        <li>spring 2026 courses: csci 170 (discrete methods), math 225 (linear algebra), csci 104 (data structures)</li>
       </ul>
     )
   },
   {
-    logo: "🐻",
-    institution: "UC Berkeley College of Engineering",
-    degree: "Summer Program - Computer Science",
-    period: "June 2024 - June 2024",
-    description: "Intensive computer science program focusing on algorithms and data structures."
+    logo: berkeleyLogo,
+    isImage: true,
+    institution: "uc berkeley college of engineering",
+    degree: "summer program - computer science",
+    period: "june 2024 - june 2024",
+    description: "completed intensive bjc-based course in abstraction, recursion, algorithms, and introductory ml through snap! and python."
   },
   {
-    logo: "🔬",
-    institution: "California NanoSystems Institute at UCLA",
-    degree: "Summer Program - Nanotechnology",
-    period: "July 2023 - July 2023",
-    description: "Hands-on nanotechnology research and laboratory experience."
+    logo: uclaLogo,
+    isImage: true,
+    institution: "california nanosystems institute at ucla",
+    degree: "summer program - nanotechnology",
+    period: "july 2023 - july 2023",
+    description: "developed aquashield (hydrophobic water bottle) in a two-week stem + entrepreneurship program, pitching to investors and applying matlab for analysis."
   },
   {
-    logo: "🏫",
-    institution: "San Marino High School",
-    degree: "High School Diploma",
-    period: "August 2021 - June 2025",
+    logo: smhsLogo,
+    isImage: true,
+    institution: "san marino high school",
+    degree: "high school diploma",
+    period: "august 2021 - june 2025",
     description: (
       <ul>
-        <li>AP Scholar with Distinction</li>
-        <li>National Merit Commended Student</li>
-        <li>Varsity Baseball - Pitcher (17 consecutive scoreless innings senior year)</li>
-        <li>ACTS Leadership Team</li>
+        <li>promethean: highest honor for a graduating student at san marino high school</li>
+        <li>person who made calculus fun, most likely to star in a calculus video</li>
+        <li>ap scholar with distinction</li>
+        <li>national merit commended student</li>
+        <li>acts christian club vice president (11th) and president (12th)</li>
       </ul>
     )
   }
@@ -134,11 +163,18 @@ const education = [
 const EducationPage = () => {
   return (
     <Container>
-      <PageTitle>Education</PageTitle>
+      <PageTitle>education</PageTitle>
+      <Subtitle>where i've learned.</Subtitle>
       {education.map((item, idx) => (
         <TimelineItem key={idx}>
           <ItemHeader>
-            <Logo>{item.logo}</Logo>
+            <Logo>
+              {item.isImage ? (
+                <LogoImage src={item.logo} alt={item.institution} />
+              ) : (
+                item.logo
+              )}
+            </Logo>
             <ItemContent>
               <Institution>{item.institution}</Institution>
               <Degree>{item.degree}</Degree>

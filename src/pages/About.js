@@ -1,50 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import vinylImage from '../assets/vinyl_collection.jpg';
 import baseballImage from '../assets/baseball_pitching.jpg';
 import boardGameImage from '../assets/board_game.jpg';
 import hikeImage from '../assets/hike.jpg';
-import baseballFamilyImage from '../assets/baseball_with_family.jpg';
-import dominicanImage from '../assets/dominican_republic.jpg';
+import familyImage from '../assets/baseball_with_family.jpg';
 
 const Container = styled.div`
-  max-width: 672px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem 2.5rem;
 
   @media (min-width: 640px) {
-    padding: 0 0 2.5rem;
+    padding: 0 1.5rem 2.5rem;
   }
 
   @media (min-width: 768px) {
-    padding: 0 0 3.5rem;
+    padding: 0 2rem 3.5rem;
   }
 `;
 
-const Section = styled.section`
-  margin-bottom: 3rem;
-`;
-
 const Title = styled.h1`
-  font-size: 28px;
+  font-size: 48px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+
+  @media (max-width: 640px) {
+    font-size: 36px;
+  }
 `;
 
 const Subtitle = styled.div`
-  font-size: 15px;
+  font-size: 16px;
   color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  opacity: 0.6;
+`;
+
+const ContentWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+
+  @media (min-width: 968px) {
+    grid-template-columns: 45% 1fr;
+    gap: 4rem;
+  }
+`;
+
+const TextContent = styled.div`
+  flex: 1;
 `;
 
 const SectionHeading = styled.h2`
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 1rem;
-  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
 `;
 
 const Paragraph = styled.p`
@@ -55,10 +70,18 @@ const Paragraph = styled.p`
   opacity: 0.9;
 `;
 
+const AsideHeading = styled.h2`
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 2rem 0 1rem 0;
+  font-style: italic;
+`;
+
 const BulletList = styled.ul`
   list-style: disc;
   margin-left: 1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 const BulletItem = styled.li`
@@ -69,49 +92,105 @@ const BulletItem = styled.li`
   opacity: 0.9;
 `;
 
-const PhotoSection = styled.div`
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+const PhotoGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  flex: 1;
+
+  /* Make the middle photo span 2 columns on larger screens */
+  & > div:nth-child(3) {
+    @media (min-width: 640px) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 `;
 
-const PhotoItem = styled.div`
+const FlipCard = styled.div`
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  perspective: 1000px;
+  cursor: pointer;
+  transform: rotate(${props => props.$rotation || 0}deg) ${props => props.$hover ? `perspective(1000px) rotateX(${props.$rotateX}deg) rotateY(${props.$rotateY}deg)` : ''};
+  transition: transform 0.3s ease, z-index 0s;
+  z-index: ${props => props.$zIndex || 1};
+
+  &:hover {
+    z-index: 10;
+    transform: rotate(0deg) scale(1.05) perspective(1000px) rotateX(${props => props.$rotateX || 0}deg) rotateY(${props => props.$rotateY || 0}deg);
+  }
+`;
+
+const FlipCardInner = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+  ${FlipCard}:hover & {
+    transform: rotateY(180deg);
+  }
+`;
+
+const FlipCardFront = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+`;
+
+const FlipCardBack = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border-radius: 12px;
+  background: ${({ theme }) => theme.card};
+  border: 1px solid ${({ theme }) => theme.border};
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  justify-content: center;
+  gap: 0.5rem;
 `;
 
 const Photo = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   border-radius: 12px;
   border: 1px solid ${({ theme }) => theme.border};
-  display: block;
 `;
 
-const PhotoInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-`;
-
-const PhotoDate = styled.div`
+const CardDate = styled.div`
   font-size: 13px;
   font-weight: 500;
-  color: ${({ theme }) => theme.text_primary};
-`;
-
-const PhotoLocation = styled.div`
-  font-size: 13px;
   color: ${({ theme }) => theme.text_secondary};
 `;
 
-const PhotoCaption = styled.div`
+const CardLocation = styled.div`
+  font-size: 14px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 0.5rem;
+`;
+
+const CardCaption = styled.div`
   font-size: 14px;
   color: ${({ theme }) => theme.text_primary};
   opacity: 0.8;
-  font-style: italic;
+  line-height: 1.5;
 `;
 
 const Link = styled.a`
@@ -126,80 +205,124 @@ const Link = styled.a`
 const photos = [
   {
     image: vinylImage,
-    date: "Ongoing",
-    location: "Los Angeles, CA",
-    caption: "vinyl wall growing (stevie to the strokes)"
+    date: "ongoing",
+    location: "los angeles, ca",
+    caption: "vinyl wall growing (stevie to the strokes)",
+    rotation: -3,
+    zIndex: 1
   },
   {
     image: baseballImage,
-    date: "May 2025",
-    location: "San Marino, CA",
-    caption: "17 consecutive scoreless innings senior year"
+    date: "may 2025",
+    location: "san marino, ca",
+    caption: "pitched in high school - loved the competition and strategy",
+    rotation: 2,
+    zIndex: 2
+  },
+  {
+    image: familyImage,
+    date: "ongoing",
+    location: "los angeles, ca",
+    caption: "i have 3 younger siblings",
+    rotation: -1,
+    zIndex: 3
   },
   {
     image: hikeImage,
-    date: "June 2025",
-    location: "Los Angeles, CA",
-    caption: "sunrise hikes above the hollywood sign"
-  },
-  {
-    image: dominicanImage,
-    date: "July 2024",
-    location: "Dominican Republic",
-    caption: "mission trip serving communities"
+    date: "june 2025",
+    location: "los angeles, ca",
+    caption: "sunrise hikes above the hollywood sign",
+    rotation: -2,
+    zIndex: 4
   },
   {
     image: boardGameImage,
-    date: "Ongoing",
-    location: "Los Angeles, CA",
-    caption: "board game nights with friends"
-  },
-  {
-    image: baseballFamilyImage,
-    date: "May 2025",
-    location: "San Marino, CA",
-    caption: "baseball with family"
+    date: "ongoing",
+    location: "los angeles, ca",
+    caption: "board game nights with friends",
+    rotation: 3,
+    zIndex: 5
   }
 ];
 
 const AboutPage = () => {
+  const [cardStates, setCardStates] = useState(photos.map(() => ({ rotateX: 0, rotateY: 0, hover: false })));
+
+  const handleMouseMove = (idx, e) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -10;
+    const rotateY = ((x - centerX) / centerX) * 10;
+
+    setCardStates(prev => {
+      const newStates = [...prev];
+      newStates[idx] = { rotateX, rotateY, hover: true };
+      return newStates;
+    });
+  };
+
+  const handleMouseLeave = (idx) => {
+    setCardStates(prev => {
+      const newStates = [...prev];
+      newStates[idx] = { rotateX: 0, rotateY: 0, hover: false };
+      return newStates;
+    });
+  };
+
   return (
     <Container>
-      <Section>
-        <Title>About</Title>
-        <Subtitle>Who I am.</Subtitle>
+      <Title>about</Title>
+      <Subtitle>who i am.</Subtitle>
 
-        <SectionHeading>more about me...</SectionHeading>
-        <Paragraph>
-          I'm a machine learning engineer based in Los Angeles, CA, studying Computer Science + Applied Mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">University of Southern California</Link>. I love building software that makes people's lives better.
-        </Paragraph>
-        <Paragraph>
-          My approach to tech is grounded in my Christian faith—I believe the best technology serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://ainatech.com" target="_blank" rel="noopener noreferrer">Aina Tech</Link>.
-        </Paragraph>
-      </Section>
+      <ContentWrapper>
+        <TextContent>
+          <SectionHeading>more about me...</SectionHeading>
+          <Paragraph>
+            i'm a machine learning engineer based in los angeles, ca, studying computer science + applied mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">university of southern california</Link>. i love building software that makes people's lives better.
+          </Paragraph>
+          <Paragraph>
+            my approach to tech is grounded in my christian faith—i believe the best technology serves people and helps them flourish. currently working on holographic video systems at <Link href="https://ainatech.com" target="_blank" rel="noopener noreferrer">aina tech</Link>.
+          </Paragraph>
 
-      <Section>
-        <SectionHeading>Aside from work, I'm currently:</SectionHeading>
-        <BulletList>
-          <BulletItem>Deep diving into PyTorch, transformers, and computer vision</BulletItem>
-          <BulletItem>Building holographic video with Gaussian Splatting and NeRFs</BulletItem>
-          <BulletItem>Collecting vinyl records (Stevie Wonder, The Strokes, Quadeca)</BulletItem>
-          <BulletItem>Hiking trails at sunrise and finding God in creation</BulletItem>
-        </BulletList>
-      </Section>
+          <AsideHeading>aside from work, i'm currently:</AsideHeading>
+          <BulletList>
+            <BulletItem>collecting vinyl records (stevie wonder, the strokes, quadeca)</BulletItem>
+            <BulletItem>hiking trails at sunrise and finding god in creation</BulletItem>
+            <BulletItem>playing board games with friends (settlers, ticket to ride, catan)</BulletItem>
+            <BulletItem>exploring biohacking and optimizing daily routines</BulletItem>
+          </BulletList>
+        </TextContent>
 
-      <PhotoSection>
-        {photos.map((photo, idx) => (
-          <PhotoItem key={idx}>
-            <Photo src={photo.image} alt={photo.caption} />
-            <PhotoInfo>
-              <PhotoDate>{photo.date}</PhotoDate>
-              <PhotoLocation>{photo.location}</PhotoLocation>
-              <PhotoCaption>{photo.caption}</PhotoCaption>
-            </PhotoInfo>
-          </PhotoItem>
-        ))}
-      </PhotoSection>
+        <PhotoGrid>
+          {photos.map((photo, idx) => (
+            <FlipCard
+              key={idx}
+              $rotation={photo.rotation}
+              $zIndex={photo.zIndex}
+              $rotateX={cardStates[idx].rotateX}
+              $rotateY={cardStates[idx].rotateY}
+              $hover={cardStates[idx].hover}
+              onMouseMove={(e) => handleMouseMove(idx, e)}
+              onMouseLeave={() => handleMouseLeave(idx)}
+            >
+              <FlipCardInner>
+                <FlipCardFront>
+                  <Photo src={photo.image} alt={photo.caption} />
+                </FlipCardFront>
+                <FlipCardBack>
+                  <CardDate>{photo.date}</CardDate>
+                  <CardLocation>{photo.location}</CardLocation>
+                  <CardCaption>{photo.caption}</CardCaption>
+                </FlipCardBack>
+              </FlipCardInner>
+            </FlipCard>
+          ))}
+        </PhotoGrid>
+      </ContentWrapper>
     </Container>
   );
 };

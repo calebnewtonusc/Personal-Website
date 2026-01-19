@@ -12,21 +12,9 @@ const FooterContainer = styled.footer`
   }
 `;
 
-const FooterContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
+const FooterContent = styled.p`
+  font-size: 14px;
   color: ${({ theme }) => theme.text_secondary};
-  flex-wrap: wrap;
-  gap: 0.5rem;
-`;
-
-const Copyright = styled.div`
-  opacity: 0.6;
-`;
-
-const Tech = styled.div`
   opacity: 0.6;
 `;
 
@@ -34,8 +22,7 @@ const Footer2 = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        <Copyright>© {new Date().getFullYear()} caleb newton</Copyright>
-        <Tech>built with react + styled-components</Tech>
+        © {new Date().getFullYear()} caleb newton. built with react + styled-components.
       </FooterContent>
     </FooterContainer>
   );

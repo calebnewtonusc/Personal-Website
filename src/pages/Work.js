@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import selfIcon from '../assets/projects/self_icon_2.png';
+import frcVision from '../assets/projects/frcvision.png';
+import smslImg from '../assets/projects/smsl.png';
 
 const Container = styled.div`
   max-width: 672px;
@@ -12,10 +15,23 @@ const Container = styled.div`
 `;
 
 const PageTitle = styled.h1`
-  font-size: 24px;
+  font-size: 48px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+
+  @media (max-width: 640px) {
+    font-size: 36px;
+  }
+`;
+
+const Subtitle = styled.div`
+  font-size: 16px;
+  color: ${({ theme }) => theme.text_secondary};
+  margin-bottom: 3rem;
+  opacity: 0.8;
 `;
 
 const TimelineItem = styled.div`
@@ -46,6 +62,13 @@ const Logo = styled.div`
   justify-content: center;
   flex-shrink: 0;
   font-size: 24px;
+  overflow: hidden;
+`;
+
+const LogoImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const ItemContent = styled.div`
@@ -57,6 +80,15 @@ const ProjectName = styled.h2`
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   margin-bottom: 0.25rem;
+`;
+
+const ProjectLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ProjectType = styled.div`
@@ -89,6 +121,11 @@ const Description = styled.div`
   p {
     margin-bottom: 0.75rem;
   }
+
+  strong {
+    font-weight: 600;
+    color: ${({ theme }) => theme.text_primary};
+  }
 `;
 
 const TechStack = styled.div`
@@ -102,64 +139,76 @@ const TechTag = styled.span`
   padding: 0.25rem 0.75rem;
   background: ${({ theme }) => theme.bgLight};
   border: 1px solid ${({ theme }) => theme.border};
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.text_secondary};
   border-radius: 999px;
   font-size: 12px;
+  opacity: 0.6;
 `;
 
 const projects = [
   {
-    logo: "🤖",
-    name: "ModelLab",
-    type: "ML Testing Platform",
+    logo: selfIcon,
+    name: "modellab",
+    type: "ml testing platform",
     period: "2025",
-    description: "Interactive machine learning testing platform for comparing model performance across different tasks. Features custom evaluation harnesses, model comparison tools, and performance visualization.",
-    tech: ["PyTorch", "Python", "React", "Model Evaluation"]
+    description: "interactive machine learning testing platform for comparing model performance across different tasks. features custom evaluation harnesses, model comparison tools, and performance visualization.",
+    tech: ["pytorch", "python", "react", "model evaluation"],
+    link: null
   },
   {
-    logo: "🧠",
-    name: "16 Tech Personalities",
-    type: "Developer Assessment Framework",
+    logo: selfIcon,
+    name: "16 tech personalities",
+    type: "developer assessment framework",
     period: "2025",
-    description: "Personality framework for tech professionals with 5 key spectrums: Builder vs Analyzer, Speed vs Precision, Generalist vs Specialist, Solo vs Collaborative, and Practical vs Theoretical. Helps developers understand their working style and optimize team dynamics.",
-    tech: ["React", "TypeScript", "Psychology", "UX Design"]
+    description: "personality framework for tech professionals with 5 key spectrums: builder vs analyzer, speed vs precision, generalist vs specialist, solo vs collaborative, and practical vs theoretical. helps developers understand their working style and optimize team dynamics.",
+    tech: ["react", "typescript", "psychology", "ux design"],
+    link: null
   },
   {
-    logo: "🍕",
-    name: "FoodVision Mini",
-    type: "Computer Vision Project",
-    period: "2025",
-    description: "Food classification system using Vision Transformers (ViT) and EfficientNet architectures. Achieved high accuracy on the Food101 dataset through transfer learning and fine-tuning techniques.",
-    tech: ["PyTorch", "Computer Vision", "ViT", "EfficientNet", "Transfer Learning"]
+    logo: selfIcon,
+    name: "the lines",
+    type: "music project",
+    period: "september 2023 - january 2025",
+    description: "educational calculus music videos combining mathematical concepts with creative songwriting and production. created engaging content to make calculus more accessible and fun for students.",
+    tech: ["music", "video production", "education", "calculus"],
+    link: "https://www.youtube.com/playlist?list=PLWhbpQ2inj_p13rmaV6mOdpLu3kTIi8XF"
   },
   {
-    logo: "✝️",
-    name: "SGV Christian Club Collective",
-    type: "Community Platform & Events",
-    period: "2024-2025",
-    description: (
-      <>
-        <p>Co-founded coalition uniting 15+ high school Christian clubs across the San Gabriel Valley. Built scalable framework for multi-school collaboration, media production, and fundraising.</p>
-        <ul>
-          <li><strong>Everything Night:</strong> Regional outreach event with 200+ students, 20 breakout sessions</li>
-          <li><strong>Chosen:</strong> Worship night with 100 students, dinner, games, and 2 music sets</li>
-        </ul>
-      </>
-    ),
-    tech: ["Event Planning", "Leadership", "Community Building", "Media Production"]
+    logo: selfIcon,
+    name: "foodvision mini",
+    type: "computer vision project",
+    period: "2025",
+    description: "food classification system using vision transformers (vit) and efficientnet architectures. achieved high accuracy on the food101 dataset through transfer learning and fine-tuning techniques.",
+    tech: ["pytorch", "computer vision", "vit", "efficientnet", "transfer learning"],
+    link: null
   }
 ];
 
 const WorkPage = () => {
   return (
     <Container>
-      <PageTitle>Projects</PageTitle>
+      <PageTitle>projects</PageTitle>
+      <Subtitle>things i've built.</Subtitle>
       {projects.map((item, idx) => (
         <TimelineItem key={idx}>
           <ItemHeader>
-            <Logo>{item.logo}</Logo>
+            <Logo>
+              {typeof item.logo === 'string' && item.logo.match(/\.(png|jpg|jpeg)$/) ? (
+                <LogoImage src={item.logo} alt={item.name} />
+              ) : (
+                item.logo
+              )}
+            </Logo>
             <ItemContent>
-              <ProjectName>{item.name}</ProjectName>
+              <ProjectName>
+                {item.link ? (
+                  <ProjectLink href={item.link} target="_blank" rel="noopener noreferrer">
+                    {item.name}
+                  </ProjectLink>
+                ) : (
+                  item.name
+                )}
+              </ProjectName>
               <ProjectType>{item.type}</ProjectType>
               <Period>{item.period}</Period>
             </ItemContent>
