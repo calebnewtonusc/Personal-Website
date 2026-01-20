@@ -110,6 +110,27 @@ const ImageGrid = styled.div`
   }
 `;
 
+const EverythingNightGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+
+  @media (max-width: 968px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const GridColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+`;
+
 const FlipCard = styled.div`
   position: relative;
   width: 100%;
@@ -182,44 +203,52 @@ const ImageCaption = styled.div`
   line-height: 1.5;
 `;
 
-const everythingNightImages = [
-  {
-    src: posterImg,
-    caption: "Everything Night Event Poster",
-    rotation: -2,
-    zIndex: 1
-  },
-  {
-    src: crowdImg,
-    caption: "200+ Students Gathered for Community and Faith",
-    rotation: 1,
-    zIndex: 2
-  },
-  {
-    src: dinnerImg,
-    caption: "Students Enjoying Dinner Together",
-    rotation: -1,
-    zIndex: 3
-  },
-  {
-    src: bandImg,
-    caption: "Live Worship Band Performance",
-    rotation: 2,
-    zIndex: 4
-  },
-  {
-    src: dodgeballImg,
-    caption: "Fun and Games - Dodgeball Tournament",
-    rotation: -2,
-    zIndex: 5
-  },
-  {
-    src: picnicImg,
-    caption: "Community Building Through Shared Meals",
-    rotation: 1,
-    zIndex: 6
-  }
-];
+const everythingNightImages = {
+  column1: [
+    {
+      src: posterImg,
+      caption: "Everything Night Event Poster",
+      rotation: -2,
+      zIndex: 1
+    }
+  ],
+  column2: [
+    {
+      src: crowdImg,
+      caption: "200+ Students Gathered for Community and Faith",
+      rotation: 1,
+      zIndex: 2
+    },
+    {
+      src: dinnerImg,
+      caption: "Students Enjoying Dinner Together",
+      rotation: -1,
+      zIndex: 3
+    }
+  ],
+  column3: [
+    {
+      src: dodgeballImg,
+      caption: "Fun and Games - Dodgeball Tournament",
+      rotation: -2,
+      zIndex: 4
+    },
+    {
+      src: picnicImg,
+      caption: "Community Building Through Shared Meals",
+      rotation: 1,
+      zIndex: 5
+    }
+  ],
+  column4: [
+    {
+      src: bandImg,
+      caption: "Live Worship Band Performance",
+      rotation: 2,
+      zIndex: 6
+    }
+  ]
+};
 
 const chosenImages = [
   {
@@ -310,20 +339,64 @@ const SGVCCCPage = () => {
             clubs and demonstrated the power of unified student leadership.
           </p>
         </Description>
-        <ImageGrid>
-          {everythingNightImages.map((img, idx) => (
-            <FlipCard key={idx} $rotation={img.rotation} $zIndex={img.zIndex}>
-              <FlipCardInner>
-                <FlipCardFront>
-                  <Image src={img.src} alt={img.caption} />
-                </FlipCardFront>
-                <FlipCardBack>
-                  <ImageCaption>{img.caption}</ImageCaption>
-                </FlipCardBack>
-              </FlipCardInner>
-            </FlipCard>
-          ))}
-        </ImageGrid>
+        <EverythingNightGrid>
+          <GridColumn>
+            {everythingNightImages.column1.map((img, idx) => (
+              <FlipCard key={idx} $rotation={img.rotation} $zIndex={img.zIndex}>
+                <FlipCardInner>
+                  <FlipCardFront>
+                    <Image src={img.src} alt={img.caption} />
+                  </FlipCardFront>
+                  <FlipCardBack>
+                    <ImageCaption>{img.caption}</ImageCaption>
+                  </FlipCardBack>
+                </FlipCardInner>
+              </FlipCard>
+            ))}
+          </GridColumn>
+          <GridColumn>
+            {everythingNightImages.column2.map((img, idx) => (
+              <FlipCard key={idx} $rotation={img.rotation} $zIndex={img.zIndex}>
+                <FlipCardInner>
+                  <FlipCardFront>
+                    <Image src={img.src} alt={img.caption} />
+                  </FlipCardFront>
+                  <FlipCardBack>
+                    <ImageCaption>{img.caption}</ImageCaption>
+                  </FlipCardBack>
+                </FlipCardInner>
+              </FlipCard>
+            ))}
+          </GridColumn>
+          <GridColumn>
+            {everythingNightImages.column3.map((img, idx) => (
+              <FlipCard key={idx} $rotation={img.rotation} $zIndex={img.zIndex}>
+                <FlipCardInner>
+                  <FlipCardFront>
+                    <Image src={img.src} alt={img.caption} />
+                  </FlipCardFront>
+                  <FlipCardBack>
+                    <ImageCaption>{img.caption}</ImageCaption>
+                  </FlipCardBack>
+                </FlipCardInner>
+              </FlipCard>
+            ))}
+          </GridColumn>
+          <GridColumn>
+            {everythingNightImages.column4.map((img, idx) => (
+              <FlipCard key={idx} $rotation={img.rotation} $zIndex={img.zIndex}>
+                <FlipCardInner>
+                  <FlipCardFront>
+                    <Image src={img.src} alt={img.caption} />
+                  </FlipCardFront>
+                  <FlipCardBack>
+                    <ImageCaption>{img.caption}</ImageCaption>
+                  </FlipCardBack>
+                </FlipCardInner>
+              </FlipCard>
+            ))}
+          </GridColumn>
+        </EverythingNightGrid>
       </EventSection>
       </ContentSection>
     </Container>

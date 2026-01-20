@@ -384,7 +384,7 @@ const photos = [
     caption: "I have 3 younger siblings",
     rotation: -1,
     zIndex: 3,
-    scale: 1.25,
+    scale: 1.35,
     translateY: "120px"
   },
   {
@@ -411,7 +411,8 @@ const photos = [
     location: "Los Angeles, CA",
     caption: "Alpha Gamma Omega (Christian fraternity) pledge challenge - 4x4 burger and 4 donuts",
     rotation: 1,
-    zIndex: 6
+    zIndex: 6,
+    translateX: "-15px"
   },
   {
     image: concertImage,
@@ -422,7 +423,7 @@ const photos = [
     zIndex: 7,
     scale: 1.15,
     translateX: "20px",
-    translateY: "-45px"
+    translateY: "-25px"
   },
   {
     image: guitarImage,
