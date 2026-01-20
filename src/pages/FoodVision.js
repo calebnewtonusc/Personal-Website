@@ -161,7 +161,7 @@ const FoodVision = () => {
           <Text>
             FoodVisionMini is an end-to-end computer vision project that classifies images of food
             into three categories: pizza, steak, and sushi. It's a complete ML workflow from data
-            collection to model training to deployment—designed to teach me the full lifecycle of
+            collection to model training to deployment. It's designed to teach me the full lifecycle of
             a production computer vision system.
           </Text>
           <Text>
@@ -263,7 +263,7 @@ criterion = CrossEntropyLoss()`}</CodeBlock>
           <SectionTitle>Why I'm Building This</SectionTitle>
           <Text>
             Computer vision is one of the most exciting areas of ML, and I want to deeply understand
-            the full pipeline—not just run a tutorial notebook. This project forces me to handle:
+            the full pipeline, not just run a tutorial notebook. This project forces me to handle:
           </Text>
           <List>
             <ListItem>Data collection, cleaning, and augmentation at scale</ListItem>
@@ -273,7 +273,7 @@ criterion = CrossEntropyLoss()`}</CodeBlock>
             <ListItem>Deployment and serving a model in production</ListItem>
           </List>
           <Text>
-            By the end, I'll have a deployable computer vision system that I built from scratch—and
+            By the end, I'll have a deployable computer vision system that I built from scratch and
             the knowledge to apply these skills to more complex vision problems.
           </Text>
         </Section>

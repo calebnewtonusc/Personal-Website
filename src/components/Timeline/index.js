@@ -94,7 +94,7 @@ const timelineData = [
         logo: "🎓",
         title: "Computer Science + Applied Math Student",
         subtitle: "University of Southern California",
-        description: "Deep diving into ML foundations—PyTorch, transformers, computer vision, and ranking systems. Building technical depth in neural architectures and production ML tools.",
+        description: "Deep diving into ML foundations: PyTorch, transformers, computer vision, and ranking systems. Building technical depth in neural architectures and production ML tools.",
         tags: ["Machine Learning", "PyTorch", "Computer Vision"]
       }
     ]

@@ -355,7 +355,9 @@ const photos = [
     location: "Los Angeles, CA",
     caption: "Vinyl collection growing (Stevie to The Strokes)",
     rotation: -3,
-    zIndex: 1
+    zIndex: 1,
+    scale: 1.2,
+    translateY: "35px"
   },
   {
     image: baseballImage,
@@ -382,7 +384,8 @@ const photos = [
     caption: "Hikes above the Hollywood sign",
     rotation: -2,
     zIndex: 4,
-    scale: 1.15
+    scale: 1.25,
+    translateY: "45px"
   },
   {
     image: boardGameImage,
@@ -486,12 +489,12 @@ const AboutPage = () => {
             I'm an aspiring machine learning and data engineer based in San Marino, CA, studying Computer Science + Applied Mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">University of Southern California</Link>. I'm driven by continuous learning and building technology that helps people.
           </Paragraph>
           <Paragraph>
-            My approach to tech is grounded in my Christian faith—I believe the best technology serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://www.ainatech.ai/" target="_blank" rel="noopener noreferrer">AINA Tech</Link>.
+            My approach to tech is grounded in my Christian faith. I believe the best technology serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://www.ainatech.ai/" target="_blank" rel="noopener noreferrer">AINA Tech</Link>.
           </Paragraph>
           <AsideHeading>Aside from work, I'm currently:</AsideHeading>
           <BulletList>
             <BulletItem>Expanding and deepening my taste in music and film (Peep my <Link href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer">RYM</Link> and <Link href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer">Letterboxd</Link>!)</BulletItem>
-            <BulletItem>Hiking trails and finding God in creation. I don't have social media—I value in-real-life connection and being fully present with people</BulletItem>
+            <BulletItem>Hiking trails and finding God in creation. I don't have social media. I value in-real-life connection and being fully present with people</BulletItem>
             <BulletItem>Playing board games, spikeball, and pickleball with friends</BulletItem>
             <BulletItem>Exploring biohacking and optimizing daily routines (when I'm not cooked lol)</BulletItem>
           </BulletList>

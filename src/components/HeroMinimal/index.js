@@ -72,7 +72,7 @@ const HeroMinimal = () => {
       <BioText>
         follower of jesus. cs + applied math @ usc. passionate about building AI systems that serve people,
         grounded in my faith and commitment to human-centered technology. currently diving deep into ML
-        foundations—pytorch, transformers, computer vision.
+        foundations: pytorch, transformers, computer vision.
       </BioText>
       <Skills>
         <Skill>machine learning</Skill>

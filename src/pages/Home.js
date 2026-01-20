@@ -586,30 +586,33 @@ const HomePage = () => {
   const yearBlockRefs = useRef([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+    // Small delay to ensure page is fully loaded before observing
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        }
+      );
+
+      if (timelineSectionRef.current) {
+        observer.observe(timelineSectionRef.current);
       }
-    );
 
-    if (timelineSectionRef.current) {
-      observer.observe(timelineSectionRef.current);
-    }
-
-    yearBlockRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
+      yearBlockRefs.current.forEach((ref) => {
+        if (ref) observer.observe(ref);
+      });
+    }, 100);
 
     return () => {
-      observer.disconnect();
+      clearTimeout(timer);
     };
   }, []);
 

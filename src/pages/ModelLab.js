@@ -199,7 +199,7 @@ const ModelLab = () => {
           <Text>
             As I dive deeper into ML engineering, I keep hitting the same friction: experimentation
             workflows that don't scale, results I can't reproduce, and no clear history of what I've tried.
-            ModelLab is my answer to that problem—a tool that treats ML experiments with the same rigor
+            ModelLab is my answer to that problem: a tool that treats ML experiments with the same rigor
             as production code.
           </Text>
           <Text>

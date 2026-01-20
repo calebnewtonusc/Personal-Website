@@ -190,7 +190,7 @@ const Tech16 = () => {
             <ListItem>Curated resources, courses, and projects tailored to your personality</ListItem>
           </List>
           <Text>
-            It's not about what languages you know—it's about discovering the role where you'll genuinely thrive.
+            It's not about what languages you know. It's about discovering the role where you'll genuinely thrive.
           </Text>
         </Section>
 
@@ -283,11 +283,11 @@ const Tech16 = () => {
           <Text>
             I spent months figuring out what kind of tech work I actually enjoy. I tried entrepreneurship,
             product thinking, and design before realizing I'm most alive when I'm going deep on the technical
-            side—ML systems, algorithms, infrastructure. This tool would have saved me time and confusion.
+            side (ML systems, algorithms, infrastructure). This tool would have saved me time and confusion.
           </Text>
           <Text>
             Plus, it's a chance to build a full-stack app with personality assessment logic, data visualization,
-            recommendation algorithms, and a polished user experience—all skills I want to develop.
+            recommendation algorithms, and a polished user experience. These are all skills I want to develop.
           </Text>
         </Section>
 
