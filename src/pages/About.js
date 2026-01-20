@@ -10,7 +10,6 @@ import guitarImage from '../assets/guitar.jpg';
 import gymBibleImage from '../assets/gym_bible.jpg';
 import agoImage from '../assets/alpha_gamma_omega.jpg';
 import premedImage from '../assets/premed_friends.jpg';
-import beachImage from '../assets/CalebAtBeach.jpg';
 
 const Container = styled.div`
   max-width: 1200px;
@@ -126,7 +125,7 @@ const FlipCard = styled.div`
   transform: rotate(${props => props.$rotation || 0}deg);
   transition: transform 0.3s ease;
   z-index: ${props => props.$zIndex || 1};
-  overflow: visible;
+  overflow: hidden;
 
   &:hover {
     z-index: 10;
@@ -209,23 +208,6 @@ const Link = styled.a`
   &:hover {
     text-decoration: underline;
   }
-`;
-
-const BeachImageSection = styled.div`
-  margin-top: 3rem;
-  width: 100%;
-`;
-
-const BeachImage = styled.img`
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 16px;
-  border: 1px solid ${({ theme }) => theme.border};
-  display: block;
-  margin: 0 auto;
-  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}15,
-              0 0 30px ${({ theme }) => theme.primary}10;
 `;
 
 const MusicSection = styled.div`
@@ -389,7 +371,7 @@ const photos = [
   },
   {
     image: hikeImage,
-    date: "June 2025",
+    date: "November 2024",
     location: "Hollywood, CA",
     caption: "Sunrise hikes above the Hollywood sign",
     rotation: -2,
@@ -527,10 +509,6 @@ const AboutPage = () => {
       <Title>About</Title>
       <Subtitle>Who I am.</Subtitle>
 
-      <BeachImageSection>
-        <BeachImage src={beachImage} alt="Caleb at the beach" />
-      </BeachImageSection>
-
       <ContentWrapper>
         <TextContent>
           <SectionHeading>More About Me...</SectionHeading>
@@ -542,6 +520,9 @@ const AboutPage = () => {
           </Paragraph>
           <Paragraph>
             I love exploring artists' discographies in depth and have been getting into more movies lately. Outside of tech, you'll find me playing spikeball, pickleball, or trying new things.
+          </Paragraph>
+          <Paragraph>
+            I don't have social media—kind of ironic for someone going into tech. I value in-real-life connection and being fully present with people.
           </Paragraph>
 
           <AsideHeading>Aside from work, I'm currently:</AsideHeading>

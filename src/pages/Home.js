@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroImg from '../assets/CalebAtBeach_cropped.jpg';
+import HeroImg from '../assets/CalebAtBeach.jpg';
 import GlassTag from '../components/GlassTag';
 import uscLogo from '../assets/logos/usc.png';
 import ainaTechLogo from '../assets/logos/learninglyai.png';
@@ -31,13 +31,17 @@ const ProfileSection = styled.section`
 `;
 
 const ProfileImage = styled.img`
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 16px;
+  margin-bottom: 2rem;
   border: 1px solid ${({ theme }) => theme.border};
-  object-fit: cover;
-  object-position: center 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}15,
+              0 0 30px ${({ theme }) => theme.primary}10;
 `;
 
 const Name = styled.h1`
