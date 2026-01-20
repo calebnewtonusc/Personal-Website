@@ -10,14 +10,6 @@ const Nav = styled.nav`
   top: 0;
   z-index: 1000;
   padding: 1rem;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  background: ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(10,10,10,0.85)'
-    : 'rgba(255,255,255,0.85)'};
-  border-bottom: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(255,255,255,0.08)'
-    : 'rgba(0,0,0,0.05)'};
 
   @media (min-width: 640px) {
     padding: 1.5rem 1rem;
@@ -44,11 +36,22 @@ const ProfileButton = styled(Link)`
   height: 40px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid ${({ theme }) => theme.border};
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.2s;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.08)'
+    : 'rgba(0,0,0,0.04)'};
+  border: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.15)'
+    : 'rgba(0,0,0,0.08)'};
+  box-shadow: 0 4px 12px -2px rgba(0,0,0,0.12),
+              inset 0 1px 0 ${({ theme }) => theme.bg === '#0a0a0a'
+                ? 'rgba(255,255,255,0.1)'
+                : 'rgba(255,255,255,0.6)'};
 
   &:hover {
     transform: scale(1.05);
@@ -164,15 +167,28 @@ const IconButton = styled.a`
   justify-content: center;
   color: ${({ theme }) => theme.text_secondary};
   font-size: 16px;
-  transition: background 0.2s, color 0.2s;
+  transition: all 0.2s;
   text-decoration: none;
   flex-shrink: 0;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.06)'
+    : 'rgba(0,0,0,0.04)'};
+  border: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.12)'
+    : 'rgba(0,0,0,0.08)'};
+  box-shadow: 0 4px 12px -2px rgba(0,0,0,0.12),
+              inset 0 1px 0 ${({ theme }) => theme.bg === '#0a0a0a'
+                ? 'rgba(255,255,255,0.1)'
+                : 'rgba(255,255,255,0.6)'};
 
   &:hover {
     background: ${({ theme }) => theme.bg === '#0a0a0a'
-      ? 'rgba(255,255,255,0.1)'
-      : 'rgba(0,0,0,0.05)'};
+      ? 'rgba(255,255,255,0.12)'
+      : 'rgba(0,0,0,0.08)'};
     color: ${({ theme }) => theme.text_primary};
+    transform: translateY(-1px);
   }
 
   @media (max-width: 900px) {
@@ -201,23 +217,34 @@ const ThemeToggle = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none;
-  border: none;
   color: ${({ theme }) => theme.text_secondary};
   font-size: 16px;
   cursor: pointer;
   padding: 0;
-  transition: background 0.2s, filter 0.2s;
+  transition: all 0.2s;
   opacity: 0.7;
   filter: grayscale(100%);
   flex-shrink: 0;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.06)'
+    : 'rgba(0,0,0,0.04)'};
+  border: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.12)'
+    : 'rgba(0,0,0,0.08)'};
+  box-shadow: 0 4px 12px -2px rgba(0,0,0,0.12),
+              inset 0 1px 0 ${({ theme }) => theme.bg === '#0a0a0a'
+                ? 'rgba(255,255,255,0.1)'
+                : 'rgba(255,255,255,0.6)'};
 
   &:hover {
     background: ${({ theme }) => theme.bg === '#0a0a0a'
-      ? 'rgba(255,255,255,0.1)'
-      : 'rgba(0,0,0,0.05)'};
+      ? 'rgba(255,255,255,0.12)'
+      : 'rgba(0,0,0,0.08)'};
     opacity: 1;
     filter: grayscale(0%);
+    transform: translateY(-1px);
   }
 
   @media (max-width: 900px) {

@@ -399,18 +399,18 @@ const timelineData = [
     year: "2026",
     images: [
       {
-        image: ainaTechSetupImg,
-        date: "January 2026",
-        location: "Aina Tech Studio",
-        caption: "75-camera volumetric capture rig setup",
-        rotation: -2,
-        zIndex: 1
-      },
-      {
         image: uscResearchImg,
         date: "2026",
         location: "University of Southern California",
         caption: "Machine learning research at USC",
+        rotation: -2,
+        zIndex: 1
+      },
+      {
+        image: ainaTechSetupImg,
+        date: "January 2026",
+        location: "Aina Tech Studio",
+        caption: "75-camera volumetric capture rig setup",
         rotation: 2,
         zIndex: 2
       },
@@ -571,7 +571,7 @@ const HomePage = () => {
         </Skills>
         <Tagline>CS + Applied Math @ USC</Tagline>
         <Mission>
-          Driven by learning and building technology that helps people flourish.
+          Building technology that helps people flourish.
         </Mission>
       </ProfileSection>
 

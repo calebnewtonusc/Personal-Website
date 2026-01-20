@@ -117,18 +117,19 @@ const PhotoGrid = styled.div`
   gap: 0.25rem;
   flex: 1;
   max-width: 100%;
-  padding: 2rem;
+  padding: 0 2rem;
+  align-self: start;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    padding: 1rem;
+    padding: 0 1rem;
     gap: 0.5rem;
   }
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
   }
 `;
 
@@ -225,16 +226,19 @@ const CardLocation = styled.div`
 `;
 
 const CardCaption = styled.div`
-  font-size: 13px;
+  font-size: 11px;
   color: ${({ theme }) => theme.text_primary};
   opacity: 0.8;
-  line-height: 1.4;
+  line-height: 1.3;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 
   @media (max-width: 640px) {
-    font-size: 11px;
+    font-size: 10px;
   }
 `;
 
@@ -351,7 +355,7 @@ const AlbumsGrid = styled.div`
 const AlbumEmbed = styled.iframe`
   border-radius: 12px;
   width: 100%;
-  height: 152px;
+  height: 82px;
   border: none;
 `;
 
@@ -380,7 +384,7 @@ const photos = [
     rotation: -1,
     zIndex: 3,
     scale: 1.15,
-    translateY: "30px"
+    translateY: "45px"
   },
   {
     image: hikeImage,
@@ -388,7 +392,8 @@ const photos = [
     location: "Hollywood, CA",
     caption: "Hikes above the Hollywood sign",
     rotation: -2,
-    zIndex: 4
+    zIndex: 4,
+    scale: 1.05
   },
   {
     image: boardGameImage,
@@ -413,7 +418,8 @@ const photos = [
     caption: "Concert nights with friends",
     rotation: -2,
     zIndex: 7,
-    scale: 1.1
+    scale: 1.1,
+    translateY: "-20px"
   },
   {
     image: guitarImage,
