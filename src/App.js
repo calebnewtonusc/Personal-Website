@@ -82,6 +82,10 @@ const PageWrapper = styled.div`
 function AnimatedRoutes({ toggleTheme, isDark }) {
   const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <>
       <Navbar toggleTheme={toggleTheme} isDark={isDark} />
