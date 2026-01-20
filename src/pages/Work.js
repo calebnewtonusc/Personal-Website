@@ -10,7 +10,7 @@ import tech16Img from '../assets/projects/tech16personalities.jpg';
 import curiosityImg from '../assets/projects/curiosity.jpg';
 
 const Container = styled.div`
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem 2.5rem;
 
