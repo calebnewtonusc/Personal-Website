@@ -84,12 +84,12 @@ const ProjectContent = styled.div`
 
 const ProjectImage = styled.div`
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid ${({ theme }) => theme.border};
-  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}15,
-              0 0 30px ${({ theme }) => theme.primary}10;
+  border: 2px solid ${({ theme }) => theme.primary}40;
+  box-shadow: inset 0 0 80px ${({ theme }) => theme.primary}30,
+              0 0 40px ${({ theme }) => theme.primary}25;
   order: ${({ $reverse }) => $reverse ? 2 : 1};
 
   @media (max-width: 767px) {
@@ -233,9 +233,9 @@ const TechTag = styled.span`
 const projects = [
   {
     image: modellabImg,
-    name: "ModelLab",
+    name: "ModelLab (in progress)",
     type: "ML Testing Platform",
-    period: "January 2025",
+    period: "January 2025 - Present",
     description: "Built an ML experiment command center with dataset versioning (checksums, schema snapshots), run tracking (seed, commit hash, dataset version), and artifact storage for reproducibility. Implemented EvalHarness: standardized metrics.json, slices.json, failure examples, and compare mode with metric/config/artifact diffs plus p50/p95 latency measurement.",
     tech: ["PyTorch", "Python", "sklearn", "Dataset Versioning", "Reproducibility"],
     link: "/modellab",
@@ -243,9 +243,9 @@ const projects = [
   },
   {
     image: tech16Img,
-    name: "Tech 16 Personalities",
+    name: "Tech 16 Personalities (in progress)",
     type: "Developer Assessment Framework",
-    period: "January 2025",
+    period: "January 2025 - Present",
     description: "Implemented a 40-question Likert quiz that scores 5 spectrums and outputs a 4-letter Tech Type plus suffix (-A/-T); stores raw trait percentages and quiz version for integrity. Built CMS-like content + role mapping (trait-weighted RoleScore) and share features (results card, optional compare) using Next.js + TypeScript + Tailwind with Supabase Auth/Postgres.",
     tech: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Postgres"],
     link: "/tech16",
@@ -253,9 +253,9 @@ const projects = [
   },
   {
     image: foodvisionImg,
-    name: "FoodVision Mini",
+    name: "FoodVision Mini (in progress)",
     type: "Computer Vision Project",
-    period: "December 2025",
+    period: "December 2025 - Present",
     description: "Trained a Food101 image classifier with a fast 3-class mini mode (pizza, steak, sushi); baseline EfficientNetB2 feature extractor with one meaningful improvement via transfer learning. Shipped a defensible eval report (accuracy, top-5, confusion matrix, calibration, failure examples) and measured CPU inference latency (warmup, p50/p95); served via FastAPI with a simple UI.",
     tech: ["PyTorch", "EfficientNet", "FastAPI", "Transfer Learning"],
     link: "/foodvision",

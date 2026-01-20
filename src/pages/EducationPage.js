@@ -87,8 +87,8 @@ const ItemHeader = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 12px;
   background: ${({ theme }) => theme.bg === '#0a0a0a'
     ? 'rgba(255,255,255,0.08)'
@@ -107,8 +107,8 @@ const Logo = styled.div`
   padding: 0.75rem;
 
   @media (max-width: 640px) {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
     padding: 0.625rem;
   }
 `;
@@ -239,16 +239,16 @@ const education = [
     institution: "UC Berkeley College of Engineering",
     degree: "Summer Program - Computer Science",
     period: "June 2024 - June 2024",
-    url: "https://www.berkeley.edu",
+    url: "https://precollege.berkeley.edu/summer-computer-science-academy",
     description: "Completed intensive BJC-based course in abstraction, recursion, algorithms, and introductory ML through Snap! and Python."
   },
   {
     logo: cnsiImg,
     isImage: true,
     institution: "California Nanosystems Institute at UCLA",
-    degree: "Summer Program - Nanotechnology",
+    degree: "Summer Program - Nanotechnology + Entrepreneurship",
     period: "July 2023",
-    url: "https://www.ucla.edu",
+    url: "https://cnsi.ucla.edu/applications-of-nanoscience-summer-program/",
     description: "Developed AquaShield (hydrophobic water bottle) in a two-week STEM + entrepreneurship program, pitching to investors and applying MATLAB for analysis."
   },
   {

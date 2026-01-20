@@ -19,10 +19,14 @@ import fleursetselLogo from '../assets/fleursetsel_logo.png';
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem 2.5rem;
+  padding: 0 1.5rem 2.5rem;
 
   @media (min-width: 640px) {
-    padding: 0 1.5rem 2.5rem;
+    padding: 0 2rem 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 2.5rem 3rem;
   }
 `;
 
@@ -32,16 +36,17 @@ const ProfileSection = styled.section`
 
 const ProfileImage = styled.img`
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   height: auto;
   border-radius: 16px;
   margin-bottom: 2rem;
   border: 1px solid ${({ theme }) => theme.border};
   display: block;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
-  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}15,
-              0 0 30px ${({ theme }) => theme.primary}10;
+  box-shadow: inset 0 0 80px ${({ theme }) => theme.primary}30,
+              0 0 40px ${({ theme }) => theme.primary}25;
+  border: 2px solid ${({ theme }) => theme.primary}40;
 `;
 
 const Name = styled.h1`
@@ -297,11 +302,11 @@ const FlipCard = styled.div`
   transform: rotate(${props => props.$rotation || 0}deg);
   transition: transform 0.3s ease;
   z-index: ${props => props.$zIndex || 1};
-  overflow: hidden;
+  overflow: visible;
   max-width: 300px;
 
   &:hover {
-    z-index: 10;
+    z-index: 1000;
     transform: rotate(0deg) scale(1.05);
   }
 `;
@@ -325,8 +330,9 @@ const FlipCardFront = styled.div`
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}15,
-              0 0 30px ${({ theme }) => theme.primary}10;
+  box-shadow: inset 0 0 80px ${({ theme }) => theme.primary}30,
+              0 0 40px ${({ theme }) => theme.primary}25;
+  border: 2px solid ${({ theme }) => theme.primary}40;
 `;
 
 const FlipCardBack = styled.div`
@@ -456,7 +462,7 @@ const timelineData = [
       {
         text: (
           <>
-            Co-Founder @ <GlassTag logo={sgvLogo} href="/everything-night">SGV Christian Club Collective</GlassTag>
+            Co-Founder @ <GlassTag logo={sgvLogo} href="/sgchristianclubcollective">SGV Christian Club Collective</GlassTag>
           </>
         ),
         nested: [

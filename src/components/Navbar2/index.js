@@ -63,10 +63,21 @@ const ProfileImage = styled.img`
 `;
 
 const CenterSection = styled.div`
-  display: none;
+  display: flex;
 
-  @media (min-width: 640px) {
-    display: flex;
+  @media (max-width: 639px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem;
+    background: ${({ theme }) => theme.bg === '#0a0a0a'
+      ? 'rgba(10,10,10,0.95)'
+      : 'rgba(255,255,255,0.95)'};
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-top: 1px solid ${({ theme }) => theme.border};
+    justify-content: center;
   }
 `;
 
@@ -154,15 +165,13 @@ const ThemeToggle = styled.button`
   font-size: 16px;
   cursor: pointer;
   padding: 0;
-  transition: background 0.2s, color 0.2s;
-  filter: grayscale(100%);
+  transition: background 0.2s;
   opacity: 0.7;
 
   &:hover {
     background: ${({ theme }) => theme.bg === '#0a0a0a'
       ? 'rgba(255,255,255,0.1)'
       : 'rgba(0,0,0,0.05)'};
-    filter: grayscale(0%);
     opacity: 1;
   }
 `;
@@ -195,7 +204,7 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
           <IconButton href={Bio.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i className="fab fa-linkedin"></i>
           </IconButton>
-          <IconButton href="https://open.spotify.com/user/calebnewton" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+          <IconButton href="https://open.spotify.com/user/rbfdtme07mst8eft5f4j8k2ll?si=b1124b9dfadf4450" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
             <i className="fab fa-spotify"></i>
           </IconButton>
           <IconButton href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer" aria-label="Letterboxd">

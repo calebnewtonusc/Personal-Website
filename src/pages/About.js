@@ -100,18 +100,20 @@ const BulletItem = styled.li`
 const PhotoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 0.5rem;
   flex: 1;
   max-width: 100%;
-  padding: 0;
+  padding: 2rem;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
   }
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
     gap: 1rem;
+    padding: 0.5rem;
   }
 `;
 
@@ -119,24 +121,22 @@ const FlipCard = styled.div`
   position: relative;
   width: 100%;
   max-width: 100%;
-  aspect-ratio: 3 / 2;
   perspective: 1000px;
   cursor: pointer;
   transform: rotate(${props => props.$rotation || 0}deg);
   transition: transform 0.3s ease;
   z-index: ${props => props.$zIndex || 1};
-  overflow: hidden;
+  overflow: visible;
 
   &:hover {
-    z-index: 10;
-    transform: rotate(0deg) scale(1.05);
+    z-index: 100;
+    transform: rotate(0deg) scale(1.15);
   }
 `;
 
 const FlipCardInner = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 
@@ -146,18 +146,20 @@ const FlipCardInner = styled.div`
 `;
 
 const FlipCardFront = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 100%;
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}15,
-              0 0 30px ${({ theme }) => theme.primary}10;
+  box-shadow: inset 0 0 80px ${({ theme }) => theme.primary}30,
+              0 0 40px ${({ theme }) => theme.primary}25;
+  border: 2px solid ${({ theme }) => theme.primary}40;
 `;
 
 const FlipCardBack = styled.div`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -174,8 +176,7 @@ const FlipCardBack = styled.div`
 
 const Photo = styled.img`
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
   border-radius: 12px;
   border: 1px solid ${({ theme }) => theme.border};
@@ -223,68 +224,69 @@ const MusicTitle = styled.h2`
   margin-bottom: 2rem;
 `;
 
-const MusicRow = styled.div`
+const MusicLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin-bottom: 2rem;
-  align-items: center;
 
   @media (min-width: 768px) {
-    grid-template-columns: ${({ $reverse }) => $reverse ? '1fr 300px' : '300px 1fr'};
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
   }
 `;
 
-const AlbumText = styled.div`
+const NowPlayingSection = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  order: ${({ $reverse }) => $reverse ? 2 : 1};
-
-  @media (max-width: 767px) {
-    order: 2;
-  }
 `;
 
-const AlbumTitle = styled.h3`
-  font-size: 20px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-`;
-
-const AlbumArtist = styled.div`
-  font-size: 16px;
-  color: ${({ theme }) => theme.text_secondary};
-  opacity: 0.8;
-`;
-
-const SpotifyEmbed = styled.iframe`
+const NowPlayingEmbed = styled.iframe`
   border-radius: 12px;
   width: 100%;
   height: 352px;
   border: none;
-  order: ${({ $reverse }) => $reverse ? 1 : 2};
+`;
 
-  @media (max-width: 767px) {
-    order: 1;
+const AlbumsSection = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ToggleContainer = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+`;
+
+const ToggleButton = styled.button`
+  padding: 0.5rem 1.5rem;
+  background: ${({ $active, theme }) => $active
+    ? theme.primary
+    : (theme.bg === '#0a0a0a' ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)')};
+  color: ${({ $active }) => $active ? 'white' : 'inherit'};
+  border: 1px solid ${({ $active, theme }) => $active
+    ? theme.primary
+    : theme.border};
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
   }
 `;
 
-const NowPlayingSection = styled.div`
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid ${({ theme }) => theme.border};
+const AlbumsGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
 
-const NowPlayingTitle = styled.h3`
-  font-size: 18px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 1rem;
-`;
-
-const NowPlayingEmbed = styled.iframe`
+const AlbumEmbed = styled.iframe`
   border-radius: 12px;
   width: 100%;
   height: 152px;
@@ -320,7 +322,7 @@ const photos = [
     image: hikeImage,
     date: "November 2024",
     location: "Hollywood, CA",
-    caption: "Sunrise hikes above the Hollywood sign",
+    caption: "Hikes above the Hollywood sign",
     rotation: -2,
     zIndex: 4
   },
@@ -366,51 +368,25 @@ const photos = [
   }
 ];
 
-const albums = [
-  {
-    name: "Songs in the Key of Life",
-    artist: "Stevie Wonder",
-    embed: "https://open.spotify.com/embed/album/6YUCc2RiXcEKS9ibuZxjt0?utm_source=generator"
-  },
-  {
-    name: "A Love Supreme",
-    artist: "John Coltrane",
-    embed: "https://open.spotify.com/embed/album/7FWR41OwYX3vvRXOrREJHG?utm_source=generator"
-  },
-  {
-    name: "The Miseducation of Lauryn Hill",
-    artist: "Lauryn Hill",
-    embed: "https://open.spotify.com/embed/album/1BZoqf8Zje5nGdwZhOjAtD?utm_source=generator"
-  },
-  {
-    name: "Mothership Connection",
-    artist: "Parliament",
-    embed: "https://open.spotify.com/embed/album/36ltakMWOJ7FUjfmG0vOtJ?utm_source=generator"
-  },
-  {
-    name: "LL",
-    artist: "The Hellp",
-    embed: "https://open.spotify.com/embed/album/0Oc2i2rRn7fxVPYiM8n7pL?utm_source=generator"
-  },
-  {
-    name: "Live at the Banks House",
-    artist: "Will Reagan",
-    embed: "https://open.spotify.com/embed/album/37CrDTv7KN6jL4Nz2X6Kke?utm_source=generator"
-  },
-  {
-    name: "Vanisher",
-    artist: "Quadeca",
-    embed: "https://open.spotify.com/embed/album/1WJj3jDgUFJpHb5xGz3Q6r?utm_source=generator"
-  },
-  {
-    name: "Sometimes I Might Be Introvert",
-    artist: "Little Simz",
-    embed: "https://open.spotify.com/embed/album/0DBoWQ52XUHtrZQdfAqOVj?utm_source=generator"
-  }
+const newAlbums = [
+  "https://open.spotify.com/embed/album/4nOym5RKE8Opauf3rMxPAW?utm_source=generator", // Little Simz
+  "https://open.spotify.com/embed/album/6YUCc2RiXcEKS9ibuZxjt0?utm_source=generator", // Stevie Wonder
+  "https://open.spotify.com/embed/album/06BotF7CerCXpcm5Km2uX7?utm_source=generator", // Will Reagan
+  "https://open.spotify.com/embed/album/6o6VAIetIFOsaOa0qt7w9u?utm_source=generator"  // Quadeca
 ];
+
+const oldAlbums = [
+  "https://open.spotify.com/embed/album/7r0oaJO4WR0KLgg1rZu6kg?utm_source=generator", // The Hellp
+  "https://open.spotify.com/embed/album/4q1HNSka8CzuLvC8ydcsD2?utm_source=generator", // Parliament
+  "https://open.spotify.com/embed/album/1BZoqf8Zje5nGdwZhOjAtD?utm_source=generator", // Lauryn Hill
+  "https://open.spotify.com/embed/album/7Ee6XgP8EHKDhTMYLIndu9?utm_source=generator"  // John Coltrane
+];
+
+const nowPlayingEmbed = "https://open.spotify.com/embed/track/7Ee6XgP8EHKDhTMYLIndu9?utm_source=generator"; // Praise
 
 const AboutPage = () => {
   const [cardStates, setCardStates] = useState(photos.map(() => ({ rotateX: 0, rotateY: 0, hover: false })));
+  const [showNewAlbums, setShowNewAlbums] = useState(true);
 
   const handleMouseMove = (idx, e) => {
     const card = e.currentTarget;
@@ -451,21 +427,12 @@ const AboutPage = () => {
           <Paragraph>
             My approach to tech is grounded in my Christian faith—I believe the best technology serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://www.ainatech.ai/" target="_blank" rel="noopener noreferrer">AINA Tech</Link>.
           </Paragraph>
-          <Paragraph>
-            I love exploring artists' discographies in depth and have been getting into more movies lately. Outside of tech, you'll find me playing spikeball, pickleball, or trying new things.
-          </Paragraph>
-          <Paragraph>
-            I don't have social media—kind of ironic for someone going into tech. I value in-real-life connection and being fully present with people.
-          </Paragraph>
-
           <AsideHeading>Aside from work, I'm currently:</AsideHeading>
           <BulletList>
-            <BulletItem>Collecting vinyl records and exploring artists' discographies (Stevie Wonder, The Strokes, Quadeca)</BulletItem>
-            <BulletItem>Getting into more movies and tracking them on <Link href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer">Letterboxd</Link></BulletItem>
-            <BulletItem>Rating and cataloging music on <Link href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer">RateYourMusic</Link></BulletItem>
-            <BulletItem>Hiking trails at sunrise and finding God in creation</BulletItem>
+            <BulletItem>Expanding and deepening my taste in music and film (Peep my <Link href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer">RYM</Link> and <Link href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer">Letterboxd</Link>!)</BulletItem>
+            <BulletItem>Hiking trails and finding God in creation—kind of ironic for someone going into tech, but I don't have social media. I value in-real-life connection and being fully present with people</BulletItem>
             <BulletItem>Playing board games, spikeball, and pickleball with friends</BulletItem>
-            <BulletItem>Exploring biohacking and optimizing daily routines</BulletItem>
+            <BulletItem>Exploring biohacking and optimizing daily routines (when I'm not cooked lol)</BulletItem>
           </BulletList>
         </TextContent>
 
@@ -498,30 +465,42 @@ const AboutPage = () => {
 
       <MusicSection>
         <MusicTitle>Music</MusicTitle>
-
-        {albums.map((album, idx) => (
-          <MusicRow key={idx} $reverse={idx % 2 === 1}>
-            <AlbumText $reverse={idx % 2 === 1}>
-              <AlbumTitle>{album.name}</AlbumTitle>
-              <AlbumArtist>{album.artist}</AlbumArtist>
-            </AlbumText>
-            <SpotifyEmbed
-              $reverse={idx % 2 === 1}
-              src={album.embed}
+        <MusicLayout>
+          <NowPlayingSection>
+            <NowPlayingEmbed
+              src={nowPlayingEmbed}
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             />
-          </MusicRow>
-        ))}
+          </NowPlayingSection>
 
-        <NowPlayingSection>
-          <NowPlayingTitle>Now Playing</NowPlayingTitle>
-          <NowPlayingEmbed
-            src="https://open.spotify.com/embed/track/37f17hCX9Slu0HwHI6k9tE?utm_source=generator"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          />
-        </NowPlayingSection>
+          <AlbumsSection>
+            <ToggleContainer>
+              <ToggleButton
+                $active={showNewAlbums}
+                onClick={() => setShowNewAlbums(true)}
+              >
+                New
+              </ToggleButton>
+              <ToggleButton
+                $active={!showNewAlbums}
+                onClick={() => setShowNewAlbums(false)}
+              >
+                Old
+              </ToggleButton>
+            </ToggleContainer>
+            <AlbumsGrid>
+              {(showNewAlbums ? newAlbums : oldAlbums).map((embedUrl, idx) => (
+                <AlbumEmbed
+                  key={idx}
+                  src={embedUrl}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                />
+              ))}
+            </AlbumsGrid>
+          </AlbumsSection>
+        </MusicLayout>
       </MusicSection>
     </Container>
   );
