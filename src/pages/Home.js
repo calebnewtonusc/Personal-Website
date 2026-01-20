@@ -388,10 +388,16 @@ const CardLocation = styled.div`
 `;
 
 const CardCaption = styled.div`
-  font-size: 14px;
+  font-size: 11px;
   color: ${({ theme }) => theme.text_primary};
   opacity: 0.8;
-  line-height: 1.5;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 `;
 
 const timelineData = [

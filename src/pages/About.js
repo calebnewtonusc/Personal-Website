@@ -226,19 +226,19 @@ const CardLocation = styled.div`
 `;
 
 const CardCaption = styled.div`
-  font-size: 11px;
+  font-size: 10px;
   color: ${({ theme }) => theme.text_primary};
   opacity: 0.8;
-  line-height: 1.3;
+  line-height: 1.25;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 
   @media (max-width: 640px) {
-    font-size: 10px;
+    font-size: 9px;
   }
 `;
 
@@ -338,7 +338,6 @@ const AlbumsGrid = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  animation: fadeIn 0.3s ease-in-out;
 
   @keyframes fadeIn {
     from {
@@ -350,12 +349,31 @@ const AlbumsGrid = styled.div`
       transform: translateY(0);
     }
   }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &[data-direction="new"] {
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &[data-direction="old"] {
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 `;
 
 const AlbumEmbed = styled.iframe`
   border-radius: 12px;
   width: 100%;
-  height: 82px;
+  height: 85px;
   border: none;
 `;
 
@@ -383,8 +401,8 @@ const photos = [
     caption: "I have 3 younger siblings",
     rotation: -1,
     zIndex: 3,
-    scale: 1.15,
-    translateY: "45px"
+    scale: 1.2,
+    translateY: "65px"
   },
   {
     image: hikeImage,
@@ -419,7 +437,7 @@ const photos = [
     rotation: -2,
     zIndex: 7,
     scale: 1.1,
-    translateY: "-20px"
+    translateY: "-40px"
   },
   {
     image: guitarImage,
@@ -568,7 +586,7 @@ const AboutPage = () => {
                 </ToggleButton>
               </ToggleContainer>
             </AlbumsHeader>
-            <AlbumsGrid key={showNewAlbums ? 'new' : 'old'}>
+            <AlbumsGrid key={showNewAlbums ? 'new' : 'old'} data-direction={showNewAlbums ? 'new' : 'old'}>
               {(showNewAlbums ? newAlbums : oldAlbums).map((embedUrl, idx) => (
                 <AlbumEmbed
                   key={idx}

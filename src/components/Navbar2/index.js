@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import { Bio } from '../../data/constants';
@@ -8,8 +8,10 @@ const Nav = styled.nav`
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10000;
   padding: 1rem;
+  transform: translateY(${({ $hidden }) => $hidden ? '-100%' : '0'});
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (min-width: 640px) {
     padding: 1.5rem 1rem;
@@ -72,21 +74,7 @@ const ProfileImage = styled.img`
 
 const CenterSection = styled.div`
   display: flex;
-
-  @media (max-width: 639px) {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0.75rem;
-    background: ${({ theme }) => theme.bg === '#0a0a0a'
-      ? 'rgba(10,10,10,0.95)'
-      : 'rgba(255,255,255,0.95)'};
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-top: 1px solid ${({ theme }) => theme.border};
-    justify-content: center;
-  }
+  justify-content: center;
 `;
 
 const NavPill = styled.div`
@@ -243,7 +231,6 @@ const ThemeToggle = styled.button`
       ? 'rgba(255,255,255,0.12)'
       : 'rgba(0,0,0,0.08)'};
     opacity: 1;
-    filter: grayscale(0%);
     transform: translateY(-1px);
   }
 
@@ -268,9 +255,41 @@ const ThemeToggle = styled.button`
 
 const Navbar2 = ({ toggleTheme, isDark }) => {
   const location = useLocation();
+  const [isHidden, setIsHidden] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollThreshold = 100;
+      const footerThreshold = documentHeight - windowHeight - 200;
+
+      // Hide at top
+      if (currentScrollY < scrollThreshold) {
+        setIsHidden(true);
+      }
+      // Hide near footer
+      else if (currentScrollY > footerThreshold) {
+        setIsHidden(true);
+      }
+      // Show when scrolling down after threshold
+      else if (currentScrollY > scrollThreshold && currentScrollY < footerThreshold) {
+        setIsHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <Nav>
+    <Nav $hidden={isHidden}>
       <NavContent>
         <LeftSection>
           <ProfileButton to="/" aria-label="Home">
@@ -305,7 +324,7 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
             </svg>
           </IconButton>
           <IconButton href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer" aria-label="RateYourMusic">
-            <span style={{ fontSize: '14px', fontWeight: 'bold' }}>RYM</span>
+            <span style={{ fontSize: '11px', fontWeight: 'bold' }}>RYM</span>
           </IconButton>
           <ThemeToggle onClick={toggleTheme} aria-label="Toggle theme">
             {isDark ? '☀️' : '🌙'}
