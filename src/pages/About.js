@@ -141,7 +141,7 @@ const FlipCard = styled.div`
   max-width: 100%;
   perspective: 1000px;
   cursor: pointer;
-  transform: rotate(${props => props.$rotation || 0}deg) ${props => props.$translateY ? `translateY(${props.$translateY})` : ''} ${props => props.$scale ? `scale(${props.$scale})` : ''};
+  transform: rotate(${props => props.$rotation || 0}deg) ${props => props.$translateX ? `translateX(${props.$translateX})` : ''} ${props => props.$translateY ? `translateY(${props.$translateY})` : ''} ${props => props.$scale ? `scale(${props.$scale})` : ''};
   transition: transform 0.3s ease;
   z-index: ${props => props.$zIndex || 1};
   overflow: visible;
@@ -149,7 +149,7 @@ const FlipCard = styled.div`
 
   &:hover {
     z-index: 100;
-    transform: rotate(0deg) scale(${props => props.$scale ? props.$scale * 1.15 : 1.15}) ${props => props.$translateY ? `translateY(${props.$translateY})` : ''};
+    transform: rotate(0deg) ${props => props.$translateX ? `translateX(${props.$translateX})` : ''} ${props => props.$translateY ? `translateY(${props.$translateY})` : ''} scale(${props => props.$scale ? props.$scale * 1.15 : 1.15});
   }
 `;
 
@@ -384,7 +384,7 @@ const photos = [
     rotation: -1,
     zIndex: 3,
     scale: 1.25,
-    translateY: "85px"
+    translateY: "120px"
   },
   {
     image: hikeImage,
@@ -420,7 +420,8 @@ const photos = [
     rotation: -2,
     zIndex: 7,
     scale: 1.15,
-    translateY: "-65px"
+    translateX: "20px",
+    translateY: "-75px"
   },
   {
     image: guitarImage,
@@ -546,6 +547,7 @@ const AboutPage = () => {
               $rotation={photo.rotation}
               $zIndex={photo.zIndex}
               $gridColumn={photo.gridColumn}
+              $translateX={photo.translateX}
               $translateY={photo.translateY}
               $scale={photo.scale}
               $rotateX={cardStates[idx].rotateX}
