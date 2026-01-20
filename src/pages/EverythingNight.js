@@ -113,7 +113,6 @@ const ImageGrid = styled.div`
 const FlipCard = styled.div`
   position: relative;
   width: 100%;
-  min-height: 300px;
   perspective: 1000px;
   cursor: pointer;
   transform: rotate(${props => props.$rotation || 0}deg);
@@ -125,16 +124,11 @@ const FlipCard = styled.div`
     z-index: 10;
     transform: rotate(0deg) scale(1.05);
   }
-
-  @media (max-width: 640px) {
-    min-height: 250px;
-  }
 `;
 
 const FlipCardInner = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 
@@ -144,9 +138,8 @@ const FlipCardInner = styled.div`
 `;
 
 const FlipCardFront = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 100%;
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
@@ -157,6 +150,8 @@ const FlipCardFront = styled.div`
 
 const FlipCardBack = styled.div`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -173,7 +168,7 @@ const FlipCardBack = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
   border-radius: 12px;
