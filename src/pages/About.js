@@ -184,15 +184,15 @@ const FlipCardBack = styled.div`
   border-radius: 12px;
   background: ${({ theme }) => theme.card};
   border: 1px solid ${({ theme }) => theme.border};
-  padding: 1rem;
+  padding: 0.65rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
   overflow: hidden;
 
   @media (max-width: 640px) {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 `;
 
@@ -205,28 +205,20 @@ const Photo = styled.img`
 `;
 
 const CardDate = styled.div`
-  font-size: 12px;
+  font-size: clamp(9px, 2.5vw, 12px);
   font-weight: 500;
   color: ${({ theme }) => theme.text_secondary};
-
-  @media (max-width: 640px) {
-    font-size: 11px;
-  }
 `;
 
 const CardLocation = styled.div`
-  font-size: 13px;
+  font-size: clamp(10px, 2.8vw, 13px);
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 0.5rem;
-
-  @media (max-width: 640px) {
-    font-size: 12px;
-  }
+  margin-bottom: 0.35rem;
 `;
 
 const CardCaption = styled.div`
-  font-size: 10px;
+  font-size: clamp(8px, 2.2vw, 10px);
   color: ${({ theme }) => theme.text_primary};
   opacity: 0.8;
   line-height: 1.25;
@@ -234,12 +226,8 @@ const CardCaption = styled.div`
   text-overflow: ellipsis;
   word-wrap: break-word;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
-
-  @media (max-width: 640px) {
-    font-size: 9px;
-  }
 `;
 
 const Link = styled.a`
@@ -335,45 +323,28 @@ const ToggleButton = styled.button`
 `;
 
 const AlbumsGrid = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  min-height: 352px;
+`;
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(5px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  &[data-direction="new"] {
-    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  &[data-direction="old"] {
-    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+const AlbumsList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  opacity: ${({ $visible }) => $visible ? 1 : 0};
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: ${({ $visible }) => $visible ? 'relative' : 'absolute'};
+  width: 100%;
+  pointer-events: ${({ $visible }) => $visible ? 'auto' : 'none'};
 `;
 
 const AlbumEmbed = styled.iframe`
   border-radius: 12px;
   width: 100%;
-  height: 85px;
+  height: 83px;
   border: none;
 `;
 
@@ -401,8 +372,8 @@ const photos = [
     caption: "I have 3 younger siblings",
     rotation: -1,
     zIndex: 3,
-    scale: 1.2,
-    translateY: "65px"
+    scale: 1.25,
+    translateY: "85px"
   },
   {
     image: hikeImage,
@@ -411,7 +382,7 @@ const photos = [
     caption: "Hikes above the Hollywood sign",
     rotation: -2,
     zIndex: 4,
-    scale: 1.05
+    scale: 1.15
   },
   {
     image: boardGameImage,
@@ -436,8 +407,8 @@ const photos = [
     caption: "Concert nights with friends",
     rotation: -2,
     zIndex: 7,
-    scale: 1.1,
-    translateY: "-40px"
+    scale: 1.15,
+    translateY: "-65px"
   },
   {
     image: guitarImage,
@@ -586,15 +557,27 @@ const AboutPage = () => {
                 </ToggleButton>
               </ToggleContainer>
             </AlbumsHeader>
-            <AlbumsGrid key={showNewAlbums ? 'new' : 'old'} data-direction={showNewAlbums ? 'new' : 'old'}>
-              {(showNewAlbums ? newAlbums : oldAlbums).map((embedUrl, idx) => (
-                <AlbumEmbed
-                  key={idx}
-                  src={embedUrl}
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                />
-              ))}
+            <AlbumsGrid>
+              <AlbumsList $visible={showNewAlbums}>
+                {newAlbums.map((embedUrl, idx) => (
+                  <AlbumEmbed
+                    key={idx}
+                    src={embedUrl}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  />
+                ))}
+              </AlbumsList>
+              <AlbumsList $visible={!showNewAlbums}>
+                {oldAlbums.map((embedUrl, idx) => (
+                  <AlbumEmbed
+                    key={idx}
+                    src={embedUrl}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  />
+                ))}
+              </AlbumsList>
             </AlbumsGrid>
           </AlbumsSection>
         </MusicLayout>

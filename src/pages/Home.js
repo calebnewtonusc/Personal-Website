@@ -29,7 +29,7 @@ const fadeInUp = keyframes`
 `;
 
 const Container = styled.div`
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1.5rem 2.5rem;
 
@@ -375,20 +375,20 @@ const Photo = styled.img`
 `;
 
 const CardDate = styled.div`
-  font-size: 13px;
+  font-size: clamp(10px, 2.5vw, 13px);
   font-weight: 500;
   color: ${({ theme }) => theme.text_secondary};
 `;
 
 const CardLocation = styled.div`
-  font-size: 14px;
+  font-size: clamp(11px, 2.8vw, 14px);
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   margin-bottom: 0.5rem;
 `;
 
 const CardCaption = styled.div`
-  font-size: 11px;
+  font-size: clamp(9px, 2.2vw, 11px);
   color: ${({ theme }) => theme.text_primary};
   opacity: 0.8;
   line-height: 1.3;
@@ -396,39 +396,13 @@ const CardCaption = styled.div`
   text-overflow: ellipsis;
   word-wrap: break-word;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 `;
 
 const timelineData = [
   {
     year: "2026",
-    images: [
-      {
-        image: uscResearchImg,
-        date: "2026",
-        location: "University of Southern California",
-        caption: "Machine learning research at USC",
-        rotation: -2,
-        zIndex: 1
-      },
-      {
-        image: ainaTechSetupImg,
-        date: "January 2026",
-        location: "Aina Tech Studio",
-        caption: "75-camera volumetric capture rig setup",
-        rotation: 2,
-        zIndex: 2
-      },
-      {
-        image: ainaTechGoatsImg,
-        date: "January 2026",
-        location: "Aina Tech - On Location",
-        caption: "Volumetric capture in diverse environments",
-        rotation: 1,
-        zIndex: 3
-      }
-    ],
     items: [
       {
         text: (
@@ -438,6 +412,16 @@ const timelineData = [
         ),
         nested: [
           "Coming soon - Machine learning research position at University of Southern California"
+        ],
+        images: [
+          {
+            image: uscResearchImg,
+            date: "2026",
+            location: "University of Southern California",
+            caption: "Machine learning research at USC",
+            rotation: -2,
+            zIndex: 1
+          }
         ]
       },
       {
@@ -451,30 +435,30 @@ const timelineData = [
           "Supporting day-to-day studio operations by managing volumetric capture workflows and data quality checks to maintain high-fidelity 3D reconstruction across diverse environments",
           "Collaborating across software R&D and business initiatives as AINA builds flexible, AI-driven holographic content creation for industry and entertainment",
           "Have helped set up, operate, and break down a 75-camera volumetric capture rig, supporting calibration, synchronization, and reliable capture runs"
+        ],
+        images: [
+          {
+            image: ainaTechSetupImg,
+            date: "January 2026",
+            location: "Aina Tech Studio",
+            caption: "75-camera volumetric capture rig setup",
+            rotation: 2,
+            zIndex: 2
+          },
+          {
+            image: ainaTechGoatsImg,
+            date: "January 2026",
+            location: "Aina Tech - On Location",
+            caption: "Volumetric capture in diverse environments",
+            rotation: 1,
+            zIndex: 3
+          }
         ]
       }
     ]
   },
   {
     year: "2025",
-    images: [
-      {
-        image: everythingNightImg,
-        date: "May 2025",
-        location: "San Gabriel Valley, CA",
-        caption: "Everything Night - 200+ students, 20 breakout sessions",
-        rotation: -2,
-        zIndex: 1
-      },
-      {
-        image: everythingNightPlanningImg,
-        date: "May 2025",
-        location: "San Gabriel Valley, CA",
-        caption: "Planning team behind Everything Night",
-        rotation: 2,
-        zIndex: 2
-      }
-    ],
     items: [
       {
         text: (
@@ -498,22 +482,30 @@ const timelineData = [
           "Conceived and executed Everything Night, a first-of-its-kind regional event attracting 200+ students to 20 breakout sessions",
           "Exercised visionary leadership by filtering and curating the strongest student-led ideas into a cohesive program that maximized impact",
           "Pioneered a scalable framework for multi-school collaboration, media, and fundraising that emphasized community-building and created a replicable model for regional impact"
+        ],
+        images: [
+          {
+            image: everythingNightImg,
+            date: "May 2025",
+            location: "San Gabriel Valley, CA",
+            caption: "Everything Night - 200+ students, 20 breakout sessions",
+            rotation: -2,
+            zIndex: 1
+          },
+          {
+            image: everythingNightPlanningImg,
+            date: "November 2024",
+            location: "San Gabriel Valley, CA",
+            caption: "Year-long planning process behind Everything Night",
+            rotation: 2,
+            zIndex: 2
+          }
         ]
       }
     ]
   },
   {
     year: "2024",
-    images: [
-      {
-        image: caltechResearchImg,
-        date: "Summer 2024",
-        location: "Caltech",
-        caption: "Control systems research - MATLAB and Python simulations",
-        rotation: 2,
-        zIndex: 1
-      }
-    ],
     items: [
       {
         text: (
@@ -524,30 +516,22 @@ const timelineData = [
         nested: [
           "Built MATLAB and Python simulations to compare Taylan Kargin's control model against three alternatives; produced visualizations to communicate stability, efficiency, and scalability trade-offs",
           "Created system models and plots to distill theory into actionable insights for faculty and peers; supported evaluation for aerospace and robotics control strategies"
+        ],
+        images: [
+          {
+            image: caltechResearchImg,
+            date: "Fall 2024",
+            location: "Caltech",
+            caption: "Control systems research - MATLAB and Python simulations",
+            rotation: 2,
+            zIndex: 1
+          }
         ]
       }
     ]
   },
   {
     year: "2022-2023",
-    images: [
-      {
-        image: impact360LeadershipImg,
-        date: "Summer 2022-2023",
-        location: "Impact 360 Institute",
-        caption: "Leadership development and servant leadership training",
-        rotation: -1,
-        zIndex: 1
-      },
-      {
-        image: dominicanRepublicImg,
-        date: "July 2022",
-        location: "Dominican Republic",
-        caption: "Mission trip - serving local communities",
-        rotation: 2,
-        zIndex: 2
-      }
-    ],
     items: [
       {
         text: (
@@ -558,6 +542,24 @@ const timelineData = [
         nested: [
           "Completed two summers of Christian leadership training focused on character, servant leadership, and communication",
           "Strengthened my ability to collaborate, make decisions, and lead with empathy and purpose"
+        ],
+        images: [
+          {
+            image: impact360LeadershipImg,
+            date: "Summer 2022-2023",
+            location: "Impact 360 Institute",
+            caption: "Leadership development and servant leadership training",
+            rotation: -1,
+            zIndex: 1
+          },
+          {
+            image: dominicanRepublicImg,
+            date: "July 2022",
+            location: "Dominican Republic",
+            caption: "Mission trip - serving local communities",
+            rotation: 2,
+            zIndex: 2
+          }
         ]
       }
     ]
@@ -573,9 +575,10 @@ const HomePage = () => {
         <Location>San Marino, CA</Location>
         <Skills>
           <Skill>Machine Learning</Skill>
+          <Skill>Data Engineering</Skill>
           <Skill>Computer Vision</Skill>
         </Skills>
-        <Tagline>CS + Applied Math @ USC</Tagline>
+        <Tagline>I want to learn and help people</Tagline>
         <Mission>
           Building technology that helps people flourish.
         </Mission>
@@ -595,16 +598,36 @@ const HomePage = () => {
                   <Year>{yearBlock.year}</Year>
                   <ItemsList>
                     {yearBlock.items.map((item, itemIdx) => (
-                      <Item key={itemIdx}>
-                        <div>{item.text}</div>
-                        {item.nested && item.nested.length > 0 && (
-                          <NestedList>
-                            {item.nested.map((nestedItem, nestedIdx) => (
-                              <NestedItem key={nestedIdx}>{nestedItem}</NestedItem>
+                      <React.Fragment key={itemIdx}>
+                        <Item>
+                          <div>{item.text}</div>
+                          {item.nested && item.nested.length > 0 && (
+                            <NestedList>
+                              {item.nested.map((nestedItem, nestedIdx) => (
+                                <NestedItem key={nestedIdx}>{nestedItem}</NestedItem>
+                              ))}
+                            </NestedList>
+                          )}
+                        </Item>
+                        {item.images && item.images.length > 0 && (
+                          <ImagesColumn>
+                            {item.images.map((photo, photoIdx) => (
+                              <FlipCard key={photoIdx} $rotation={photo.rotation} $zIndex={photo.zIndex}>
+                                <FlipCardInner>
+                                  <FlipCardFront>
+                                    <Photo src={photo.image} alt={photo.caption} />
+                                  </FlipCardFront>
+                                  <FlipCardBack>
+                                    <CardDate>{photo.date}</CardDate>
+                                    <CardLocation>{photo.location}</CardLocation>
+                                    <CardCaption>{photo.caption}</CardCaption>
+                                  </FlipCardBack>
+                                </FlipCardInner>
+                              </FlipCard>
                             ))}
-                          </NestedList>
+                          </ImagesColumn>
                         )}
-                      </Item>
+                      </React.Fragment>
                     ))}
                   </ItemsList>
                   {yearBlock.images && yearBlock.images.length > 0 && (

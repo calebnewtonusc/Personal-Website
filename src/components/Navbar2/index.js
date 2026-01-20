@@ -25,6 +25,16 @@ const NavContent = styled.div`
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 1rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.5rem;
+  }
 `;
 
 const LeftSection = styled.div`
@@ -75,6 +85,14 @@ const ProfileImage = styled.img`
 const CenterSection = styled.div`
   display: flex;
   justify-content: center;
+
+  @media (max-width: 900px) {
+    overflow-x: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `;
 
 const NavPill = styled.div`
