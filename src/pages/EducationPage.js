@@ -5,9 +5,10 @@ import berkeleyLogo from '../assets/education/berkeley.png';
 import uclaLogo from '../assets/education/ucla_logo.png';
 import smhsLogo from '../assets/education/smhs.png';
 import cnsiImg from '../assets/cnsi_ucla.jpg';
+import stjohnsImg from '../assets/stjohns.jpg';
 
 const Container = styled.div`
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem 2.5rem;
 
@@ -86,8 +87,8 @@ const ItemHeader = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   border-radius: 12px;
   background: ${({ theme }) => theme.bg === '#0a0a0a'
     ? 'rgba(255,255,255,0.08)'
@@ -106,8 +107,8 @@ const Logo = styled.div`
   padding: 0.75rem;
 
   @media (max-width: 640px) {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     padding: 0.625rem;
   }
 `;
@@ -180,6 +181,23 @@ const Description = styled.div`
   }
 `;
 
+const LearnMore = styled.a`
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 14px;
+  color: ${({ theme }) => theme.primary};
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &::after {
+    content: ' →';
+  }
+`;
+
 const education = [
   {
     logo: uscLogo,
@@ -187,6 +205,7 @@ const education = [
     institution: "University of Southern California",
     degree: "Bachelor of Science - Mathematics and Computer Science",
     period: "2025 - May 2029",
+    url: "https://www.usc.edu",
     description: (
       <ul>
         <li>Viterbi School of Engineering</li>
@@ -202,6 +221,7 @@ const education = [
     institution: "San Marino High School",
     degree: "High School Diploma",
     period: "August 2021 - June 2025",
+    url: "https://www.sanmarinohs.org",
     description: (
       <ul>
         <li>Promethean: Highest honor for a graduating student at San Marino High School</li>
@@ -209,6 +229,7 @@ const education = [
         <li>AP Scholar with Distinction</li>
         <li>National Merit Commended Student</li>
         <li>ACTS Christian Club Vice President (11th) and President (12th)</li>
+        <li>Baseball, Wrestling, Football</li>
       </ul>
     )
   },
@@ -218,6 +239,7 @@ const education = [
     institution: "UC Berkeley College of Engineering",
     degree: "Summer Program - Computer Science",
     period: "June 2024 - June 2024",
+    url: "https://www.berkeley.edu",
     description: "Completed intensive BJC-based course in abstraction, recursion, algorithms, and introductory ML through Snap! and Python."
   },
   {
@@ -226,14 +248,16 @@ const education = [
     institution: "California Nanosystems Institute at UCLA",
     degree: "Summer Program - Nanotechnology",
     period: "July 2023",
+    url: "https://www.ucla.edu",
     description: "Developed AquaShield (hydrophobic water bottle) in a two-week STEM + entrepreneurship program, pitching to investors and applying MATLAB for analysis."
   },
   {
-    logo: "🎓",
-    isImage: false,
+    logo: stjohnsImg,
+    isImage: true,
     institution: "St. John's Nursery School",
     degree: "Certified Juice Box Connoisseur",
     period: "August 2010 - June 2011",
+    url: "https://www.stjohnsnurseryla.com",
     description: (
       <div>
         <p>Fundamentals of Sharing, Naptime Negotiation, and Sandbox Engineering</p>
@@ -266,6 +290,11 @@ const EducationPage = () => {
             </ItemContent>
           </ItemHeader>
           <Description>{item.description}</Description>
+          {item.url && (
+            <LearnMore href={item.url} target="_blank" rel="noopener noreferrer">
+              Learn more
+            </LearnMore>
+          )}
         </GlassCard>
       ))}
     </Container>

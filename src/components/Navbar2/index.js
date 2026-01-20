@@ -184,7 +184,7 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
             <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
             <NavLink to="/about" $active={location.pathname === '/about'}>About</NavLink>
             <NavLink to="/education" $active={location.pathname === '/education'}>Education</NavLink>
-            <NavLink to="/work" $active={location.pathname === '/work'}>Work</NavLink>
+            <NavLink to="/work" $active={location.pathname === '/work'}>Projects</NavLink>
           </NavPill>
         </CenterSection>
 
