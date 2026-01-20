@@ -121,7 +121,7 @@ const PhotoGrid = styled.div`
   max-width: 100%;
   padding: 0 2rem;
   align-self: start;
-  margin-top: -4rem;
+  margin-top: -6rem;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);

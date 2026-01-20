@@ -237,7 +237,7 @@ const education = [
     isImage: true,
     institution: "University of Southern California",
     degree: "Bachelor of Science - Mathematics and Computer Science",
-    period: "2025 - May 2029",
+    period: "August 2025 - May 2029",
     url: "https://www.usc.edu",
     description: (
       <ul>
@@ -271,7 +271,7 @@ const education = [
     isImage: true,
     institution: "UC Berkeley College of Engineering",
     degree: "Summer Program - Computer Science",
-    period: "June 2024 - June 2024",
+    period: "June 2024",
     url: "https://precollege.berkeley.edu/summer-computer-science-academy",
     description: "Completed intensive BJC-based course in abstraction, recursion, algorithms, and introductory ML through Snap! and Python."
   },

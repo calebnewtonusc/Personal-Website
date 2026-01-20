@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import crowdImg from '../assets/everything_night_crowd.jpg';
 import dinnerImg from '../assets/everything_night_dinner.jpg';
@@ -68,13 +68,28 @@ const Description = styled.div`
 `;
 
 const ContentSection = styled.div`
-  animation: ${fadeInUp} 0.6s ease-out 0.2s backwards;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const EventSection = styled.div`
   margin-bottom: 4rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid ${({ theme }) => theme.border};
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   &:last-child {
     border-bottom: none;
@@ -272,6 +287,39 @@ const chosenImages = [
 ];
 
 const SGVCCCPage = () => {
+  const contentSectionRef = useRef(null);
+  const eventSectionRefs = useRef([]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        }
+      );
+
+      if (contentSectionRef.current) {
+        observer.observe(contentSectionRef.current);
+      }
+
+      eventSectionRefs.current.forEach((ref) => {
+        if (ref) observer.observe(ref);
+      });
+
+      return () => observer.disconnect();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Container>
       <HeaderSection>
@@ -279,7 +327,7 @@ const SGVCCCPage = () => {
         <Subtitle>November 2024 - June 2025</Subtitle>
       </HeaderSection>
 
-      <ContentSection>
+      <ContentSection ref={contentSectionRef}>
       <Description>
         <p>
           The SGV Christian Club Collective was a coalition uniting 15+ high school Christian clubs
@@ -294,7 +342,7 @@ const SGVCCCPage = () => {
         </p>
       </Description>
 
-      <EventSection>
+      <EventSection ref={(el) => (eventSectionRefs.current[0] = el)}>
         <EventTitle>Chosen</EventTitle>
         <EventDate>April 12, 2025</EventDate>
         <Description>
@@ -325,7 +373,7 @@ const SGVCCCPage = () => {
         </ImageGrid>
       </EventSection>
 
-      <EventSection>
+      <EventSection ref={(el) => (eventSectionRefs.current[1] = el)}>
         <EventTitle>Everything Night</EventTitle>
         <EventDate>May 23, 2025</EventDate>
         <Description>
