@@ -54,12 +54,12 @@ const Subtitle = styled.div`
 
 const CardsSection = styled.div`
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 
   &.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 `;
 
@@ -79,14 +79,14 @@ const GlassCard = styled.div`
   box-shadow: ${({ theme }) => theme.bg === '#0a0a0a'
     ? '0 8px 32px -4px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15)'
     : '0 8px 32px -4px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.8)'};
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.6s ease-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 1s ease-out;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(60px) scale(0.95);
 
   &.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 
   &:hover {

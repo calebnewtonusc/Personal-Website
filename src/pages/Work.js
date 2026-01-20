@@ -53,12 +53,12 @@ const Subtitle = styled.div`
 
 const ProjectsSection = styled.div`
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 
   &.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 `;
 
@@ -80,12 +80,12 @@ const ProjectCard = styled.div`
     : '0 8px 32px -4px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.8)'};
   overflow: hidden;
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 
   &.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 
   &::before {

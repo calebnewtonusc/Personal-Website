@@ -29,12 +29,16 @@ const NavContent = styled.div`
 
   @media (max-width: 900px) {
     grid-template-columns: auto 1fr auto;
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
   @media (max-width: 768px) {
     grid-template-columns: auto 1fr auto;
-    gap: 0.5rem;
+    gap: 0.25rem;
+  }
+
+  @media (max-width: 480px) {
+    gap: 0.125rem;
   }
 `;
 
@@ -169,11 +173,15 @@ const RightSection = styled.div`
   justify-content: flex-end;
 
   @media (max-width: 900px) {
-    gap: 0.375rem;
+    gap: 0.25rem;
   }
 
-  @media (max-width: 639px) {
-    gap: 0.25rem;
+  @media (max-width: 768px) {
+    gap: 0.125rem;
+  }
+
+  @media (max-width: 480px) {
+    gap: 0.0625rem;
   }
 `;
 

@@ -69,12 +69,12 @@ const Description = styled.div`
 
 const ContentSection = styled.div`
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 
   &.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 `;
 
@@ -83,12 +83,12 @@ const EventSection = styled.div`
   padding-bottom: 3rem;
   border-bottom: 1px solid ${({ theme }) => theme.border};
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 
   &.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 
   &:last-child {
