@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useRef } from 'react';
+import styled, { keyframes } from 'styled-components';
 import crowdImg from '../assets/everything_night_crowd.jpg';
 import dinnerImg from '../assets/everything_night_dinner.jpg';
 import bandImg from '../assets/everything_night_band.jpg';
@@ -9,6 +9,17 @@ import posterImg from '../assets/everything_night_poster.jpg';
 import chosenDabImg from '../assets/chosen_dab.jpg';
 import chosenCrowdImg from '../assets/chosen_crowd.jpg';
 import chosenTeamImg from '../assets/chosen_team.jpg';
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Container = styled.div`
   max-width: 1200px;
@@ -22,6 +33,10 @@ const Container = styled.div`
   @media (min-width: 768px) {
     padding: 0 2rem 3.5rem;
   }
+`;
+
+const HeaderSection = styled.div`
+  animation: ${fadeInUp} 0.6s ease-out;
 `;
 
 const Title = styled.h1`
@@ -50,6 +65,17 @@ const Description = styled.div`
   color: ${({ theme }) => theme.text_primary};
   margin-bottom: 2rem;
   opacity: 0.9;
+`;
+
+const ContentSection = styled.div`
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const EventSection = styled.div`
@@ -94,7 +120,6 @@ const ImageGrid = styled.div`
 const FlipCard = styled.div`
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 2;
   perspective: 1000px;
   cursor: pointer;
   transform: rotate(${props => props.$rotation || 0}deg);
@@ -225,11 +250,43 @@ const chosenImages = [
 ];
 
 const SGVCCCPage = () => {
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    // Small delay to ensure page is fully loaded before observing
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        }
+      );
+
+      if (contentRef.current) {
+        observer.observe(contentRef.current);
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <Container>
-      <Title>SGV Christian Club Collective</Title>
-      <Subtitle>November 2024 - June 2025</Subtitle>
+      <HeaderSection>
+        <Title>SGV Christian Club Collective</Title>
+        <Subtitle>November 2024 - June 2025</Subtitle>
+      </HeaderSection>
 
+      <ContentSection ref={contentRef}>
       <Description>
         <p>
           The SGV Christian Club Collective was a coalition uniting 15+ high school Christian clubs
@@ -304,6 +361,7 @@ const SGVCCCPage = () => {
           ))}
         </ImageGrid>
       </EventSection>
+      </ContentSection>
     </Container>
   );
 };

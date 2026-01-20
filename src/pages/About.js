@@ -366,7 +366,7 @@ const photos = [
     rotation: -3,
     zIndex: 1,
     scale: 1.2,
-    translateY: "35px"
+    translateY: "65px"
   },
   {
     image: baseballImage,
@@ -374,7 +374,8 @@ const photos = [
     location: "San Marino, CA",
     caption: "Pitched in high school - loved the competition and strategy",
     rotation: 2,
-    zIndex: 2
+    zIndex: 2,
+    translateY: "15px"
   },
   {
     image: familyImage,
@@ -394,7 +395,7 @@ const photos = [
     rotation: -2,
     zIndex: 4,
     scale: 1.25,
-    translateY: "45px"
+    translateY: "75px"
   },
   {
     image: boardGameImage,
@@ -421,7 +422,7 @@ const photos = [
     zIndex: 7,
     scale: 1.15,
     translateX: "20px",
-    translateY: "-75px"
+    translateY: "-45px"
   },
   {
     image: guitarImage,
@@ -429,7 +430,8 @@ const photos = [
     location: "Los Angeles, CA",
     caption: "Recently bought guitar - learning worship songs",
     rotation: 2,
-    zIndex: 8
+    zIndex: 8,
+    translateY: "-25px"
   },
   {
     image: premedImage,
