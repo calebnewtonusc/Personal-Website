@@ -216,112 +216,59 @@ const MusicSection = styled.div`
   border-top: 1px solid ${({ theme }) => theme.border};
 `;
 
-const MusicHeader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-`;
-
 const MusicTitle = styled.h2`
   font-size: 24px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 2rem;
 `;
 
-const TabContainer = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.25rem;
-  border-radius: 999px;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  background: ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(255,255,255,0.06)'
-    : 'rgba(0,0,0,0.04)'};
-  border: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(255,255,255,0.12)'
-    : 'rgba(0,0,0,0.08)'};
-`;
-
-const Tab = styled.button`
-  padding: 0.5rem 1rem;
-  font-size: 14px;
-  font-weight: 500;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.2s;
-  background: ${({ $active, theme }) => $active
-    ? (theme.bg === '#0a0a0a' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.05)')
-    : 'transparent'};
-  color: ${({ $active, theme }) => $active ? theme.text_primary : theme.text_secondary};
-
-  &:hover {
-    color: ${({ theme }) => theme.text_primary};
-    background: ${({ $active, theme }) => !$active && (theme.bg === '#0a0a0a'
-      ? 'rgba(255,255,255,0.08)'
-      : 'rgba(0,0,0,0.03)')};
-  }
-`;
-
-const AlbumsGrid = styled.div`
+const MusicRow = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
 
-  @media (max-width: 640px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+  @media (min-width: 768px) {
+    grid-template-columns: ${({ $reverse }) => $reverse ? '1fr 300px' : '300px 1fr'};
+    gap: 3rem;
   }
 `;
 
-const AlbumCard = styled.a`
+const AlbumText = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  text-decoration: none;
-  transition: transform 0.2s;
+  gap: 0.5rem;
+  order: ${({ $reverse }) => $reverse ? 2 : 1};
 
-  &:hover {
-    transform: translateY(-4px);
+  @media (max-width: 767px) {
+    order: 2;
   }
 `;
 
-const AlbumArt = styled.div`
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 8px;
-  overflow: hidden;
-  background: ${({ theme }) => theme.card};
-  border: 1px solid ${({ theme }) => theme.border};
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-`;
-
-const AlbumArtImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
-const AlbumInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-`;
-
-const AlbumName = styled.div`
-  font-size: 14px;
+const AlbumTitle = styled.h3`
+  font-size: 20px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  line-height: 1.3;
 `;
 
 const AlbumArtist = styled.div`
-  font-size: 13px;
+  font-size: 16px;
   color: ${({ theme }) => theme.text_secondary};
+  opacity: 0.8;
+`;
+
+const SpotifyEmbed = styled.iframe`
+  border-radius: 12px;
+  width: 100%;
+  height: 352px;
+  border: none;
+  order: ${({ $reverse }) => $reverse ? 1 : 2};
+
+  @media (max-width: 767px) {
+    order: 1;
+  }
 `;
 
 const NowPlayingSection = styled.div`
@@ -337,7 +284,7 @@ const NowPlayingTitle = styled.h3`
   margin-bottom: 1rem;
 `;
 
-const SpotifyEmbed = styled.iframe`
+const NowPlayingEmbed = styled.iframe`
   border-radius: 12px;
   width: 100%;
   height: 152px;
@@ -419,63 +366,51 @@ const photos = [
   }
 ];
 
-const oldAlbums = [
+const albums = [
   {
     name: "Songs in the Key of Life",
     artist: "Stevie Wonder",
-    spotify: "https://open.spotify.com/album/6YUCc2RiXcEKS9ibuZxjt0",
-    image: "https://i.scdn.co/image/ab67616d0000b2732aa04b29ecd22d1389d1b925"
-  },
-  {
-    name: "The Miseducation of Lauryn Hill",
-    artist: "Lauryn Hill",
-    spotify: "https://open.spotify.com/album/1BZoqf8Zje5nGdwZhOjAtD",
-    image: "https://i.scdn.co/image/ab67616d0000b273390a5d4f71c9519c3e94acd9"
-  },
-  {
-    name: "Mothership Connection",
-    artist: "Parliament",
-    spotify: "https://open.spotify.com/album/36ltakMWOJ7FUjfmG0vOtJ",
-    image: "https://i.scdn.co/image/ab67616d0000b273b9b66d3f7e19f48e68e25ee0"
+    embed: "https://open.spotify.com/embed/album/6YUCc2RiXcEKS9ibuZxjt0?utm_source=generator"
   },
   {
     name: "A Love Supreme",
     artist: "John Coltrane",
-    spotify: "https://open.spotify.com/album/7FWR41OwYX3vvRXOrREJHG",
-    image: "https://i.scdn.co/image/ab67616d0000b273582d56ce20fe0146ffa0e5cf"
-  }
-];
-
-const newAlbums = [
+    embed: "https://open.spotify.com/embed/album/7FWR41OwYX3vvRXOrREJHG?utm_source=generator"
+  },
+  {
+    name: "The Miseducation of Lauryn Hill",
+    artist: "Lauryn Hill",
+    embed: "https://open.spotify.com/embed/album/1BZoqf8Zje5nGdwZhOjAtD?utm_source=generator"
+  },
+  {
+    name: "Mothership Connection",
+    artist: "Parliament",
+    embed: "https://open.spotify.com/embed/album/36ltakMWOJ7FUjfmG0vOtJ?utm_source=generator"
+  },
   {
     name: "LL",
     artist: "The Hellp",
-    spotify: "https://open.spotify.com/album/0Oc2i2rRn7fxVPYiM8n7pL",
-    image: "https://i.scdn.co/image/ab67616d0000b27333b929789076b07b1ca9bbaf"
+    embed: "https://open.spotify.com/embed/album/0Oc2i2rRn7fxVPYiM8n7pL?utm_source=generator"
   },
   {
     name: "Live at the Banks House",
     artist: "Will Reagan",
-    spotify: "https://open.spotify.com/album/37CrDTv7KN6jL4Nz2X6Kke",
-    image: "https://i.scdn.co/image/ab67616d0000b2732e27e66e5e87f0d01c328c5b"
+    embed: "https://open.spotify.com/embed/album/37CrDTv7KN6jL4Nz2X6Kke?utm_source=generator"
   },
   {
     name: "Vanisher",
     artist: "Quadeca",
-    spotify: "https://open.spotify.com/album/1WJj3jDgUFJpHb5xGz3Q6r",
-    image: "https://i.scdn.co/image/ab67616d0000b2732de68eb707cc400f908a6ec5"
+    embed: "https://open.spotify.com/embed/album/1WJj3jDgUFJpHb5xGz3Q6r?utm_source=generator"
   },
   {
     name: "Sometimes I Might Be Introvert",
     artist: "Little Simz",
-    spotify: "https://open.spotify.com/album/0DBoWQ52XUHtrZQdfAqOVj",
-    image: "https://i.scdn.co/image/ab67616d0000b2733ae914c69f8afa479c300501"
+    embed: "https://open.spotify.com/embed/album/0DBoWQ52XUHtrZQdfAqOVj?utm_source=generator"
   }
 ];
 
 const AboutPage = () => {
   const [cardStates, setCardStates] = useState(photos.map(() => ({ rotateX: 0, rotateY: 0, hover: false })));
-  const [activeTab, setActiveTab] = useState('old');
 
   const handleMouseMove = (idx, e) => {
     const card = e.currentTarget;
@@ -501,8 +436,6 @@ const AboutPage = () => {
       return newStates;
     });
   };
-
-  const currentAlbums = activeTab === 'old' ? oldAlbums : newAlbums;
 
   return (
     <Container>
@@ -564,35 +497,26 @@ const AboutPage = () => {
       </ContentWrapper>
 
       <MusicSection>
-        <MusicHeader>
-          <MusicTitle>Music</MusicTitle>
-          <TabContainer>
-            <Tab $active={activeTab === 'old'} onClick={() => setActiveTab('old')}>
-              Favorite Old Albums
-            </Tab>
-            <Tab $active={activeTab === 'new'} onClick={() => setActiveTab('new')}>
-              Favorite New Albums
-            </Tab>
-          </TabContainer>
-        </MusicHeader>
+        <MusicTitle>Music</MusicTitle>
 
-        <AlbumsGrid>
-          {currentAlbums.map((album, idx) => (
-            <AlbumCard key={idx} href={album.spotify} target="_blank" rel="noopener noreferrer">
-              <AlbumArt>
-                <AlbumArtImage src={album.image} alt={`${album.name} by ${album.artist}`} />
-              </AlbumArt>
-              <AlbumInfo>
-                <AlbumName>{album.name}</AlbumName>
-                <AlbumArtist>{album.artist}</AlbumArtist>
-              </AlbumInfo>
-            </AlbumCard>
-          ))}
-        </AlbumsGrid>
+        {albums.map((album, idx) => (
+          <MusicRow key={idx} $reverse={idx % 2 === 1}>
+            <AlbumText $reverse={idx % 2 === 1}>
+              <AlbumTitle>{album.name}</AlbumTitle>
+              <AlbumArtist>{album.artist}</AlbumArtist>
+            </AlbumText>
+            <SpotifyEmbed
+              $reverse={idx % 2 === 1}
+              src={album.embed}
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
+          </MusicRow>
+        ))}
 
         <NowPlayingSection>
           <NowPlayingTitle>Now Playing</NowPlayingTitle>
-          <SpotifyEmbed
+          <NowPlayingEmbed
             src="https://open.spotify.com/embed/track/37f17hCX9Slu0HwHI6k9tE?utm_source=generator"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
