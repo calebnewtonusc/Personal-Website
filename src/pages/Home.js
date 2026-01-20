@@ -114,11 +114,11 @@ const Skill = styled.span`
   opacity: 0.6;
 `;
 
-const Tagline = styled.div`
-  font-size: 14px;
-  color: ${({ theme }) => theme.text_secondary};
+const TaglineWrapper = styled.div`
   margin-bottom: 0.5rem;
-  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `;
 
 const Mission = styled.p`
@@ -252,7 +252,7 @@ const Item = styled.li`
     content: '';
     position: absolute;
     left: 0;
-    top: 8px;
+    top: 0.45em;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -627,7 +627,9 @@ const HomePage = () => {
           <Skill>Data Engineering</Skill>
           <Skill>Computer Vision</Skill>
         </Skills>
-        <Tagline>CS + Applied Mathematics @ USC</Tagline>
+        <TaglineWrapper>
+          CS + Applied Mathematics @ <GlassTag logo={uscLogo} href="https://www.usc.edu">USC</GlassTag>
+        </TaglineWrapper>
         <Mission>I want to learn and help people</Mission>
       </ProfileSection>
 

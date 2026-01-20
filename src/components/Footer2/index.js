@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
@@ -6,6 +6,14 @@ const FooterContainer = styled.footer`
   margin: 4rem auto 0;
   padding: 2.5rem 1rem;
   border-top: 1px solid ${({ theme }) => theme.border};
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   @media (min-width: 640px) {
     padding: 2.5rem 0;
@@ -64,8 +72,36 @@ const FooterContent = styled.p`
 `;
 
 const Footer2 = () => {
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        }
+      );
+
+      if (footerRef.current) {
+        observer.observe(footerRef.current);
+      }
+
+      return () => observer.disconnect();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <FooterContainer>
+    <FooterContainer ref={footerRef}>
       <GetInTouch>
         <GetInTouchTitle>Get in Touch</GetInTouchTitle>
         <GetInTouchText>
