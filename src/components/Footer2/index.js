@@ -22,7 +22,7 @@ const Footer2 = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        © {new Date().getFullYear()} caleb newton. built with react + styled-components.
+        © {new Date().getFullYear()} Caleb Newton. Built with React + styled-components.
       </FooterContent>
     </FooterContainer>
   );

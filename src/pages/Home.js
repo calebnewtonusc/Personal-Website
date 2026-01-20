@@ -6,7 +6,7 @@ import uscLogo from '../assets/logos/usc.png';
 import ainaTechLogo from '../assets/logos/learninglyai.png';
 import caltechLogo from '../assets/logos/caltech.png';
 import impact360Logo from '../assets/logos/impact360.png';
-import smslLogo from '../assets/projects/smsl.png';
+import sgvLogo from '../assets/logos/sgv.png';
 import uscResearchImg from '../assets/usc_research.jpg';
 import caltechResearchImg from '../assets/caltech_research.jpg';
 import ainaTechSetupImg from '../assets/AinatechImages/Ainatechsetup.jpg';
@@ -407,7 +407,7 @@ const timelineData = [
       {
         text: (
           <>
-            research assistant @ <GlassTag logo={uscLogo} href="https://www.usc.edu">USC</GlassTag>
+            Research Assistant @ <GlassTag logo={uscLogo} href="https://www.usc.edu">USC</GlassTag>
           </>
         ),
         nested: [
@@ -417,7 +417,7 @@ const timelineData = [
       {
         text: (
           <>
-            software engineer & immersive studio production assistant @ <GlassTag logo={ainaTechLogo} href="https://www.ainatech.ai/">AINA Tech</GlassTag>
+            Software Engineer & Immersive Studio Production Assistant @ <GlassTag logo={ainaTechLogo} href="https://www.ainatech.ai/">AINA Tech</GlassTag>
           </>
         ),
         nested: [
@@ -445,7 +445,7 @@ const timelineData = [
       {
         text: (
           <>
-            strategic business consultant @ <GlassTag logo={fleursetselLogo} href="https://www.fleursetsel.com/">Fleurs et Sel Cookies</GlassTag>
+            Strategic Business Consultant @ <GlassTag logo={fleursetselLogo} href="https://www.fleursetsel.com/">Fleurs et Sel Cookies</GlassTag>
           </>
         ),
         nested: [
@@ -456,7 +456,7 @@ const timelineData = [
       {
         text: (
           <>
-            co-founder @ <GlassTag logo={smslLogo} href="/everything-night">SGV Christian Club Collective</GlassTag>
+            Co-Founder @ <GlassTag logo={sgvLogo} href="/everything-night">SGV Christian Club Collective</GlassTag>
           </>
         ),
         nested: [
@@ -484,7 +484,7 @@ const timelineData = [
       {
         text: (
           <>
-            research assistant @ <GlassTag logo={caltechLogo} href="https://www.caltech.edu">Caltech</GlassTag>
+            Research Assistant @ <GlassTag logo={caltechLogo} href="https://www.caltech.edu">Caltech</GlassTag>
           </>
         ),
         nested: [
@@ -518,7 +518,7 @@ const timelineData = [
       {
         text: (
           <>
-            leadership development @ <GlassTag logo={impact360Logo} href="https://impact360institute.org">Impact 360 Institute</GlassTag>
+            Leadership Development @ <GlassTag logo={impact360Logo} href="https://impact360institute.org">Impact 360 Institute</GlassTag>
           </>
         ),
         nested: [
