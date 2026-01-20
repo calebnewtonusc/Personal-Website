@@ -149,14 +149,9 @@ const TimelineItems = styled.div`
 const YearBlock = styled.div`
   position: relative;
   padding-left: 2.5rem;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-
-  @media (min-width: 968px) {
-    grid-template-columns: 1fr auto;
-    gap: 3rem;
-  }
 `;
 
 const YearDot = styled.div`
@@ -279,13 +274,17 @@ const YearContent = styled.div`
 `;
 
 const ImagesColumn = styled.div`
-  display: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @media (min-width: 968px) {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 280px;
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
@@ -298,7 +297,8 @@ const FlipCard = styled.div`
   transform: rotate(${props => props.$rotation || 0}deg);
   transition: transform 0.3s ease;
   z-index: ${props => props.$zIndex || 1};
-  overflow: visible;
+  overflow: hidden;
+  max-width: 300px;
 
   &:hover {
     z-index: 10;
@@ -573,25 +573,25 @@ const HomePage = () => {
                       </Item>
                     ))}
                   </ItemsList>
+                  {yearBlock.images && yearBlock.images.length > 0 && (
+                    <ImagesColumn>
+                      {yearBlock.images.map((photo, photoIdx) => (
+                        <FlipCard key={photoIdx} $rotation={photo.rotation} $zIndex={photo.zIndex}>
+                          <FlipCardInner>
+                            <FlipCardFront>
+                              <Photo src={photo.image} alt={photo.caption} />
+                            </FlipCardFront>
+                            <FlipCardBack>
+                              <CardDate>{photo.date}</CardDate>
+                              <CardLocation>{photo.location}</CardLocation>
+                              <CardCaption>{photo.caption}</CardCaption>
+                            </FlipCardBack>
+                          </FlipCardInner>
+                        </FlipCard>
+                      ))}
+                    </ImagesColumn>
+                  )}
                 </YearContent>
-                {yearBlock.images && yearBlock.images.length > 0 && (
-                  <ImagesColumn>
-                    {yearBlock.images.map((photo, photoIdx) => (
-                      <FlipCard key={photoIdx} $rotation={photo.rotation} $zIndex={photo.zIndex}>
-                        <FlipCardInner>
-                          <FlipCardFront>
-                            <Photo src={photo.image} alt={photo.caption} />
-                          </FlipCardFront>
-                          <FlipCardBack>
-                            <CardDate>{photo.date}</CardDate>
-                            <CardLocation>{photo.location}</CardLocation>
-                            <CardCaption>{photo.caption}</CardCaption>
-                          </FlipCardBack>
-                        </FlipCardInner>
-                      </FlipCard>
-                    ))}
-                  </ImagesColumn>
-                )}
               </YearBlock>
             ))}
           </TimelineItems>

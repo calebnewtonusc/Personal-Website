@@ -28,8 +28,8 @@ const Gradient = styled.div`
   transform: translateX(-50%);
   width: 100%;
   max-width: 1400px;
-  height: 600px;
-  background: radial-gradient(circle at 50% 0%, ${({ theme }) => theme.primary}25, ${({ theme }) => theme.primary}08 40%, transparent 70%);
+  height: 800px;
+  background: radial-gradient(circle at 50% 0%, ${({ theme }) => theme.primary}25, ${({ theme }) => theme.primary}08 40%, ${({ theme }) => theme.primary}03 70%, transparent 100%);
   pointer-events: none;
   z-index: 0;
   opacity: 0.6;
