@@ -41,7 +41,6 @@ const Body = styled.div`
   color: ${({ theme }) => theme.text_primary};
   width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
 `;
 
@@ -73,7 +72,6 @@ const fadeIn = keyframes`
 `;
 
 const Content = styled.div`
-  position: relative;
   z-index: 1;
 `;
 
