@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 import modellabImg from '../assets/projects/modellab.jpg';
@@ -52,14 +52,7 @@ const Subtitle = styled.div`
 `;
 
 const ProjectsSection = styled.div`
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: ${fadeInUp} 0.6s ease-out 0.2s backwards;
 `;
 
 const ProjectCard = styled.div`
@@ -300,42 +293,13 @@ const projects = [
 ];
 
 const WorkPage = () => {
-  const projectsRef = useRef(null);
-
-  useEffect(() => {
-    // Small delay to ensure page is fully loaded before observing
-    const timer = setTimeout(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        },
-        {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        }
-      );
-
-      if (projectsRef.current) {
-        observer.observe(projectsRef.current);
-      }
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-
   return (
     <Container>
       <HeaderSection>
         <PageTitle>Projects</PageTitle>
         <Subtitle>Things I've built.</Subtitle>
       </HeaderSection>
-      <ProjectsSection ref={projectsRef}>
+      <ProjectsSection>
         {projects.map((item, idx) => (
         <ProjectCard key={idx}>
           <ProjectContent $reverse={idx % 2 === 1}>

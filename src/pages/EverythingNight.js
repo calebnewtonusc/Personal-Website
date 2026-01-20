@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import crowdImg from '../assets/everything_night_crowd.jpg';
 import dinnerImg from '../assets/everything_night_dinner.jpg';
@@ -68,14 +68,7 @@ const Description = styled.div`
 `;
 
 const ContentSection = styled.div`
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: ${fadeInUp} 0.6s ease-out 0.2s backwards;
 `;
 
 const EventSection = styled.div`
@@ -120,6 +113,7 @@ const ImageGrid = styled.div`
 const FlipCard = styled.div`
   position: relative;
   width: 100%;
+  min-height: 300px;
   perspective: 1000px;
   cursor: pointer;
   transform: rotate(${props => props.$rotation || 0}deg);
@@ -130,6 +124,10 @@ const FlipCard = styled.div`
   &:hover {
     z-index: 10;
     transform: rotate(0deg) scale(1.05);
+  }
+
+  @media (max-width: 640px) {
+    min-height: 250px;
   }
 `;
 
@@ -250,35 +248,6 @@ const chosenImages = [
 ];
 
 const SGVCCCPage = () => {
-  const contentRef = useRef(null);
-
-  useEffect(() => {
-    // Small delay to ensure page is fully loaded before observing
-    const timer = setTimeout(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        },
-        {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        }
-      );
-
-      if (contentRef.current) {
-        observer.observe(contentRef.current);
-      }
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-
   return (
     <Container>
       <HeaderSection>
@@ -286,7 +255,7 @@ const SGVCCCPage = () => {
         <Subtitle>November 2024 - June 2025</Subtitle>
       </HeaderSection>
 
-      <ContentSection ref={contentRef}>
+      <ContentSection>
       <Description>
         <p>
           The SGV Christian Club Collective was a coalition uniting 15+ high school Christian clubs

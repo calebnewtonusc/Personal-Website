@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import uscLogo from '../assets/logos/usc.png';
 import berkeleyLogo from '../assets/education/berkeley.png';
@@ -53,14 +53,7 @@ const Subtitle = styled.div`
 `;
 
 const CardsSection = styled.div`
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: ${fadeInUp} 0.6s ease-out 0.2s backwards;
 `;
 
 const GlassCard = styled.div`
@@ -295,42 +288,13 @@ const education = [
 ];
 
 const EducationPage = () => {
-  const cardsRef = useRef(null);
-
-  useEffect(() => {
-    // Small delay to ensure page is fully loaded before observing
-    const timer = setTimeout(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        },
-        {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        }
-      );
-
-      if (cardsRef.current) {
-        observer.observe(cardsRef.current);
-      }
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-
   return (
     <Container>
       <HeaderSection>
         <PageTitle>Education</PageTitle>
         <Subtitle>Where I've learned.</Subtitle>
       </HeaderSection>
-      <CardsSection ref={cardsRef}>
+      <CardsSection>
         {education.map((item, idx) => (
           <GlassCard key={idx}>
           <ItemHeader>
