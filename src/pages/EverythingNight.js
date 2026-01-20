@@ -127,9 +127,9 @@ const FlipCardFront = styled.div`
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: inset 0 0 80px ${({ theme }) => theme.primary}30,
-              0 0 40px ${({ theme }) => theme.primary}25;
-  border: 2px solid ${({ theme }) => theme.primary}40;
+  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}25,
+              0 0 30px ${({ theme }) => theme.primary}20;
+  border: 1px solid ${({ theme }) => theme.primary}30;
 `;
 
 const FlipCardBack = styled.div`

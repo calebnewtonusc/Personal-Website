@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import HeroImg from '../assets/CalebAtBeach.jpg';
 import GlassTag from '../components/GlassTag';
 import uscLogo from '../assets/logos/usc.png';
@@ -15,6 +15,17 @@ import everythingNightImg from '../assets/everything_night_main.jpg';
 import impact360LeadershipImg from '../assets/impact360_leadership.jpg';
 import dominicanRepublicImg from '../assets/dominican_republic.jpg';
 import fleursetselLogo from '../assets/fleursetsel_logo.png';
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Container = styled.div`
   max-width: 1200px;
@@ -32,6 +43,7 @@ const Container = styled.div`
 
 const ProfileSection = styled.section`
   margin-bottom: 4rem;
+  animation: ${fadeInUp} 0.6s ease-out;
 `;
 
 const ProfileImage = styled.img`
@@ -44,9 +56,9 @@ const ProfileImage = styled.img`
   display: block;
   margin-left: 0;
   margin-right: auto;
-  box-shadow: inset 0 0 80px ${({ theme }) => theme.primary}30,
-              0 0 40px ${({ theme }) => theme.primary}25;
-  border: 2px solid ${({ theme }) => theme.primary}40;
+  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}25,
+              0 0 30px ${({ theme }) => theme.primary}20;
+  border: 1px solid ${({ theme }) => theme.primary}30;
 `;
 
 const Name = styled.h1`
@@ -117,6 +129,7 @@ const Mission = styled.p`
 
 const TimelineSection = styled.section`
   margin-top: 4rem;
+  animation: ${fadeInUp} 0.6s ease-out 0.2s backwards;
 `;
 
 const TimelineTitle = styled.h2`
@@ -330,9 +343,9 @@ const FlipCardFront = styled.div`
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: inset 0 0 80px ${({ theme }) => theme.primary}30,
-              0 0 40px ${({ theme }) => theme.primary}25;
-  border: 2px solid ${({ theme }) => theme.primary}40;
+  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}25,
+              0 0 30px ${({ theme }) => theme.primary}20;
+  border: 1px solid ${({ theme }) => theme.primary}30;
 `;
 
 const FlipCardBack = styled.div`

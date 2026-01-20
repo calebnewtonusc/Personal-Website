@@ -87,9 +87,9 @@ const ProjectImage = styled.div`
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
-  border: 2px solid ${({ theme }) => theme.primary}40;
-  box-shadow: inset 0 0 80px ${({ theme }) => theme.primary}30,
-              0 0 40px ${({ theme }) => theme.primary}25;
+  border: 1px solid ${({ theme }) => theme.primary}30;
+  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}25,
+              0 0 30px ${({ theme }) => theme.primary}20;
   order: ${({ $reverse }) => $reverse ? 2 : 1};
 
   @media (max-width: 767px) {

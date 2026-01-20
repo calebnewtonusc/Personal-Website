@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import vinylImage from '../assets/vinyl_collection.jpg';
 import baseballImage from '../assets/baseball_pitching.jpg';
 import boardGameImage from '../assets/board_game.jpg';
@@ -10,6 +10,17 @@ import guitarImage from '../assets/guitar.jpg';
 import gymBibleImage from '../assets/gym_bible.jpg';
 import agoImage from '../assets/alpha_gamma_omega.jpg';
 import premedImage from '../assets/premed_friends.jpg';
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Container = styled.div`
   max-width: 1200px;
@@ -32,6 +43,7 @@ const Title = styled.h1`
   margin-bottom: 0.5rem;
   letter-spacing: -0.025em;
   line-height: 1.1;
+  animation: ${fadeInUp} 0.6s ease-out;
 
   @media (max-width: 640px) {
     font-size: 36px;
@@ -43,12 +55,14 @@ const Subtitle = styled.div`
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 3rem;
   opacity: 0.6;
+  animation: ${fadeInUp} 0.6s ease-out 0.1s backwards;
 `;
 
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  animation: ${fadeInUp} 0.6s ease-out 0.2s backwards;
 
   @media (min-width: 968px) {
     grid-template-columns: 45% 1fr;
@@ -100,7 +114,7 @@ const BulletItem = styled.li`
 const PhotoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  gap: 0.25rem;
   flex: 1;
   max-width: 100%;
   padding: 2rem;
@@ -108,6 +122,7 @@ const PhotoGrid = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
+    gap: 0.5rem;
   }
 
   @media (max-width: 640px) {
@@ -151,9 +166,9 @@ const FlipCardFront = styled.div`
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: inset 0 0 80px ${({ theme }) => theme.primary}30,
-              0 0 40px ${({ theme }) => theme.primary}25;
-  border: 2px solid ${({ theme }) => theme.primary}40;
+  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}25,
+              0 0 30px ${({ theme }) => theme.primary}20;
+  border: 1px solid ${({ theme }) => theme.primary}30;
 `;
 
 const FlipCardBack = styled.div`
@@ -167,11 +182,16 @@ const FlipCardBack = styled.div`
   border-radius: 12px;
   background: ${({ theme }) => theme.card};
   border: 1px solid ${({ theme }) => theme.border};
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+  overflow: hidden;
+
+  @media (max-width: 640px) {
+    padding: 0.75rem;
+  }
 `;
 
 const Photo = styled.img`
@@ -183,23 +203,35 @@ const Photo = styled.img`
 `;
 
 const CardDate = styled.div`
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_secondary};
+
+  @media (max-width: 640px) {
+    font-size: 11px;
+  }
 `;
 
 const CardLocation = styled.div`
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   margin-bottom: 0.5rem;
+
+  @media (max-width: 640px) {
+    font-size: 12px;
+  }
 `;
 
 const CardCaption = styled.div`
-  font-size: 14px;
+  font-size: 13px;
   color: ${({ theme }) => theme.text_primary};
   opacity: 0.8;
-  line-height: 1.5;
+  line-height: 1.4;
+
+  @media (max-width: 640px) {
+    font-size: 12px;
+  }
 `;
 
 const Link = styled.a`
@@ -215,6 +247,7 @@ const MusicSection = styled.div`
   margin-top: 4rem;
   padding-top: 3rem;
   border-top: 1px solid ${({ theme }) => theme.border};
+  animation: ${fadeInUp} 0.6s ease-out 0.4s backwards;
 `;
 
 const MusicTitle = styled.h2`
@@ -238,6 +271,14 @@ const MusicLayout = styled.div`
 const NowPlayingSection = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const SectionLabel = styled.h3`
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 1rem;
+  opacity: 0.9;
 `;
 
 const NowPlayingEmbed = styled.iframe`
@@ -283,13 +324,25 @@ const ToggleButton = styled.button`
 const AlbumsGrid = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
+  animation: fadeIn 0.4s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 `;
 
 const AlbumEmbed = styled.iframe`
   border-radius: 12px;
   width: 100%;
-  height: 152px;
+  height: 120px;
   border: none;
 `;
 
@@ -370,13 +423,13 @@ const photos = [
 
 const newAlbums = [
   "https://open.spotify.com/embed/album/4nOym5RKE8Opauf3rMxPAW?utm_source=generator", // Little Simz
-  "https://open.spotify.com/embed/album/6YUCc2RiXcEKS9ibuZxjt0?utm_source=generator", // Stevie Wonder
+  "https://open.spotify.com/embed/album/7r0oaJO4WR0KLgg1rZu6kg?utm_source=generator", // The Hellp
   "https://open.spotify.com/embed/album/06BotF7CerCXpcm5Km2uX7?utm_source=generator", // Will Reagan
   "https://open.spotify.com/embed/album/6o6VAIetIFOsaOa0qt7w9u?utm_source=generator"  // Quadeca
 ];
 
 const oldAlbums = [
-  "https://open.spotify.com/embed/album/7r0oaJO4WR0KLgg1rZu6kg?utm_source=generator", // The Hellp
+  "https://open.spotify.com/embed/album/6YUCc2RiXcEKS9ibuZxjt0?utm_source=generator", // Stevie Wonder
   "https://open.spotify.com/embed/album/4q1HNSka8CzuLvC8ydcsD2?utm_source=generator", // Parliament
   "https://open.spotify.com/embed/album/1BZoqf8Zje5nGdwZhOjAtD?utm_source=generator", // Lauryn Hill
   "https://open.spotify.com/embed/album/7Ee6XgP8EHKDhTMYLIndu9?utm_source=generator"  // John Coltrane
@@ -422,7 +475,7 @@ const AboutPage = () => {
         <TextContent>
           <SectionHeading>More About Me...</SectionHeading>
           <Paragraph>
-            I'm an aspiring machine learning and data engineer based in San Marino, CA, studying Computer Science + Applied Mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">University of Southern California</Link>. I love building cool things and learning constantly.
+            I'm an aspiring machine learning and data engineer based in San Marino, CA, studying Computer Science + Applied Mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">University of Southern California</Link>. I'm driven by continuous learning and building technology that helps people.
           </Paragraph>
           <Paragraph>
             My approach to tech is grounded in my Christian faith—I believe the best technology serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://www.ainatech.ai/" target="_blank" rel="noopener noreferrer">AINA Tech</Link>.
@@ -430,7 +483,7 @@ const AboutPage = () => {
           <AsideHeading>Aside from work, I'm currently:</AsideHeading>
           <BulletList>
             <BulletItem>Expanding and deepening my taste in music and film (Peep my <Link href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer">RYM</Link> and <Link href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer">Letterboxd</Link>!)</BulletItem>
-            <BulletItem>Hiking trails and finding God in creation—kind of ironic for someone going into tech, but I don't have social media. I value in-real-life connection and being fully present with people</BulletItem>
+            <BulletItem>Hiking trails and finding God in creation. I don't have social media—I value in-real-life connection and being fully present with people</BulletItem>
             <BulletItem>Playing board games, spikeball, and pickleball with friends</BulletItem>
             <BulletItem>Exploring biohacking and optimizing daily routines (when I'm not cooked lol)</BulletItem>
           </BulletList>
@@ -467,6 +520,7 @@ const AboutPage = () => {
         <MusicTitle>Music</MusicTitle>
         <MusicLayout>
           <NowPlayingSection>
+            <SectionLabel>Currently Playing</SectionLabel>
             <NowPlayingEmbed
               src={nowPlayingEmbed}
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -475,6 +529,7 @@ const AboutPage = () => {
           </NowPlayingSection>
 
           <AlbumsSection>
+            <SectionLabel>Favorite Albums</SectionLabel>
             <ToggleContainer>
               <ToggleButton
                 $active={showNewAlbums}
@@ -489,7 +544,7 @@ const AboutPage = () => {
                 Old
               </ToggleButton>
             </ToggleContainer>
-            <AlbumsGrid>
+            <AlbumsGrid key={showNewAlbums ? 'new' : 'old'}>
               {(showNewAlbums ? newAlbums : oldAlbums).map((embedUrl, idx) => (
                 <AlbumEmbed
                   key={idx}

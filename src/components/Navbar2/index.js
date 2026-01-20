@@ -130,6 +130,10 @@ const RightSection = styled.div`
   gap: 0.5rem;
   align-items: center;
   justify-content: flex-end;
+
+  @media (max-width: 639px) {
+    gap: 0.25rem;
+  }
 `;
 
 const IconButton = styled.a`
@@ -150,6 +154,12 @@ const IconButton = styled.a`
       : 'rgba(0,0,0,0.05)'};
     color: ${({ theme }) => theme.text_primary};
   }
+
+  @media (max-width: 639px) {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
 `;
 
 const ThemeToggle = styled.button`
@@ -165,14 +175,16 @@ const ThemeToggle = styled.button`
   font-size: 16px;
   cursor: pointer;
   padding: 0;
-  transition: background 0.2s;
+  transition: background 0.2s, filter 0.2s;
   opacity: 0.7;
+  filter: grayscale(100%);
 
   &:hover {
     background: ${({ theme }) => theme.bg === '#0a0a0a'
       ? 'rgba(255,255,255,0.1)'
       : 'rgba(0,0,0,0.05)'};
     opacity: 1;
+    filter: grayscale(0%);
   }
 `;
 
