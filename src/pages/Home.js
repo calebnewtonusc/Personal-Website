@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroImg from '../assets/CalebAtBeach.jpg';
+import HeroImg from '../assets/CalebAtBeach_cropped.jpg';
 import GlassTag from '../components/GlassTag';
 import uscLogo from '../assets/logos/usc.png';
 import ainaTechLogo from '../assets/logos/learninglyai.png';
@@ -14,6 +14,7 @@ import ainaTechGoatsImg from '../assets/AinatechImages/Ainatechgoats.jpg';
 import everythingNightImg from '../assets/everything_night_main.jpg';
 import impact360LeadershipImg from '../assets/impact360_leadership.jpg';
 import dominicanRepublicImg from '../assets/dominican_republic.jpg';
+import fleursetselLogo from '../assets/fleursetsel_logo.png';
 
 const Container = styled.div`
   max-width: 1200px;
@@ -35,6 +36,8 @@ const ProfileImage = styled.img`
   border-radius: 50%;
   margin-bottom: 1.5rem;
   border: 1px solid ${({ theme }) => theme.border};
+  object-fit: cover;
+  object-position: center 30%;
 `;
 
 const Name = styled.h1`
@@ -408,13 +411,13 @@ const timelineData = [
       {
         text: (
           <>
-            software engineer @ <GlassTag logo={ainaTechLogo} href="https://www.ainatech.ai/">Aina Tech</GlassTag>
+            software engineer & immersive studio production assistant @ <GlassTag logo={ainaTechLogo} href="https://www.ainatech.ai/">AINA Tech</GlassTag>
           </>
         ),
         nested: [
-          "Assisting in development of Aina's foundational generative 3D model using Gaussian Splatting and Neural Radiance Fields (NeRFs) for photorealistic spatial video and holographic rendering",
+          "Assisting in development of AINA's foundational generative 3D model using Gaussian Splatting and Neural Radiance Fields (NeRFs) for photorealistic spatial video and holographic rendering",
           "Supporting day-to-day studio operations by managing volumetric capture workflows and data quality checks to maintain high-fidelity 3D reconstruction across diverse environments",
-          "Collaborating across software R&D and business initiatives as Aina builds flexible, AI-driven holographic content creation for industry and entertainment",
+          "Collaborating across software R&D and business initiatives as AINA builds flexible, AI-driven holographic content creation for industry and entertainment",
           "Have helped set up, operate, and break down a 75-camera volumetric capture rig, supporting calibration, synchronization, and reliable capture runs"
         ]
       }
@@ -433,6 +436,17 @@ const timelineData = [
       }
     ],
     items: [
+      {
+        text: (
+          <>
+            strategic business consultant @ <GlassTag logo={fleursetselLogo} href="https://www.fleursetsel.com/">Fleurs et Sel Cookies</GlassTag>
+          </>
+        ),
+        nested: [
+          "Produced a scaling strategy for a founder-led premium bakery without losing brand identity; delivered social media feed and packaging mockups plus an implementation roadmap",
+          "Built partnership and marketing recommendations using case studies (Sprinkles, Glossier) and corporate partnership research (Marriott, Delta), including QR-driven acquisition concepts"
+        ]
+      },
       {
         text: (
           <>
@@ -516,14 +530,14 @@ const HomePage = () => {
       <ProfileSection>
         <ProfileImage src={HeroImg} alt="Caleb Newton" />
         <Name>Hi, I'm Caleb Newton</Name>
-        <Location>Los Angeles, CA</Location>
+        <Location>San Marino, CA</Location>
         <Skills>
           <Skill>Machine Learning</Skill>
           <Skill>Computer Vision</Skill>
         </Skills>
         <Tagline>CS + Applied Math @ USC</Tagline>
         <Mission>
-          Making software that makes people's lives better.
+          Building cool things and learning constantly.
         </Mission>
       </ProfileSection>
 

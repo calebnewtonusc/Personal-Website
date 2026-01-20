@@ -5,10 +5,12 @@ import baseballImage from '../assets/baseball_pitching.jpg';
 import boardGameImage from '../assets/board_game.jpg';
 import hikeImage from '../assets/hike.jpg';
 import familyImage from '../assets/baseball_with_family.jpg';
-import dominicanImage from '../assets/dominican_republic.jpg';
 import concertImage from '../assets/concert.jpg';
 import guitarImage from '../assets/guitar.jpg';
 import gymBibleImage from '../assets/gym_bible.jpg';
+import agoImage from '../assets/alpha_gamma_omega.jpg';
+import premedImage from '../assets/premed_friends.jpg';
+import beachImage from '../assets/CalebAtBeach.jpg';
 
 const Container = styled.div`
   max-width: 1200px;
@@ -207,6 +209,21 @@ const Link = styled.a`
   }
 `;
 
+const BeachImageSection = styled.div`
+  margin-top: 3rem;
+  width: 100%;
+`;
+
+const BeachImage = styled.img`
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid ${({ theme }) => theme.border};
+  display: block;
+  margin: 0 auto;
+`;
+
 const MusicSection = styled.div`
   margin-top: 4rem;
   padding-top: 3rem;
@@ -346,7 +363,7 @@ const photos = [
     image: vinylImage,
     date: "Ongoing",
     location: "Los Angeles, CA",
-    caption: "Vinyl wall growing (Stevie to The Strokes)",
+    caption: "Vinyl collection growing (Stevie to The Strokes)",
     rotation: -3,
     zIndex: 1
   },
@@ -361,7 +378,7 @@ const photos = [
   {
     image: familyImage,
     date: "Ongoing",
-    location: "Los Angeles, CA",
+    location: "San Marino, CA",
     caption: "I have 3 younger siblings",
     rotation: -1,
     zIndex: 3
@@ -369,7 +386,7 @@ const photos = [
   {
     image: hikeImage,
     date: "June 2025",
-    location: "Los Angeles, CA",
+    location: "Hollywood, CA",
     caption: "Sunrise hikes above the Hollywood sign",
     rotation: -2,
     zIndex: 4
@@ -383,10 +400,10 @@ const photos = [
     zIndex: 5
   },
   {
-    image: dominicanImage,
-    date: "March 2023",
-    location: "Dominican Republic",
-    caption: "Mission trip serving communities",
+    image: agoImage,
+    date: "November 2025",
+    location: "Los Angeles, CA",
+    caption: "Alpha Gamma Omega pledge challenge - 4x4 burger and 4 donuts",
     rotation: 1,
     zIndex: 6
   },
@@ -407,10 +424,10 @@ const photos = [
     zIndex: 8
   },
   {
-    image: gymBibleImage,
-    date: "Daily",
+    image: premedImage,
+    date: "Fall 2025",
     location: "Los Angeles, CA",
-    caption: "6am gym and Bible study routine",
+    caption: "Premed friends at dinner - one of the few times we're not studying lol",
     rotation: -1,
     zIndex: 9
   }
@@ -506,21 +523,30 @@ const AboutPage = () => {
       <Title>About</Title>
       <Subtitle>Who I am.</Subtitle>
 
+      <BeachImageSection>
+        <BeachImage src={beachImage} alt="Caleb at the beach" />
+      </BeachImageSection>
+
       <ContentWrapper>
         <TextContent>
           <SectionHeading>More About Me...</SectionHeading>
           <Paragraph>
-            I'm a machine learning engineer based in Los Angeles, CA, studying Computer Science + Applied Mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">University of Southern California</Link>. I love building software that makes people's lives better.
+            I'm an aspiring machine learning and data engineer based in San Marino, CA, studying Computer Science + Applied Mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">University of Southern California</Link>. I love building cool things and learning constantly.
           </Paragraph>
           <Paragraph>
-            My approach to tech is grounded in my Christian faith—I believe the best technology serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://www.ainatech.ai/" target="_blank" rel="noopener noreferrer">Aina Tech</Link>.
+            My approach to tech is grounded in my Christian faith—I believe the best technology serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://www.ainatech.ai/" target="_blank" rel="noopener noreferrer">AINA Tech</Link>.
+          </Paragraph>
+          <Paragraph>
+            I love exploring artists' discographies in depth and have been getting into more movies lately. Outside of tech, you'll find me playing spikeball, pickleball, or trying new things.
           </Paragraph>
 
           <AsideHeading>Aside from work, I'm currently:</AsideHeading>
           <BulletList>
-            <BulletItem>Collecting vinyl records (Stevie Wonder, The Strokes, Quadeca)</BulletItem>
+            <BulletItem>Collecting vinyl records and exploring artists' discographies (Stevie Wonder, The Strokes, Quadeca)</BulletItem>
+            <BulletItem>Getting into more movies and tracking them on <Link href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer">Letterboxd</Link></BulletItem>
+            <BulletItem>Rating and cataloging music on <Link href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer">RateYourMusic</Link></BulletItem>
             <BulletItem>Hiking trails at sunrise and finding God in creation</BulletItem>
-            <BulletItem>Playing board games with friends (Settlers, Ticket to Ride, Catan)</BulletItem>
+            <BulletItem>Playing board games, spikeball, and pickleball with friends</BulletItem>
             <BulletItem>Exploring biohacking and optimizing daily routines</BulletItem>
           </BulletList>
         </TextContent>

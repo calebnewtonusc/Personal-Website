@@ -7,6 +7,8 @@ import dodgeballImg from '../assets/everything_night_dodgeball.jpg';
 import picnicImg from '../assets/everything_night_picnic.jpg';
 import posterImg from '../assets/everything_night_poster.jpg';
 import chosenDabImg from '../assets/chosen_dab.jpg';
+import chosenCrowdImg from '../assets/chosen_crowd.jpg';
+import chosenTeamImg from '../assets/chosen_team.jpg';
 
 const Container = styled.div`
   max-width: 1200px;
@@ -204,6 +206,18 @@ const chosenImages = [
     caption: "Celebrating Community at Chosen Event",
     rotation: -1,
     zIndex: 1
+  },
+  {
+    src: chosenCrowdImg,
+    caption: "100+ Students Gathered for Worship and Community",
+    rotation: 2,
+    zIndex: 2
+  },
+  {
+    src: chosenTeamImg,
+    caption: "Planning Team - Student Leaders from Across the SGV",
+    rotation: -2,
+    zIndex: 3
   }
 ];
 

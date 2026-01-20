@@ -155,12 +155,15 @@ const ThemeToggle = styled.button`
   cursor: pointer;
   padding: 0;
   transition: background 0.2s, color 0.2s;
+  filter: grayscale(100%);
+  opacity: 0.7;
 
   &:hover {
     background: ${({ theme }) => theme.bg === '#0a0a0a'
       ? 'rgba(255,255,255,0.1)'
       : 'rgba(0,0,0,0.05)'};
-    color: ${({ theme }) => theme.text_primary};
+    filter: grayscale(0%);
+    opacity: 1;
   }
 `;
 
@@ -191,6 +194,19 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
           </IconButton>
           <IconButton href={Bio.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i className="fab fa-linkedin"></i>
+          </IconButton>
+          <IconButton href="https://open.spotify.com/user/calebnewton" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+            <i className="fab fa-spotify"></i>
+          </IconButton>
+          <IconButton href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer" aria-label="Letterboxd">
+            <svg width="16" height="16" viewBox="0 0 500 500" fill="currentColor">
+              <circle cx="125" cy="250" r="125" fillOpacity="0.5"/>
+              <circle cx="375" cy="250" r="125" fillOpacity="0.5"/>
+              <circle cx="250" cy="250" r="125" fillOpacity="1"/>
+            </svg>
+          </IconButton>
+          <IconButton href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer" aria-label="RateYourMusic">
+            <span style={{ fontSize: '14px', fontWeight: 'bold' }}>RYM</span>
           </IconButton>
           <ThemeToggle onClick={toggleTheme} aria-label="Toggle theme">
             {isDark ? '☀️' : '🌙'}

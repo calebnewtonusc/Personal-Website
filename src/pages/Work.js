@@ -238,16 +238,6 @@ const TechTag = styled.span`
 
 const projects = [
   {
-    logo: curiosityImg,
-    name: "2026 Learning & Exploration",
-    type: "Concepts & Technologies to Explore",
-    period: "2026",
-    description: "Focus areas for 2026: Building production ML systems with PyTorch, exploring transformer architectures and attention mechanisms, diving into computer vision applications, learning ranking systems and recommendation engines, understanding distributed training and model deployment, experimenting with neural architecture search, and building end-to-end ML pipelines from data collection to production inference.",
-    tech: ["PyTorch", "Transformers", "Computer Vision", "Ranking Systems", "Distributed Training", "MLOps", "Neural Architecture Search"],
-    link: null,
-    isImage: true
-  },
-  {
     logo: modellabImg,
     name: "ModelLab",
     type: "ML Testing Platform",
@@ -283,10 +273,10 @@ const projects = [
   {
     logo: selfIcon,
     name: "The Lines",
-    type: "Music Project",
+    type: "STEM Music Project",
     period: "September 2023 - January 2025",
-    description: "Educational calculus music videos combining mathematical concepts with creative songwriting and production. Created engaging content to make calculus more accessible and fun for students.",
-    tech: ["Music", "Video Production", "Education", "Calculus"],
+    description: "Educational STEM music videos combining mathematical concepts with creative songwriting and production. Created engaging content to make calculus and science more accessible and fun for students.",
+    tech: ["Music", "Video Production", "Education", "STEM"],
     link: "https://www.youtube.com/playlist?list=PLWhbpQ2inj_p13rmaV6mOdpLu3kTIi8XF",
     isImage: true
   }
