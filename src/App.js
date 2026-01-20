@@ -83,7 +83,7 @@ function AnimatedRoutes({ toggleTheme, isDark }) {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [location.pathname]);
 
   return (
@@ -125,6 +125,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }, [isDark]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
 
   const toggleTheme = () => {
     setIsDark(!isDark);

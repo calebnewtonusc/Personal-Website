@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import HeroImg from '../assets/CalebAtBeachUSCHoodie.jpg';
 import GlassTag from '../components/GlassTag';
@@ -44,7 +44,7 @@ const Container = styled.div`
 
 const ProfileSection = styled.section`
   margin-bottom: 4rem;
-  animation: ${fadeInUp} 0.6s ease-out;
+  opacity: 1;
 `;
 
 const ProfileImage = styled.img`
@@ -130,7 +130,14 @@ const Mission = styled.p`
 
 const TimelineSection = styled.section`
   margin-top: 4rem;
-  animation: ${fadeInUp} 0.6s ease-out 0.2s backwards;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const TimelineTitle = styled.h2`
@@ -171,6 +178,14 @@ const YearBlock = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const YearDot = styled.div`
@@ -270,7 +285,7 @@ const NestedItem = styled.li`
     content: '';
     position: absolute;
     left: 0;
-    top: 8px;
+    top: 0.6em;
     width: 4px;
     height: 4px;
     border-radius: 50%;
@@ -411,7 +426,7 @@ const timelineData = [
           </>
         ),
         nested: [
-          "Coming soon - Machine learning research position at University of Southern California"
+          "Coming soon: Machine Learning Research Assistant"
         ],
         images: [
           {
@@ -567,6 +582,37 @@ const timelineData = [
 ];
 
 const HomePage = () => {
+  const timelineSectionRef = useRef(null);
+  const yearBlockRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    if (timelineSectionRef.current) {
+      observer.observe(timelineSectionRef.current);
+    }
+
+    yearBlockRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <Container>
       <ProfileSection>
@@ -579,18 +625,17 @@ const HomePage = () => {
           <Skill>Computer Vision</Skill>
         </Skills>
         <Tagline>I want to learn and help people</Tagline>
-        <Mission>
-          Building technology that helps people flourish.
-        </Mission>
       </ProfileSection>
 
-      <TimelineSection>
+      <TimelineSection ref={timelineSectionRef}>
         <TimelineTitle>Timeline</TimelineTitle>
         <TimelineContainer>
           <TimelineLine />
           <TimelineItems>
             {timelineData.map((yearBlock, idx) => (
-              <YearBlock key={idx}>
+              <YearBlock
+                key={idx}
+                ref={(el) => (yearBlockRefs.current[idx] = el)}>
                 <YearDot />
                 <YearDotCircle />
                 {idx < timelineData.length - 1 && <YearVerticalLine />}
