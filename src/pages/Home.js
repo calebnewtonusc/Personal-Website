@@ -321,6 +321,8 @@ const FlipCardFront = styled.div`
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}15,
+              0 0 30px ${({ theme }) => theme.primary}10;
 `;
 
 const FlipCardBack = styled.div`
@@ -501,7 +503,7 @@ const timelineData = [
       },
       {
         image: dominicanRepublicImg,
-        date: "Summer 2023",
+        date: "July 2022",
         location: "Dominican Republic",
         caption: "Mission trip - serving local communities",
         rotation: 2,

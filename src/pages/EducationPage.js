@@ -4,6 +4,7 @@ import uscLogo from '../assets/logos/usc.png';
 import berkeleyLogo from '../assets/education/berkeley.png';
 import uclaLogo from '../assets/education/ucla_logo.png';
 import smhsLogo from '../assets/education/smhs.png';
+import cnsiImg from '../assets/cnsi_ucla.jpg';
 
 const Container = styled.div`
   max-width: 800px;
@@ -191,24 +192,9 @@ const education = [
         <li>Viterbi School of Engineering</li>
         <li>Focus: Machine Learning Systems + Data/ML Engineering</li>
         <li>Spring 2026 Courses: Multivariable Calculus, Linear Algebra & Differential Equations, C++, Discrete Methods in CS</li>
+        <li><strong>Learning Interests:</strong> Building production ML systems with PyTorch, exploring transformer architectures and attention mechanisms, diving into computer vision applications, learning ranking systems and recommendation engines, understanding distributed training and model deployment, experimenting with neural architecture search, and building end-to-end ML pipelines</li>
       </ul>
     )
-  },
-  {
-    logo: berkeleyLogo,
-    isImage: true,
-    institution: "UC Berkeley College of Engineering",
-    degree: "Summer Program - Computer Science",
-    period: "June 2024 - June 2024",
-    description: "Completed intensive BJC-based course in abstraction, recursion, algorithms, and introductory ML through Snap! and Python."
-  },
-  {
-    logo: uclaLogo,
-    isImage: true,
-    institution: "California Nanosystems Institute at UCLA",
-    degree: "Summer Program - Nanotechnology",
-    period: "July 2023 - July 2023",
-    description: "Developed AquaShield (hydrophobic water bottle) in a two-week STEM + entrepreneurship program, pitching to investors and applying MATLAB for analysis."
   },
   {
     logo: smhsLogo,
@@ -224,6 +210,36 @@ const education = [
         <li>National Merit Commended Student</li>
         <li>ACTS Christian Club Vice President (11th) and President (12th)</li>
       </ul>
+    )
+  },
+  {
+    logo: berkeleyLogo,
+    isImage: true,
+    institution: "UC Berkeley College of Engineering",
+    degree: "Summer Program - Computer Science",
+    period: "June 2024 - June 2024",
+    description: "Completed intensive BJC-based course in abstraction, recursion, algorithms, and introductory ML through Snap! and Python."
+  },
+  {
+    logo: cnsiImg,
+    isImage: true,
+    institution: "California Nanosystems Institute at UCLA",
+    degree: "Summer Program - Nanotechnology",
+    period: "July 2023",
+    description: "Developed AquaShield (hydrophobic water bottle) in a two-week STEM + entrepreneurship program, pitching to investors and applying MATLAB for analysis."
+  },
+  {
+    logo: "🎓",
+    isImage: false,
+    institution: "St. John's Nursery School",
+    degree: "Certified Juice Box Connoisseur",
+    period: "August 2010 - June 2011",
+    description: (
+      <div>
+        <p>Fundamentals of Sharing, Naptime Negotiation, and Sandbox Engineering</p>
+        <p style={{ marginTop: '0.5rem', fontStyle: 'italic' }}>Activities: Block Tower Construction Club, Tricycle Racing League, Story Time Enthusiasts</p>
+        <p style={{ marginTop: '0.5rem' }}>Built early STEM skills by testing gravity with block towers, racing tricycles, and asking "why?" 47 times a day.</p>
+      </div>
     )
   }
 ];

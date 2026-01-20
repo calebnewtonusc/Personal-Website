@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, keyframes } from 'styled-components';
 import { darkTheme, lightTheme } from './utils/Themes';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar2';
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';
@@ -35,9 +35,24 @@ const Gradient = styled.div`
   opacity: 0.6;
 `;
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const Content = styled.div`
   position: relative;
   z-index: 1;
+`;
+
+const PageWrapper = styled.div`
+  animation: ${fadeIn} 0.4s ease-out;
 `;
 
 function App() {
@@ -61,16 +76,18 @@ function App() {
           <Gradient />
           <Content>
             <Navbar toggleTheme={toggleTheme} isDark={isDark} />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/education" element={<EducationPage />} />
-              <Route path="/work" element={<WorkPage />} />
-              <Route path="/everything-night" element={<EverythingNightPage />} />
-              <Route path="/modellab" element={<ComingSoonPage />} />
-              <Route path="/tech16" element={<ComingSoonPage />} />
-              <Route path="/foodvision" element={<ComingSoonPage />} />
-            </Routes>
+            <PageWrapper key={window.location.pathname}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/education" element={<EducationPage />} />
+                <Route path="/work" element={<WorkPage />} />
+                <Route path="/everything-night" element={<EverythingNightPage />} />
+                <Route path="/modellab" element={<ComingSoonPage />} />
+                <Route path="/tech16" element={<ComingSoonPage />} />
+                <Route path="/foodvision" element={<ComingSoonPage />} />
+              </Routes>
+            </PageWrapper>
             <Footer />
           </Content>
         </Body>

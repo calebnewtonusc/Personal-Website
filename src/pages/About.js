@@ -153,6 +153,8 @@ const FlipCardFront = styled.div`
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}15,
+              0 0 30px ${({ theme }) => theme.primary}10;
 `;
 
 const FlipCardBack = styled.div`
@@ -222,6 +224,8 @@ const BeachImage = styled.img`
   border: 1px solid ${({ theme }) => theme.border};
   display: block;
   margin: 0 auto;
+  box-shadow: inset 0 0 60px ${({ theme }) => theme.primary}15,
+              0 0 30px ${({ theme }) => theme.primary}10;
 `;
 
 const MusicSection = styled.div`
