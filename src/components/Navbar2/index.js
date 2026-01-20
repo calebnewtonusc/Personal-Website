@@ -11,7 +11,7 @@ const Nav = styled.nav`
   right: 0;
   z-index: 10000;
   padding: 1rem;
-  transform: translateY(${({ $hidden }) => $hidden ? '-120%' : '0'});
+  transform: translateY(${({ $hidden }) => $hidden ? '-200px' : '0'});
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (min-width: 640px) {
