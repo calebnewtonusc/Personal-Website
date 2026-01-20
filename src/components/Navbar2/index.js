@@ -293,7 +293,7 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
       const currentScrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
-      const scrollThreshold = 100;
+      const scrollThreshold = 50;
       const footerThreshold = documentHeight - windowHeight - 200;
 
       // Hide at top

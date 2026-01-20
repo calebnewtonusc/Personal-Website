@@ -73,14 +73,14 @@ const fadeIn = keyframes`
 
 const Content = styled.div`
   z-index: 1;
-  padding-top: 5rem;
+  padding-top: 2rem;
 
   @media (min-width: 640px) {
-    padding-top: 6rem;
+    padding-top: 2.5rem;
   }
 
   @media (min-width: 1024px) {
-    padding-top: 7rem;
+    padding-top: 3rem;
   }
 `;
 
