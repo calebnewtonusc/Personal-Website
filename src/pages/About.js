@@ -126,24 +126,21 @@ const PhotoGrid = styled.div`
   @media (max-width: 967px) {
     margin-top: 0;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 1.5rem;
-    max-width: 600px;
+    padding: 0 4rem;
     margin-left: auto;
     margin-right: auto;
   }
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 1rem;
+    padding: 0 6rem;
     gap: 0.5rem;
-    max-width: 400px;
   }
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 0 0.5rem;
-    max-width: 280px;
+    padding: 0 8rem;
   }
 `;
 
