@@ -5,6 +5,7 @@ import { Bio } from '../../data/constants';
 import ProfileImg from '../../assets/CalebAtUSC.jpg';
 
 const Nav = styled.nav`
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -12,8 +13,11 @@ const Nav = styled.nav`
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   background: ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(10,10,10,0.7)'
-    : 'rgba(255,255,255,0.7)'};
+    ? 'rgba(10,10,10,0.85)'
+    : 'rgba(255,255,255,0.85)'};
+  border-bottom: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
+    ? 'rgba(255,255,255,0.08)'
+    : 'rgba(0,0,0,0.05)'};
 
   @media (min-width: 640px) {
     padding: 1.5rem 1rem;
@@ -162,6 +166,7 @@ const IconButton = styled.a`
   font-size: 16px;
   transition: background 0.2s, color 0.2s;
   text-decoration: none;
+  flex-shrink: 0;
 
   &:hover {
     background: ${({ theme }) => theme.bg === '#0a0a0a'
@@ -170,10 +175,22 @@ const IconButton = styled.a`
     color: ${({ theme }) => theme.text_primary};
   }
 
-  @media (max-width: 639px) {
+  @media (max-width: 900px) {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 768px) {
     width: 28px;
     height: 28px;
     font-size: 14px;
+  }
+
+  @media (max-width: 639px) {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
   }
 `;
 
@@ -193,6 +210,7 @@ const ThemeToggle = styled.button`
   transition: background 0.2s, filter 0.2s;
   opacity: 0.7;
   filter: grayscale(100%);
+  flex-shrink: 0;
 
   &:hover {
     background: ${({ theme }) => theme.bg === '#0a0a0a'
@@ -200,6 +218,24 @@ const ThemeToggle = styled.button`
       : 'rgba(0,0,0,0.05)'};
     opacity: 1;
     filter: grayscale(0%);
+  }
+
+  @media (max-width: 900px) {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 768px) {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 639px) {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
   }
 `;
 

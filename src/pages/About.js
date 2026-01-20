@@ -138,7 +138,7 @@ const FlipCard = styled.div`
   max-width: 100%;
   perspective: 1000px;
   cursor: pointer;
-  transform: rotate(${props => props.$rotation || 0}deg) ${props => props.$translateY ? `translateY(${props.$translateY})` : ''};
+  transform: rotate(${props => props.$rotation || 0}deg) ${props => props.$translateY ? `translateY(${props.$translateY})` : ''} ${props => props.$scale ? `scale(${props.$scale})` : ''};
   transition: transform 0.3s ease;
   z-index: ${props => props.$zIndex || 1};
   overflow: visible;
@@ -146,7 +146,7 @@ const FlipCard = styled.div`
 
   &:hover {
     z-index: 100;
-    transform: rotate(0deg) scale(1.15) ${props => props.$translateY ? `translateY(${props.$translateY})` : ''};
+    transform: rotate(0deg) scale(${props => props.$scale ? props.$scale * 1.15 : 1.15}) ${props => props.$translateY ? `translateY(${props.$translateY})` : ''};
   }
 `;
 
@@ -229,9 +229,12 @@ const CardCaption = styled.div`
   color: ${({ theme }) => theme.text_primary};
   opacity: 0.8;
   line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 
   @media (max-width: 640px) {
-    font-size: 12px;
+    font-size: 11px;
   }
 `;
 
@@ -294,11 +297,16 @@ const AlbumsSection = styled.div`
   flex-direction: column;
 `;
 
+const AlbumsHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+`;
+
 const ToggleContainer = styled.div`
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 1rem;
-  justify-content: center;
 `;
 
 const ToggleButton = styled.button`
@@ -325,13 +333,13 @@ const ToggleButton = styled.button`
 const AlbumsGrid = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  animation: fadeIn 0.4s ease-in-out;
+  gap: 0.25rem;
+  animation: fadeIn 0.3s ease-in-out;
 
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(5px);
     }
     to {
       opacity: 1;
@@ -343,7 +351,7 @@ const AlbumsGrid = styled.div`
 const AlbumEmbed = styled.iframe`
   border-radius: 12px;
   width: 100%;
-  height: 120px;
+  height: 152px;
   border: none;
 `;
 
@@ -370,7 +378,9 @@ const photos = [
     location: "San Marino, CA",
     caption: "I have 3 younger siblings",
     rotation: -1,
-    zIndex: 3
+    zIndex: 3,
+    scale: 1.15,
+    translateY: "30px"
   },
   {
     image: hikeImage,
@@ -378,9 +388,7 @@ const photos = [
     location: "Hollywood, CA",
     caption: "Hikes above the Hollywood sign",
     rotation: -2,
-    zIndex: 4,
-    gridColumn: "span 2",
-    translateY: "20px"
+    zIndex: 4
   },
   {
     image: boardGameImage,
@@ -394,11 +402,9 @@ const photos = [
     image: agoImage,
     date: "November 2025",
     location: "Los Angeles, CA",
-    caption: "Alpha Gamma Omega pledge challenge - 4x4 burger and 4 donuts",
+    caption: "Alpha Gamma Omega (Christian fraternity) pledge challenge - 4x4 burger and 4 donuts",
     rotation: 1,
-    zIndex: 6,
-    gridColumn: "span 2",
-    translateY: "-20px"
+    zIndex: 6
   },
   {
     image: concertImage,
@@ -406,7 +412,8 @@ const photos = [
     location: "Los Angeles, CA",
     caption: "Concert nights with friends",
     rotation: -2,
-    zIndex: 7
+    zIndex: 7,
+    scale: 1.1
   },
   {
     image: guitarImage,
@@ -422,7 +429,8 @@ const photos = [
     location: "Los Angeles, CA",
     caption: "Premed friends at dinner - one of the few times we're not studying lol",
     rotation: -1,
-    zIndex: 9
+    zIndex: 9,
+    scale: 1.15
   }
 ];
 
@@ -437,7 +445,7 @@ const oldAlbums = [
   "https://open.spotify.com/embed/album/6YUCc2RiXcEKS9ibuZxjt0?utm_source=generator", // Stevie Wonder
   "https://open.spotify.com/embed/album/4q1HNSka8CzuLvC8ydcsD2?utm_source=generator", // Parliament
   "https://open.spotify.com/embed/album/1BZoqf8Zje5nGdwZhOjAtD?utm_source=generator", // Lauryn Hill
-  "https://open.spotify.com/embed/album/7Ee6XgP8EHKDhTMYLIndu9?utm_source=generator"  // John Coltrane
+  "https://open.spotify.com/embed/album/3JRgE1OqN7A8wrYqFxDfJO?utm_source=generator"  // John Coltrane
 ];
 
 const nowPlayingEmbed = "https://open.spotify.com/embed/track/7Ee6XgP8EHKDhTMYLIndu9?utm_source=generator"; // Praise
@@ -502,6 +510,7 @@ const AboutPage = () => {
               $zIndex={photo.zIndex}
               $gridColumn={photo.gridColumn}
               $translateY={photo.translateY}
+              $scale={photo.scale}
               $rotateX={cardStates[idx].rotateX}
               $rotateY={cardStates[idx].rotateY}
               $hover={cardStates[idx].hover}
@@ -536,21 +545,23 @@ const AboutPage = () => {
           </NowPlayingSection>
 
           <AlbumsSection>
-            <SectionLabel>Favorite Albums</SectionLabel>
-            <ToggleContainer>
-              <ToggleButton
-                $active={showNewAlbums}
-                onClick={() => setShowNewAlbums(true)}
-              >
-                New
-              </ToggleButton>
-              <ToggleButton
-                $active={!showNewAlbums}
-                onClick={() => setShowNewAlbums(false)}
-              >
-                Old
-              </ToggleButton>
-            </ToggleContainer>
+            <AlbumsHeader>
+              <SectionLabel>Favorite Albums</SectionLabel>
+              <ToggleContainer>
+                <ToggleButton
+                  $active={showNewAlbums}
+                  onClick={() => setShowNewAlbums(true)}
+                >
+                  New
+                </ToggleButton>
+                <ToggleButton
+                  $active={!showNewAlbums}
+                  onClick={() => setShowNewAlbums(false)}
+                >
+                  Old
+                </ToggleButton>
+              </ToggleContainer>
+            </AlbumsHeader>
             <AlbumsGrid key={showNewAlbums ? 'new' : 'old'}>
               {(showNewAlbums ? newAlbums : oldAlbums).map((embedUrl, idx) => (
                 <AlbumEmbed
