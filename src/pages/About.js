@@ -123,6 +123,12 @@ const PhotoGrid = styled.div`
   align-self: start;
   margin-top: -6rem;
 
+  @media (max-width: 967px) {
+    margin-top: 0;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 1.5rem;
+  }
+
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 1rem;
