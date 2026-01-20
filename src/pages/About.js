@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import vinylImage from '../assets/vinyl_collection.jpg';
 import baseballImage from '../assets/baseball_pitching.jpg';
@@ -36,6 +36,10 @@ const Container = styled.div`
   }
 `;
 
+const HeaderSection = styled.div`
+  animation: ${fadeInUp} 0.6s ease-out;
+`;
+
 const Title = styled.h1`
   font-size: 48px;
   font-weight: 600;
@@ -43,7 +47,6 @@ const Title = styled.h1`
   margin-bottom: 0.5rem;
   letter-spacing: -0.025em;
   line-height: 1.1;
-  animation: ${fadeInUp} 0.6s ease-out;
 
   @media (max-width: 640px) {
     font-size: 36px;
@@ -55,7 +58,6 @@ const Subtitle = styled.div`
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 3rem;
   opacity: 0.6;
-  animation: ${fadeInUp} 0.6s ease-out 0.1s backwards;
 `;
 
 const ContentWrapper = styled.div`
@@ -243,7 +245,14 @@ const MusicSection = styled.div`
   margin-top: 4rem;
   padding-top: 3rem;
   border-top: 1px solid ${({ theme }) => theme.border};
-  animation: ${fadeInUp} 0.6s ease-out 0.4s backwards;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const MusicTitle = styled.h2`
@@ -451,6 +460,34 @@ const nowPlayingEmbed = "https://open.spotify.com/embed/track/7Ee6XgP8EHKDhTMYLI
 const AboutPage = () => {
   const [cardStates, setCardStates] = useState(photos.map(() => ({ rotateX: 0, rotateY: 0, hover: false })));
   const [showNewAlbums, setShowNewAlbums] = useState(true);
+  const musicRef = useRef(null);
+
+  useEffect(() => {
+    // Small delay to ensure page is fully loaded before observing
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        }
+      );
+
+      if (musicRef.current) {
+        observer.observe(musicRef.current);
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   const handleMouseMove = (idx, e) => {
     const card = e.currentTarget;
@@ -479,8 +516,10 @@ const AboutPage = () => {
 
   return (
     <Container>
-      <Title>About</Title>
-      <Subtitle>Who I am.</Subtitle>
+      <HeaderSection>
+        <Title>About</Title>
+        <Subtitle>Who I am.</Subtitle>
+      </HeaderSection>
 
       <ContentWrapper>
         <TextContent>
@@ -530,7 +569,7 @@ const AboutPage = () => {
         </PhotoGrid>
       </ContentWrapper>
 
-      <MusicSection>
+      <MusicSection ref={musicRef}>
         <MusicTitle>Music</MusicTitle>
         <MusicLayout>
           <NowPlayingSection>

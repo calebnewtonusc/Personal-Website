@@ -1,11 +1,22 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useRef } from 'react';
+import styled, { keyframes } from 'styled-components';
 import uscLogo from '../assets/logos/usc.png';
 import berkeleyLogo from '../assets/education/berkeley.png';
 import uclaLogo from '../assets/education/ucla_logo.png';
 import smhsLogo from '../assets/education/smhs.png';
 import cnsiImg from '../assets/cnsi_ucla.jpg';
 import stjohnsImg from '../assets/stjohns.jpg';
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Container = styled.div`
   max-width: 1000px;
@@ -15,6 +26,10 @@ const Container = styled.div`
   @media (min-width: 640px) {
     padding: 0 1.5rem 2.5rem;
   }
+`;
+
+const HeaderSection = styled.div`
+  animation: ${fadeInUp} 0.6s ease-out;
 `;
 
 const PageTitle = styled.h1`
@@ -35,6 +50,17 @@ const Subtitle = styled.div`
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 3rem;
   opacity: 0.8;
+`;
+
+const CardsSection = styled.div`
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const GlassCard = styled.div`
@@ -269,12 +295,44 @@ const education = [
 ];
 
 const EducationPage = () => {
+  const cardsRef = useRef(null);
+
+  useEffect(() => {
+    // Small delay to ensure page is fully loaded before observing
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        }
+      );
+
+      if (cardsRef.current) {
+        observer.observe(cardsRef.current);
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <Container>
-      <PageTitle>Education</PageTitle>
-      <Subtitle>Where I've learned.</Subtitle>
-      {education.map((item, idx) => (
-        <GlassCard key={idx}>
+      <HeaderSection>
+        <PageTitle>Education</PageTitle>
+        <Subtitle>Where I've learned.</Subtitle>
+      </HeaderSection>
+      <CardsSection ref={cardsRef}>
+        {education.map((item, idx) => (
+          <GlassCard key={idx}>
           <ItemHeader>
             <Logo>
               {item.isImage ? (
@@ -296,7 +354,8 @@ const EducationPage = () => {
             </LearnMore>
           )}
         </GlassCard>
-      ))}
+        ))}
+      </CardsSection>
     </Container>
   );
 };

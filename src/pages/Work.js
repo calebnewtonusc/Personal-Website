@@ -1,10 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useRef } from 'react';
+import styled, { keyframes } from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 import modellabImg from '../assets/projects/modellab.jpg';
 import foodvisionImg from '../assets/projects/foodvision.jpg';
 import tech16Img from '../assets/projects/tech16personalities.jpg';
 import thelinesImg from '../assets/projects/thelines.jpg';
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Container = styled.div`
   max-width: 1000px;
@@ -14,6 +25,10 @@ const Container = styled.div`
   @media (min-width: 640px) {
     padding: 0 1.5rem 2.5rem;
   }
+`;
+
+const HeaderSection = styled.div`
+  animation: ${fadeInUp} 0.6s ease-out;
 `;
 
 const PageTitle = styled.h1`
@@ -34,6 +49,17 @@ const Subtitle = styled.div`
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 3rem;
   opacity: 0.8;
+`;
+
+const ProjectsSection = styled.div`
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const ProjectCard = styled.div`
@@ -274,11 +300,43 @@ const projects = [
 ];
 
 const WorkPage = () => {
+  const projectsRef = useRef(null);
+
+  useEffect(() => {
+    // Small delay to ensure page is fully loaded before observing
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        }
+      );
+
+      if (projectsRef.current) {
+        observer.observe(projectsRef.current);
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <Container>
-      <PageTitle>Projects</PageTitle>
-      <Subtitle>Things I've built.</Subtitle>
-      {projects.map((item, idx) => (
+      <HeaderSection>
+        <PageTitle>Projects</PageTitle>
+        <Subtitle>Things I've built.</Subtitle>
+      </HeaderSection>
+      <ProjectsSection ref={projectsRef}>
+        {projects.map((item, idx) => (
         <ProjectCard key={idx}>
           <ProjectContent $reverse={idx % 2 === 1}>
             <ProjectImage $reverse={idx % 2 === 1}>
@@ -308,7 +366,8 @@ const WorkPage = () => {
             </ProjectInfo>
           </ProjectContent>
         </ProjectCard>
-      ))}
+        ))}
+      </ProjectsSection>
     </Container>
   );
 };
