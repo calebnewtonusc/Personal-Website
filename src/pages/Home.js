@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import HeroImg from '../assets/CalebAtBeach.jpg';
+import HeroImg from '../assets/CalebAtBeachUSCHoodie.jpg';
 import GlassTag from '../components/GlassTag';
 import uscLogo from '../assets/logos/usc.png';
 import ainaTechLogo from '../assets/logos/learninglyai.png';

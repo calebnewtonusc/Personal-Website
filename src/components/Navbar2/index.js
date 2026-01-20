@@ -7,7 +7,7 @@ import ProfileImg from '../../assets/CalebAtUSC.jpg';
 const Nav = styled.nav`
   position: sticky;
   top: 0;
-  z-index: 40;
+  z-index: 1000;
   padding: 1rem;
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -60,6 +60,7 @@ const ProfileImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 30%;
 `;
 
 const CenterSection = styled.div`
@@ -123,6 +124,16 @@ const NavLink = styled(Link)`
       ? 'rgba(255,255,255,0.08)'
       : 'rgba(0,0,0,0.03)')};
   }
+
+  @media (max-width: 900px) {
+    padding: 0.5rem 0.75rem;
+    font-size: 13px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 0.6rem;
+    font-size: 12px;
+  }
 `;
 
 const RightSection = styled.div`
@@ -130,6 +141,10 @@ const RightSection = styled.div`
   gap: 0.5rem;
   align-items: center;
   justify-content: flex-end;
+
+  @media (max-width: 900px) {
+    gap: 0.375rem;
+  }
 
   @media (max-width: 639px) {
     gap: 0.25rem;

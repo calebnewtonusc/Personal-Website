@@ -138,14 +138,15 @@ const FlipCard = styled.div`
   max-width: 100%;
   perspective: 1000px;
   cursor: pointer;
-  transform: rotate(${props => props.$rotation || 0}deg);
+  transform: rotate(${props => props.$rotation || 0}deg) ${props => props.$translateY ? `translateY(${props.$translateY})` : ''};
   transition: transform 0.3s ease;
   z-index: ${props => props.$zIndex || 1};
   overflow: visible;
+  grid-column: ${props => props.$gridColumn || 'span 1'};
 
   &:hover {
     z-index: 100;
-    transform: rotate(0deg) scale(1.15);
+    transform: rotate(0deg) scale(1.15) ${props => props.$translateY ? `translateY(${props.$translateY})` : ''};
   }
 `;
 
@@ -377,7 +378,9 @@ const photos = [
     location: "Hollywood, CA",
     caption: "Hikes above the Hollywood sign",
     rotation: -2,
-    zIndex: 4
+    zIndex: 4,
+    gridColumn: "span 2",
+    translateY: "20px"
   },
   {
     image: boardGameImage,
@@ -393,7 +396,9 @@ const photos = [
     location: "Los Angeles, CA",
     caption: "Alpha Gamma Omega pledge challenge - 4x4 burger and 4 donuts",
     rotation: 1,
-    zIndex: 6
+    zIndex: 6,
+    gridColumn: "span 2",
+    translateY: "-20px"
   },
   {
     image: concertImage,
@@ -495,6 +500,8 @@ const AboutPage = () => {
               key={idx}
               $rotation={photo.rotation}
               $zIndex={photo.zIndex}
+              $gridColumn={photo.gridColumn}
+              $translateY={photo.translateY}
               $rotateX={cardStates[idx].rotateX}
               $rotateY={cardStates[idx].rotateY}
               $hover={cardStates[idx].hover}

@@ -54,7 +54,7 @@ const Logo = styled.img`
   width: 18px;
   height: 18px;
   border-radius: 4px;
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 const GlassTag = ({ logo, children, href, internal, ...props }) => {

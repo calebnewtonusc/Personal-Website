@@ -11,6 +11,30 @@ import WorkPage from './pages/Work';
 import EverythingNightPage from './pages/EverythingNight';
 import ComingSoonPage from './pages/ComingSoon';
 import Footer from './components/Footer2';
+import useImagePreloader from './utils/useImagePreloader';
+
+// Import all images for preloading
+import heroImg from './assets/CalebAtBeachUSCHoodie.jpg';
+import profileImg from './assets/CalebAtUSC.jpg';
+import vinylImage from './assets/vinyl_collection.jpg';
+import baseballImage from './assets/baseball_pitching.jpg';
+import boardGameImage from './assets/board_game.jpg';
+import hikeImage from './assets/hike.jpg';
+import familyImage from './assets/baseball_with_family.jpg';
+import concertImage from './assets/concert.jpg';
+import guitarImage from './assets/guitar.jpg';
+import agoImage from './assets/alpha_gamma_omega.jpg';
+import premedImage from './assets/premed_friends.jpg';
+import modellabImg from './assets/projects/modellab.jpg';
+import foodvisionImg from './assets/projects/foodvision.jpg';
+import tech16Img from './assets/projects/tech16personalities.jpg';
+import thelinesImg from './assets/projects/thelines.jpg';
+import uscLogo from './assets/logos/usc.png';
+import berkeleyLogo from './assets/education/berkeley.png';
+import uclaLogo from './assets/education/ucla_logo.png';
+import smhsLogo from './assets/education/smhs.png';
+import cnsiImg from './assets/cnsi_ucla.jpg';
+import stjohnsImg from './assets/stjohns.jpg';
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -57,11 +81,44 @@ const PageWrapper = styled.div`
   animation: ${fadeIn} 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
+function AnimatedRoutes({ toggleTheme, isDark }) {
+  const location = useLocation();
+
+  return (
+    <>
+      <Navbar toggleTheme={toggleTheme} isDark={isDark} />
+      <PageWrapper key={location.pathname}>
+        <Routes location={location}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/education" element={<EducationPage />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/sgchristianclubcollective" element={<EverythingNightPage />} />
+          <Route path="/modellab" element={<ComingSoonPage />} />
+          <Route path="/tech16" element={<ComingSoonPage />} />
+          <Route path="/foodvision" element={<ComingSoonPage />} />
+        </Routes>
+      </PageWrapper>
+      <Footer />
+    </>
+  );
+}
+
 function App() {
   const [isDark, setIsDark] = useState(() => {
     const saved = localStorage.getItem('theme');
     return saved ? saved === 'dark' : false;
   });
+
+  // Preload all images for faster page transitions
+  const imagesToPreload = [
+    heroImg, profileImg, vinylImage, baseballImage, boardGameImage,
+    hikeImage, familyImage, concertImage, guitarImage, agoImage,
+    premedImage, modellabImg, foodvisionImg, tech16Img, thelinesImg,
+    uscLogo, berkeleyLogo, uclaLogo, smhsLogo, cnsiImg, stjohnsImg
+  ];
+
+  useImagePreloader(imagesToPreload);
 
   useEffect(() => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
@@ -77,20 +134,7 @@ function App() {
         <Body>
           <Gradient />
           <Content>
-            <Navbar toggleTheme={toggleTheme} isDark={isDark} />
-            <PageWrapper key={window.location.pathname}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/education" element={<EducationPage />} />
-                <Route path="/work" element={<WorkPage />} />
-                <Route path="/sgchristianclubcollective" element={<EverythingNightPage />} />
-                <Route path="/modellab" element={<ComingSoonPage />} />
-                <Route path="/tech16" element={<ComingSoonPage />} />
-                <Route path="/foodvision" element={<ComingSoonPage />} />
-              </Routes>
-            </PageWrapper>
-            <Footer />
+            <AnimatedRoutes toggleTheme={toggleTheme} isDark={isDark} />
           </Content>
         </Body>
       </Router>
