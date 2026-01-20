@@ -54,8 +54,8 @@ const Subtitle = styled.div`
 
 const CardsSection = styled.div`
   opacity: 0;
-  transform: translateY(60px) scale(0.95);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 
   &.visible {
     opacity: 1;
@@ -79,10 +79,10 @@ const GlassCard = styled.div`
   box-shadow: ${({ theme }) => theme.bg === '#0a0a0a'
     ? '0 8px 32px -4px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15)'
     : '0 8px 32px -4px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.8)'};
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 1s ease-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.8s ease-out;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(60px) scale(0.95);
+  transform: translateY(40px) scale(0.97);
 
   &.visible {
     opacity: 1;

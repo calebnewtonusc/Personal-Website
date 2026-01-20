@@ -7,8 +7,8 @@ const FooterContainer = styled.footer`
   padding: 2.5rem 1rem;
   border-top: 1px solid ${({ theme }) => theme.border};
   opacity: 0;
-  transform: translateY(60px) scale(0.95);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 
   &.visible {
     opacity: 1;

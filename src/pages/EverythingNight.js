@@ -69,8 +69,8 @@ const Description = styled.div`
 
 const ContentSection = styled.div`
   opacity: 0;
-  transform: translateY(60px) scale(0.95);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 
   &.visible {
     opacity: 1;
@@ -83,8 +83,8 @@ const EventSection = styled.div`
   padding-bottom: 3rem;
   border-bottom: 1px solid ${({ theme }) => theme.border};
   opacity: 0;
-  transform: translateY(60px) scale(0.95);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 
   &.visible {
     opacity: 1;
