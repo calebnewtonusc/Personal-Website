@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 import modellabImg from '../assets/projects/modellab.jpg';
@@ -52,7 +52,14 @@ const Subtitle = styled.div`
 `;
 
 const ProjectsSection = styled.div`
-  animation: ${fadeInUp} 0.6s ease-out 0.2s backwards;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const ProjectCard = styled.div`
@@ -72,6 +79,14 @@ const ProjectCard = styled.div`
     ? '0 8px 32px -4px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15)'
     : '0 8px 32px -4px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.8)'};
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   &::before {
     content: '';
@@ -293,15 +308,48 @@ const projects = [
 ];
 
 const WorkPage = () => {
+  const projectsSectionRef = useRef(null);
+  const projectRefs = useRef([]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        }
+      );
+
+      if (projectsSectionRef.current) {
+        observer.observe(projectsSectionRef.current);
+      }
+
+      projectRefs.current.forEach((ref) => {
+        if (ref) observer.observe(ref);
+      });
+
+      return () => observer.disconnect();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Container>
       <HeaderSection>
         <PageTitle>Projects</PageTitle>
         <Subtitle>Things I've built.</Subtitle>
       </HeaderSection>
-      <ProjectsSection>
+      <ProjectsSection ref={projectsSectionRef}>
         {projects.map((item, idx) => (
-        <ProjectCard key={idx}>
+        <ProjectCard key={idx} ref={(el) => (projectRefs.current[idx] = el)}>
           <ProjectContent $reverse={idx % 2 === 1}>
             <ProjectImage $reverse={idx % 2 === 1}>
               <Img src={item.image} alt={item.name} />

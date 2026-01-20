@@ -464,7 +464,7 @@ const timelineData = [
             image: ainaTechGoatsImg,
             date: "January 2026",
             location: "Aina Tech - On Location",
-            caption: "Volumetric capture in diverse environments",
+            caption: "Grateful for this incredible team - pushing the boundaries of holographic video together",
             rotation: 1,
             zIndex: 3
           }
@@ -627,7 +627,8 @@ const HomePage = () => {
           <Skill>Data Engineering</Skill>
           <Skill>Computer Vision</Skill>
         </Skills>
-        <Tagline>I want to learn and help people</Tagline>
+        <Tagline>CS + Applied Mathematics @ USC</Tagline>
+        <Mission>I want to learn and help people</Mission>
       </ProfileSection>
 
       <TimelineSection ref={timelineSectionRef}>

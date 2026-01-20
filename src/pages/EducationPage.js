@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import uscLogo from '../assets/logos/usc.png';
 import berkeleyLogo from '../assets/education/berkeley.png';
@@ -53,7 +53,14 @@ const Subtitle = styled.div`
 `;
 
 const CardsSection = styled.div`
-  animation: ${fadeInUp} 0.6s ease-out 0.2s backwards;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const GlassCard = styled.div`
@@ -72,8 +79,15 @@ const GlassCard = styled.div`
   box-shadow: ${({ theme }) => theme.bg === '#0a0a0a'
     ? '0 8px 32px -4px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15)'
     : '0 8px 32px -4px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.8)'};
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.6s ease-out;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   &:hover {
     transform: translateY(-4px);
@@ -288,15 +302,48 @@ const education = [
 ];
 
 const EducationPage = () => {
+  const cardsSectionRef = useRef(null);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        }
+      );
+
+      if (cardsSectionRef.current) {
+        observer.observe(cardsSectionRef.current);
+      }
+
+      cardRefs.current.forEach((ref) => {
+        if (ref) observer.observe(ref);
+      });
+
+      return () => observer.disconnect();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Container>
       <HeaderSection>
         <PageTitle>Education</PageTitle>
         <Subtitle>Where I've learned.</Subtitle>
       </HeaderSection>
-      <CardsSection>
+      <CardsSection ref={cardsSectionRef}>
         {education.map((item, idx) => (
-          <GlassCard key={idx}>
+          <GlassCard key={idx} ref={(el) => (cardRefs.current[idx] = el)}>
           <ItemHeader>
             <Logo>
               {item.isImage ? (

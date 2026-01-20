@@ -64,6 +64,7 @@ const ProfileButton = styled(Link)`
               inset 0 1px 0 ${({ theme }) => theme.bg === '#0a0a0a'
                 ? 'rgba(255,255,255,0.1)'
                 : 'rgba(255,255,255,0.6)'};
+  flex-shrink: 0;
 
   &:hover {
     transform: scale(1.05);
@@ -72,6 +73,11 @@ const ProfileButton = styled(Link)`
   @media (min-width: 768px) {
     width: 48px;
     height: 48px;
+  }
+
+  @media (max-width: 480px) {
+    width: 36px;
+    height: 36px;
   }
 `;
 
@@ -130,6 +136,7 @@ const NavLink = styled(Link)`
       ? 'rgba(255,255,255,0.15)'
       : 'rgba(0,0,0,0.05)')
     : 'transparent'};
+  white-space: nowrap;
 
   &:hover {
     color: ${({ theme }) => theme.text_primary};
@@ -144,8 +151,13 @@ const NavLink = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    padding: 0.5rem 0.6rem;
-    font-size: 12px;
+    padding: 0.4rem 0.5rem;
+    font-size: 11px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.35rem 0.4rem;
+    font-size: 10px;
   }
 `;
 
@@ -198,21 +210,21 @@ const IconButton = styled.a`
   }
 
   @media (max-width: 900px) {
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
-  }
-
-  @media (max-width: 768px) {
     width: 28px;
     height: 28px;
     font-size: 14px;
   }
 
-  @media (max-width: 639px) {
+  @media (max-width: 768px) {
     width: 26px;
     height: 26px;
     font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
   }
 `;
 
@@ -253,21 +265,21 @@ const ThemeToggle = styled.button`
   }
 
   @media (max-width: 900px) {
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
-  }
-
-  @media (max-width: 768px) {
     width: 28px;
     height: 28px;
     font-size: 14px;
   }
 
-  @media (max-width: 639px) {
+  @media (max-width: 768px) {
     width: 26px;
     height: 26px;
     font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
   }
 `;
 

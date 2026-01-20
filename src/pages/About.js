@@ -121,6 +121,7 @@ const PhotoGrid = styled.div`
   max-width: 100%;
   padding: 0 2rem;
   align-self: start;
+  margin-top: -2rem;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
@@ -529,10 +530,7 @@ const AboutPage = () => {
         <TextContent>
           <SectionHeading>More About Me...</SectionHeading>
           <Paragraph>
-            I'm an aspiring machine learning and data engineer based in San Marino, CA, studying Computer Science + Applied Mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">University of Southern California</Link>. I'm driven by continuous learning and building technology that helps people.
-          </Paragraph>
-          <Paragraph>
-            My approach to tech is grounded in my Christian faith. I believe the best technology serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://www.ainatech.ai/" target="_blank" rel="noopener noreferrer">AINA Tech</Link>.
+            I'm an aspiring machine learning and data engineer based in San Marino, CA, studying Computer Science + Applied Mathematics @ <Link href="https://www.usc.edu" target="_blank" rel="noopener noreferrer">University of Southern California</Link>. My approach to tech is grounded in my Christian faith—I'm driven by continuous learning and building technology that genuinely serves people and helps them flourish. Currently working on holographic video systems at <Link href="https://www.ainatech.ai/" target="_blank" rel="noopener noreferrer">AINA Tech</Link>.
           </Paragraph>
           <AsideHeading>Aside from work, I'm currently:</AsideHeading>
           <BulletList>
