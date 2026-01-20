@@ -12,6 +12,7 @@ import caltechResearchImg from '../assets/caltech_research.jpg';
 import ainaTechSetupImg from '../assets/AinatechImages/Ainatechsetup.jpg';
 import ainaTechGoatsImg from '../assets/AinatechImages/Ainatechgoats.jpg';
 import everythingNightImg from '../assets/everything_night_main.jpg';
+import everythingNightPlanningImg from '../assets/everythingnightplanning.jpg';
 import impact360LeadershipImg from '../assets/impact360_leadership.jpg';
 import dominicanRepublicImg from '../assets/dominican_republic.jpg';
 import fleursetselLogo from '../assets/fleursetsel_logo.png';
@@ -458,6 +459,14 @@ const timelineData = [
         caption: "Everything Night - 200+ students, 20 breakout sessions",
         rotation: -2,
         zIndex: 1
+      },
+      {
+        image: everythingNightPlanningImg,
+        date: "May 2025",
+        location: "San Gabriel Valley, CA",
+        caption: "Planning team behind Everything Night",
+        rotation: 2,
+        zIndex: 2
       }
     ],
     items: [
