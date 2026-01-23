@@ -138,6 +138,28 @@ router.put('/:id', (req, res) => {
   }
 });
 
+// GET dataset preview
+router.get('/:id/preview', (req, res) => {
+  try {
+    const dataset = storage.getDatasetById(req.params.id);
+    if (!dataset) {
+      return res.status(404).json({ error: 'Dataset not found' });
+    }
+
+    // Load dataset and return first 100 rows
+    const { data } = schemaDetector.loadDatasetFile(dataset.filePath);
+    const preview = data.slice(0, 100);
+
+    res.json({
+      preview,
+      total: data.length,
+      showing: preview.length
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // DELETE dataset
 router.delete('/:id', (req, res) => {
   try {

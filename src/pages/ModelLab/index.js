@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Dashboard from './Dashboard';
-import Datasets from './Datasets';
-import Runs from './Runs';
-import Compare from './Compare';
+import Dashboard from './DashboardEnhanced';
+import Datasets from './DatasetsEnhanced';
+import Runs from './RunsEnhanced';
+import Compare from './CompareEnhanced';
+import { Toast } from './components/SharedComponents';
+import { useToast } from './components/useToast';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -14,9 +16,6 @@ const NavBar = styled.nav`
   background: ${({ theme }) => theme.card};
   border-bottom: 1px solid ${({ theme }) => theme.text_primary + '12'};
   padding: 1rem 2rem;
-  position: sticky;
-  top: 80px;
-  z-index: 100;
 `;
 
 const NavContent = styled.div`
@@ -63,6 +62,7 @@ const Content = styled.div`
 
 const ModelLab = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
+  const { toasts, removeToast } = useToast();
 
   const renderContent = () => {
     switch (activeTab) {
@@ -81,6 +81,7 @@ const ModelLab = () => {
 
   return (
     <Container>
+      <Toast toasts={toasts} removeToast={removeToast} />
       <NavBar>
         <NavContent>
           <Logo>ModelLab</Logo>
