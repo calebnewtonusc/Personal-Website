@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { dashboardData as initialData } from './dashboardData';
 
 function Dashboard() {
   const [password, setPassword] = useState('');
@@ -23,12 +24,11 @@ function Dashboard() {
   const fetchDashboardData = async () => {
     setLoading(true);
     try {
-      const response = await fetch('/dashboard-data.json?_=' + Date.now());
-      const data = await response.json();
-      setDashboardData(data);
+      // Use embedded data (updated during build)
+      setDashboardData(initialData);
       setError(null);
     } catch (err) {
-      setError('Failed to fetch dashboard data');
+      setError('Failed to load dashboard data');
       console.error(err);
     }
     setLoading(false);
