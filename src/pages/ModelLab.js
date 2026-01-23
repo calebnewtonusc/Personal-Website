@@ -170,27 +170,28 @@ const ModelLab = () => {
         <Section>
           <SectionTitle>Key Features</SectionTitle>
           <List>
-            <ListItem><strong>Dataset Versioning</strong> - Track every dataset version with checksums and provenance</ListItem>
-            <ListItem><strong>Training Jobs</strong> - Queue, run, and monitor training jobs with full configuration tracking</ListItem>
-            <ListItem><strong>EvalHarness Integration</strong> - Standardized evaluation framework for honest comparisons</ListItem>
-            <ListItem><strong>Artifact Storage</strong> - Centralized storage for models, checkpoints, and logs</ListItem>
-            <ListItem><strong>Run Comparison</strong> - Side-by-side comparison of experiments with metrics visualization</ListItem>
-            <ListItem><strong>One-Command Reproducibility</strong> - Re-run any experiment with identical settings</ListItem>
-            <ListItem><strong>Honest Failure Modes</strong> - Track what doesn't work, not just what does</ListItem>
+            <ListItem><strong>Dataset Versioning</strong> - Upload CSVs with checksums and schema snapshots for reproducibility</ListItem>
+            <ListItem><strong>Run Tracking</strong> - Track seed, commit hash, and dataset version for every experiment</ListItem>
+            <ListItem><strong>EvalHarness</strong> - Standardized metrics.json, slices.json, failure examples with confidence intervals</ListItem>
+            <ListItem><strong>Artifact Storage</strong> - Store configs, metrics, models, and plots in reproducible structure</ListItem>
+            <ListItem><strong>Compare Mode</strong> - Diff metrics, configs, and artifacts between runs with statistical comparisons</ListItem>
+            <ListItem><strong>Latency Measurement</strong> - p50/p95 latency profiling for model inference performance</ListItem>
+            <ListItem><strong>Baseline Enforcement</strong> - Baseline-first approach ensures every model beats simple baselines</ListItem>
           </List>
         </Section>
 
         <Section>
           <SectionTitle>Tech Stack</SectionTitle>
           <TechStack>
-            <TechTag>Python</TechTag>
-            <TechTag>PyTorch</TechTag>
-            <TechTag>PostgreSQL</TechTag>
-            <TechTag>Prisma ORM</TechTag>
-            <TechTag>Docker</TechTag>
-            <TechTag>GitHub Actions CI</TechTag>
+            <TechTag>Next.js</TechTag>
+            <TechTag>Tailwind CSS</TechTag>
             <TechTag>FastAPI</TechTag>
-            <TechTag>React</TechTag>
+            <TechTag>Supabase</TechTag>
+            <TechTag>Python</TechTag>
+            <TechTag>scikit-learn</TechTag>
+            <TechTag>XGBoost</TechTag>
+            <TechTag>Vercel</TechTag>
+            <TechTag>Docker</TechTag>
           </TechStack>
         </Section>
 
@@ -209,11 +210,18 @@ const ModelLab = () => {
         </Section>
 
         <Section>
-          <SectionTitle>Timeline</SectionTitle>
+          <SectionTitle>Development Status</SectionTitle>
+          <Text>
+            🚧 <strong>Under Active Development</strong> - Week 0-2 Project (January 2026)
+          </Text>
           <List>
-            <ListItem><strong>Weeks 0-2 (Jan 2026)</strong> - v1 foundation: repo setup, dataset versioning, basic training job queue</ListItem>
-            <ListItem><strong>February 2026</strong> - EvalHarness integration, artifact storage, run comparison UI</ListItem>
-            <ListItem><strong>March 2026</strong> - Polish, documentation, deployment, dogfooding with real projects</ListItem>
+            <ListItem>EvalHarness core library with metrics, slices, and failure analysis</ListItem>
+            <ListItem>Dataset upload and versioning with checksums and schemas</ListItem>
+            <ListItem>Training pipeline with baseline enforcement</ListItem>
+            <ListItem>Run tracking with seed, commit hash, and dataset version</ListItem>
+            <ListItem>Artifact storage and reproducibility packs</ListItem>
+            <ListItem>Run comparison view with metric/config diffs</ListItem>
+            <ListItem>Latency profiling (p50/p95) for model inference</ListItem>
           </List>
         </Section>
       </Wrapper>
