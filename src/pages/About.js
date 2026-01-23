@@ -156,17 +156,9 @@ const FlipCard = styled.div`
   overflow: visible;
   grid-column: ${props => props.$gridColumn || 'span 1'};
 
-  @media (max-width: 640px) {
-    transform: none;
-  }
-
   &:hover {
     z-index: 100;
     transform: rotate(0deg) ${props => props.$translateX ? `translateX(${props.$translateX})` : ''} ${props => props.$translateY ? `translateY(${props.$translateY})` : ''} scale(${props => props.$scale ? props.$scale * 1.15 : 1.15});
-
-    @media (max-width: 640px) {
-      transform: scale(1.05);
-    }
   }
 `;
 
