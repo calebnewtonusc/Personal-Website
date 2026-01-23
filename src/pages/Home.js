@@ -309,7 +309,7 @@ const YearContent = styled.div`
 
 const ImagesColumn = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 1rem;
 
@@ -332,7 +332,10 @@ const FlipCard = styled.div`
   transition: transform 0.3s ease;
   z-index: ${props => props.$zIndex || 1};
   overflow: visible;
-  max-width: 300px;
+
+  @media (min-width: 640px) {
+    max-width: 300px;
+  }
 
   &:hover {
     z-index: 1000;
@@ -373,11 +376,20 @@ const FlipCardBack = styled.div`
   border-radius: 12px;
   background: ${({ theme }) => theme.card};
   border: 1px solid ${({ theme }) => theme.border};
-  padding: 1.5rem;
+  padding: 0.75rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
+
+  @media (min-width: 640px) {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 968px) {
+    padding: 1.5rem;
+  }
 `;
 
 const Photo = styled.img`
@@ -390,29 +402,55 @@ const Photo = styled.img`
 `;
 
 const CardDate = styled.div`
-  font-size: clamp(10px, 2.5vw, 13px);
+  font-size: 11px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_secondary};
+
+  @media (min-width: 640px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: 968px) {
+    font-size: 13px;
+  }
 `;
 
 const CardLocation = styled.div`
-  font-size: clamp(11px, 2.8vw, 14px);
+  font-size: 12px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+
+  @media (min-width: 640px) {
+    font-size: 13px;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (min-width: 968px) {
+    font-size: 14px;
+  }
 `;
 
 const CardCaption = styled.div`
-  font-size: clamp(9px, 2.2vw, 11px);
+  font-size: 10px;
   color: ${({ theme }) => theme.text_primary};
   opacity: 0.8;
-  line-height: 1.3;
+  line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
+
+  @media (min-width: 640px) {
+    font-size: 11px;
+    -webkit-line-clamp: 4;
+  }
+
+  @media (min-width: 968px) {
+    line-height: 1.3;
+  }
 `;
 
 const timelineData = [
@@ -446,10 +484,10 @@ const timelineData = [
           </>
         ),
         nested: [
-          "Assisting in development of AINA's foundational generative 3D model using Gaussian Splatting and Neural Radiance Fields (NeRFs) for photorealistic spatial video and holographic rendering",
-          "Supporting day-to-day studio operations by managing volumetric capture workflows and data quality checks to maintain high-fidelity 3D reconstruction across diverse environments",
-          "Collaborating across software R&D and business initiatives as AINA builds flexible, AI-driven holographic content creation for industry and entertainment",
-          "Have helped set up, operate, and break down a 75-camera volumetric capture rig, supporting calibration, synchronization, and reliable capture runs"
+          "Developing AlgRun GUI automating volumetric pipeline (RED R3D decode, COLMAP, depth estimation, 4DGS) with Python/FastAPI backend, React/TypeScript frontend, WebSocket monitoring, and gscripts orchestration processing 75-camera RED Komodo captures",
+          "Building COLMAP validation tools with automated diagnostics, tiered storage (10TB cache + AWS S3), and WebGPU rendering enabling non-technical operators to process multi-terabyte volumetric datasets",
+          "Optimizing 4D Gaussian Splatting through GPU load balancing across 4 GPUs, CUDA profiling (nvprof, Nsight Compute), and training convergence debugging for real-time XR rendering",
+          "Supporting 75-camera volumetric rig operations including setup, calibration, synchronization, on-set troubleshooting, and AWS cloud deployment for distributed processing"
         ],
         images: [
           {
