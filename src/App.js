@@ -16,27 +16,10 @@ import Footer from './components/Footer2';
 import useImagePreloader from './utils/useImagePreloader';
 
 // Import all images for preloading
-import heroImg from './assets/CalebAtBeachUSCHoodie.jpg';
-import profileImg from './assets/CalebAtUSC.jpg';
-import vinylImage from './assets/vinyl_collection.jpg';
-import baseballImage from './assets/baseball_pitching.jpg';
-import boardGameImage from './assets/board_game.jpg';
-import hikeImage from './assets/hike.jpg';
-import familyImage from './assets/baseball_with_family.jpg';
-import concertImage from './assets/concert.jpg';
-import guitarImage from './assets/guitar.jpg';
-import agoImage from './assets/alpha_gamma_omega.jpg';
-import premedImage from './assets/premed_friends.jpg';
-import modellabImg from './assets/projects/modellab.jpg';
-import foodvisionImg from './assets/projects/foodvision.jpg';
-import tech16Img from './assets/projects/tech16personalities.jpg';
-import thelinesImg from './assets/projects/thelines.jpg';
-import uscLogo from './assets/logos/usc.png';
-import berkeleyLogo from './assets/education/berkeley.png';
-import uclaLogo from './assets/education/ucla_logo.png';
-import smhsLogo from './assets/education/smhs.png';
-import cnsiImg from './assets/cnsi_ucla.jpg';
-import stjohnsImg from './assets/stjohns.jpg';
+// TEMPORARILY COMMENTED OUT - images missing from repo
+// import heroImg from './assets/CalebAtBeachUSCHoodie.jpg';
+// import profileImg from './assets/CalebAtUSC.jpg';
+// ... (other imports)
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -126,14 +109,9 @@ function App() {
   });
 
   // Preload all images for faster page transitions
-  const imagesToPreload = [
-    heroImg, profileImg, vinylImage, baseballImage, boardGameImage,
-    hikeImage, familyImage, concertImage, guitarImage, agoImage,
-    premedImage, modellabImg, foodvisionImg, tech16Img, thelinesImg,
-    uscLogo, berkeleyLogo, uclaLogo, smhsLogo, cnsiImg, stjohnsImg
-  ];
-
-  useImagePreloader(imagesToPreload);
+  // TEMPORARILY DISABLED - images missing from repo
+  // const imagesToPreload = [];
+  // useImagePreloader(imagesToPreload);
 
   useEffect(() => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
