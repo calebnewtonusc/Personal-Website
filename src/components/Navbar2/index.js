@@ -119,9 +119,9 @@ const MobileNavPill = styled.div`
     position: fixed;
     bottom: 1rem;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(${({ $hidden }) => $hidden ? '200px' : '0'});
     z-index: 10001;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 `;
 
@@ -394,7 +394,7 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
         </NavContent>
       </Nav>
 
-      <MobileNavPill>
+      <MobileNavPill $hidden={isHidden}>
         <NavPill>
           <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
           <NavLink to="/about" $active={location.pathname === '/about'}>About</NavLink>
