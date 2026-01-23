@@ -1,0 +1,8 @@
+{
+  "name": "mega-brain-api",
+  "version": "1.0.0",
+  "description": "Mega Brain API serverless functions for Vercel",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2"
+  }
+}
