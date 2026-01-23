@@ -312,6 +312,7 @@ const ImagesColumn = styled.div`
   grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 1rem;
+  transition: grid-template-columns 0.4s ease;
 
   @media (min-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
@@ -329,7 +330,7 @@ const FlipCard = styled.div`
   perspective: 1000px;
   cursor: pointer;
   transform: rotate(${props => props.$rotation || 0}deg);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, width 0.4s ease, height 0.4s ease, grid-column 0.4s ease;
   z-index: ${props => props.$zIndex || 1};
   overflow: visible;
 

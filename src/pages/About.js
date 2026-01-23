@@ -122,6 +122,7 @@ const PhotoGrid = styled.div`
   padding: 0 2rem;
   align-self: start;
   margin-top: -6rem;
+  transition: grid-template-columns 0.4s ease, gap 0.4s ease, padding 0.4s ease;
 
   @media (max-width: 967px) {
     margin-top: 0;
@@ -151,7 +152,7 @@ const FlipCard = styled.div`
   perspective: 1000px;
   cursor: pointer;
   transform: rotate(${props => props.$rotation || 0}deg) ${props => props.$translateX ? `translateX(${props.$translateX})` : ''} ${props => props.$translateY ? `translateY(${props.$translateY})` : ''} ${props => props.$scale ? `scale(${props.$scale})` : ''};
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, width 0.4s ease, height 0.4s ease, grid-column 0.4s ease;
   z-index: ${props => props.$zIndex || 1};
   overflow: visible;
   grid-column: ${props => props.$gridColumn || 'span 1'};
