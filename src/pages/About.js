@@ -133,14 +133,14 @@ const PhotoGrid = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 6rem;
+    padding: 0 4rem;
     gap: 0.5rem;
   }
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0 8rem;
+    gap: 2rem;
+    padding: 0 2rem;
   }
 `;
 
@@ -156,9 +156,17 @@ const FlipCard = styled.div`
   overflow: visible;
   grid-column: ${props => props.$gridColumn || 'span 1'};
 
+  @media (max-width: 640px) {
+    transform: none;
+  }
+
   &:hover {
     z-index: 100;
     transform: rotate(0deg) ${props => props.$translateX ? `translateX(${props.$translateX})` : ''} ${props => props.$translateY ? `translateY(${props.$translateY})` : ''} scale(${props => props.$scale ? props.$scale * 1.15 : 1.15});
+
+    @media (max-width: 640px) {
+      transform: scale(1.05);
+    }
   }
 `;
 
