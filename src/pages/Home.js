@@ -312,7 +312,7 @@ const ImagesColumn = styled.div`
   grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 1rem;
-  transition: grid-template-columns 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (min-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
@@ -330,9 +330,10 @@ const FlipCard = styled.div`
   perspective: 1000px;
   cursor: pointer;
   transform: rotate(${props => props.$rotation || 0}deg);
-  transition: transform 0.3s ease, width 0.4s ease, height 0.4s ease, grid-column 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: ${props => props.$zIndex || 1};
   overflow: visible;
+  will-change: transform, width, height;
 
   @media (min-width: 640px) {
     max-width: 300px;
@@ -341,6 +342,7 @@ const FlipCard = styled.div`
   &:hover {
     z-index: 1000;
     transform: rotate(0deg) scale(1.05);
+    transition: transform 0.3s ease;
   }
 `;
 
@@ -400,6 +402,7 @@ const Photo = styled.img`
   display: block;
   border-radius: 12px;
   border: 1px solid ${({ theme }) => theme.border};
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 const CardDate = styled.div`

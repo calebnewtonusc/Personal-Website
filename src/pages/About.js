@@ -122,7 +122,7 @@ const PhotoGrid = styled.div`
   padding: 0 2rem;
   align-self: start;
   margin-top: -6rem;
-  transition: grid-template-columns 0.4s ease, gap 0.4s ease, padding 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (max-width: 967px) {
     margin-top: 0;
@@ -152,14 +152,16 @@ const FlipCard = styled.div`
   perspective: 1000px;
   cursor: pointer;
   transform: rotate(${props => props.$rotation || 0}deg) ${props => props.$translateX ? `translateX(${props.$translateX})` : ''} ${props => props.$translateY ? `translateY(${props.$translateY})` : ''} ${props => props.$scale ? `scale(${props.$scale})` : ''};
-  transition: transform 0.3s ease, width 0.4s ease, height 0.4s ease, grid-column 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: ${props => props.$zIndex || 1};
   overflow: visible;
   grid-column: ${props => props.$gridColumn || 'span 1'};
+  will-change: transform, width, height;
 
   &:hover {
     z-index: 100;
     transform: rotate(0deg) ${props => props.$translateX ? `translateX(${props.$translateX})` : ''} ${props => props.$translateY ? `translateY(${props.$translateY})` : ''} scale(${props => props.$scale ? props.$scale * 1.15 : 1.15});
+    transition: transform 0.3s ease;
   }
 `;
 
@@ -214,6 +216,7 @@ const Photo = styled.img`
   display: block;
   border-radius: 12px;
   border: 1px solid ${({ theme }) => theme.border};
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 const CardDate = styled.div`
