@@ -6,12 +6,12 @@ import ProfileImg from '../../assets/CalebAtUSC.jpg';
 
 const Nav = styled.nav`
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 10000;
   padding: 1rem;
-  transform: translateY(${({ $hidden }) => $hidden ? '-200px' : '0'});
+  transform: translateY(${({ $hidden }) => $hidden ? '200px' : '0'});
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (min-width: 640px) {
