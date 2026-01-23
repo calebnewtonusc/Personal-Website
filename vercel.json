@@ -1,14 +1,4 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "rewrites": [
-    { "source": "/dashboard", "destination": "/index.html" },
-    { "source": "/about", "destination": "/index.html" },
-    { "source": "/education", "destination": "/index.html" },
-    { "source": "/work", "destination": "/index.html" },
-    { "source": "/admin", "destination": "/index.html" },
-    { "source": "/", "destination": "/index.html" }
-  ],
   "headers": [
     {
       "source": "/api/(.*)",
