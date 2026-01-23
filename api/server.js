@@ -475,3 +475,8 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+
+// ==================== MEGA BRAIN API ====================
+const setupMegaBrainAPI = require('./mega-brain-api');
+setupMegaBrainAPI(app);
+
