@@ -620,7 +620,7 @@ const HomePage = () => {
     <Container>
       <ProfileSection>
         <ProfileImage src={HeroImg} alt="Caleb Newton" />
-        <Name>Hi, I'm Caleb Newton</Name>
+        <Name>Hi, I'm Caleb Newton!</Name>
         <Location>San Marino, CA</Location>
         <Skills>
           <Skill>Machine Learning</Skill>
