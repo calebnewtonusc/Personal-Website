@@ -78,6 +78,8 @@ function Dashboard() {
   const learnings = dashboardData?.learnings || { recent: [] };
   const events = dashboardData?.events || { recent: [] };
   const systemHealth = dashboardData?.system_health || {};
+  const collectiveMemory = dashboardData?.collective_memory || {};
+  const autonomousStrategist = dashboardData?.autonomous_strategist || {};
 
   return (
     <div style={styles.container}>
@@ -131,6 +133,50 @@ function Dashboard() {
                 <div style={styles.metric}>
                   <span>Disk:</span>
                   <span style={styles.metricValue}>{systemHealth.disk_percent}%</span>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Collective Memory */}
+          <div style={styles.card}>
+            <h2 style={styles.cardTitle}>🧠 Collective Memory</h2>
+            <div style={styles.healthMetrics}>
+              <div style={styles.metric}>
+                <span>Essays:</span>
+                <span style={styles.metricValue}>{collectiveMemory.essays_count || 0}</span>
+              </div>
+              <div style={styles.metric}>
+                <span>Total Items:</span>
+                <span style={styles.metricValue}>{collectiveMemory.total_items || 0}</span>
+              </div>
+              <div style={styles.metric}>
+                <span>Size:</span>
+                <span style={styles.metricValue}>{collectiveMemory.size_mb || 0} MB</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Autonomous Strategist */}
+          <div style={styles.card}>
+            <h2 style={styles.cardTitle}>🎯 Autonomous Strategist</h2>
+            <div style={styles.healthMetrics}>
+              <div style={styles.metric}>
+                <span>Decisions:</span>
+                <span style={styles.metricValue}>{autonomousStrategist.total_decisions || 0}</span>
+              </div>
+              <div style={styles.metric}>
+                <span>Actions:</span>
+                <span style={styles.metricValue}>{autonomousStrategist.total_actions || 0}</span>
+              </div>
+              {autonomousStrategist.priorities && autonomousStrategist.priorities.length > 0 && (
+                <div style={{marginTop: '10px', fontSize: '12px'}}>
+                  <strong>Current Priorities:</strong>
+                  <ul style={{marginTop: '5px', paddingLeft: '20px'}}>
+                    {autonomousStrategist.priorities.slice(0, 3).map((p, i) => (
+                      <li key={i}>{p}</li>
+                    ))}
+                  </ul>
                 </div>
               )}
             </div>
