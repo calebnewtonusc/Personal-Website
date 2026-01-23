@@ -480,3 +480,12 @@ module.exports = app;
 const setupMegaBrainAPI = require('./mega-brain-api');
 setupMegaBrainAPI(app);
 
+// ==================== MODELLAB API ====================
+const datasetsAPI = require('./modellab/datasets');
+const runsAPI = require('./modellab/runs');
+const artifactsAPI = require('./modellab/artifacts');
+
+app.use('/api/modellab/datasets', datasetsAPI);
+app.use('/api/modellab/runs', runsAPI);
+app.use('/api/modellab/artifacts', artifactsAPI);
+

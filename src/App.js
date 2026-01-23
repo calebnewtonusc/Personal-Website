@@ -12,6 +12,7 @@ import EverythingNightPage from './pages/EverythingNight';
 import ComingSoonPage from './pages/ComingSoon';
 import AdminPage from './pages/Admin';
 import Dashboard from './Dashboard';
+import ModelLab from './pages/ModelLab';
 import Footer from './components/Footer2';
 import useImagePreloader from './utils/useImagePreloader';
 
@@ -90,7 +91,7 @@ function AnimatedRoutes({ toggleTheme, isDark }) {
           <Route path="/education" element={<EducationPage />} />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/sgchristianclubcollective" element={<EverythingNightPage />} />
-          <Route path="/modellab" element={<ComingSoonPage />} />
+          <Route path="/modellab" element={<ModelLab />} />
           <Route path="/tech16" element={<ComingSoonPage />} />
           <Route path="/foodvision" element={<ComingSoonPage />} />
           <Route path="/admin" element={<AdminPage />} />
