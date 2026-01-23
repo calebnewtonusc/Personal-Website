@@ -15,7 +15,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
 
-const CONTEXT_DIR = path.join(__dirname, '../../Caleb-Context');
+const CONTEXT_DIR = '/Users/joelnewton/Desktop/2026 Code/Caleb-Context';
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY || '',
 });
@@ -43,16 +43,13 @@ class MegaBrainAPI {
     console.log('[Mega Brain] Loading complete context...');
 
     const contextFiles = [
-      'WHO_IS_CALEB.md',
-      'CHROME_CONTEXT.md',
-      'TERMINAL_CONTEXT.md',
-      'VSCODE_CONTEXT.md',
-      'PHOTOS_CONTEXT.md',
-      'NOTES_CONTEXT.md',
-      'ALL_APPS_CONTEXT.md',
-      'IMESSAGE_CONTEXT.md',
-      'EMAIL_CONTEXT.md',
-      'KEYCHAIN_CONTEXT.md',
+      'docs/WHO_IS_CALEB.md',
+      'docs/LIVE_ACTIVITY_CONTEXT.md',
+      'docs/CHROME_CONTEXT.md',
+      'docs/TERMINAL_CONTEXT.md',
+      'docs/VSCODE_CONTEXT.md',
+      'docs/PHOTOS_CONTEXT.md',
+      'docs/VALUES_AND_PHILOSOPHY.md',
     ];
 
     const context = {};

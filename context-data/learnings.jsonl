@@ -1,0 +1,74 @@
+{"timestamp": "2026-01-23T00:01:34.841991", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:01:39.634476", "agent_id": "file-watcher-01", "insight": "File activity pattern: 7 changes detected", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:01:39.859286", "agent_id": "file-watcher-01", "insight": "File activity pattern: 7 changes detected", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:01:57.557210", "agent_id": "intelligent-executor-01", "insight": "Completed cycle 85: learn on error_recovery", "confidence": 0.7, "applies_to": ["all"], "learning_type": "operational"}
+{"timestamp": "2026-01-23T00:02:10.548967", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:02:34.980382", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:02:39.646903", "agent_id": "file-watcher-01", "insight": "File activity pattern: 10 changes detected", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:02:39.956169", "agent_id": "file-watcher-01", "insight": "File activity pattern: 10 changes detected", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:03.152190", "agent_id": "autonomous-learner-system_architecture", "insight": "Created initial capability matrix - swarm now knows what it should know", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:03.290591", "agent_id": "autonomous-learner-general", "insight": "Identified 29 knowledge gaps for swarm to learn", "confidence": 0.85, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:03.452685", "agent_id": "autonomous-learner-intelligence_capabilities", "insight": "Identified need to learn: Natural language understanding", "confidence": 0.7, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:03.453435", "agent_id": "autonomous-learner-intelligence_capabilities", "insight": "Learned new capability: Natural language understanding", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:03.465239", "agent_id": "autonomous-learner-ai_ml_expertise", "insight": "Identified need to learn: Multi-agent systems and swarm intelligence", "confidence": 0.7, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:03.466180", "agent_id": "autonomous-learner-ai_ml_expertise", "insight": "Learned new capability: Multi-agent systems and swarm intelligence", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:03.468736", "agent_id": "autonomous-learner-automation_mastery", "insight": "Identified need to learn: Workflow automation", "confidence": 0.7, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:03.469418", "agent_id": "autonomous-learner-automation_mastery", "insight": "Learned new capability: Workflow automation", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:10.773603", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:35.116433", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:39.664290", "agent_id": "file-watcher-01", "insight": "File activity pattern: 10 changes detected", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:40.050379", "agent_id": "file-watcher-01", "insight": "File activity pattern: 10 changes detected", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:03:58.053677", "agent_id": "intelligent-executor-01", "insight": "Completed cycle 86: learn on error_recovery", "confidence": 0.7, "applies_to": ["all"], "learning_type": "operational"}
+{"timestamp": "2026-01-23T00:04:10.993210", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:04:34.246347", "agent_id": "path-updater", "agent_type": "automation", "insight": "Updated 10030 path references from 'Caleb-Context' to 'Mega Brain' across 322 files", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:04:35.250599", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:04:39.686760", "agent_id": "file-watcher-01", "insight": "File activity pattern: 10 changes detected", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:04:40.148656", "agent_id": "file-watcher-01", "insight": "File activity pattern: 10 changes detected", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:03.266289", "agent_id": "autonomous-learner-system_architecture", "insight": "Identified need to learn: Distributed systems and event-driven architecture", "confidence": 0.7, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:03.266798", "agent_id": "autonomous-learner-system_architecture", "insight": "Learned new capability: Distributed systems and event-driven architecture", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:03.404564", "agent_id": "autonomous-learner-general", "insight": "Identified need to learn: Multi-agent systems and swarm intelligence", "confidence": 0.7, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:03.405091", "agent_id": "autonomous-learner-general", "insight": "Learned new capability: Multi-agent systems and swarm intelligence", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:03.538678", "agent_id": "autonomous-learner-intelligence_capabilities", "insight": "Identified need to learn: Natural language understanding", "confidence": 0.7, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:03.538929", "agent_id": "autonomous-learner-intelligence_capabilities", "insight": "Learned new capability: Natural language understanding", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:03.572733", "agent_id": "autonomous-learner-ai_ml_expertise", "insight": "Identified need to learn: Multi-agent systems and swarm intelligence", "confidence": 0.7, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:03.573113", "agent_id": "autonomous-learner-ai_ml_expertise", "insight": "Learned new capability: Multi-agent systems and swarm intelligence", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:03.573593", "agent_id": "autonomous-learner-automation_mastery", "insight": "Identified need to learn: Workflow automation", "confidence": 0.7, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:03.573784", "agent_id": "autonomous-learner-automation_mastery", "insight": "Learned new capability: Workflow automation", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:11.201992", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:35.396113", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:39.706979", "agent_id": "file-watcher-01", "insight": "File activity pattern: 10 changes detected", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:05:40.240697", "agent_id": "file-watcher-01", "insight": "File activity pattern: 10 changes detected", "confidence": 0.9, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:06:03.257662", "agent_id": "health-monitor", "insight": "Restarted 1 crashed agents: com.caleb.megabrain", "importance": 0.9}
+{"timestamp": "2026-01-23T00:06:03.412207", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:06:08.544613", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:07:03.670172", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:07:09.224420", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:08:03.985610", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:08:09.461328", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:09:04.223550", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:09:09.698745", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:10:04.477622", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:10:09.930889", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:11:03.999907", "agent_id": "health-monitor", "insight": "Restarted 50 crashed agents: com.caleb.extractor.extract-chrome-context, com.caleb.window-monitor, com.caleb.swarm.process-monitor", "importance": 0.9}
+{"timestamp": "2026-01-23T00:11:04.759287", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:11:10.212418", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:12:04.997189", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:12:10.412099", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:13:05.211405", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:13:10.663691", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:14:05.433801", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:14:10.939228", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:15:05.692661", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:15:11.204887", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:16:04.163966", "agent_id": "health-monitor", "insight": "Health check: All 50 agents running", "importance": 0.9}
+{"timestamp": "2026-01-23T00:16:05.961401", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:16:11.461330", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:17:06.187681", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:17:11.693223", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:18:06.420238", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:18:11.938598", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:19:06.595402", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:19:12.133399", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:19:51.758810", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:19:51.763569", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:19:52.366625", "agent_id": "health-monitor", "insight": "Restarted 50 crashed agents: com.caleb.swarm.git-automation, com.caleb.extractor.extract-linkedin-context, com.caleb.platform-monitor", "importance": 0.9}
