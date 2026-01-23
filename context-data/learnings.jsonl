@@ -72,3 +72,38 @@
 {"timestamp": "2026-01-23T00:19:51.758810", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
 {"timestamp": "2026-01-23T00:19:51.763569", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
 {"timestamp": "2026-01-23T00:19:52.366625", "agent_id": "health-monitor", "insight": "Restarted 50 crashed agents: com.caleb.swarm.git-automation, com.caleb.extractor.extract-linkedin-context, com.caleb.platform-monitor", "importance": 0.9}
+{"timestamp": "2026-01-23T00:19:54.212582", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:19:54.212898", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:19:54.250950", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:19:54.350745", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: data/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:19:54.351148", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved: filesystem_monitor_stderr.log \u2192 Monitoring-Systems/", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:19:54.351395", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved: filesystem_monitor_stdout.log \u2192 Monitoring-Systems/", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:20:52.006147", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:20:52.025248", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:21:52.244689", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:21:52.260208", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:22:52.474218", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:22:52.475936", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:23:52.703685", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:23:52.714878", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:24:52.477825", "agent_id": "health-monitor", "insight": "Health check: All 50 agents running", "importance": 0.9}
+{"timestamp": "2026-01-23T00:24:52.933664", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:24:52.951354", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:24:55.952399", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:25:53.174450", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:25:53.187218", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:26:53.382470", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:26:53.394767", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:27:53.604838", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:27:53.621923", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:28:02.330816", "agent_id": "self-healing", "agent_type": "maintenance", "insight": "Self-healed: Fixed poke_notifier datetime bug", "importance": 0.8, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:28:02.330903", "agent_id": "self-healing", "agent_type": "maintenance", "insight": "Self-healed: Enhanced context file sync with debugging", "importance": 0.8, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:28:22.531423", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:28:51.512739", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:28:51.816591", "agent_id": "health-monitor", "insight": "Restarted 49 crashed agents: com.caleb.monitoring-agents, com.caleb.context-monitor, com.caleb.extractor.extract-gmail-context", "importance": 0.9}
+{"timestamp": "2026-01-23T00:28:52.064470", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-23T00:28:54.282121", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:28:54.282751", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:28:54.283763", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved: MEGA_BRAIN_FINAL_STEPS.md \u2192 Documentation/", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:28:54.284399", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260123_002854.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-23T00:28:54.284738", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}

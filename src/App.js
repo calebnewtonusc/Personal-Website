@@ -11,6 +11,7 @@ import WorkPage from './pages/Work';
 import EverythingNightPage from './pages/EverythingNight';
 import ComingSoonPage from './pages/ComingSoon';
 import AdminPage from './pages/Admin';
+import Dashboard from './Dashboard';
 import Footer from './components/Footer2';
 import useImagePreloader from './utils/useImagePreloader';
 
@@ -110,6 +111,7 @@ function AnimatedRoutes({ toggleTheme, isDark }) {
           <Route path="/tech16" element={<ComingSoonPage />} />
           <Route path="/foodvision" element={<ComingSoonPage />} />
           <Route path="/admin" element={<AdminPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </PageWrapper>
       <Footer />

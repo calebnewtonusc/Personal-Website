@@ -1,67 +1,61 @@
 {
-  "timestamp": "2026-01-23T00:19:54.172368",
+  "timestamp": "2026-01-23T00:28:54.371151",
   "local_agents": [
     {
-      "pid": "65852",
+      "pid": "69294",
       "status": "0",
       "name": "com.megabrain.calendar-monitor",
-      "timestamp": "2026-01-23T00:19:54.172255"
+      "timestamp": "2026-01-23T00:28:54.371034"
     },
     {
-      "pid": "65854",
+      "pid": "69296",
       "status": "0",
       "name": "com.megabrain.platform-monitor",
-      "timestamp": "2026-01-23T00:19:54.172282"
+      "timestamp": "2026-01-23T00:28:54.371064"
     },
     {
-      "pid": "65862",
+      "pid": "69304",
       "status": "0",
       "name": "com.megabrain.swarm-git",
-      "timestamp": "2026-01-23T00:19:54.172285"
+      "timestamp": "2026-01-23T00:28:54.371067"
     },
     {
       "pid": "-",
       "status": "0",
       "name": "com.megabrain.health-monitor",
-      "timestamp": "2026-01-23T00:19:54.172300"
+      "timestamp": "2026-01-23T00:28:54.371082"
     },
     {
-      "pid": "65856",
+      "pid": "69298",
       "status": "0",
       "name": "com.megabrain.chatgpt-monitor",
-      "timestamp": "2026-01-23T00:19:54.172306"
+      "timestamp": "2026-01-23T00:28:54.371090"
     },
     {
-      "pid": "65864",
+      "pid": "69306",
       "status": "0",
       "name": "com.megabrain.cloud-sync",
-      "timestamp": "2026-01-23T00:19:54.172310"
+      "timestamp": "2026-01-23T00:28:54.371095"
     },
     {
-      "pid": "65860",
+      "pid": "69302",
       "status": "0",
       "name": "com.megabrain.swarm-process",
-      "timestamp": "2026-01-23T00:19:54.172316"
+      "timestamp": "2026-01-23T00:28:54.371101"
     },
     {
-      "pid": "65866",
+      "pid": "69308",
       "status": "0",
       "name": "com.megabrain.dashboard-updater",
-      "timestamp": "2026-01-23T00:19:54.172319"
+      "timestamp": "2026-01-23T00:28:54.371103"
     },
     {
       "pid": "-",
-      "status": "78",
-      "name": "com.caleb.megabrain",
-      "timestamp": "2026-01-23T00:19:54.172329"
-    },
-    {
-      "pid": "65868",
       "status": "0",
       "name": "com.megabrain.file-organizer",
-      "timestamp": "2026-01-23T00:19:54.172349"
+      "timestamp": "2026-01-23T00:28:54.371114"
     }
   ],
-  "total": 10,
+  "total": 9,
   "healthy": 9
 }
