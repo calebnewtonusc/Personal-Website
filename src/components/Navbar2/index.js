@@ -96,6 +96,7 @@ const ProfileImage = styled.img`
 const CenterSection = styled.div`
   display: flex;
   justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (max-width: 768px) {
     position: fixed;
@@ -133,6 +134,7 @@ const NavPill = styled.div`
               inset 0 1px 0 ${({ theme }) => theme.bg === '#0a0a0a'
                 ? 'rgba(255,255,255,0.1)'
                 : 'rgba(255,255,255,0.6)'};
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 const NavLink = styled(Link)`
@@ -236,6 +238,7 @@ const IconButton = styled.a`
     width: 26px;
     height: 26px;
     font-size: 13px;
+    display: ${({ $hideOnMobile }) => $hideOnMobile ? 'none' : 'flex'};
   }
 
   @media (max-width: 480px) {
@@ -361,17 +364,17 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
           <IconButton href={Bio.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i className="fab fa-linkedin"></i>
           </IconButton>
-          <IconButton href="https://open.spotify.com/user/rbfdtme07mst8eft5f4j8k2ll?si=b1124b9dfadf4450" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+          <IconButton $hideOnMobile href="https://open.spotify.com/user/rbfdtme07mst8eft5f4j8k2ll?si=b1124b9dfadf4450" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
             <i className="fab fa-spotify"></i>
           </IconButton>
-          <IconButton href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer" aria-label="Letterboxd">
+          <IconButton $hideOnMobile href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer" aria-label="Letterboxd">
             <svg width="16" height="16" viewBox="0 0 500 500" fill="currentColor">
               <circle cx="125" cy="250" r="125" fillOpacity="0.5"/>
               <circle cx="375" cy="250" r="125" fillOpacity="0.5"/>
               <circle cx="250" cy="250" r="125" fillOpacity="1"/>
             </svg>
           </IconButton>
-          <IconButton href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer" aria-label="RateYourMusic">
+          <IconButton $hideOnMobile href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer" aria-label="RateYourMusic">
             <span style={{ fontSize: '11px', fontWeight: 'bold' }}>RYM</span>
           </IconButton>
           <ThemeToggle onClick={toggleTheme} aria-label="Toggle theme">
