@@ -1,24 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/((?!api).*)",
-      "destination": "/index.html"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/dashboard/status",
-      "dest": "/api/dashboard/status.js"
-    },
-    {
-      "src": "/api/dashboard/update",
-      "dest": "/api/dashboard/update.js"
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/api/(.*)",
