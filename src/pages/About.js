@@ -133,14 +133,14 @@ const PhotoGrid = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 4rem;
-    gap: 0.5rem;
+    padding: 0 2rem;
+    gap: 1rem;
   }
 
   @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1rem;
+    gap: 1rem;
   }
 `;
 
