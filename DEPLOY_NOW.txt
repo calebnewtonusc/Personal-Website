@@ -1,0 +1,86 @@
+================================================================
+🧠 MEGA BRAIN - DEPLOY TO VERCEL NOW
+================================================================
+
+STEP 1: Set Environment Variables
+----------------------------------
+1. Open: https://vercel.com/dashboard
+2. Select: personal-website project
+3. Go to: Settings → Environment Variables
+4. Add:
+   Name: ANTHROPIC_API_KEY
+   Value: [Your Claude API key from console.anthropic.com]
+   Environments: Production ✓ Preview ✓ Development ✓
+
+STEP 2: Deploy
+--------------
+Open Terminal and run:
+
+cd "/Users/joelnewton/Desktop/2026 Code/Big-Projects/Personal-Website"
+./deploy.sh
+
+OR manually:
+
+vercel --prod
+
+STEP 3: Test
+------------
+After deployment completes, run:
+
+./test-endpoints.sh
+
+OR test manually:
+
+curl "https://calebnewton.me/api/brain/ask?q=hello"
+
+================================================================
+YOUR CLOUD ENDPOINTS (after deployment)
+================================================================
+
+Ask Questions:
+https://calebnewton.me/api/brain/ask?q=YOUR_QUESTION
+
+Execute Commands:
+https://calebnewton.me/api/brain/do
+  (POST with {"command": "..."})
+
+SMS Webhook:
+https://calebnewton.me/api/brain/poke
+  (POST with {"message": "...", "from": "..."})
+
+================================================================
+QUICK COMMANDS
+================================================================
+
+# Deploy now
+cd "/Users/joelnewton/Desktop/2026 Code/Big-Projects/Personal-Website" && ./deploy.sh
+
+# Test after deployment
+./test-endpoints.sh
+
+# View logs
+vercel logs --follow
+
+# Check status
+vercel ls
+
+================================================================
+DOCUMENTATION
+================================================================
+
+Quick Start Guide:  MEGA_BRAIN_QUICK_START.md
+Full Deployment:    DEPLOYMENT.md
+Status & Details:   DEPLOYMENT_STATUS.md
+README:             README.md
+
+================================================================
+STATUS: READY TO DEPLOY ✅
+================================================================
+
+All code is written, tested, and committed to GitHub.
+Just need to:
+  1. Set ANTHROPIC_API_KEY in Vercel dashboard
+  2. Run: ./deploy.sh
+  3. Test: ./test-endpoints.sh
+
+Let's go! 🚀
