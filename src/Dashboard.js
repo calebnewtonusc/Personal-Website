@@ -23,9 +23,9 @@ function Dashboard() {
   const fetchDashboardData = async () => {
     setLoading(true);
     try {
-      const response = await fetch('/api/dashboard/status');
+      const response = await fetch('/dashboard-data.json?_=' + Date.now());
       const data = await response.json();
-      setDashboardData(data.data || data);
+      setDashboardData(data);
       setError(null);
     } catch (err) {
       setError('Failed to fetch dashboard data');
