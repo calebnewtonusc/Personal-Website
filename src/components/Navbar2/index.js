@@ -98,7 +98,11 @@ const CenterSection = styled.div`
   justify-content: center;
 
   @media (max-width: 768px) {
-    display: none;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10001;
   }
 
   @media (min-width: 769px) and (max-width: 900px) {
@@ -296,114 +300,11 @@ const ThemeToggle = styled.button`
   }
 `;
 
-const HamburgerButton = styled.button`
-  display: none;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.text_secondary};
-  font-size: 16px;
-  cursor: pointer;
-  padding: 0;
-  transition: all 0.2s;
-  flex-shrink: 0;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  background: ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(255,255,255,0.06)'
-    : 'rgba(0,0,0,0.04)'};
-  border: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(255,255,255,0.12)'
-    : 'rgba(0,0,0,0.08)'};
-  box-shadow: 0 4px 12px -2px rgba(0,0,0,0.12),
-              inset 0 1px 0 ${({ theme }) => theme.bg === '#0a0a0a'
-                ? 'rgba(255,255,255,0.1)'
-                : 'rgba(255,255,255,0.6)'};
-
-  @media (max-width: 768px) {
-    display: flex;
-  }
-
-  &:hover {
-    background: ${({ theme }) => theme.bg === '#0a0a0a'
-      ? 'rgba(255,255,255,0.12)'
-      : 'rgba(0,0,0,0.08)'};
-    color: ${({ theme }) => theme.text_primary};
-    transform: translateY(-1px);
-  }
-`;
-
-const MobileMenu = styled.div`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  transform: translateY(${({ $open }) => $open ? '0' : '100%'});
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  background: ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(10,10,10,0.95)'
-    : 'rgba(255,255,255,0.95)'};
-  border-top: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(255,255,255,0.12)'
-    : 'rgba(0,0,0,0.08)'};
-  padding: 2rem 1rem;
-  display: none;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
-`;
-
-const MobileNavLinks = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-`;
-
-const MobileNavLink = styled(Link)`
-  padding: 1rem;
-  font-size: 16px;
-  color: ${({ theme, $active }) => $active ? theme.text_primary : theme.text_secondary};
-  text-decoration: none;
-  transition: all 0.2s;
-  font-weight: ${({ $active }) => $active ? '500' : '400'};
-  border-radius: 12px;
-  background: ${({ theme, $active }) => $active
-    ? (theme.bg === '#0a0a0a'
-      ? 'rgba(255,255,255,0.1)'
-      : 'rgba(0,0,0,0.05)')
-    : 'transparent'};
-  text-align: center;
-
-  &:hover {
-    color: ${({ theme }) => theme.text_primary};
-    background: ${({ theme, $active }) => !$active && (theme.bg === '#0a0a0a'
-      ? 'rgba(255,255,255,0.06)'
-      : 'rgba(0,0,0,0.03)')};
-  }
-`;
-
-const MobileSocialLinks = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid ${({ theme }) => theme.bg === '#0a0a0a'
-    ? 'rgba(255,255,255,0.12)'
-    : 'rgba(0,0,0,0.08)'};
-`;
 
 const Navbar2 = ({ toggleTheme, isDark }) => {
   const location = useLocation();
   const [isHidden, setIsHidden] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -436,86 +337,24 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
   }, [lastScrollY]);
 
   return (
-    <>
-      <Nav $hidden={isHidden}>
-        <NavContent>
-          <LeftSection>
-            <ProfileButton to="/" aria-label="Home">
-              <ProfileImage src={ProfileImg} alt="Caleb Newton" />
-            </ProfileButton>
-          </LeftSection>
+    <Nav $hidden={isHidden}>
+      <NavContent>
+        <LeftSection>
+          <ProfileButton to="/" aria-label="Home">
+            <ProfileImage src={ProfileImg} alt="Caleb Newton" />
+          </ProfileButton>
+        </LeftSection>
 
-          <CenterSection>
-            <NavPill>
-              <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
-              <NavLink to="/about" $active={location.pathname === '/about'}>About</NavLink>
-              <NavLink to="/education" $active={location.pathname === '/education'}>Education</NavLink>
-              <NavLink to="/work" $active={location.pathname === '/work'}>Projects</NavLink>
-            </NavPill>
-          </CenterSection>
+        <CenterSection>
+          <NavPill>
+            <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
+            <NavLink to="/about" $active={location.pathname === '/about'}>About</NavLink>
+            <NavLink to="/education" $active={location.pathname === '/education'}>Education</NavLink>
+            <NavLink to="/work" $active={location.pathname === '/work'}>Projects</NavLink>
+          </NavPill>
+        </CenterSection>
 
-          <RightSection>
-            <HamburgerButton onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
-              <i className={`fas fa-${mobileMenuOpen ? 'times' : 'bars'}`}></i>
-            </HamburgerButton>
-            <IconButton href={Bio.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <i className="fab fa-github"></i>
-            </IconButton>
-            <IconButton href={Bio.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <i className="fab fa-linkedin"></i>
-            </IconButton>
-            <IconButton href="https://open.spotify.com/user/rbfdtme07mst8eft5f4j8k2ll?si=b1124b9dfadf4450" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
-              <i className="fab fa-spotify"></i>
-            </IconButton>
-            <IconButton href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer" aria-label="Letterboxd">
-              <svg width="16" height="16" viewBox="0 0 500 500" fill="currentColor">
-                <circle cx="125" cy="250" r="125" fillOpacity="0.5"/>
-                <circle cx="375" cy="250" r="125" fillOpacity="0.5"/>
-                <circle cx="250" cy="250" r="125" fillOpacity="1"/>
-              </svg>
-            </IconButton>
-            <IconButton href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer" aria-label="RateYourMusic">
-              <span style={{ fontSize: '11px', fontWeight: 'bold' }}>RYM</span>
-            </IconButton>
-            <ThemeToggle onClick={toggleTheme} aria-label="Toggle theme">
-              {isDark ? '☀️' : '🌙'}
-            </ThemeToggle>
-          </RightSection>
-        </NavContent>
-      </Nav>
-
-      <MobileMenu $open={mobileMenuOpen}>
-        <MobileNavLinks>
-          <MobileNavLink
-            to="/"
-            $active={location.pathname === '/'}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Home
-          </MobileNavLink>
-          <MobileNavLink
-            to="/about"
-            $active={location.pathname === '/about'}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            About
-          </MobileNavLink>
-          <MobileNavLink
-            to="/education"
-            $active={location.pathname === '/education'}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Education
-          </MobileNavLink>
-          <MobileNavLink
-            to="/work"
-            $active={location.pathname === '/work'}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Projects
-          </MobileNavLink>
-        </MobileNavLinks>
-        <MobileSocialLinks>
+        <RightSection>
           <IconButton href={Bio.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i className="fab fa-github"></i>
           </IconButton>
@@ -535,9 +374,12 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
           <IconButton href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer" aria-label="RateYourMusic">
             <span style={{ fontSize: '11px', fontWeight: 'bold' }}>RYM</span>
           </IconButton>
-        </MobileSocialLinks>
-      </MobileMenu>
-    </>
+          <ThemeToggle onClick={toggleTheme} aria-label="Toggle theme">
+            {isDark ? '☀️' : '🌙'}
+          </ThemeToggle>
+        </RightSection>
+      </NavContent>
+    </Nav>
   );
 };
 
