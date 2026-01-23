@@ -21,6 +21,7 @@
   },
   "homepage": ".",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^5.18.0",
