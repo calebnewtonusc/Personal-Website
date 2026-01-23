@@ -1,0 +1,65 @@
+{
+  "lastUpdate": "2026-01-23T00:58:00.000Z",
+  "agents": {
+    "total_local": 19,
+    "local_agents": [
+      {"name": "calendar-monitor", "pid": "70826", "status": "running"},
+      {"name": "platform-monitor", "pid": "70856", "status": "running"},
+      {"name": "chatgpt-monitor", "pid": "70829", "status": "running"},
+      {"name": "master-coordinator", "pid": "70853", "status": "running"},
+      {"name": "dashboard-updater", "pid": "76333", "status": "running"},
+      {"name": "swarm-process", "pid": "70865", "status": "running"},
+      {"name": "swarm-git", "pid": "70862", "status": "running"},
+      {"name": "cloud-sync", "pid": "-", "status": "periodic"},
+      {"name": "health-monitor", "pid": "-", "status": "periodic"},
+      {"name": "file-organizer", "pid": "-", "status": "periodic"},
+      {"name": "poke-notifier", "pid": "-", "status": "periodic"},
+      {"name": "lemma-failure-detector", "pid": "-", "status": "periodic"},
+      {"name": "lemma-ab-test", "pid": "-", "status": "periodic"},
+      {"name": "lemma-prompt-optimizer", "pid": "-", "status": "periodic"},
+      {"name": "collective-memory", "pid": "-", "status": "periodic"},
+      {"name": "social-media-scraper", "pid": "-", "status": "periodic"},
+      {"name": "autonomous-strategist", "pid": "-", "status": "periodic"},
+      {"name": "meta-improvement", "pid": "-", "status": "periodic"},
+      {"name": "capability-provider", "pid": "-", "status": "periodic"}
+    ]
+  },
+  "learnings": {
+    "count": 183,
+    "recent": []
+  },
+  "events": {
+    "count": 359,
+    "recent": []
+  },
+  "system_health": {
+    "cpu_percent": 12.5,
+    "memory_percent": 45.2,
+    "disk_percent": 68.3
+  },
+  "collective_memory": {
+    "status": "active",
+    "size_mb": 98.63,
+    "total_items": 986,
+    "essays_count": 444,
+    "learnings_count": 183,
+    "events_count": 359
+  },
+  "autonomous_strategist": {
+    "status": "active",
+    "total_decisions": 1,
+    "total_actions": 1,
+    "priorities": [
+      "Enable autonomous actions",
+      "Connect Google APIs",
+      "Provide missing agent capabilities"
+    ]
+  },
+  "metrics": {
+    "total_learnings": 183,
+    "total_events": 359,
+    "agents_running": 19,
+    "capabilities_provided": 3,
+    "improvements_made": 1
+  }
+}
