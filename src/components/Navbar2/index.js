@@ -98,20 +98,30 @@ const CenterSection = styled.div`
   justify-content: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media (max-width: 768px) {
-    position: fixed;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10001;
-  }
-
   @media (min-width: 769px) and (max-width: 900px) {
     overflow-x: auto;
     scrollbar-width: none;
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const MobileNavPill = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10001;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 `;
 
@@ -238,7 +248,6 @@ const IconButton = styled.a`
     width: 26px;
     height: 26px;
     font-size: 13px;
-    display: ${({ $hideOnMobile }) => $hideOnMobile ? 'none' : 'flex'};
   }
 
   @media (max-width: 480px) {
@@ -340,49 +349,60 @@ const Navbar2 = ({ toggleTheme, isDark }) => {
   }, [lastScrollY]);
 
   return (
-    <Nav $hidden={isHidden}>
-      <NavContent>
-        <LeftSection>
-          <ProfileButton to="/" aria-label="Home">
-            <ProfileImage src={ProfileImg} alt="Caleb Newton" />
-          </ProfileButton>
-        </LeftSection>
+    <>
+      <Nav $hidden={isHidden}>
+        <NavContent>
+          <LeftSection>
+            <ProfileButton to="/" aria-label="Home">
+              <ProfileImage src={ProfileImg} alt="Caleb Newton" />
+            </ProfileButton>
+          </LeftSection>
 
-        <CenterSection>
-          <NavPill>
-            <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
-            <NavLink to="/about" $active={location.pathname === '/about'}>About</NavLink>
-            <NavLink to="/education" $active={location.pathname === '/education'}>Education</NavLink>
-            <NavLink to="/work" $active={location.pathname === '/work'}>Projects</NavLink>
-          </NavPill>
-        </CenterSection>
+          <CenterSection>
+            <NavPill>
+              <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
+              <NavLink to="/about" $active={location.pathname === '/about'}>About</NavLink>
+              <NavLink to="/education" $active={location.pathname === '/education'}>Education</NavLink>
+              <NavLink to="/work" $active={location.pathname === '/work'}>Projects</NavLink>
+            </NavPill>
+          </CenterSection>
 
-        <RightSection>
-          <IconButton href={Bio.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <i className="fab fa-github"></i>
-          </IconButton>
-          <IconButton href={Bio.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <i className="fab fa-linkedin"></i>
-          </IconButton>
-          <IconButton $hideOnMobile href="https://open.spotify.com/user/rbfdtme07mst8eft5f4j8k2ll?si=b1124b9dfadf4450" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
-            <i className="fab fa-spotify"></i>
-          </IconButton>
-          <IconButton $hideOnMobile href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer" aria-label="Letterboxd">
-            <svg width="16" height="16" viewBox="0 0 500 500" fill="currentColor">
-              <circle cx="125" cy="250" r="125" fillOpacity="0.5"/>
-              <circle cx="375" cy="250" r="125" fillOpacity="0.5"/>
-              <circle cx="250" cy="250" r="125" fillOpacity="1"/>
-            </svg>
-          </IconButton>
-          <IconButton $hideOnMobile href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer" aria-label="RateYourMusic">
-            <span style={{ fontSize: '11px', fontWeight: 'bold' }}>RYM</span>
-          </IconButton>
-          <ThemeToggle onClick={toggleTheme} aria-label="Toggle theme">
-            {isDark ? '☀️' : '🌙'}
-          </ThemeToggle>
-        </RightSection>
-      </NavContent>
-    </Nav>
+          <RightSection>
+            <IconButton href={Bio.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i className="fab fa-github"></i>
+            </IconButton>
+            <IconButton href={Bio.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i className="fab fa-linkedin"></i>
+            </IconButton>
+            <IconButton href="https://open.spotify.com/user/rbfdtme07mst8eft5f4j8k2ll?si=b1124b9dfadf4450" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+              <i className="fab fa-spotify"></i>
+            </IconButton>
+            <IconButton href="https://letterboxd.com/cnewt/" target="_blank" rel="noopener noreferrer" aria-label="Letterboxd">
+              <svg width="16" height="16" viewBox="0 0 500 500" fill="currentColor">
+                <circle cx="125" cy="250" r="125" fillOpacity="0.5"/>
+                <circle cx="375" cy="250" r="125" fillOpacity="0.5"/>
+                <circle cx="250" cy="250" r="125" fillOpacity="1"/>
+              </svg>
+            </IconButton>
+            <IconButton href="https://rateyourmusic.com/~cnewt" target="_blank" rel="noopener noreferrer" aria-label="RateYourMusic">
+              <span style={{ fontSize: '11px', fontWeight: 'bold' }}>RYM</span>
+            </IconButton>
+            <ThemeToggle onClick={toggleTheme} aria-label="Toggle theme">
+              {isDark ? '☀️' : '🌙'}
+            </ThemeToggle>
+          </RightSection>
+        </NavContent>
+      </Nav>
+
+      <MobileNavPill>
+        <NavPill>
+          <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
+          <NavLink to="/about" $active={location.pathname === '/about'}>About</NavLink>
+          <NavLink to="/education" $active={location.pathname === '/education'}>Education</NavLink>
+          <NavLink to="/work" $active={location.pathname === '/work'}>Projects</NavLink>
+        </NavPill>
+      </MobileNavPill>
+    </>
   );
 };
 
