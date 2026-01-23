@@ -8,6 +8,7 @@ A personal portfolio website showcasing my journey as an aspiring machine learni
 - **React Router v6** - Client-side routing and navigation
 - **Spotify API** - Live music integration showing currently playing tracks
 - **Glassmorphism Design** - Modern UI with frosted glass effects and green tinted accents
+- **Mega Brain API** - Cloud-accessible AI assistant with full context (Vercel serverless functions + Claude)
 
 ## 🎨 Design Philosophy
 - **Green Growth Theme** - Primary color (#228B22) representing growth, learning, and renewal
@@ -46,6 +47,27 @@ npm install      # Install dependencies
 npm start        # Start development server (localhost:3000)
 npm run build    # Build for production
 ```
+
+## 🧠 Mega Brain API
+
+The website includes a cloud-accessible AI assistant with complete context about Caleb's digital life.
+
+**Live Endpoints**:
+- `https://calebnewton.me/api/brain/ask` - Ask questions with full context
+- `https://calebnewton.me/api/brain/do` - Execute commands
+- `https://calebnewton.me/api/brain/poke` - SMS/webhook integration
+
+**Deploy to Vercel**:
+```bash
+./deploy.sh
+```
+
+**Test endpoints**:
+```bash
+./test-endpoints.sh
+```
+
+See [MEGA_BRAIN_QUICK_START.md](MEGA_BRAIN_QUICK_START.md) for usage guide and [DEPLOYMENT.md](DEPLOYMENT.md) for full documentation.
 
 ## 🎯 Pages & Features
 
