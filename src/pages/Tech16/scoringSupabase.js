@@ -1,0 +1,159 @@
+// Scoring algorithm for Tech 16 Personalities Quiz (Supabase version)
+
+/**
+ * Calculate quiz progress percentage
+ */
+export const getQuizProgress = (responses, totalQuestions) => {
+  const answeredCount = Object.keys(responses).length;
+  return totalQuestions > 0 ? Math.round((answeredCount / totalQuestions) * 100) : 0;
+};
+
+/**
+ * Calculate spectrum scores from quiz responses
+ * Each spectrum is scored 0-100:
+ * - 0 represents the "low" end (Builder, User-Facing, Exploratory, Vision-Led, Adaptive)
+ * - 100 represents the "high" end (Analyzer, Systems-Facing, Operational, Logic-Led, Structured)
+ */
+export function calculateScores(responses, questions) {
+  // Initialize spectrum tallies
+  const spectrumTallies = {
+    focus: { total: 0, count: 0 },
+    interface: { total: 0, count: 0 },
+    change: { total: 0, count: 0 },
+    decision: { total: 0, count: 0 },
+    execution: { total: 0, count: 0 },
+  };
+
+  // Process each response
+  questions.forEach((question) => {
+    const answer = responses[question.id];
+    if (answer === undefined) return;
+
+    const spectrum = question.spectrum;
+    const direction = question.direction;
+
+    // Skip if required fields are missing
+    if (!spectrum || !direction) return;
+
+    // Determine if this question pushes toward the high end of the spectrum
+    const isHighDirection = [
+      'analyzer',
+      'systems',
+      'operational',
+      'logic',
+      'structured',
+    ].includes(direction);
+
+    // Calculate contribution (0-100 scale)
+    // answer is 0-4 (index of selected option)
+    let contribution;
+    if (isHighDirection) {
+      // Agreeing pushes toward high end (100)
+      contribution = answer * 25; // 0, 25, 50, 75, 100
+    } else {
+      // Agreeing pushes toward low end (0)
+      contribution = (4 - answer) * 25; // 100, 75, 50, 25, 0
+    }
+
+    spectrumTallies[spectrum].total += contribution;
+    spectrumTallies[spectrum].count += 1;
+  });
+
+  // Calculate average scores for each spectrum
+  const scores = {
+    focus_score: Math.round(
+      spectrumTallies.focus.count > 0
+        ? spectrumTallies.focus.total / spectrumTallies.focus.count
+        : 50
+    ),
+    interface_score: Math.round(
+      spectrumTallies.interface.count > 0
+        ? spectrumTallies.interface.total / spectrumTallies.interface.count
+        : 50
+    ),
+    change_score: Math.round(
+      spectrumTallies.change.count > 0
+        ? spectrumTallies.change.total / spectrumTallies.change.count
+        : 50
+    ),
+    decision_score: Math.round(
+      spectrumTallies.decision.count > 0
+        ? spectrumTallies.decision.total / spectrumTallies.decision.count
+        : 50
+    ),
+    execution_score: Math.round(
+      spectrumTallies.execution.count > 0
+        ? spectrumTallies.execution.total / spectrumTallies.execution.count
+        : 50
+    ),
+  };
+
+  return scores;
+}
+
+/**
+ * Generate personality type code from spectrum scores
+ * Format: [Focus]-[Interface]-[Change]-[Decision]-[Execution]
+ * Example: B-U-E-V-A
+ */
+export function generatePersonalityType(scores) {
+  // Determine each letter based on which side of 50 the score falls
+  const focus = scores.focus_score < 50 ? 'B' : 'A'; // Builder vs Analyzer
+  const interface_ = scores.interface_score < 50 ? 'U' : 'S'; // User-Facing vs Systems-Facing
+  const change = scores.change_score < 50 ? 'E' : 'O'; // Exploratory vs Operational
+  const decision = scores.decision_score < 50 ? 'V' : 'L'; // Vision-Led vs Logic-Led
+  const execution = scores.execution_score < 50 ? 'A' : 'T'; // Adaptive vs Structured
+
+  return `${focus}-${interface_}-${change}-${decision}-${execution}`;
+}
+
+/**
+ * Get spectrum label for a given score
+ */
+export function getSpectrumLabel(spectrum, score) {
+  const labels = {
+    focus: {
+      low: { label: 'Builder', code: 'B' },
+      high: { label: 'Analyzer', code: 'A' },
+    },
+    interface: {
+      low: { label: 'User-Facing', code: 'U' },
+      high: { label: 'Systems-Facing', code: 'S' },
+    },
+    change: {
+      low: { label: 'Exploratory', code: 'E' },
+      high: { label: 'Operational', code: 'O' },
+    },
+    decision: {
+      low: { label: 'Vision-Led', code: 'V' },
+      high: { label: 'Logic-Led', code: 'L' },
+    },
+    execution: {
+      low: { label: 'Adaptive', code: 'A' },
+      high: { label: 'Structured', code: 'T' },
+    },
+  };
+
+  return score < 50 ? labels[spectrum].low : labels[spectrum].high;
+}
+
+/**
+ * Calculate percentage for display (how strongly you lean toward one side)
+ */
+export function getSpectrumPercentage(score) {
+  // Convert 0-100 score to 0-100% leaning
+  // Score of 50 = 0% (neutral)
+  // Score of 0 or 100 = 100% (strong leaning)
+  return Math.abs(score - 50) * 2;
+}
+
+/**
+ * Get descriptive strength label
+ */
+export function getStrengthLabel(percentage) {
+  if (percentage < 10) return 'Balanced';
+  if (percentage < 30) return 'Slight';
+  if (percentage < 50) return 'Moderate';
+  if (percentage < 70) return 'Strong';
+  return 'Very Strong';
+}

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { questions } from './data/questions';
-import { getQuizProgress } from './scoring';
+import { getQuizProgress } from './scoringSupabase';
 import { Button, Card, ProgressBar, GradientBackground, Container } from './components/SharedComponents';
+import { supabase } from '../../lib/supabase';
 
 const QuizContainer = styled.div`
   min-height: 100vh;
@@ -205,6 +205,38 @@ const Quiz = ({ onComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [responses, setResponses] = useState({});
   const [savedIndicator, setSavedIndicator] = useState(false);
+  const [questions, setQuestions] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [quizVersionId, setQuizVersionId] = useState(null);
+
+  // Load questions from Supabase
+  useEffect(() => {
+    async function loadQuestions() {
+      try {
+        const { data: quizVersion, error } = await supabase
+          .from('quiz_versions')
+          .select('*')
+          .eq('is_active', true)
+          .order('version', { ascending: false })
+          .limit(1)
+          .single();
+
+        if (error) throw error;
+
+        if (quizVersion && quizVersion.questions) {
+          const quizQuestions = quizVersion.questions.questions || [];
+          setQuestions(quizQuestions);
+          setQuizVersionId(quizVersion.id);
+        }
+      } catch (error) {
+        console.error('Error loading questions:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadQuestions();
+  }, []);
 
   // Load saved responses from localStorage
   useEffect(() => {
@@ -228,14 +260,14 @@ const Quiz = ({ onComplete }) => {
     }
   }, [responses]);
 
-  const currentQuestion = questions[currentQuestionIndex];
-  const progress = getQuizProgress(responses);
+  const currentQuestion = questions.length > 0 ? questions[currentQuestionIndex] : null;
+  const progress = questions.length > 0 ? getQuizProgress(responses, questions.length) : 0;
   const answeredCount = Object.keys(responses).length;
 
-  const handleAnswer = (questionId, rating) => {
+  const handleAnswer = (questionId, optionIndex) => {
     setResponses((prev) => ({
       ...prev,
-      [questionId]: rating,
+      [questionId]: optionIndex,
     }));
   };
 
@@ -262,20 +294,45 @@ const Quiz = ({ onComplete }) => {
     if (answeredCount === questions.length) {
       // Clear saved data
       localStorage.removeItem('tech16_quiz_responses');
-      onComplete(responses);
+      onComplete({ responses, questions });
     }
   };
 
   const isLastQuestion = currentQuestionIndex === questions.length - 1;
   const canSubmit = answeredCount === questions.length;
 
-  const likertOptions = [
-    { value: 1, label: 'Strongly Disagree' },
-    { value: 2, label: 'Disagree' },
-    { value: 3, label: 'Neutral' },
-    { value: 4, label: 'Agree' },
-    { value: 5, label: 'Strongly Agree' },
-  ];
+  if (loading) {
+    return (
+      <GradientBackground>
+        <QuizContainer>
+          <Container maxWidth="900px">
+            <Header>
+              <Title>Loading Quiz...</Title>
+              <Subtitle>Please wait while we load the questions</Subtitle>
+            </Header>
+          </Container>
+        </QuizContainer>
+      </GradientBackground>
+    );
+  }
+
+  if (!currentQuestion) {
+    return (
+      <GradientBackground>
+        <QuizContainer>
+          <Container maxWidth="900px">
+            <Header>
+              <Title>Error Loading Quiz</Title>
+              <Subtitle>Please refresh the page to try again</Subtitle>
+            </Header>
+          </Container>
+        </QuizContainer>
+      </GradientBackground>
+    );
+  }
+
+  // Get options for current question
+  const questionOptions = currentQuestion.options || [];
 
   return (
     <GradientBackground>
@@ -314,20 +371,14 @@ const Quiz = ({ onComplete }) => {
             </QuestionNumber>
             <QuestionText>{currentQuestion.text}</QuestionText>
 
-            <ScaleLabels>
-              <span>Strongly Disagree</span>
-              <span>Strongly Agree</span>
-            </ScaleLabels>
-
             <LikertScale>
-              {likertOptions.map((option) => (
+              {questionOptions.map((option, index) => (
                 <LikertOption
-                  key={option.value}
-                  selected={responses[currentQuestion.id] === option.value}
-                  onClick={() => handleAnswer(currentQuestion.id, option.value)}
+                  key={index}
+                  selected={responses[currentQuestion.id] === index}
+                  onClick={() => handleAnswer(currentQuestion.id, index)}
                 >
-                  <OptionNumber>{option.value}</OptionNumber>
-                  <OptionLabel>{option.label}</OptionLabel>
+                  <OptionLabel>{typeof option === 'string' ? option : option.text}</OptionLabel>
                 </LikertOption>
               ))}
             </LikertScale>

@@ -1,8 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { calculateResults } from './scoring';
-import { getPersonalityByCode } from './data/personalities';
-import { getTopRoles } from './data/roles';
+import { calculateScores, generatePersonalityType, getSpectrumLabel, getSpectrumPercentage } from './scoringSupabase';
+import { supabase } from '../../lib/supabase';
 import {
   Button,
   Card,
@@ -251,20 +250,162 @@ const ShareSection = styled.div`
   border: 1px solid ${({ theme }) => theme.text_primary + '12'};
 `;
 
-const Results = ({ responses, onRetake }) => {
+const Results = ({ responses, questions, onRetake }) => {
   const resultsRef = useRef(null);
-  const results = calculateResults(responses);
-  const personality = getPersonalityByCode(results.personalityCode);
-  const topRoles = getTopRoles(results.personalityCode, 3);
+  const [personality, setPersonality] = useState(null);
+  const [topRoles, setTopRoles] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Calculate scores and personality type
+  const scores = calculateScores(responses, questions);
+  const personalityCode = generatePersonalityType(scores);
+
+  // Build spectrum breakdown for display
+  const spectrumBreakdown = [
+    {
+      spectrum: 'focus',
+      name: 'Technical Focus',
+      leftPole: 'Builder',
+      rightPole: 'Analyzer',
+      score: scores.focus_score,
+      leftPercent: Math.round(Math.max(0, (50 - scores.focus_score) * 2)),
+      rightPercent: Math.round(Math.max(0, (scores.focus_score - 50) * 2)),
+      dominantPercent: Math.abs(scores.focus_score - 50) * 2,
+    },
+    {
+      spectrum: 'interface',
+      name: 'Interface Preference',
+      leftPole: 'User-Facing',
+      rightPole: 'Systems-Facing',
+      score: scores.interface_score,
+      leftPercent: Math.round(Math.max(0, (50 - scores.interface_score) * 2)),
+      rightPercent: Math.round(Math.max(0, (scores.interface_score - 50) * 2)),
+      dominantPercent: Math.abs(scores.interface_score - 50) * 2,
+    },
+    {
+      spectrum: 'change',
+      name: 'Change Orientation',
+      leftPole: 'Exploratory',
+      rightPole: 'Operational',
+      score: scores.change_score,
+      leftPercent: Math.round(Math.max(0, (50 - scores.change_score) * 2)),
+      rightPercent: Math.round(Math.max(0, (scores.change_score - 50) * 2)),
+      dominantPercent: Math.abs(scores.change_score - 50) * 2,
+    },
+    {
+      spectrum: 'decision',
+      name: 'Decision Style',
+      leftPole: 'Vision-Led',
+      rightPole: 'Logic-Led',
+      score: scores.decision_score,
+      leftPercent: Math.round(Math.max(0, (50 - scores.decision_score) * 2)),
+      rightPercent: Math.round(Math.max(0, (scores.decision_score - 50) * 2)),
+      dominantPercent: Math.abs(scores.decision_score - 50) * 2,
+    },
+    {
+      spectrum: 'execution',
+      name: 'Execution Style',
+      leftPole: 'Adaptive',
+      rightPole: 'Structured',
+      score: scores.execution_score,
+      leftPercent: Math.round(Math.max(0, (50 - scores.execution_score) * 2)),
+      rightPercent: Math.round(Math.max(0, (scores.execution_score - 50) * 2)),
+      dominantPercent: Math.abs(scores.execution_score - 50) * 2,
+    },
+  ];
 
   // Prepare data for radar chart
-  const radarData = results.spectrumBreakdown.map((spectrum) => ({
+  const radarData = spectrumBreakdown.map((spectrum) => ({
     dimension: spectrum.name,
     value: spectrum.dominantPercent,
   }));
 
+  // Load personality profile from Supabase
+  useEffect(() => {
+    async function loadPersonality() {
+      try {
+        const { data, error } = await supabase
+          .from('personality_profiles')
+          .select('*')
+          .eq('type_code', personalityCode)
+          .single();
+
+        if (error) throw error;
+        setPersonality(data);
+      } catch (error) {
+        console.error('Error loading personality:', error);
+      }
+    }
+
+    if (personalityCode) {
+      loadPersonality();
+    }
+  }, [personalityCode]);
+
+  // Load roles and calculate recommendations
+  useEffect(() => {
+    async function loadRoles() {
+      try {
+        // Load all roles
+        const { data: roles, error: rolesError } = await supabase
+          .from('tech_roles')
+          .select('*');
+
+        if (rolesError) throw rolesError;
+
+        // Load scoring weights for all roles
+        const { data: weights, error: weightsError } = await supabase
+          .from('role_scoring_weights')
+          .select('*');
+
+        if (weightsError) throw weightsError;
+
+        // Calculate fit scores for each role
+        const rolesWithScores = roles.map(role => {
+          const roleWeights = weights.filter(w => w.role_id === role.id);
+
+          // Calculate weighted score
+          let totalScore = 0;
+          let totalWeight = 0;
+
+          roleWeights.forEach(weight => {
+            const spectrumScore = scores[`${weight.spectrum}_score`];
+            if (spectrumScore !== undefined) {
+              // Calculate how well this spectrum score matches the role's preference
+              const difference = Math.abs(spectrumScore - weight.preferred_value);
+              const matchScore = 100 - difference; // 0-100 scale
+              const weightedScore = matchScore * weight.weight;
+
+              totalScore += weightedScore;
+              totalWeight += weight.weight;
+            }
+          });
+
+          const fitScore = totalWeight > 0 ? totalScore / totalWeight / 100 : 0;
+
+          return {
+            ...role,
+            fitScore,
+          };
+        });
+
+        // Sort by fit score and take top 3
+        const sortedRoles = rolesWithScores.sort((a, b) => b.fitScore - a.fitScore);
+        setTopRoles(sortedRoles.slice(0, 3));
+      } catch (error) {
+        console.error('Error loading roles:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadRoles();
+  }, [scores]);
+
   const handleShare = () => {
-    const shareText = `I just discovered my Tech 16 Personality: ${personality.name} (${results.fullTypeCode})!\n\nTop roles for me:\n${topRoles.map((r, i) => `${i + 1}. ${r.title} (${Math.round(r.fitScore * 100)}% fit)`).join('\n')}`;
+    if (!personality) return;
+
+    const shareText = `I just discovered my Tech 16 Personality: ${personality.name} (${personalityCode})!\n\nTop roles for me:\n${topRoles.map((r, i) => `${i + 1}. ${r.title} (${Math.round(r.fitScore * 100)}% fit)`).join('\n')}`;
 
     if (navigator.share) {
       navigator
@@ -282,20 +423,22 @@ const Results = ({ responses, onRetake }) => {
   };
 
   const handleDownload = () => {
+    if (!personality) return;
+
     // Simple download as text file
     const content = `
 Tech 16 Personalities Results
 ==============================
 
 Personality Type: ${personality.name}
-Code: ${results.fullTypeCode}
+Code: ${personalityCode}
 Tagline: ${personality.tagline}
 
 Description:
 ${personality.description}
 
 Spectrum Breakdown:
-${results.spectrumBreakdown.map((s) => `- ${s.name}: ${s.leftPole} (${s.leftPercent}%) ↔ ${s.rightPole} (${s.rightPercent}%)`).join('\n')}
+${spectrumBreakdown.map((s) => `- ${s.name}: ${s.leftPole} (${s.leftPercent}%) ↔ ${s.rightPole} (${s.rightPercent}%)`).join('\n')}
 
 Top Role Recommendations:
 ${topRoles.map((r, i) => `${i + 1}. ${r.title} (${Math.round(r.fitScore * 100)}% fit)\n   ${r.description}`).join('\n\n')}
@@ -307,19 +450,34 @@ Challenges:
 ${personality.challenges.map((c) => `- ${c}`).join('\n')}
 
 Work Preferences:
-${personality.workPreferences.map((w) => `- ${w}`).join('\n')}
+${personality.work_preferences.map((w) => `- ${w}`).join('\n')}
     `;
 
     const blob = new Blob([content], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `tech16-results-${results.personalityCode}.txt`;
+    a.download = `tech16-results-${personalityCode}.txt`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
+
+  if (loading) {
+    return (
+      <GradientBackground>
+        <ResultsContainer>
+          <Container>
+            <Header>
+              <Title>Loading Your Results...</Title>
+              <Subtitle>Analyzing your personality profile</Subtitle>
+            </Header>
+          </Container>
+        </ResultsContainer>
+      </GradientBackground>
+    );
+  }
 
   if (!personality) {
     return (
@@ -328,7 +486,7 @@ ${personality.workPreferences.map((w) => `- ${w}`).join('\n')}
           <Container>
             <Header>
               <Title>Error Loading Results</Title>
-              <Subtitle>Unable to find personality profile for {results.personalityCode}</Subtitle>
+              <Subtitle>Unable to find personality profile for {personalityCode}</Subtitle>
             </Header>
             <div style={{ textAlign: 'center' }}>
               <Button onClick={onRetake}>Retake Quiz</Button>
@@ -349,7 +507,7 @@ ${personality.workPreferences.map((w) => `- ${w}`).join('\n')}
           </Header>
 
           <PersonalityCard>
-            <PersonalityCode>{results.fullTypeCode}</PersonalityCode>
+            <PersonalityCode>{personalityCode}</PersonalityCode>
             <PersonalityName>{personality.name}</PersonalityName>
             <PersonalityTagline>{personality.tagline}</PersonalityTagline>
             <PersonalityDescription>{personality.description}</PersonalityDescription>
@@ -358,7 +516,7 @@ ${personality.workPreferences.map((w) => `- ${w}`).join('\n')}
           <Section>
             <SectionTitle>Your Personality Spectrums</SectionTitle>
             <SpectrumSection>
-              {results.spectrumBreakdown.map((spectrum) => (
+              {spectrumBreakdown.map((spectrum) => (
                 <SpectrumDisplay
                   key={spectrum.spectrum}
                   name={spectrum.name}
@@ -408,7 +566,7 @@ ${personality.workPreferences.map((w) => `- ${w}`).join('\n')}
                 Work Preferences
               </SectionTitle>
               <List>
-                {personality.workPreferences.map((pref, idx) => (
+                {personality.work_preferences?.map((pref, idx) => (
                   <ListItem key={idx}>{pref}</ListItem>
                 ))}
               </List>
@@ -429,29 +587,33 @@ ${personality.workPreferences.map((w) => `- ${w}`).join('\n')}
 
                   <RoleDescription>{role.description}</RoleDescription>
 
-                  <SkillsList>
-                    <SkillsTitle>Key Skills</SkillsTitle>
-                    <Skills>
-                      {role.skills.slice(0, 8).map((skill, skillIdx) => (
-                        <SkillTag key={skillIdx}>{skill}</SkillTag>
-                      ))}
-                    </Skills>
-                  </SkillsList>
+                  {role.skills && Array.isArray(role.skills) && role.skills.length > 0 && (
+                    <SkillsList>
+                      <SkillsTitle>Key Skills</SkillsTitle>
+                      <Skills>
+                        {role.skills.slice(0, 8).map((skill, skillIdx) => (
+                          <SkillTag key={skillIdx}>{skill}</SkillTag>
+                        ))}
+                      </Skills>
+                    </SkillsList>
+                  )}
 
-                  <RoadmapSection>
-                    <SkillsTitle>Learning Roadmap</SkillsTitle>
-                    {role.roadmap.slice(0, 3).map((phase, phaseIdx) => (
-                      <RoadmapPhase key={phaseIdx}>
-                        <PhaseTitle>{phase.phase}</PhaseTitle>
-                        <PhaseDuration>{phase.duration}</PhaseDuration>
-                        <PhaseItems>
-                          {phase.items.map((item, itemIdx) => (
-                            <li key={itemIdx}>{item}</li>
-                          ))}
-                        </PhaseItems>
-                      </RoadmapPhase>
-                    ))}
-                  </RoadmapSection>
+                  {role.roadmap && Array.isArray(role.roadmap) && role.roadmap.length > 0 && (
+                    <RoadmapSection>
+                      <SkillsTitle>Learning Roadmap</SkillsTitle>
+                      {role.roadmap.slice(0, 3).map((phase, phaseIdx) => (
+                        <RoadmapPhase key={phaseIdx}>
+                          <PhaseTitle>{phase.phase}</PhaseTitle>
+                          <PhaseDuration>{phase.duration}</PhaseDuration>
+                          <PhaseItems>
+                            {phase.items.map((item, itemIdx) => (
+                              <li key={itemIdx}>{item}</li>
+                            ))}
+                          </PhaseItems>
+                        </RoadmapPhase>
+                      ))}
+                    </RoadmapSection>
+                  )}
                 </RoleCard>
               ))}
             </Grid>

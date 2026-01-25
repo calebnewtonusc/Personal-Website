@@ -283,7 +283,7 @@ const Footer = styled.div`
 
 const Tech16 = () => {
   const [view, setView] = useState('landing'); // 'landing', 'quiz', 'results'
-  const [quizResponses, setQuizResponses] = useState(null);
+  const [quizData, setQuizData] = useState(null); // { responses, questions }
 
   // Check for saved progress on mount
   useEffect(() => {
@@ -304,14 +304,14 @@ const Tech16 = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleQuizComplete = (responses) => {
-    setQuizResponses(responses);
+  const handleQuizComplete = (data) => {
+    setQuizData(data);
     setView('results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleRetakeQuiz = () => {
-    setQuizResponses(null);
+    setQuizData(null);
     localStorage.removeItem('tech16_quiz_responses');
     setView('quiz');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -326,8 +326,8 @@ const Tech16 = () => {
     return <Quiz onComplete={handleQuizComplete} />;
   }
 
-  if (view === 'results' && quizResponses) {
-    return <Results responses={quizResponses} onRetake={handleRetakeQuiz} />;
+  if (view === 'results' && quizData) {
+    return <Results responses={quizData.responses} questions={quizData.questions} onRetake={handleRetakeQuiz} />;
   }
 
   // Landing page
