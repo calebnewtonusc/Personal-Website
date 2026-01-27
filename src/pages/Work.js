@@ -278,7 +278,7 @@ const projects = [
     image: tech16Img,
     name: "Tech 16 Personalities",
     type: "Developer Assessment Framework",
-    description: "Built full-stack personality assessment platform with 40-question Likert-scale psychometric quiz scoring 5 behavioral spectrums (Focus, Interface, Change, Decision, Execution), generating 32 unique types through 4 core dimensions + 1 modifier suffix. Architected dynamic trait-based role matching algorithm that calculates fit scores using weighted distance metrics across personality traits to rank 95+ engineering roles. Implemented complete CMS with PostgreSQL JSONB for version-locked quiz snapshots, React Context API for state management, styled-components theming system, and Recharts for data visualization. Features shareable results cards, personality comparison mode, and responsive design with mobile-first approach.",
+    description: "Built full-stack developer personality platform with 40-question psychometric quiz scoring 5 behavioral dimensions to generate 32 unique types, implementing custom algorithms in React/PostgreSQL to calculate 0-100 trait scores and classify user personalities. Architected dynamic role-matching engine using weighted distance metrics across trait profiles to rank 95+ engineering roles by fit percentage, replacing database lookups with algorithmic matching that adapts automatically to scoring changes. Implemented PostgreSQL JSONB version-controlled snapshots, Context API state management, Recharts visualization, styled-components theming, and shareable results with mobile-responsive design.",
     tech: ["React", "styled-components", "Supabase", "PostgreSQL", "Recharts"],
     link: "https://16techpersonalities.com",
     internal: false
