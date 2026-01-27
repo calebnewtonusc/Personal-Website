@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/modellab",
+      "destination": "https://modellab.studio",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
