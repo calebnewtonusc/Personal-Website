@@ -249,7 +249,7 @@ export const projects = [
   {
     id: 1,
     title: "16 Tech Personalities",
-    description: "Myers-Briggs style tech personality quiz with 16 unique developer profiles. Take 40 questions across 5 dimensions (Interface, Change, Decision, Execution, Focus) to discover your type and get personalized role recommendations from 95+ engineering positions.",
+    description: "Engineered personality assessment platform with 40-question psychometric quiz implementing custom scoring algorithms to classify developers into 32 unique types across 5 behavioral dimensions. Architected dynamic role-matching engine using weighted distance metrics to algorithmically rank 95+ engineering positions by personality fit percentage. Eliminated database dependencies through adaptive trait-based profiling that automatically recalculates when scoring algorithms change.",
     image: "https://via.placeholder.com/800x400/32CD32/FFFFFF?text=Tech+Personalities",
     tags: ["React", "styled-components", "Supabase", "PostgreSQL", "Recharts", "Vercel"],
     category: "web app",
