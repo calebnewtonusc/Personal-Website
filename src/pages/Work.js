@@ -278,7 +278,7 @@ const projects = [
     image: tech16Img,
     name: "Tech 16 Personalities",
     type: "Developer Assessment Framework",
-    description: "Myers-Briggs style tech personality quiz with 16 unique developer profiles. Take 40 questions across 5 dimensions (Interface, Change, Decision, Execution, Focus) to discover your type and get personalized role recommendations from 95+ engineering positions.",
+    description: "Built full-stack personality assessment platform with 40-question Likert-scale psychometric quiz scoring 5 behavioral spectrums, generating 32 unique types (16 base personalities + Focus modifier suffix). Implemented CMS-like content system with trait-weighted role scoring algorithm analyzing 95+ engineering positions. Features shareable results visualization, optional profile comparison, and version-locked quiz snapshots for data integrity.",
     tech: ["React", "styled-components", "Supabase", "PostgreSQL", "Recharts"],
     link: "https://16techpersonalities.com",
     internal: false
