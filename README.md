@@ -97,7 +97,7 @@ See [MEGA_BRAIN_QUICK_START.md](MEGA_BRAIN_QUICK_START.md) for usage guide and [
 ### Projects (`/work`)
 - **ModelLab** - ML experiment tracking platform with dataset versioning
 - **Tech 16 Personalities** - Developer assessment framework
-- **FoodVision Mini** - Food image classifier using EfficientNet
+- **FoodVision** - 97.20% accurate food classifier using EfficientNetB2
 - **The Lines** - STEM music videos for education
 
 ### Everything Night (`/everything-night`)
