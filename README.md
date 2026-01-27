@@ -2,6 +2,8 @@
 
 A personal portfolio website showcasing my journey as an aspiring machine learning and data engineer, Computer Science + Applied Mathematics student at USC.
 
+**🌐 Live Site:** [https://calebnewton.me](https://calebnewton.me)
+
 ## 🌱 Built With
 - **React 18** - Frontend library with functional components and hooks
 - **Styled Components** - CSS-in-JS styling with theme support
