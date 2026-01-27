@@ -13946,3 +13946,26 @@
 {"timestamp": "2026-01-27T13:32:50.707377", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
 {"timestamp": "2026-01-27T13:33:11.649365", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
 {"timestamp": "2026-01-27T13:33:15.218690", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T13:33:19.540140", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: execute_task (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-27T13:33:20.576427", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-27T13:33:41.748143", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T13:33:50.921356", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T13:34:11.831903", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T13:34:15.971289", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T13:34:41.917918", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T13:34:51.187834", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T13:35:12.026427", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T13:35:16.876562", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T13:35:42.129564", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T13:35:51.465581", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T13:36:12.227101", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T13:36:17.704868", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T13:36:42.309493", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T13:36:51.674496", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T13:37:12.408158", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T13:37:18.727693", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T13:37:42.486436", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T13:37:51.915982", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T13:37:57.145290", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks and CPU at only 31.7%, there is significant available processing capacity to work through the backlog. Memory at 79.7% is elevated but still within operational range. During working hours, task execution should be the priority.", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-27T13:38:12.597549", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T13:38:19.511567", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}

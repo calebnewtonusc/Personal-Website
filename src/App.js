@@ -10,7 +10,7 @@ import EducationPage from './pages/EducationPage';
 import WorkPage from './pages/Work';
 import EverythingNightPage from './pages/EverythingNight';
 import ComingSoonPage from './pages/ComingSoon';
-import FoodVision from './pages/FoodVision';
+// import FoodVision from './pages/FoodVision'; // Removed - direct link to foodvis.in instead
 import AdminPage from './pages/Admin';
 import Dashboard from './Dashboard';
 import Tech16 from './pages/Tech16';
@@ -93,7 +93,7 @@ function AnimatedRoutes({ toggleTheme, isDark }) {
           <Route path="/work" element={<WorkPage />} />
           <Route path="/sgchristianclubcollective" element={<EverythingNightPage />} />
           <Route path="/tech16" element={<Tech16 />} />
-          <Route path="/foodvision" element={<FoodVision />} />
+          {/* <Route path="/foodvision" element={<FoodVision />} /> */} {/* Removed - links directly to foodvis.in */}
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
