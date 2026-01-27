@@ -271,8 +271,8 @@ const projects = [
     type: "ML Testing Platform",
     description: "Built an ML experiment command center with dataset versioning (checksums, schema snapshots), run tracking (seed, commit hash, dataset version), and artifact storage for reproducibility. Implemented EvalHarness: standardized metrics.json, slices.json, failure examples, and compare mode with metric/config/artifact diffs plus p50/p95 latency measurement.",
     tech: ["PyTorch", "Python", "sklearn", "Dataset Versioning", "Reproducibility"],
-    link: "/modellab",
-    internal: true
+    link: "https://modellab.studio",
+    internal: false
   },
   {
     image: tech16Img,

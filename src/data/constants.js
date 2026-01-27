@@ -244,7 +244,7 @@ export const projects = [
     tags: ["Python", "PyTorch", "PostgreSQL", "Prisma", "Docker", "GitHub Actions"],
     category: "machine learning",
     github: "https://github.com/calebnewtonusc/ModelLab",
-    webapp: "/projects/modellab",
+    webapp: "https://modellab.studio",
   },
   {
     id: 1,
