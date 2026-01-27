@@ -258,7 +258,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "FoodVision Mini",
+    title: "Food Vision",
     description: "End-to-end computer vision project for food classification (pizza, steak, sushi). Features training pipeline with EfficientNetB2, evaluation harness, and deployed Gradio demo app.",
     image: "https://via.placeholder.com/800x400/90EE90/000000?text=FoodVision",
     tags: ["PyTorch", "EfficientNetB2", "Gradio", "Hugging Face", "Computer Vision"],
