@@ -260,9 +260,9 @@ export const projects = [
   {
     id: 2,
     title: "Food Vision",
-    description: "End-to-end computer vision project for food classification (pizza, steak, sushi). Features training pipeline with EfficientNetB2, evaluation harness, and deployed Gradio demo app.",
+    description: "Built and deployed computer vision classifier for multi-class food recognition (pizza, steak, sushi) using transfer learning with EfficientNetB2. Implemented complete ML pipeline: data augmentation, training loop with mixed precision, evaluation harness for metrics tracking, and production deployment via Gradio on Hugging Face Spaces.",
     image: "https://via.placeholder.com/800x400/90EE90/000000?text=FoodVision",
-    tags: ["PyTorch", "EfficientNetB2", "Gradio", "Hugging Face", "Computer Vision"],
+    tags: ["PyTorch", "EfficientNetB2", "Transfer Learning", "Gradio", "Hugging Face", "Computer Vision"],
     category: "machine learning",
     github: "https://github.com/calebnewtonusc/FoodVisionMini",
     webapp: "https://foodvis.in",
