@@ -239,9 +239,9 @@ export const projects = [
   {
     id: 0,
     title: "ModelLab",
-    description: "ML experiment command center with dataset versioning, training jobs, EvalHarness evaluation, artifact storage, and run comparison. Emphasizes reproducible runs, clean evaluation, and honest failure modes.",
+    description: "Built and deployed an ML experiment command center (React + Express + PostgreSQL) with dataset versioning (checksums, schema snapshots), run tracking (seed, commit hash, dataset version), and artifact storage for reproducibility. Implemented EvalHarness: standardized metrics.json, slices.json, failure examples with ROC-AUC/PR-AUC/calibration metrics, and compare mode with metric/config/artifact diffs plus p50/p95 latency measurement.",
     image: "https://via.placeholder.com/800x400/228B22/FFFFFF?text=ModelLab",
-    tags: ["Python", "PyTorch", "PostgreSQL", "Prisma", "Docker", "GitHub Actions"],
+    tags: ["React", "Express", "PostgreSQL", "Python", "EvalHarness", "Docker"],
     category: "machine learning",
     github: "https://github.com/calebnewtonusc/ModelLab",
     webapp: "https://modellab.studio",
