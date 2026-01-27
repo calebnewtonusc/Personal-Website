@@ -164,7 +164,7 @@ const Tech16 = () => {
         <Header>
           <Title>16 Tech Personalities</Title>
           <Tagline>Find Your Tech Career Identity</Tagline>
-          <ComingSoonBadge>🚀 Launching Spring 2026</ComingSoonBadge>
+          <ComingSoonBadge>✅ Live at 16techpersonalities.com</ComingSoonBadge>
         </Header>
 
         <Section>
@@ -256,48 +256,40 @@ const Tech16 = () => {
         <Section>
           <SectionTitle>Key Features</SectionTitle>
           <List>
-            <ListItem>Thoughtfully designed quiz with scenario-based questions (not just "do you like design?")</ListItem>
-            <ListItem>16 distinct Tech Personality types with detailed profiles</ListItem>
-            <ListItem>Role recommendations: Frontend, Backend, ML/AI, DevOps, Product, Design, Data, etc.</ListItem>
-            <ListItem>Personalized skill roadmaps showing what to learn next for your path</ListItem>
-            <ListItem>Curated resources: courses, projects, books, and communities</ListItem>
-            <ListItem>Shareable results with beautiful visuals</ListItem>
+            <ListItem>40-question psychometric quiz with single-direction scoring (eliminates response bias)</ListItem>
+            <ListItem>32 distinct Tech Personality types (16 base types × 2 focus variants)</ListItem>
+            <ListItem>60+ curated engineering roles matched via Euclidean distance algorithm with flexibility thresholds</ListItem>
+            <ListItem>Category-based matching system (Mobile, ML, Security, Infrastructure, etc.) with keyword detection</ListItem>
+            <ListItem>Dynamic role ranking from 15-100% fit (no hard-coded weights, adapts to algorithm changes)</ListItem>
+            <ListItem>Interactive radar charts and spectrum visualizations showing all 5 dimensions</ListItem>
           </List>
         </Section>
 
         <Section>
           <SectionTitle>Tech Stack</SectionTitle>
           <TechStack>
-            <TechTag>Next.js (App Router)</TechTag>
-            <TechTag>TypeScript</TechTag>
-            <TechTag>Tailwind CSS</TechTag>
-            <TechTag>FastAPI</TechTag>
-            <TechTag>Supabase</TechTag>
+            <TechTag>React 19</TechTag>
+            <TechTag>styled-components</TechTag>
+            <TechTag>Supabase (PostgreSQL)</TechTag>
+            <TechTag>Recharts</TechTag>
             <TechTag>Vercel</TechTag>
-            <TechTag>Chart.js</TechTag>
+            <TechTag>React Router</TechTag>
           </TechStack>
         </Section>
 
         <Section>
-          <SectionTitle>Why I'm Building This</SectionTitle>
+          <SectionTitle>Why I Built This</SectionTitle>
           <Text>
             I spent months figuring out what kind of tech work I actually enjoy. I tried entrepreneurship,
             product thinking, and design before realizing I'm most alive when I'm going deep on the technical
             side (ML systems, algorithms, infrastructure). This tool would have saved me time and confusion.
           </Text>
           <Text>
-            Plus, it's a chance to build a full-stack app with personality assessment logic, data visualization,
-            recommendation algorithms, and a polished user experience. These are all skills I want to develop.
+            Building this project involved solving real engineering challenges: psychometric test design,
+            custom scoring algorithms, dynamic role matching with category-based profiling, database
+            schema versioning, and responsive UI with data visualization. Each component required careful
+            architectural decisions and algorithmic thinking.
           </Text>
-        </Section>
-
-        <Section>
-          <SectionTitle>Timeline</SectionTitle>
-          <List>
-            <ListItem><strong>Week 1-2 (Jan 2026)</strong> - Quiz logic, spectrum scoring, database schema</ListItem>
-            <ListItem><strong>February 2026</strong> - 16 personality profiles, role recommendations, roadmap generation</ListItem>
-            <ListItem><strong>March 2026</strong> - UI polish, resource curation, deployment and beta testing</ListItem>
-          </List>
         </Section>
       </Wrapper>
     </Container>
