@@ -55,7 +55,7 @@ const Tagline = styled.p`
   margin-bottom: 24px;
 `;
 
-const ComingSoonBadge = styled.div`
+const LiveBadge = styled.div`
   display: inline-block;
   background: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.white};
@@ -64,6 +64,28 @@ const ComingSoonBadge = styled.div`
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 32px;
+`;
+
+const LiveLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1.8px solid ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.primary};
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px ${({ theme }) => theme.primary}40;
+  }
 `;
 
 const Section = styled.div`
@@ -152,47 +174,54 @@ const FoodVision = () => {
 
         <Header>
           <Title>FoodVisionMini</Title>
-          <Tagline>End-to-End Computer Vision Project</Tagline>
-          <ComingSoonBadge>🚀 Launching Spring 2026</ComingSoonBadge>
+          <Tagline>Production ML Pipeline - 97.20% Accuracy</Tagline>
+          <LiveBadge>✅ Live in Production</LiveBadge>
+          <LiveLink href="https://foodvis.in" target="_blank" rel="noopener noreferrer">
+            🚀 Try it at foodvis.in →
+          </LiveLink>
         </Header>
 
         <Section>
           <SectionTitle>The Project</SectionTitle>
           <Text>
-            FoodVisionMini is an end-to-end computer vision project that classifies images of food
-            into three categories: pizza, steak, and sushi. It's a complete ML workflow from data
-            collection to model training to deployment. It's designed to teach me the full lifecycle of
-            a production computer vision system.
+            Implemented production ML pipeline for Food101 image classification using EfficientNetB2 with progressive
+            fine-tuning and discriminative learning rates, achieving <strong>97.20% accuracy</strong>. Built custom
+            evaluation harness measuring accuracy, F1, calibration (ECE: 0.0147), and inference latency (p50/p95).
+            Deployed to <a href="https://foodvis.in" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>foodvis.in</a> using
+            HuggingFace Spaces (FastAPI backend) and Vercel (React frontend) with 70% confidence threshold for
+            unknown food detection.
           </Text>
           <Text>
-            This isn't just about training a model. It's about building a reproducible training pipeline,
-            implementing proper evaluation, and deploying a live demo that anyone can use.
+            This project demonstrates end-to-end MLOps: from data preparation through training, comprehensive
+            evaluation, and production deployment with custom domain and HTTPS. The system intelligently rejects
+            non-food images and serves predictions in ~500ms on CPU with free hosting infrastructure.
           </Text>
         </Section>
 
         <Section>
-          <SectionTitle>Key Features</SectionTitle>
+          <SectionTitle>Key Achievements</SectionTitle>
           <List>
-            <ListItem><strong>Custom Dataset</strong> - Curated and preprocessed dataset of pizza, steak, and sushi images</ListItem>
-            <ListItem><strong>Transfer Learning with EfficientNetB2</strong> - Fine-tuned state-of-the-art model for food classification</ListItem>
-            <ListItem><strong>Training Pipeline</strong> - Reproducible training with proper train/val/test splits and data augmentation</ListItem>
-            <ListItem><strong>EvalHarness Evaluation</strong> - Standardized evaluation framework to measure real performance</ListItem>
-            <ListItem><strong>Gradio Demo App</strong> - Interactive web demo where you can upload food images</ListItem>
-            <ListItem><strong>Hugging Face Deployment</strong> - Live demo hosted on Hugging Face Spaces</ListItem>
-            <ListItem><strong>Full Documentation</strong> - Reproducible setup, training logs, and model cards</ListItem>
+            <ListItem><strong>97.20% Accuracy</strong> - Exceeded 90% target by 7.2% using progressive fine-tuning</ListItem>
+            <ListItem><strong>Production Deployment</strong> - Live at <a href="https://foodvis.in" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>foodvis.in</a> with custom domain and HTTPS</ListItem>
+            <ListItem><strong>Unknown Food Detection</strong> - 70% confidence threshold rejects non-food images</ListItem>
+            <ListItem><strong>Comprehensive Evaluation</strong> - Custom harness measuring accuracy, F1 (0.9720), calibration (ECE: 0.0147), and latency</ListItem>
+            <ListItem><strong>Full-Stack Application</strong> - FastAPI backend on HuggingFace Spaces + React frontend on Vercel</ListItem>
+            <ListItem><strong>Discriminative Learning Rates</strong> - 1e-5 (mid layers), 1e-4 (last blocks), 1e-3 (classifier)</ListItem>
+            <ListItem><strong>Free Hosting</strong> - ~$1/month total cost (domain only, all infrastructure free)</ListItem>
           </List>
         </Section>
 
         <Section>
           <SectionTitle>Tech Stack</SectionTitle>
           <TechStack>
-            <TechTag>PyTorch</TechTag>
+            <TechTag>PyTorch 2.1.0</TechTag>
             <TechTag>EfficientNetB2</TechTag>
-            <TechTag>torchvision</TechTag>
-            <TechTag>Gradio</TechTag>
-            <TechTag>Hugging Face Spaces</TechTag>
-            <TechTag>Weights & Biases</TechTag>
-            <TechTag>Python</TechTag>
+            <TechTag>FastAPI 0.104.1</TechTag>
+            <TechTag>React 18</TechTag>
+            <TechTag>Tailwind CSS</TechTag>
+            <TechTag>HuggingFace Spaces</TechTag>
+            <TechTag>Vercel</TechTag>
+            <TechTag>Git LFS</TechTag>
           </TechStack>
         </Section>
 
@@ -220,42 +249,44 @@ criterion = CrossEntropyLoss()`}</CodeBlock>
         </Section>
 
         <Section>
-          <SectionTitle>Training & Evaluation</SectionTitle>
+          <SectionTitle>Training & Results</SectionTitle>
           <Text>
-            <strong>Training Setup:</strong>
+            <strong>Training Pipeline:</strong>
           </Text>
           <List>
-            <ListItem>Dataset: ~1500 images per class (pizza, steak, sushi)</ListItem>
-            <ListItem>80/10/10 train/val/test split with stratification</ListItem>
-            <ListItem>Data augmentation: random rotation, flip, color jitter</ListItem>
-            <ListItem>Batch size: 32, Epochs: 5-10, Early stopping on validation loss</ListItem>
-            <ListItem>Learning rate scheduling with ReduceLROnPlateau</ListItem>
+            <ListItem>Dataset: Food101 subset - 750 train + 250 test images per class</ListItem>
+            <ListItem>Baseline Model: 94.27% accuracy (frozen backbone, 10 epochs)</ListItem>
+            <ListItem>Improved Model: 97.20% accuracy (progressive fine-tuning, 15 epochs)</ListItem>
+            <ListItem>Enhanced augmentation: RandomResizedCrop, flips, color jitter, rotation</ListItem>
+            <ListItem>Cosine annealing scheduler with discriminative learning rates</ListItem>
           </List>
           <Text>
-            <strong>Evaluation Metrics:</strong>
+            <strong>Evaluation Results:</strong>
           </Text>
           <List>
-            <ListItem>Accuracy, Precision, Recall, F1-Score per class</ListItem>
-            <ListItem>Confusion matrix analysis</ListItem>
-            <ListItem>Test set performance with confidence intervals</ListItem>
-            <ListItem>Failure case analysis (what the model gets wrong and why)</ListItem>
+            <ListItem>Accuracy: 97.20% (exceeded 90% target by 7.2%)</ListItem>
+            <ListItem>F1 Score (macro): 0.9720</ListItem>
+            <ListItem>Expected Calibration Error (ECE): 0.0147 (excellent)</ListItem>
+            <ListItem>CPU Inference Latency: ~500ms p50 (optimizable with TorchScript)</ListItem>
+            <ListItem>Confusion matrix, reliability diagrams, and failure case analysis generated</ListItem>
           </List>
         </Section>
 
         <Section>
-          <SectionTitle>Deployment</SectionTitle>
+          <SectionTitle>Production Deployment</SectionTitle>
           <Text>
-            The trained model will be deployed as an interactive Gradio demo on Hugging Face Spaces.
-            Users can:
+            The application is live at <a href="https://foodvis.in" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', fontWeight: 'bold', textDecoration: 'underline'}}>foodvis.in</a> with full production infrastructure:
           </Text>
           <List>
-            <ListItem>Upload an image of food</ListItem>
-            <ListItem>Get instant predictions with confidence scores</ListItem>
-            <ListItem>See model explanations (which features it's using)</ListItem>
-            <ListItem>Try example images from the test set</ListItem>
+            <ListItem><strong>Backend:</strong> FastAPI on HuggingFace Spaces (Docker) - handles inference with 55MB model via Git LFS</ListItem>
+            <ListItem><strong>Frontend:</strong> React 18 + Tailwind CSS on Vercel - drag-and-drop upload, real-time predictions</ListItem>
+            <ListItem><strong>Domain:</strong> Custom domain (foodvis.in) configured via GoDaddy DNS with Vercel SSL/HTTPS</ListItem>
+            <ListItem><strong>Features:</strong> Unknown food detection, working demo gallery, confidence visualization, mobile-responsive</ListItem>
+            <ListItem><strong>Cost:</strong> ~$1/month (domain only - HuggingFace Spaces + Vercel both free tier)</ListItem>
           </List>
           <Text>
-            The demo will be publicly accessible and showcased in my project portfolio.
+            Users can upload any image to test the classifier. The system detects when an image is not pizza, steak, or sushi
+            (confidence threshold: 70%) and displays appropriate feedback.
           </Text>
         </Section>
 
@@ -279,12 +310,17 @@ criterion = CrossEntropyLoss()`}</CodeBlock>
         </Section>
 
         <Section>
-          <SectionTitle>Timeline</SectionTitle>
+          <SectionTitle>Development Timeline</SectionTitle>
           <List>
-            <ListItem><strong>Week 0-1 (Jan 2026)</strong> - Dataset collection, preprocessing, baseline model</ListItem>
-            <ListItem><strong>Week 2 (Late Jan)</strong> - Training pipeline, EvalHarness integration, model optimization</ListItem>
-            <ListItem><strong>February 2026</strong> - Gradio demo, Hugging Face deployment, documentation</ListItem>
+            <ListItem><strong>Jan 26, 2026</strong> - Dataset download (Food101), baseline training (94.27% accuracy)</ListItem>
+            <ListItem><strong>Jan 27, 2026</strong> - Improved model (97.20%), comprehensive evaluation, backend/frontend development</ListItem>
+            <ListItem><strong>Jan 27, 2026</strong> - Full deployment to HuggingFace Spaces + Vercel, domain configuration</ListItem>
+            <ListItem><strong>Status:</strong> ✅ Live in production at <a href="https://foodvis.in" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>foodvis.in</a></ListItem>
           </List>
+          <Text>
+            Total development time: ~24 hours (including overnight automated training). Demonstrates rapid prototyping
+            to production deployment with proper ML engineering practices.
+          </Text>
         </Section>
       </Wrapper>
     </Container>
