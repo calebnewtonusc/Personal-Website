@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/foodvision",
+      "destination": "https://foodvis.in",
+      "permanent": true
+    },
+    {
       "source": "/modellab",
       "destination": "https://modellab.studio",
       "permanent": true
