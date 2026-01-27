@@ -27,3 +27,4 @@ yarn-error.log*
 
 # Environment variables
 .env
+context-data/COLLECTIVE_MEMORY.json
