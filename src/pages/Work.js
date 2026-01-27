@@ -278,8 +278,8 @@ const projects = [
     image: tech16Img,
     name: "Tech 16 Personalities",
     type: "Developer Assessment Framework",
-    description: "Implemented a 40-question Likert quiz that scores 5 spectrums and outputs a 4-letter Tech Type plus suffix (-A/-T); stores raw trait percentages and quiz version for integrity. Built CMS-like content + role mapping (trait-weighted RoleScore) and share features (results card, optional compare) using Next.js + TypeScript + Tailwind with Supabase Auth/Postgres.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Postgres"],
+    description: "Myers-Briggs style tech personality quiz with 16 unique developer profiles. Take 40 questions across 5 dimensions (Interface, Change, Decision, Execution, Focus) to discover your type and get personalized role recommendations from 95+ engineering positions.",
+    tech: ["React", "styled-components", "Supabase", "PostgreSQL", "Recharts"],
     link: "https://16techpersonalities.com",
     internal: false
   },
