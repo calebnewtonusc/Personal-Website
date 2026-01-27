@@ -10814,3 +10814,744 @@
 {"timestamp": "2026-01-26T21:29:18.882030", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
 {"timestamp": "2026-01-26T21:29:27.411798", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
 {"timestamp": "2026-01-26T21:29:33.792366", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks and healthy CPU utilization (24.9%), the system has capacity to process workload. Memory at 77.6% is elevated but not critical. Evening time suggests catching up on the task backlog is the priority.", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:29:41.690237", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:29:48.506358", "agent_id": "ai-file-organizer", "agent_type": "intelligent-automation", "insight": "AI File Organizer: Organized 2 files using AI analysis", "importance": 0.8, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:29:57.518713", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:30:10.578713", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:30:19.096140", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:30:27.800164", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:30:58.062540", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:31:05.818356", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: optimize_system (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:31:11.883409", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:31:19.311891", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:31:28.203379", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:31:58.287029", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:32:16.671218", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:32:19.552411", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:32:28.364880", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:32:58.440235", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:33:17.423398", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:33:19.829396", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:33:28.534957", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:33:58.622233", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:34:18.105426", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:34:20.059481", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:34:28.714907", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:34:43.446209", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:34:58.819267", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:35:18.833522", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:35:20.272351", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:35:28.921409", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:35:59.009428", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:36:09.893489", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: optimize_system (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:36:19.517503", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:36:20.517954", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:36:29.092955", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:36:59.176988", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:37:20.166312", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:37:20.738746", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:37:29.266876", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:37:59.383005", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:38:20.983501", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:38:21.074442", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:38:29.507918", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:38:59.627842", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:39:21.199521", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:39:21.795199", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:39:29.726565", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:39:45.091853", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:39:59.838286", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:40:21.485132", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:40:22.477119", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:40:29.941190", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:41:00.044753", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:41:14.190971", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: optimize_system (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:41:21.776575", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:41:23.252164", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:41:30.141520", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:42:00.219041", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:42:01.042947", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:42:01.044679", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:42:01.046111", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260126_214201.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:42:01.046467", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:42:21.984312", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:42:23.925901", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:42:30.320637", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:43:00.425654", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:43:22.194855", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:43:24.614859", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:43:30.503376", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:44:00.609921", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:44:22.397709", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:44:25.408357", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:44:30.695496", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:44:39.316122", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks and relatively low CPU usage (18%), the system has ample processing capacity to work through the backlog. High memory usage (79.1%) is concerning but not critical, and working on tasks is the primary objective.", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:44:46.753910", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:45:00.797145", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:45:22.643422", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:45:26.114516", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:45:30.884641", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:46:00.987664", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:46:18.106344", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:46:22.884956", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:46:26.845698", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:46:31.074717", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:47:01.146154", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:47:23.111450", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:47:27.560002", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:47:31.210038", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:48:01.316387", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:48:23.319198", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:48:28.223293", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:48:31.409575", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:49:01.506783", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:49:23.529321", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:49:28.875132", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:49:31.585545", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:49:48.523880", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:50:01.699623", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:50:23.765225", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:50:29.645648", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:50:31.775704", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:51:01.908440", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:51:22.806815", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:51:24.056520", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:51:30.303965", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:51:32.016490", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:52:02.135870", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:52:24.298671", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:52:31.100417", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:52:32.218737", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:53:02.327841", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:53:24.526246", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:53:31.840065", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:53:32.428080", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:54:02.527740", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:54:24.740898", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:54:32.454572", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:54:32.619462", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:54:50.362675", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:55:02.691664", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:55:24.984221", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:55:32.768716", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:55:33.100301", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:56:02.983266", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:56:25.197154", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:56:27.272433", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:56:33.048826", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:56:33.770366", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:57:01.130233", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:57:01.131822", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:57:01.133344", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260126_215701.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:57:01.133813", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:57:03.140366", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:57:22.640160", "agent_id": "collective-memory", "agent_type": "knowledge-management", "insight": "Built collective memory with 25821 items", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:57:25.420144", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:57:33.240631", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:57:34.376104", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:58:03.331162", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:58:25.645040", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:58:33.427254", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:58:35.070700", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:59:03.506300", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:59:25.988202", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:59:33.607963", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T21:59:35.795778", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T21:59:45.217023", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks in queue and healthy system resources (CPU at 21.1% with plenty of headroom, Memory at 69.4% which is acceptable), the priority should be reducing the task backlog. System performance is stable enough to handle task execution efficiently.", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T21:59:52.273194", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:00:01.682721", "agent_id": "ai-file-organizer", "agent_type": "intelligent-automation", "insight": "AI File Organizer: Organized 1 files using AI analysis", "importance": 0.8, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:00:03.694141", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:00:26.209200", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:00:33.810910", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:00:36.502100", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:01:03.942179", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:01:26.453695", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:01:34.041640", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:01:37.168343", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:01:42.403773", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: optimize_system (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:02:04.122637", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:02:26.696016", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:02:34.212486", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:02:37.946711", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:03:04.325673", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:03:26.901116", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:03:34.405682", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:03:38.594327", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:04:04.509625", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:04:27.130331", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:04:34.624806", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:04:39.191096", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:04:53.953596", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:05:04.719427", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:05:27.359873", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:05:34.783313", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:05:39.829992", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:06:04.882322", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:06:27.575548", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:06:34.992652", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:06:40.490405", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:06:46.314160", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:07:05.080180", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:07:27.886221", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:07:35.179234", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:07:41.767366", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:08:05.264561", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:08:28.106707", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:08:35.380401", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:08:42.397552", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:09:05.446518", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:09:28.348158", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:09:35.534298", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:09:43.069793", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:09:55.716128", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:10:05.613373", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:10:28.570576", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:10:35.690306", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:10:43.803360", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:11:05.783120", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:11:28.801429", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:11:35.873021", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:11:44.614852", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:11:50.888253", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:12:01.216851", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:12:01.218208", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:12:01.219105", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260126_221201.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:12:01.219428", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:12:05.947067", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:12:29.019348", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:12:36.041670", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:12:45.227400", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:13:06.139010", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:13:29.239709", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:13:36.219619", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:13:45.848437", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:14:06.313975", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:14:29.441140", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:14:36.387442", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:14:46.490252", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:14:51.989837", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks and healthy system resources (CPU at 19%, Memory at 66.6%), this is an optimal time to process the task backlog. Off hours provide ideal conditions for task execution without competing demands.", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:14:57.517840", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:15:06.465372", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:15:29.648951", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:15:36.535226", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:15:47.134058", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:16:06.601671", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:16:29.869929", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:16:36.697764", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:16:47.854561", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:16:55.288518", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:17:06.766444", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:17:30.073951", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:17:36.833604", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:17:48.586711", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:18:06.945548", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:18:30.280790", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:18:37.017613", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:18:49.156348", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:19:07.099021", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:19:30.481784", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:19:37.193673", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:19:49.773460", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:19:59.240708", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:20:07.282769", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:20:30.685072", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:20:37.365632", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:20:50.376562", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:21:07.456254", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:21:31.007420", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:21:37.553466", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:21:51.009538", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:21:59.521685", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:22:07.656689", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:22:31.209183", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:22:37.738258", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:22:51.767233", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:23:07.847045", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:23:31.424032", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:23:37.935669", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:23:52.460512", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:24:08.040782", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:24:31.634335", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:24:38.122297", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:24:53.058212", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:25:00.810982", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:25:08.203337", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:25:31.838867", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:25:38.296504", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:25:53.669578", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:26:08.394520", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:26:32.037397", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:26:38.488162", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:26:54.248295", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:27:01.281810", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:27:01.282861", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:27:01.284088", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260126_222701.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:27:01.284879", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:27:04.248746", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: execute_task (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:27:08.559902", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:27:32.242748", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:27:38.635451", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:27:54.961668", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:28:08.718891", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:28:32.464818", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:28:38.811596", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:28:55.623313", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:29:08.910142", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:29:32.654268", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:29:39.000915", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:29:56.202516", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:29:56.641940", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks and healthy system resources (CPU at 19.6%, Memory at 65.7%), this is an optimal time to process the backlog. Off-hours provide an excellent opportunity to make progress without competing for resources or impacting users.", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:30:02.550416", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:30:09.103062", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:30:13.839057", "agent_id": "ai-file-organizer", "agent_type": "intelligent-automation", "insight": "AI File Organizer: Organized 1 files using AI analysis", "importance": 0.8, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:30:32.883479", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:30:39.182476", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:30:56.833996", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:31:09.255812", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:31:33.094918", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:31:39.354537", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:31:57.471777", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:32:09.437785", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:32:17.318003", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: task_queue_optimization (role: operational, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:32:33.308654", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:32:39.533024", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:32:58.092029", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:33:09.613077", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:33:33.523168", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:33:39.699697", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:33:58.809530", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:34:09.773168", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:34:33.722650", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:34:39.853209", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:34:59.496038", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:35:04.199335", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:35:09.950020", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:35:33.931624", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:35:40.033739", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:36:00.123968", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:36:10.106623", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:36:34.131159", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:36:40.185437", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:37:00.731251", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:37:10.270765", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:37:22.034804", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:37:34.358484", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:37:40.361891", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:38:01.351776", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:38:10.462074", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:38:34.568447", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:38:40.531929", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:39:01.994298", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:39:10.623210", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:39:34.780658", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:39:40.706540", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:40:02.952621", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:40:06.064872", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:40:10.797852", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:40:34.975378", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:40:40.880227", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:41:03.680069", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:41:10.969239", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:41:35.196789", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:41:41.060833", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:42:01.360672", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:42:01.362310", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:42:01.366281", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260126_224201.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:42:01.367199", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:42:04.328024", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:42:11.160517", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:42:26.412491", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:42:35.403550", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:42:41.252238", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:43:05.020658", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:43:11.335355", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:43:35.639959", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:43:41.409967", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:44:05.661394", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:44:11.508669", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:44:35.889173", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:44:41.605389", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:45:00.791479", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks and healthy system resources (CPU at 17.9%, Memory at 66.0%), this is an optimal time to work through the task backlog during off-hours when system demand is typically lower", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:45:06.357642", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:45:07.645671", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:45:11.688293", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:45:36.101131", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:45:41.790793", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:46:07.029316", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:46:11.873945", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:46:36.305165", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:46:41.962698", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:47:07.634269", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:47:12.045168", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:47:30.725751", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:47:36.501861", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:47:42.127099", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:48:08.290710", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:48:12.230410", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:48:36.717767", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:48:42.295028", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:49:08.929296", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:49:12.383513", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:49:37.016500", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:49:42.465305", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:50:09.380423", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:50:09.574757", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:50:12.556779", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:50:37.223553", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:50:42.625023", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:51:10.285569", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:51:12.690019", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:51:37.433746", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:51:42.775712", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:52:10.989756", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:52:12.858222", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:52:34.842226", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: execute_task (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:52:37.659593", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:52:42.924783", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:53:11.623606", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:53:13.006551", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:53:37.907210", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:53:43.074148", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:54:12.234912", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:54:13.161091", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:54:38.109650", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:54:43.245218", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:55:11.048526", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:55:12.835432", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:55:13.332210", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:55:38.335224", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:55:43.454078", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:56:13.510123", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:56:13.520318", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:56:38.535219", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:56:43.627477", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:57:01.436553", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:57:01.438192", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:57:01.439784", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260126_225701.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:57:01.440375", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:57:13.697155", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:57:14.207736", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:57:25.438251", "agent_id": "collective-memory", "agent_type": "knowledge-management", "insight": "Built collective memory with 26501 items", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:57:38.761000", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:57:39.692556", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: execute_task (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T22:57:43.780472", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:58:13.865783", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:58:14.829577", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:58:38.969015", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:58:43.964994", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:59:14.068422", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T22:59:15.472431", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:59:39.256922", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T22:59:44.162575", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:00:05.095133", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks and healthy system resources (CPU at 17.9%, Memory at 67.8%), this is an optimal time to process the task backlog during off hours when system demand is typically lower", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:00:12.680250", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:00:14.261226", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:00:16.106235", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:00:21.066294", "agent_id": "ai-file-organizer", "agent_type": "intelligent-automation", "insight": "AI File Organizer: Organized 0 files using AI analysis", "importance": 0.8, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:00:39.419334", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:00:44.352177", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:01:14.444219", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:01:16.780960", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:01:39.656929", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:01:44.542333", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:02:14.610956", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:02:17.550761", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:02:39.869594", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:02:44.706333", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:02:49.697675", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: task_queue_prioritization (role: operational, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:03:14.793663", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:03:18.393653", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:03:40.109767", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:03:44.904936", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:04:15.011291", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:04:19.039318", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:04:40.311057", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:04:45.096298", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:05:14.352416", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:05:15.192136", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:05:19.689516", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:05:40.542973", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:05:45.268765", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:06:15.336823", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:06:20.405646", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:06:40.771427", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:06:45.405986", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:07:15.486009", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:07:21.053875", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:07:40.969072", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:07:45.579888", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:07:54.191027", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:08:15.678625", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:08:21.793983", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:08:41.186074", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:08:45.774031", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:09:15.843743", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:09:22.413630", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:09:41.404249", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:09:45.944377", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:10:16.014056", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:10:16.022741", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:10:23.109710", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:10:41.638420", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:10:46.111849", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:11:16.198419", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:11:23.786707", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:11:41.849108", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:11:46.281825", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:12:01.514410", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:12:01.518048", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:12:01.521723", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260126_231201.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:12:01.522556", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:12:16.375836", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:12:24.474677", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:12:42.082089", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:12:46.471468", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:12:58.835387", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:13:16.547904", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:13:25.219702", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:13:42.322335", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:13:46.661826", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:14:16.754637", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:14:25.961990", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:14:42.542783", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:14:46.850457", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:15:09.778740", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks and healthy system resources (CPU at 18.7% with plenty of headroom, Memory at 72.8% is manageable), this is an optimal time to process the task backlog during off-hours when system demand is typically lower", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:15:16.946252", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:15:17.641786", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:15:26.618666", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:15:42.765231", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:15:47.033472", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:16:17.143868", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:16:27.288866", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:16:43.000108", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:16:47.241842", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:17:17.333629", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:17:28.102073", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:17:43.215074", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:17:47.428478", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:18:03.436991", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:18:17.508459", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:18:28.759289", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:18:43.435010", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:18:47.588357", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:19:17.662604", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:19:29.584236", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:19:43.654774", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:19:47.731162", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:20:17.821984", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:20:19.298206", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:20:30.302088", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:20:43.875139", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:20:47.910727", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:21:17.994935", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:21:31.016536", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:21:44.088370", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:21:48.080939", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:22:18.153030", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:22:31.692193", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:22:44.292869", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:22:48.241150", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:23:07.965113", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: execute_task (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:23:18.319731", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:23:32.424570", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:23:44.503444", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:23:48.414309", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:24:18.506022", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:24:33.068480", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:24:44.846088", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:24:48.620770", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:25:18.717604", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:25:20.950925", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:25:33.747258", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:25:45.068095", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:25:48.803126", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:26:18.905795", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:26:34.427169", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:26:45.279444", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:26:48.993343", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:27:01.610010", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:27:01.611250", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:27:01.612822", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260126_232701.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:27:01.614055", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:27:19.065061", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:27:35.118930", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:27:45.519175", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:27:49.155456", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:28:11.675274", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:28:19.274111", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:28:35.872171", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:28:45.727583", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:28:49.351930", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:29:19.435669", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:29:36.623578", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:29:45.941244", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:29:49.537424", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:30:14.433982", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks, CPU at only 22.4% (plenty of headroom), and off-hours timing ideal for batch processing, the system should focus on reducing the task backlog. Memory at 73.1% is elevated but still within acceptable operational range.", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:30:19.640096", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:30:22.613534", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:30:37.250592", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:30:40.650794", "agent_id": "ai-file-organizer", "agent_type": "intelligent-automation", "insight": "AI File Organizer: Organized 3 files using AI analysis", "importance": 0.8, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:30:46.170381", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:30:49.746219", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:31:19.847955", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:31:37.923796", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:31:46.385976", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:31:49.960746", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:32:20.057950", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:32:38.525456", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:32:46.598199", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:32:50.150075", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:33:20.232962", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:33:22.148438", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:33:39.296852", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:33:46.807338", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:33:50.320361", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:34:20.413315", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:34:39.963954", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:34:47.029418", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:34:50.514274", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:35:20.588993", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:35:24.310201", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:35:40.675194", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:35:47.224660", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:35:50.674677", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:36:20.765890", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:36:41.377828", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:36:47.433313", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:36:50.853945", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:37:21.236577", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:37:42.039610", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:37:47.638953", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:37:51.305883", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:38:21.411210", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:38:26.098075", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:38:42.753095", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:38:47.851259", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:38:51.528264", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:39:21.628202", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:39:43.863078", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:39:48.085931", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:39:51.721917", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:40:21.822963", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:40:25.996554", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:40:44.530367", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:40:48.315385", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:40:51.904588", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:41:21.970258", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:41:45.250294", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:41:48.528036", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:41:52.058367", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:42:01.663522", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:42:01.665628", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:42:01.668408", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260126_234201.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:42:01.669335", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:42:22.149441", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:42:45.974247", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:42:48.749672", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:42:52.267836", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:43:22.359649", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:43:30.568421", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:43:46.667881", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:43:48.955875", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:43:52.437984", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:44:22.517707", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:44:47.443858", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:44:49.186380", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:44:52.585606", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:45:19.333139", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks and low CPU utilization (19.5%), system resources are available to process the task backlog. Memory at 72.8% is elevated but still within operational range. During off hours is an optimal time to clear pending work without competing with peak usage demands.", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:45:22.648251", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:45:27.700876", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:45:48.123449", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:45:49.375603", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:45:52.750871", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:46:22.860740", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:46:48.907956", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:46:49.592045", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:46:52.955656", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:47:23.040415", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:47:49.614253", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:47:49.813296", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:47:53.134063", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:48:23.233058", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:48:35.405513", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 2)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:48:50.037929", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:48:50.318875", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:48:53.306129", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:49:23.405132", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:49:50.288369", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:49:51.040526", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:49:53.483545", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:50:23.558325", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:50:29.396647", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:50:50.494050", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:50:51.664559", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:50:53.648762", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:51:23.733834", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:51:50.700608", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:51:52.297943", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:51:53.813731", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:52:23.909193", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:52:50.908819", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:52:53.032272", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:52:53.998940", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:53:24.081837", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:53:39.504187", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:53:51.107188", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:53:53.721754", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:53:54.149164", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:54:24.249304", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:54:51.336728", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:54:54.326793", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:54:54.520602", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:55:24.416287", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:55:31.721582", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:55:51.611088", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:55:54.502265", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:55:55.167411", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:56:24.603843", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:56:51.862958", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:56:54.698466", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:56:55.902026", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:57:01.745086", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:57:01.746603", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized directory: Moved directory: filesystem_logs/ \u2192 Data/", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:57:01.751555", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Moved (renamed): filesystem_monitor_stderr.log \u2192 Monitoring-Systems/filesystem_monitor_stderr_20260126_235701.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:57:01.755343", "agent_id": "file-organizer", "agent_type": "automation", "insight": "Organized file: Removed duplicate: filesystem_monitor_stdout.log", "importance": 0.3, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:57:24.779427", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:57:28.552991", "agent_id": "collective-memory", "agent_type": "knowledge-management", "insight": "Built collective memory with 27183 items", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:57:52.134612", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:57:54.861059", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:57:56.614846", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:58:24.954828", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:58:43.266006", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-26T23:58:52.344666", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:58:55.061472", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:58:57.488746", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:59:25.152382", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:59:52.551560", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-26T23:59:55.239067", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-26T23:59:58.128546", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:00:24.203212", "agent_id": "ai-decision-maker", "agent_type": "autonomous-intelligence", "insight": "Decision: execute_task - With 50 pending tasks and system resources available (CPU at only 24.4%, plenty of headroom), this is the optimal time to process the task backlog. Off-hours periods are ideal for productive work without competing demands.", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-27T00:00:25.343616", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T00:00:33.379717", "agent_id": "cloud-sync-bridge", "agent_type": "synchronization", "insight": "Synced 0 files to cloud", "importance": 0.4, "confidence": 0.9}
+{"timestamp": "2026-01-27T00:00:52.754698", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:00:55.438848", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T00:00:57.058246", "agent_id": "ai-file-organizer", "agent_type": "intelligent-automation", "insight": "AI File Organizer: Organized 2 files using AI analysis", "importance": 0.8, "confidence": 0.9}
+{"timestamp": "2026-01-27T00:00:58.926719", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:01:25.526156", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T00:01:53.013067", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:01:55.641420", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T00:01:59.610587", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:02:25.747133", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T00:02:53.212601", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:02:56.053102", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T00:03:00.367970", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:03:26.124996", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T00:03:53.437061", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:03:56.216731", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T00:03:56.501901", "agent_id": "strategic-swarm", "agent_type": "swarm-intelligence", "insight": "Swarm decision: process_learnings (role: tactical, score: 5)", "importance": 0.9, "confidence": 0.9}
+{"timestamp": "2026-01-27T00:04:01.141044", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:04:26.890397", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T00:04:53.945592", "agent_id": "process-monitor-01", "insight": "Process monitoring cycle complete", "confidence": 0.8, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:04:57.287312", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}
+{"timestamp": "2026-01-27T00:05:04.012559", "agent_id": "git-automation-01", "insight": "Auto-commit completed by swarm agent", "confidence": 1.0, "applies_to": ["all"]}
+{"timestamp": "2026-01-27T00:05:27.417066", "agent_id": "health-monitor", "insight": "Health check: All 49 agents running", "importance": 0.9}

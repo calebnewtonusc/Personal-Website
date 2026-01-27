@@ -258,9 +258,9 @@ const Tech16 = () => {
           <List>
             <ListItem>40-question psychometric quiz with single-direction scoring (eliminates response bias)</ListItem>
             <ListItem>32 distinct Tech Personality types (16 base types × 2 focus variants)</ListItem>
-            <ListItem>60+ curated engineering roles matched via Euclidean distance algorithm with flexibility thresholds</ListItem>
-            <ListItem>Category-based matching system (Mobile, ML, Security, Infrastructure, etc.) with keyword detection</ListItem>
-            <ListItem>Dynamic role ranking from 15-100% fit (no hard-coded weights, adapts to algorithm changes)</ListItem>
+            <ListItem>42+ curated engineering roles matched via Euclidean distance algorithm with category-specific flexibility profiles</ListItem>
+            <ListItem>Optimized role distribution achieving 52% coverage (up from 39%) with 55% reduction in over-representation</ListItem>
+            <ListItem>Dynamic role ranking from 15-100% fit (adapts to algorithm changes, no hard-coded weights)</ListItem>
             <ListItem>Interactive radar charts and spectrum visualizations showing all 5 dimensions</ListItem>
           </List>
         </Section>

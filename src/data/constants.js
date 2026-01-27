@@ -249,7 +249,7 @@ export const projects = [
   {
     id: 1,
     title: "16 Tech Personalities",
-    description: "Engineered personality assessment platform with 40-question psychometric quiz implementing custom scoring algorithms to classify developers into 32 unique types across 5 behavioral dimensions. Architected dynamic role-matching engine using weighted distance metrics to algorithmically rank 95+ engineering positions by personality fit percentage. Eliminated database dependencies through adaptive trait-based profiling that automatically recalculates when scoring algorithms change.",
+    description: "Designed full-stack personality assessment platform serving Myers-Briggs style psychometric analysis across 5 behavioral spectrums, generating 32 unique personality types with shareable result URLs and version-locked quiz integrity. Engineered Euclidean distance-based matching algorithm with category-specific flexibility profiles, improving role recommendation coverage by 13% (39%→52%) and reducing over-representation by 55% across 42+ curated engineering positions.",
     image: "https://via.placeholder.com/800x400/32CD32/FFFFFF?text=Tech+Personalities",
     tags: ["React", "styled-components", "Supabase", "PostgreSQL", "Recharts", "Vercel"],
     category: "web app",
