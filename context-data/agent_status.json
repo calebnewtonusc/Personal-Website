@@ -1,173 +1,173 @@
 {
-  "timestamp": "2026-01-27T13:43:22.644156",
+  "timestamp": "2026-01-27T13:48:24.426770",
   "local_agents": [
     {
       "pid": "2262",
       "status": "0",
       "name": "com.megabrain.calendar-monitor",
-      "timestamp": "2026-01-27T13:43:22.644050"
+      "timestamp": "2026-01-27T13:48:24.426661"
     },
     {
       "pid": "2305",
       "status": "0",
       "name": "com.megabrain.platform-monitor",
-      "timestamp": "2026-01-27T13:43:22.644068"
+      "timestamp": "2026-01-27T13:48:24.426680"
     },
     {
       "pid": "2314",
       "status": "0",
       "name": "com.megabrain.swarm-git",
-      "timestamp": "2026-01-27T13:43:22.644071"
+      "timestamp": "2026-01-27T13:48:24.426683"
     },
     {
       "pid": "-",
       "status": "1",
       "name": "com.megabrain.poke-notifier",
-      "timestamp": "2026-01-27T13:43:22.644073"
+      "timestamp": "2026-01-27T13:48:24.426685"
     },
     {
       "pid": "2263",
       "status": "0",
       "name": "com.megabrain.ai-email-responder",
-      "timestamp": "2026-01-27T13:43:22.644078"
+      "timestamp": "2026-01-27T13:48:24.426691"
     },
     {
       "pid": "2288",
       "status": "0",
       "name": "com.megabrain.smart-dashboard",
-      "timestamp": "2026-01-27T13:43:22.644080"
+      "timestamp": "2026-01-27T13:48:24.426693"
     },
     {
       "pid": "2321",
       "status": "0",
       "name": "com.megabrain.ai-decision-maker",
-      "timestamp": "2026-01-27T13:43:22.644083"
+      "timestamp": "2026-01-27T13:48:24.426695"
     },
     {
       "pid": "2252",
       "status": "0",
       "name": "com.megabrain.meta-improvement",
-      "timestamp": "2026-01-27T13:43:22.644088"
+      "timestamp": "2026-01-27T13:48:24.426701"
     },
     {
       "pid": "2258",
       "status": "0",
       "name": "com.megabrain.active-learner",
-      "timestamp": "2026-01-27T13:43:22.644089"
+      "timestamp": "2026-01-27T13:48:24.426702"
     },
     {
       "pid": "-",
       "status": "0",
       "name": "com.megabrain.lemma-failure-detector",
-      "timestamp": "2026-01-27T13:43:22.644091"
+      "timestamp": "2026-01-27T13:48:24.426704"
     },
     {
       "pid": "-",
       "status": "1",
       "name": "com.megabrain.lemma-ab-test",
-      "timestamp": "2026-01-27T13:43:22.644092"
+      "timestamp": "2026-01-27T13:48:24.426705"
     },
     {
       "pid": "-",
       "status": "0",
       "name": "com.megabrain.health-monitor",
-      "timestamp": "2026-01-27T13:43:22.644096"
+      "timestamp": "2026-01-27T13:48:24.426709"
     },
     {
       "pid": "2253",
       "status": "0",
       "name": "com.megabrain.chatgpt-monitor",
-      "timestamp": "2026-01-27T13:43:22.644101"
+      "timestamp": "2026-01-27T13:48:24.426714"
     },
     {
       "pid": "2255",
       "status": "0",
       "name": "com.megabrain.continuous-sync",
-      "timestamp": "2026-01-27T13:43:22.644103"
+      "timestamp": "2026-01-27T13:48:24.426715"
     },
     {
       "pid": "2271",
       "status": "0",
       "name": "com.megabrain.master-coordinator",
-      "timestamp": "2026-01-27T13:43:22.644105"
+      "timestamp": "2026-01-27T13:48:24.426717"
     },
     {
       "pid": "2281",
       "status": "0",
       "name": "com.megabrain.collective-memory",
-      "timestamp": "2026-01-27T13:43:22.644106"
+      "timestamp": "2026-01-27T13:48:24.426720"
     },
     {
       "pid": "2299",
       "status": "0",
       "name": "com.megabrain.cloud-sync",
-      "timestamp": "2026-01-27T13:43:22.644109"
+      "timestamp": "2026-01-27T13:48:24.426723"
     },
     {
       "pid": "2241",
       "status": "0",
       "name": "com.megabrain.strategic-swarm",
-      "timestamp": "2026-01-27T13:43:22.644116"
+      "timestamp": "2026-01-27T13:48:24.426730"
     },
     {
       "pid": "2245",
       "status": "0",
       "name": "com.megabrain.swarm-process",
-      "timestamp": "2026-01-27T13:43:22.644117"
+      "timestamp": "2026-01-27T13:48:24.426731"
     },
     {
       "pid": "-",
       "status": "1",
       "name": "com.megabrain.social-media-scraper",
-      "timestamp": "2026-01-27T13:43:22.644124"
+      "timestamp": "2026-01-27T13:48:24.426738"
     },
     {
       "pid": "2272",
       "status": "0",
       "name": "com.megabrain.file-organizer",
-      "timestamp": "2026-01-27T13:43:22.644129"
+      "timestamp": "2026-01-27T13:48:24.426743"
     },
     {
       "pid": "2274",
       "status": "0",
       "name": "com.megabrain.self-healer",
-      "timestamp": "2026-01-27T13:43:22.644130"
+      "timestamp": "2026-01-27T13:48:24.426745"
     },
     {
       "pid": "-",
       "status": "1",
       "name": "com.megabrain.poke-interface",
-      "timestamp": "2026-01-27T13:43:22.644132"
+      "timestamp": "2026-01-27T13:48:24.426747"
     },
     {
       "pid": "-",
       "status": "1",
       "name": "com.megabrain.lemma-prompt-optimizer",
-      "timestamp": "2026-01-27T13:43:22.644134"
+      "timestamp": "2026-01-27T13:48:24.426748"
     },
     {
       "pid": "2320",
       "status": "0",
       "name": "com.megabrain.capability-provider",
-      "timestamp": "2026-01-27T13:43:22.644136"
+      "timestamp": "2026-01-27T13:48:24.426751"
     },
     {
       "pid": "2322",
       "status": "0",
       "name": "com.megabrain.ai-file-organizer",
-      "timestamp": "2026-01-27T13:43:22.644138"
+      "timestamp": "2026-01-27T13:48:24.426753"
     },
     {
       "pid": "2244",
       "status": "0",
       "name": "com.megabrain.autonomous-strategist",
-      "timestamp": "2026-01-27T13:43:22.644142"
+      "timestamp": "2026-01-27T13:48:24.426757"
     },
     {
       "pid": "2260",
       "status": "0",
       "name": "com.megabrain.task-delegation",
-      "timestamp": "2026-01-27T13:43:22.644144"
+      "timestamp": "2026-01-27T13:48:24.426759"
     }
   ],
   "total": 28,

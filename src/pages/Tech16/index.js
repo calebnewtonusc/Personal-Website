@@ -290,7 +290,6 @@ const Tech16 = () => {
     const savedResponses = localStorage.getItem('tech16_quiz_responses');
     if (savedResponses && view === 'landing') {
       // Could prompt user to resume
-      console.log('Found saved quiz progress');
     }
   }, [view]);
 
