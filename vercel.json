@@ -4,26 +4,6 @@
       "source": "/modellab",
       "destination": "https://modellab.studio",
       "permanent": true
-    },
-    {
-      "source": "/",
-      "destination": "/tech16",
-      "has": [
-        {
-          "type": "host",
-          "value": "16techpersonalities.com"
-        }
-      ]
-    },
-    {
-      "source": "/",
-      "destination": "/tech16",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.16techpersonalities.com"
-        }
-      ]
     }
   ],
   "headers": [
