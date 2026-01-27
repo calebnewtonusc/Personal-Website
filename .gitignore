@@ -30,3 +30,4 @@ yarn-error.log*
 context-data/COLLECTIVE_MEMORY.json
 .env*.local
 context-data/COLLECTIVE_MEMORY.json
+context-data/
