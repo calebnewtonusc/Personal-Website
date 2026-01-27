@@ -180,9 +180,7 @@ const Projects = () => {
               </Tags>
               <Details>
                 <ProjectTitle>{project.title}</ProjectTitle>
-                <Date>{project.date}</Date>
                 <Description>{project.description}</Description>
-                {project.comingSoon && <ComingSoonBadge>Coming Spring 2026</ComingSoonBadge>}
               </Details>
             </Card>
           ))}
