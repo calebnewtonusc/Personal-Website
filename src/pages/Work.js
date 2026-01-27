@@ -280,8 +280,8 @@ const projects = [
     type: "Developer Assessment Framework",
     description: "Implemented a 40-question Likert quiz that scores 5 spectrums and outputs a 4-letter Tech Type plus suffix (-A/-T); stores raw trait percentages and quiz version for integrity. Built CMS-like content + role mapping (trait-weighted RoleScore) and share features (results card, optional compare) using Next.js + TypeScript + Tailwind with Supabase Auth/Postgres.",
     tech: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Postgres"],
-    link: "/tech16",
-    internal: true
+    link: "https://16techpersonalities.com",
+    internal: false
   },
   {
     image: foodvisionImg,
