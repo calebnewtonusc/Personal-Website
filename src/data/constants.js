@@ -264,6 +264,6 @@ export const projects = [
     tags: ["PyTorch", "EfficientNetB2", "Gradio", "Hugging Face", "Computer Vision"],
     category: "machine learning",
     github: "https://github.com/calebnewtonusc/FoodVisionMini",
-    webapp: "/projects/foodvision",
+    webapp: "https://foodvis.in",
   },
 ];
