@@ -235,6 +235,7 @@ export const education = [
   },
 ];
 
+// ML Projects
 export const projects = [
   {
     id: 0,
