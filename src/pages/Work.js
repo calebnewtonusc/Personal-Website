@@ -278,7 +278,7 @@ const projects = [
     image: tech16Img,
     name: "16 Tech Personalities",
     type: "Developer Assessment Framework",
-    description: "Designed full-stack personality assessment platform serving Myers-Briggs style psychometric analysis across 5 behavioral spectrums, generating 32 unique personality types with shareable result URLs and version-locked quiz integrity. Engineered Euclidean distance-based matching algorithm with category-specific flexibility profiles, improving role recommendation coverage by 13% (39%→52%) and reducing over-representation by 55% across 42+ curated engineering positions.",
+    description: "Designed full-stack personality assessment platform serving Myers-Briggs style psychometric analysis across 5 behavioral spectrums, generating 16 unique personality types with shareable result URLs and version-locked quiz integrity. Engineered Euclidean distance-based matching algorithm with category-specific flexibility profiles, improving role recommendation coverage by 13% (39%→52%) and reducing over-representation by 55% across 42+ curated engineering positions.",
     tech: ["React", "styled-components", "Supabase", "PostgreSQL", "Recharts", "Vercel"],
     link: "https://16techpersonalities.com",
     internal: false
@@ -287,8 +287,8 @@ const projects = [
     image: foodvisionImg,
     name: "Food Vision",
     type: "Computer Vision Project",
-    description: "Built and deployed computer vision classifier for multi-class food recognition (pizza, steak, sushi) using transfer learning with EfficientNetB2. Implemented complete ML pipeline: data augmentation, training loop with mixed precision, evaluation harness for metrics tracking, and production deployment via Gradio on Hugging Face Spaces.",
-    tech: ["PyTorch", "EfficientNetB2", "Transfer Learning", "Gradio", "Hugging Face"],
+    description: "Built and deployed 97.20% accurate computer vision classifier for multi-class food recognition (pizza, steak, sushi) using transfer learning with EfficientNetB2. Implemented complete ML pipeline: data augmentation, progressive fine-tuning, comprehensive evaluation harness with calibration metrics, and full-stack production deployment with FastAPI backend on Hugging Face Spaces and React frontend on Vercel.",
+    tech: ["PyTorch", "EfficientNetB2", "FastAPI", "React", "Hugging Face", "Vercel"],
     link: "https://foodvis.in",
     internal: false
   },
