@@ -269,28 +269,28 @@ const projects = [
     image: modellabImg,
     name: "ModelLab",
     type: "ML Testing Platform",
-    description: "Built an ML experiment command center with dataset versioning (checksums, schema snapshots), run tracking (seed, commit hash, dataset version), and artifact storage for reproducibility. Implemented EvalHarness: standardized metrics.json, slices.json, failure examples, and compare mode with metric/config/artifact diffs plus p50/p95 latency measurement.",
-    tech: ["PyTorch", "Python", "sklearn", "Dataset Versioning", "Reproducibility"],
+    description: "Built and deployed an ML experiment command center (React + Express + PostgreSQL) with dataset versioning (checksums, schema snapshots), run tracking (seed, commit hash, dataset version), and artifact storage for reproducibility. Implemented EvalHarness: standardized metrics.json, slices.json, failure examples with ROC-AUC/PR-AUC/calibration metrics, and compare mode with metric/config/artifact diffs plus p50/p95 latency measurement.",
+    tech: ["React", "Express", "PostgreSQL", "Python", "EvalHarness", "Docker"],
     link: "https://modellab.studio",
     internal: false
   },
   {
     image: tech16Img,
-    name: "Tech 16 Personalities",
+    name: "16 Tech Personalities",
     type: "Developer Assessment Framework",
-    description: "Engineered personality assessment platform with 40-question psychometric quiz implementing custom scoring algorithms to classify developers into 32 unique types across 5 behavioral dimensions. Architected dynamic role-matching engine using Euclidean distance with flexibility thresholds to algorithmically rank 60+ curated engineering roles by personality fit. Eliminated database weight dependencies through adaptive category-based profiling with keyword matching that automatically adapts to algorithm changes.",
-    tech: ["React", "styled-components", "Supabase", "PostgreSQL", "Recharts"],
+    description: "Designed full-stack personality assessment platform serving Myers-Briggs style psychometric analysis across 5 behavioral spectrums, generating 32 unique personality types with shareable result URLs and version-locked quiz integrity. Engineered Euclidean distance-based matching algorithm with category-specific flexibility profiles, improving role recommendation coverage by 13% (39%→52%) and reducing over-representation by 55% across 42+ curated engineering positions.",
+    tech: ["React", "styled-components", "Supabase", "PostgreSQL", "Recharts", "Vercel"],
     link: "https://16techpersonalities.com",
     internal: false
   },
   {
     image: foodvisionImg,
-    name: "FoodVision Mini",
+    name: "Food Vision",
     type: "Computer Vision Project",
-    description: "Trained a Food101 image classifier with a fast 3-class mini mode (pizza, steak, sushi); baseline EfficientNetB2 feature extractor with one meaningful improvement via transfer learning. Shipped a defensible eval report (accuracy, top-5, confusion matrix, calibration, failure examples) and measured CPU inference latency (warmup, p50/p95); served via FastAPI with a simple UI.",
-    tech: ["PyTorch", "EfficientNet", "FastAPI", "Transfer Learning"],
-    link: "/foodvision",
-    internal: true
+    description: "Built and deployed computer vision classifier for multi-class food recognition (pizza, steak, sushi) using transfer learning with EfficientNetB2. Implemented complete ML pipeline: data augmentation, training loop with mixed precision, evaluation harness for metrics tracking, and production deployment via Gradio on Hugging Face Spaces.",
+    tech: ["PyTorch", "EfficientNetB2", "Transfer Learning", "Gradio", "Hugging Face"],
+    link: "https://foodvis.in",
+    internal: false
   },
   {
     image: thelinesImg,
