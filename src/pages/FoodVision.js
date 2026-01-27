@@ -173,7 +173,7 @@ const FoodVision = () => {
         </BackButton>
 
         <Header>
-          <Title>FoodVisionMini</Title>
+          <Title>Food Vision</Title>
           <Tagline>Production ML Pipeline - 97.20% Accuracy</Tagline>
           <LiveBadge>✅ Live in Production</LiveBadge>
           <LiveLink href="https://foodvis.in" target="_blank" rel="noopener noreferrer">
