@@ -278,7 +278,7 @@ const projects = [
     image: tech16Img,
     name: "16 Tech Personalities",
     type: "Developer Assessment Framework",
-    description: "Designed full-stack personality assessment platform (React + Supabase + PostgreSQL) serving Myers-Briggs style psychometric analysis across 5 behavioral spectrums, generating 16 unique personality types with shareable result URLs and version-locked quiz integrity. Engineered Euclidean distance-based matching algorithm with category-specific flexibility profiles, improving role coverage by 14 percentage points (25%→39%) and reducing Full Stack Engineer over-representation by 82% (11x→2x) across 61 curated engineering roles.",
+    description: "Designed full-stack personality assessment platform (React + Supabase + PostgreSQL) serving Myers-Briggs style psychometric analysis across 5 behavioral spectrums, generating 16 unique personality types with shareable result URLs and version-locked quiz integrity. Engineered Euclidean distance-based matching algorithm with category-specific flexibility profiles, improving role coverage by 14% (25%→39%) and reducing Full Stack Engineer over-representation by 82% (11x→2x) across 61 curated engineering roles.",
     tech: ["React", "styled-components", "Supabase", "PostgreSQL", "Recharts", "Vercel"],
     link: "https://16techpersonalities.com",
     internal: false
